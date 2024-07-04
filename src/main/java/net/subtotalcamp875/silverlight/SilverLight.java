@@ -2,6 +2,8 @@ package net.subtotalcamp875.silverlight;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.subtotalcamp875.silverlight.item.ModItemGroups;
+import net.subtotalcamp875.silverlight.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ public class SilverLight implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }
