@@ -1,21 +1,17 @@
 package net.subtotalcamp875.silverlight.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.item.custom.BackpackItem;
-import org.spongepowered.asm.mixin.injection.Slice;
+import net.subtotalcamp875.silverlight.item.entity.BackpackItem;
 
 public class ModItems {
-    public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings()));
+    public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings().maxCount(1)));
     public static final Item STRETCHY_LEATHER = registerItem("stretchy_leather", new Item(new Item.Settings()));
 
 

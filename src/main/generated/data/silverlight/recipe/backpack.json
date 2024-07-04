@@ -1,29 +1,30 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:mojang_banner_pattern"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "silverlight:stretchy_leather"
+    }
+  },
   "pattern": [
     "SBS",
     "NCN",
     "SLS"
   ],
-  "key": {
-    "C": {
-      "item": "minecraft:chest"
-    },
-    "S": {
-      "item": "silverlight:stretchy_leather"
-    },
-    "N": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "B": {
-      "item": "minecraft:mojang_banner_pattern"
-    },
-    "L": {
-      "item": "minecraft:leather"
-    }
-  },
   "result": {
+    "count": 1,
     "id": "silverlight:backpack"
   }
 }
