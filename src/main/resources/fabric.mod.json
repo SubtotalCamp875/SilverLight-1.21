@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "silverlight",
+	"version": "${version}",
+	"name": "SilverLight",
+	"description": "Mod made for the SilverLight SMP!",
+	"authors": [
+		"SubtotalCamp875"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/silverlight/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.subtotalcamp875.silverlight.SilverLight"
+		],
+		"client": [
+			"net.subtotalcamp875.silverlight.SilverLightClient"
+		],
+		"fabric-datagen": [
+			"net.subtotalcamp875.silverlight.SilverLightDataGenerator"
+		]
+	},
+	"mixins": [
+		"silverlight.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
