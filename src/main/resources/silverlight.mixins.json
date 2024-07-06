@@ -3,7 +3,6 @@
 	"package": "net.subtotalcamp875.silverlight.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
