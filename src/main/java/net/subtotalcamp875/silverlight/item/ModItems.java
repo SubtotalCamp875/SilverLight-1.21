@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.item.entity.BackpackItem;
+import net.subtotalcamp875.silverlight.item.custom.BackpackItem;
 
 public class ModItems {
     public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings().maxCount(1)));
