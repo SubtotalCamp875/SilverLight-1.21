@@ -25,7 +25,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("SLS")
                 .input('S', ModItems.STRETCHY_LEATHER)
                 .input('C', Items.CHEST)
-                .input('N', Items.NETHERITE_INGOT)
+                .input('N', Items.ANCIENT_DEBRIS)
                 .input('L', Items.LEATHER)
                 .input('B', Items.MOJANG_BANNER_PATTERN)
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
