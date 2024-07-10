@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:writable_book"
+    },
+    "Q": {
+      "item": "silverlight:quill"
+    }
+  },
+  "pattern": [
+    "BQ"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:canonical_book"
+  }
+}
