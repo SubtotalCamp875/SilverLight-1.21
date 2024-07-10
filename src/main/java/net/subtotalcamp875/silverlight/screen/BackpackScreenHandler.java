@@ -12,11 +12,11 @@ import net.subtotalcamp875.silverlight.component.type.BackpackContentsComponent;
 public class BackpackScreenHandler extends ScreenHandler {
 
     private static final int BACKPACK_START = 0;
-    private static final int BACKPACK_END = 27;
-    private static final int INVENTORY_START = 27;
-    private static final int INVENTORY_END = 54;
-    private static final int HOTBAR_START = 54;
-    private static final int HOTBAR_END = 63;
+    private static final int BACKPACK_END = 54;
+    private static final int INVENTORY_START = 54;
+    private static final int INVENTORY_END = 81;
+    private static final int HOTBAR_START = 81;
+    private static final int HOTBAR_END = 90;
 
     private final SimpleInventory inventory;
     public final ItemStack backpackStack;
@@ -28,7 +28,7 @@ public class BackpackScreenHandler extends ScreenHandler {
                 new BackpackContentsComponent());
         this.inventory = new SimpleInventory(backpackContentsComponent.stacks.toArray(ItemStack[]::new));
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 9; j++) {
                 this.addSlot(new Slot(this.inventory, j + i * 9, 8 + j * 18, 18 + i * 18) {
                     @Override
@@ -41,12 +41,12 @@ public class BackpackScreenHandler extends ScreenHandler {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 140 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; i++) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 198));
         }
         inventory.onOpen(playerInventory.player);
         inventory.addListener(sender -> {

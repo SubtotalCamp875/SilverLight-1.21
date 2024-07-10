@@ -12,6 +12,8 @@ public class BackpackScreen extends HandledScreen<BackpackScreenHandler> {
 
     public BackpackScreen(BackpackScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
+        this.backgroundHeight = 222;
+        this.playerInventoryTitleY = this.backgroundHeight - 94;
     }
 
     @Override
