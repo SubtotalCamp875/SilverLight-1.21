@@ -1,5 +1,7 @@
-// 1.21	2024-07-08T11:45:12.6886846	SilverLight/Recipes
+// 1.21	2024-07-10T10:58:22.4067842	SilverLight/Recipes
+ae5a6bb1fb67b540792ab1834a18e5531c50c16e data\silverlight\recipe\canonical_book.json
 9800b6057c912133b8f01763996b60e935e32a23 data\silverlight\advancement\recipes\misc\backpack.json
 d344dabf772b2a7cfacb52905ce62c3ffcb22911 data\silverlight\advancement\recipes\misc\stretchy_leather.json
-e70b418e6e4bd64c7973130ea315d48aa3c49079 data\silverlight\recipe\backpack.json
-037785f86ae1a92a14cfe2b050218dc6848eb0eb data\silverlight\recipe\stretchy_leather.json
+44470083941fb994222e10a565a826779e07fd37 data\silverlight\recipe\backpack.json
+ab4ff907827a1c738ca3a46e20594f1601798af5 data\silverlight\recipe\stretchy_leather.json
+0f94328194c489db7af042e64a1ff6d78fb43359 data\silverlight\advancement\recipes\misc\canonical_book.json

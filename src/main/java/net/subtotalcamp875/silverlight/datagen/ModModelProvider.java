@@ -20,5 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BACKPACK, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRETCHY_LEATHER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUILL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CANONICAL_BOOK, Models.GENERATED);
     }
 }

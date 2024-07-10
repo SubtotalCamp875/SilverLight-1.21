@@ -13,8 +13,8 @@
     }
   },
   "pattern": [
-    "LRL",
-    "RSR",
+    "LLL",
+    "LSL",
     "LRL"
   ],
   "result": {

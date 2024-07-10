@@ -27,18 +27,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', Items.CHEST)
                 .input('N', Items.ANCIENT_DEBRIS)
                 .input('L', Items.LEATHER)
-                .input('B', Items.MOJANG_BANNER_PATTERN)
+                .input('B', ModItems.CANONICAL_BOOK)
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.BACKPACK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRETCHY_LEATHER, 1)
-                .pattern("LRL")
-                .pattern("RSR")
+                .pattern("LLL")
+                .pattern("LSL")
                 .pattern("LRL")
                 .input('S', Items.SLIME_BALL)
                 .input('L', Items.LEATHER)
                 .input('R', Items.RABBIT_HIDE)
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.STRETCHY_LEATHER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CANONICAL_BOOK, 1)
+                .pattern("BQ")
+                .input('Q', ModItems.QUILL)
+                .input('B', Items.WRITABLE_BOOK)
+                .criterion(hasItem(Items.WRITABLE_BOOK), conditionsFromItem(Items.WRITABLE_BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CANONICAL_BOOK)));
     }
 }

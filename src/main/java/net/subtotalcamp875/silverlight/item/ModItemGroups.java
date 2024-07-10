@@ -16,6 +16,8 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.BACKPACK)).entries((displayContext, entries) -> {
                         entries.add(ModItems.BACKPACK);
                         entries.add(ModItems.STRETCHY_LEATHER);
+                        entries.add(ModItems.QUILL);
+                        entries.add(ModItems.CANONICAL_BOOK);
 
 
                     }).build());

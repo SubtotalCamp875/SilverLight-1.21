@@ -1,6 +1,8 @@
 {
   "item.silverlight.backpack": "Backpack",
   "item.silverlight.stretchy_leather": "Stretchy Leather",
+  "item.silverlight.quill": "Quill",
+  "item.silverlight.canonical_book": "Canonical Book",
 
   "itemgroup.silverlight": "Silver Light Group"
 }
