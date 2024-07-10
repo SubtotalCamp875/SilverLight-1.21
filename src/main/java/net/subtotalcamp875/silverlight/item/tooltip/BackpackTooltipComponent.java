@@ -18,7 +18,7 @@ public class BackpackTooltipComponent implements TooltipComponent {
     private static final int HEIGHT_PER_ROW = 18;
     private final BackpackContentsComponent backpackContents;
     private static final int BACKGROUND_WIDTH = 176;
-    private static final int BACKGROUND_HEIGHT = 68;
+    private static final int BACKGROUND_HEIGHT = 122;
 
     public BackpackTooltipComponent(BackpackContentsComponent backpackContents) {
         this.backpackContents = backpackContents;
@@ -40,7 +40,7 @@ public class BackpackTooltipComponent implements TooltipComponent {
         // context.drawGuiTexture(BACKGROUND_TEXTURE, x, y, BACKGROUND_WIDTH, BACKGROUND_HEIGHT);
         int slotIndex = 0;
 
-        for (int rowIndex = 0; rowIndex < 3; rowIndex++) {
+        for (int rowIndex = 0; rowIndex < 6; rowIndex++) {
             for (int columnIndex = 0; columnIndex < 9; columnIndex++) {
                 int slotX = x + columnIndex * WIDTH_PER_COLUMN + 7;
                 int slotY = y + rowIndex * HEIGHT_PER_ROW + 7;

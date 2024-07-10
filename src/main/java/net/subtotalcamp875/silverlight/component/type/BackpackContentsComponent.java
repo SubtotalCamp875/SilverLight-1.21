@@ -11,9 +11,9 @@ import net.minecraft.util.collection.DefaultedList;
 import java.util.List;
 
 public final class BackpackContentsComponent implements TooltipData {
-	public static final Codec<BackpackContentsComponent> CODEC = ItemStack.OPTIONAL_CODEC.listOf(27, 27).xmap(BackpackContentsComponent::new, component -> component.stacks);
+	public static final Codec<BackpackContentsComponent> CODEC = ItemStack.OPTIONAL_CODEC.listOf(54, 54).xmap(BackpackContentsComponent::new, component -> component.stacks);
 	public static final PacketCodec<RegistryByteBuf, BackpackContentsComponent> PACKET_CODEC = ItemStack.OPTIONAL_PACKET_CODEC
-		.collect(PacketCodecs.toList(27))
+		.collect(PacketCodecs.toList(54))
 		.xmap(BackpackContentsComponent::new, component -> component.stacks);
 	public final List<ItemStack> stacks;
 
@@ -22,7 +22,7 @@ public final class BackpackContentsComponent implements TooltipData {
 	}
 
 	public BackpackContentsComponent() {
-		this(List.copyOf(DefaultedList.ofSize(27, ItemStack.EMPTY)));
+		this(List.copyOf(DefaultedList.ofSize(54, ItemStack.EMPTY)));
 	}
 
 	@Override
