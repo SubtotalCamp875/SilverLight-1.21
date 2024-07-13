@@ -13,8 +13,9 @@ import net.subtotalcamp875.silverlight.item.custom.BackpackItem;
 public class ModItems {
     public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings().maxCount(1)));
     public static final Item STRETCHY_LEATHER = registerItem("stretchy_leather", new Item(new Item.Settings()));
-    public static final Item QUILL = registerItem("quill", new Item(new Item.Settings().maxCount(1)));
+    public static final Item QUILL = registerItem("quill", new Item(new Item.Settings()));
     public static final Item CANONICAL_BOOK = registerItem("canonical_book", new Item(new Item.Settings().maxCount(1)));
+    public static final Item DRAGON_OMLET = registerItem("dragon_omlet", new Item(new Item.Settings().maxCount(1)));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
@@ -22,6 +23,7 @@ public class ModItems {
         entries.add(STRETCHY_LEATHER);
         entries.add(QUILL);
         entries.add(CANONICAL_BOOK);
+        entries.add(DRAGON_OMLET);
     }
 
     private static Item registerItem(String name, Item item) {

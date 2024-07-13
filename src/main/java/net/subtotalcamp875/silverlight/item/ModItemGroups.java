@@ -18,6 +18,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STRETCHY_LEATHER);
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
+                        entries.add(ModItems.DRAGON_OMLET);
 
 
                     }).build());

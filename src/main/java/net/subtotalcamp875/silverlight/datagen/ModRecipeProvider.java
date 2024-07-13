@@ -20,8 +20,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BACKPACK, 1)
-                .pattern("SBS")
-                .pattern("NCN")
+                .pattern("SNS")
+                .pattern("BCB")
                 .pattern("SLS")
                 .input('S', ModItems.STRETCHY_LEATHER)
                 .input('C', Items.CHEST)
@@ -32,7 +32,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.BACKPACK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRETCHY_LEATHER, 1)
-                .pattern("LLL")
                 .pattern("LSL")
                 .pattern("LRL")
                 .input('S', Items.SLIME_BALL)
@@ -47,5 +46,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.WRITABLE_BOOK)
                 .criterion(hasItem(Items.WRITABLE_BOOK), conditionsFromItem(Items.WRITABLE_BOOK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CANONICAL_BOOK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.QUILL, 7)
+                .pattern("FFF")
+                .pattern("FSF")
+                .pattern("FBF")
+                .input('S', Items.INK_SAC)
+                .input('F', Items.FEATHER)
+                .input('F', Items.BLUE_DYE)
+                .criterion(hasItem(Items.FEATHER), conditionsFromItem(Items.FEATHER))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.QUILL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRAGON_OMLET, 1)
+                .pattern("D")
+                .pattern("B")
+                .input('D', Items.DRAGON_EGG)
+                .input('B', Items.BLAZE_POWDER)
+                .criterion(hasItem(Items.BLAZE_POWDER), conditionsFromItem(Items.BLAZE_POWDER))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.DRAGON_OMLET)));
     }
 }
