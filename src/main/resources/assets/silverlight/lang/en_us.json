@@ -5,5 +5,10 @@
   "item.silverlight.canonical_book": "Canonical Book",
   "item.silverlight.dragon_omlet": "Dragon Omlet",
 
+
+  "item.silverlight.tomato_plant": "Tomato Plant",
+  "item.silverlight.tomato": "Tomato",
+
+
   "itemgroup.silverlight": "Silver Light Group"
 }

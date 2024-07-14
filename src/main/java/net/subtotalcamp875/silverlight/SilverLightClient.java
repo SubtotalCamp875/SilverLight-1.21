@@ -1,8 +1,11 @@
 package net.subtotalcamp875.silverlight;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.TooltipComponentCallback;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.client.render.RenderLayer;
+import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.component.type.BackpackContentsComponent;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipComponent;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipData;
@@ -19,5 +22,7 @@ public class SilverLightClient implements ClientModInitializer {
             }
             return null;
         });
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TOMATO_PLANT, RenderLayer.getCutout());
     }
 }

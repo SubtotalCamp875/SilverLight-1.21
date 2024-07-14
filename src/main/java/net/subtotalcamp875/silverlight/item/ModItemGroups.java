@@ -8,6 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
+import net.subtotalcamp875.silverlight.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup SILVERLIGHT_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -19,6 +20,10 @@ public class ModItemGroups {
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
                         entries.add(ModItems.DRAGON_OMLET);
+
+
+                        entries.add(ModItems.TOMATO_PLANT);
+                        entries.add(ModItems.TOMATO);
 
 
                     }).build());

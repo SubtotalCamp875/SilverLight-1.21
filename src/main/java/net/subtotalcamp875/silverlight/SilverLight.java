@@ -1,6 +1,7 @@
 package net.subtotalcamp875.silverlight;
 
 import net.fabricmc.api.ModInitializer;
+import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.component.ModDataComponentTypes;
 import net.subtotalcamp875.silverlight.item.ModItemGroups;
 import net.subtotalcamp875.silverlight.item.ModItems;
@@ -16,6 +17,8 @@ public class SilverLight implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
 		ModDataComponentTypes.registerModDataComponentTypes();
 		ModScreenHandlerTypes.registerModScreenHandlerTypes();
 	}
