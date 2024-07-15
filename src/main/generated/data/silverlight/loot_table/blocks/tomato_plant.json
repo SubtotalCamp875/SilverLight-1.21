@@ -23,11 +23,11 @@
                   }
                 }
               ],
-              "name": "silverlight:tomato_seed"
+              "name": "silverlight:tomato"
             },
             {
               "type": "minecraft:item",
-              "name": "silverlight:tomato"
+              "name": "silverlight:tomato_seed"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "silverlight:tomato"
+          "name": "silverlight:tomato_seed"
         }
       ],
       "rolls": 1.0

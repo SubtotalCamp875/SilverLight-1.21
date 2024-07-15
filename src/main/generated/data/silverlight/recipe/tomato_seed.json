@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "silverlight:tomato"
+    }
+  },
+  "pattern": [
+    "T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:tomato_seed"
+  }
+}

@@ -22,7 +22,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BACKPACK, 1)
                 .pattern("SNS")
                 .pattern("BCB")
-                .pattern("SLS")
+                .pattern("LLL")
                 .input('S', ModItems.STRETCHY_LEATHER)
                 .input('C', Items.CHEST)
                 .input('N', Items.ANCIENT_DEBRIS)
@@ -64,5 +64,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.BLAZE_POWDER)
                 .criterion(hasItem(Items.BLAZE_POWDER), conditionsFromItem(Items.BLAZE_POWDER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.DRAGON_OMLET)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOMATO_SEED, 1)
+                .pattern("T")
+                .input('T', ModItems.TOMATO)
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.TOMATO_SEED)));
     }
 }
