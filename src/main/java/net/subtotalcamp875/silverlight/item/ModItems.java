@@ -25,8 +25,6 @@ public class ModItems {
 
     public static final Item TOMATO = registerItem("tomato",
             new AliasedBlockItem(ModBlocks.TOMATO_PLANT, new Item.Settings()));
-    public static final Item TOMATO_PLANT = registerItem("tomato_plant",
-            new Item(new Item.Settings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

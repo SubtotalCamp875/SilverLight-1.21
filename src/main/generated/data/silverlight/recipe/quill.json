@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_dye"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "S": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "FSF",
+    "FBF"
+  ],
+  "result": {
+    "count": 7,
+    "id": "silverlight:quill"
+  }
+}

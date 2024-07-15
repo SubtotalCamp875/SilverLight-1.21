@@ -21,8 +21,6 @@ public class ModItemGroups {
                         entries.add(ModItems.CANONICAL_BOOK);
                         entries.add(ModItems.DRAGON_OMLET);
 
-
-                        entries.add(ModItems.TOMATO_PLANT);
                         entries.add(ModItems.TOMATO);
 
 

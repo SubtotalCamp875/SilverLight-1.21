@@ -53,7 +53,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("FBF")
                 .input('S', Items.INK_SAC)
                 .input('F', Items.FEATHER)
-                .input('F', Items.BLUE_DYE)
+                .input('B', Items.BLUE_DYE)
                 .criterion(hasItem(Items.FEATHER), conditionsFromItem(Items.FEATHER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.QUILL)));
 
