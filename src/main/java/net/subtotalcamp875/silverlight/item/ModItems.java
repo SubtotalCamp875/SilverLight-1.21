@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.item.custom.BackpackItem;
+import net.subtotalcamp875.silverlight.item.custom.TomatoItem;
 
 public class ModItems {
 
@@ -23,8 +24,10 @@ public class ModItems {
     public static final Item DRAGON_OMLET = registerItem("dragon_omlet", new Item(new Item.Settings().food(ModFoodComponents.DRAGON_OMLET)));
 
 
-    public static final Item TOMATO = registerItem("tomato",
+    public static final Item TOMATO_SEED = registerItem("tomato_seed",
             new AliasedBlockItem(ModBlocks.TOMATO_PLANT, new Item.Settings()));
+    public static final Item TOMATO = registerItem("tomato",
+            new TomatoItem(new Item.Settings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

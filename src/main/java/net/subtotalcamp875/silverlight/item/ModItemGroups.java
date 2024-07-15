@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DRAGON_OMLET);
 
                         entries.add(ModItems.TOMATO);
+                        entries.add(ModItems.TOMATO_SEED);
 
 
                     }).build());
