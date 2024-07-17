@@ -25,7 +25,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRETCHY_LEATHER, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUILL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CANONICAL_BOOK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DRAGON_OMLET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRAGON_OMELET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRAGON_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OBSIDIAN_SHEARS, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
     }
 }

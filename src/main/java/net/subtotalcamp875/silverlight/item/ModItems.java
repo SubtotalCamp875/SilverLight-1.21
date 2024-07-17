@@ -21,7 +21,9 @@ public class ModItems {
     public static final Item STRETCHY_LEATHER = registerItem("stretchy_leather", new Item(new Item.Settings()));
     public static final Item QUILL = registerItem("quill", new Item(new Item.Settings()));
     public static final Item CANONICAL_BOOK = registerItem("canonical_book", new Item(new Item.Settings().maxCount(1)));
-    public static final Item DRAGON_OMLET = registerItem("dragon_omlet", new Item(new Item.Settings().food(ModFoodComponents.DRAGON_OMLET)));
+    public static final Item DRAGON_OMELET = registerItem("dragon_omelet", new Item(new Item.Settings().food(ModFoodComponents.DRAGON_OMELET)));
+    public static final Item DRAGON_SCRAP = registerItem("dragon_scrap", new Item(new Item.Settings()));
+    public static final Item OBSIDIAN_SHEARS = registerItem("obsidian_shears", new Item(new Item.Settings().maxDamage(64)));
 
 
     public static final Item TOMATO_SEED = registerItem("tomato_seed",
@@ -35,7 +37,7 @@ public class ModItems {
         entries.add(STRETCHY_LEATHER);
         entries.add(QUILL);
         entries.add(CANONICAL_BOOK);
-        entries.add(DRAGON_OMLET);
+        entries.add(DRAGON_OMELET);
     }
 
     private static Item registerItem(String name, Item item) {

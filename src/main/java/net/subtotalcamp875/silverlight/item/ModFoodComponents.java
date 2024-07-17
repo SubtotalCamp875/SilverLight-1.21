@@ -5,6 +5,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class ModFoodComponents {
-    public static final FoodComponent DRAGON_OMLET = new FoodComponent.Builder().nutrition(6).saturationModifier(15)
+    public static final FoodComponent DRAGON_OMELET = new FoodComponent.Builder().nutrition(8).saturationModifier(0.9f)
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100), 0.5f).alwaysEdible().build();
 }

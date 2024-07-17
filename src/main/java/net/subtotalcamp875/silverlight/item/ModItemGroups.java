@@ -19,7 +19,9 @@ public class ModItemGroups {
                         entries.add(ModItems.STRETCHY_LEATHER);
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
-                        entries.add(ModItems.DRAGON_OMLET);
+                        entries.add(ModItems.DRAGON_OMELET);
+                        entries.add(ModItems.DRAGON_SCRAP);
+                        entries.add(ModItems.OBSIDIAN_SHEARS);
 
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);
