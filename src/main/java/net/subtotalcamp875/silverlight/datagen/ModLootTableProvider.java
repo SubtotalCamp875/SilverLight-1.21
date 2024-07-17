@@ -25,5 +25,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .exactMatch(TomatoPlantBlock.AGE, 8));
 
         addDrop(ModBlocks.TOMATO_PLANT, cropDrops(ModBlocks.TOMATO_PLANT, ModItems.TOMATO, ModItems.TOMATO_SEED, builder2));
+        addDrop(ModBlocks.DRAGON_PROCESSING_STATION);
     }
 }

@@ -26,6 +26,8 @@ public class ModItemGroups {
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);
 
+                        entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
+
 
                     }).build());
 

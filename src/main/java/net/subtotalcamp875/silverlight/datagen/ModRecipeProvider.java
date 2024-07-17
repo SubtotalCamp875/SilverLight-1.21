@@ -8,6 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
+import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -70,11 +71,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBSIDIAN_SHEARS, 1)
                 .pattern(" O")
                 .pattern("OI")
-                .pattern("I")
+                .pattern("I ")
                 .input('I', Items.IRON_INGOT)
                 .input('O', Items.OBSIDIAN)
                 .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.OBSIDIAN_SHEARS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRAGON_PROCESSING_STATION, 1)
+                .pattern("OCO")
+                .pattern("S S")
+                .input('C', Items.STONECUTTER)
+                .input('S', Items.SMOOTH_STONE)
+                .input('O', Items.OBSIDIAN)
+                .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.DRAGON_PROCESSING_STATION)));
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOMATO_SEED, 1)

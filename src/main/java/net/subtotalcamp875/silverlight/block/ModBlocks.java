@@ -12,11 +12,15 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
+import net.subtotalcamp875.silverlight.block.custom.DragonProcessingStationBlock;
 import net.subtotalcamp875.silverlight.block.custom.TomatoPlantBlock;
 
 public class ModBlocks {
     public static final Block TOMATO_PLANT = Registry.register(Registries.BLOCK, Identifier.of(SilverLight.MOD_ID, "tomato_plant"),
             new TomatoPlantBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block DRAGON_PROCESSING_STATION = registerBlock("dragon_processing_station",
+            new DragonProcessingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
 
 

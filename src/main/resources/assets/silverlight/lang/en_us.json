@@ -4,11 +4,15 @@
   "item.silverlight.quill": "Quill",
   "item.silverlight.canonical_book": "Canonical Book",
   "item.silverlight.dragon_omelet": "Dragon Omelet",
+  "item.silverlight.dragon_scrap": "Dragon Scrap",
+  "item.silverlight.obsidian_shears": "Obsidian Shears",
 
 
   "item.silverlight.tomato_plant": "Tomato Plant",
   "item.silverlight.tomato": "Tomato",
   "item.silverlight.tomato_seed": "Tomato Seeds",
+
+  "block.silverlight.dragon_processing_station": "Dragon Processing Station",
 
 
   "itemgroup.silverlight": "Silver Light Group"
