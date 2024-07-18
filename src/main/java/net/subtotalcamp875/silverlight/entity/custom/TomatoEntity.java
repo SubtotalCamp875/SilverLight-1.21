@@ -5,9 +5,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
@@ -41,7 +38,6 @@ public class TomatoEntity extends ThrownItemEntity {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
         if (entity instanceof LivingEntity) {
-            LivingEntity livingEntity = (LivingEntity) entity;
             entityHitResult.getEntity().damage(this.getDamageSources().lightningBolt(), 0.1f);
         }
 
