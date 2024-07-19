@@ -59,14 +59,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.QUILL)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRAGON_OMELET, 1)
-                .pattern("CE")
+                .pattern("C")
                 .pattern("D ")
-                .pattern("BS")
+                .pattern("B")
                 .input('C', Items.CHORUS_FRUIT)
                 .input('D', ModItems.DRAGON_SCRAP)
                 .input('B', Items.BLAZE_POWDER)
-                .input('E', Items.END_STONE_BRICKS)
-                .input('S', Items.SANDSTONE_STAIRS)
                 .criterion(hasItem(Items.BLAZE_POWDER), conditionsFromItem(Items.BLAZE_POWDER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.DRAGON_OMELET)));
 

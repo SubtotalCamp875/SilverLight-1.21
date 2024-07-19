@@ -92,7 +92,7 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
-        Inventories.writeNbt(nbt, inventory, false, registryLookup);
+        Inventories.readNbt(nbt, inventory, registryLookup);
         progress = nbt.getInt("runicForgeProgress");
     }
 
@@ -140,14 +140,9 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
     }
 
     private void progressMultiplier() {
-        SilverLight.LOGGER.info("test1");
-        SilverLight.LOGGER.info(String.valueOf(this.hasBurningRecipe()));
-        SilverLight.LOGGER.info(String.valueOf(this.hasVoidRecipe()));
         if (this.hasBurningRecipe()) {
-            SilverLight.LOGGER.info("test2");
             this.increaseCraftProgress();
         } else if (this.hasVoidRecipe()) {
-            SilverLight.LOGGER.info("test3");
             this.increaseCraftProgress();
             this.increaseCraftProgress();
             this.increaseCraftProgress();
