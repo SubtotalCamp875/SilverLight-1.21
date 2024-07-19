@@ -26,6 +26,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.custom.DragonProcessingStationBlock;
 import net.subtotalcamp875.silverlight.item.ModItems;
 import net.subtotalcamp875.silverlight.screen.DragonProcessingScreenHandler;
@@ -41,6 +42,8 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
+    private int tick = 0;
+    private int maxTick = 50;
 
     public DragonProcessingStationBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.DRAGON_PROCESSING_STATION_BLOCK_ENTITY, pos, state);
@@ -106,13 +109,27 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
 
         if(isOutputSlotEmptyOrReceivable()) {
             if(this.hasRecipe()) {
-                this.increaseCraftProgress();
-                markDirty(world, pos, state);
+
+                if (!this.hasBlackEggRecipe()) {
+                    this.increaseCraftProgress();
+                    this.progressMultiplier();
+                    markDirty(world, pos, state);
+                } else {
+                    if (this.tickReached()) {
+                        this.increaseCraftProgress();
+                        this.progressMultiplier();
+                        this.resetTick();
+                    } else {
+                        this.increaseTick();
+                    }
+                    markDirty(world, pos, state);
+                    }
 
                 if(hasCraftingFinished()) {
                     this.craftItem();
                     this.resetProgress();
                 }
+
             } else {
                 this.resetProgress();
             }
@@ -122,8 +139,36 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
         }
     }
 
+    private void progressMultiplier() {
+        SilverLight.LOGGER.info("test1");
+        SilverLight.LOGGER.info(String.valueOf(this.hasBurningRecipe()));
+        SilverLight.LOGGER.info(String.valueOf(this.hasVoidRecipe()));
+        if (this.hasBurningRecipe()) {
+            SilverLight.LOGGER.info("test2");
+            this.increaseCraftProgress();
+        } else if (this.hasVoidRecipe()) {
+            SilverLight.LOGGER.info("test3");
+            this.increaseCraftProgress();
+            this.increaseCraftProgress();
+            this.increaseCraftProgress();
+            this.increaseCraftProgress();
+        }
+    }
+
     private void resetProgress() {
         this.progress = 0;
+    }
+
+    private void resetTick() {
+        this.tick = 0;
+    }
+
+    private void increaseTick() {
+        this.tick++;
+    }
+
+    private boolean tickReached() {
+        return tick >= maxTick;
     }
 
     private void craftItem() {
@@ -142,10 +187,31 @@ public class DragonProcessingStationBlockEntity extends BlockEntity implements E
 
     private boolean hasRecipe() {
         ItemStack result = new ItemStack(ModItems.DRAGON_SCRAP);
-        boolean hasInput = getStack(INPUT_SLOT).getItem() == Items.DRAGON_EGG;
-        boolean hasTool = getStack(TOOL_SLOT).getItem() == ModItems.OBSIDIAN_SHEARS;
+        boolean hasInput = getStack(INPUT_SLOT).getItem() == Items.DRAGON_EGG || getStack(INPUT_SLOT).getItem() == ModItems.BLACK_EGG;
+        boolean hasTool =
+                getStack(TOOL_SLOT).getItem() == ModItems.OBSIDIAN_SHEARS ||
+                getStack(TOOL_SLOT).getItem() == ModItems.BURNING_OBSIDIAN_SHEARS ||
+                getStack(TOOL_SLOT).getItem() == ModItems.VOID_OBSIDIAN_SHEARS;
 
         return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem()) && hasTool;
+    }
+
+    private boolean hasBurningRecipe() {
+        boolean hasTool = getStack(TOOL_SLOT).getItem() == ModItems.BURNING_OBSIDIAN_SHEARS;
+
+        return hasTool;
+    }
+
+    private boolean hasVoidRecipe() {
+        boolean hasTool = getStack(TOOL_SLOT).getItem() == ModItems.VOID_OBSIDIAN_SHEARS;
+
+        return hasTool;
+    }
+
+    private boolean hasBlackEggRecipe() {
+        boolean hasInput = getStack(INPUT_SLOT).getItem() == ModItems.BLACK_EGG;
+
+        return hasInput;
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

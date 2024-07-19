@@ -21,7 +21,10 @@ public class ModItemGroups {
                         entries.add(ModItems.CANONICAL_BOOK);
                         entries.add(ModItems.DRAGON_OMELET);
                         entries.add(ModItems.DRAGON_SCRAP);
+                        entries.add(ModItems.BLACK_EGG);
                         entries.add(ModItems.OBSIDIAN_SHEARS);
+                        entries.add(ModItems.BURNING_OBSIDIAN_SHEARS);
+                        entries.add(ModItems.VOID_OBSIDIAN_SHEARS);
 
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);

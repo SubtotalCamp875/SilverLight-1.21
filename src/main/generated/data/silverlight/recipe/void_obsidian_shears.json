@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "silverlight:burning_obsidian_shears"
+    },
+    "D": {
+      "item": "minecraft:dragon_head"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "ODO",
+    "DBI",
+    "OIO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:void_obsidian_shears"
+  }
+}

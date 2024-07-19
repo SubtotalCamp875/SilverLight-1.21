@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "O": {
+      "item": "silverlight:obsidian_shears"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "BSB",
+    "BOB",
+    "BLB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:burning_obsidian_shears"
+  }
+}
