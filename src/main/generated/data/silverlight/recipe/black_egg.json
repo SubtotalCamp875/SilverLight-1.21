@@ -3,25 +3,25 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:elytra"
-    },
-    "B": {
-      "item": "minecraft:black_dye"
-    },
-    "D": {
-      "item": "minecraft:dragon_head"
-    },
-    "E": {
       "item": "minecraft:egg"
     },
-    "O": {
-      "item": "minecraft:obsidian"
+    "C": {
+      "item": "minecraft:end_crystal"
+    },
+    "D": {
+      "item": "minecraft:black_dye"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "minecraft:shulker_shell"
     }
   },
   "pattern": [
-    "ODO",
-    "B#B",
-    "OEO"
+    "EDE",
+    "S#S",
+    "CCC"
   ],
   "result": {
     "count": 1,

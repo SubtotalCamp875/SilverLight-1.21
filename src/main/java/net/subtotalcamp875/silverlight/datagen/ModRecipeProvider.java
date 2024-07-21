@@ -21,20 +21,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BACKPACK, 1)
-                .pattern("SNS")
+                .pattern("STS")
                 .pattern("BCB")
                 .pattern("LLL")
                 .input('S', ModItems.STRETCHY_LEATHER)
                 .input('C', Items.CHEST)
-                .input('N', Items.ANCIENT_DEBRIS)
+                .input('T', Items.TRIPWIRE_HOOK)
                 .input('L', Items.LEATHER)
                 .input('B', ModItems.CANONICAL_BOOK)
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.BACKPACK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRETCHY_LEATHER, 1)
-                .pattern("LSL")
-                .pattern("LRL")
+                .pattern("SL")
+                .pattern("R ")
                 .input('S', Items.SLIME_BALL)
                 .input('L', Items.LEATHER)
                 .input('R', Items.RABBIT_HIDE)
@@ -60,7 +60,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRAGON_OMELET, 1)
                 .pattern("C")
-                .pattern("D ")
+                .pattern("D")
                 .pattern("B")
                 .input('C', Items.CHORUS_FRUIT)
                 .input('D', ModItems.DRAGON_SCRAP)
@@ -69,14 +69,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.DRAGON_OMELET)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLACK_EGG, 1)
-                .pattern("ODO")
-                .pattern("B#B")
-                .pattern("OEO")
-                .input('O', Items.OBSIDIAN)
-                .input('D', Items.DRAGON_HEAD)
-                .input('B', Items.BLACK_DYE)
-                .input('#', Items.ELYTRA)
-                .input('E', Items.EGG)
+                .pattern("EDE")
+                .pattern("S#S")
+                .pattern("CCC")
+                .input('E', Items.ENDER_EYE)
+                .input('D', Items.BLACK_DYE)
+                .input('S', Items.SHULKER_SHELL)
+                .input('#', Items.EGG)
+                .input('C', Items.END_CRYSTAL)
                 .criterion(hasItem(Items.DRAGON_HEAD), conditionsFromItem(Items.DRAGON_HEAD))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.BLACK_EGG)));
 
@@ -101,13 +101,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.BURNING_OBSIDIAN_SHEARS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VOID_OBSIDIAN_SHEARS, 1)
-                .pattern("ODO")
-                .pattern("DBI")
-                .pattern("OIO")
-                .input('O', Items.OBSIDIAN)
+                .pattern(" SE")
+                .pattern("SCB")
+                .pattern("EB ")
+                .input('S', Items.SHULKER_SHELL)
                 .input('B', ModItems.BURNING_OBSIDIAN_SHEARS)
-                .input('I', Items.IRON_BLOCK)
-                .input('D', Items.DRAGON_HEAD)
+                .input('E', Items.ENDER_EYE)
+                .input('C', Items.END_CRYSTAL)
                 .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.VOID_OBSIDIAN_SHEARS)));
 

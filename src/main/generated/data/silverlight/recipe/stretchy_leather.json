@@ -13,8 +13,8 @@
     }
   },
   "pattern": [
-    "LSL",
-    "LRL"
+    "SL",
+    "R "
   ],
   "result": {
     "count": 1,

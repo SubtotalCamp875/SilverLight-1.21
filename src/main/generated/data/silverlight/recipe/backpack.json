@@ -11,15 +11,15 @@
     "L": {
       "item": "minecraft:leather"
     },
-    "N": {
-      "item": "minecraft:ancient_debris"
-    },
     "S": {
       "item": "silverlight:stretchy_leather"
+    },
+    "T": {
+      "item": "minecraft:tripwire_hook"
     }
   },
   "pattern": [
-    "SNS",
+    "STS",
     "BCB",
     "LLL"
   ],

@@ -5,20 +5,20 @@
     "B": {
       "item": "silverlight:burning_obsidian_shears"
     },
-    "D": {
-      "item": "minecraft:dragon_head"
+    "C": {
+      "item": "minecraft:end_crystal"
     },
-    "I": {
-      "item": "minecraft:iron_block"
+    "E": {
+      "item": "minecraft:ender_eye"
     },
-    "O": {
-      "item": "minecraft:obsidian"
+    "S": {
+      "item": "minecraft:shulker_shell"
     }
   },
   "pattern": [
-    "ODO",
-    "DBI",
-    "OIO"
+    " SE",
+    "SCB",
+    "EB "
   ],
   "result": {
     "count": 1,

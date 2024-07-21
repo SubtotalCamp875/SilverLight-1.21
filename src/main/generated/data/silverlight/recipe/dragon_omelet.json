@@ -10,18 +10,12 @@
     },
     "D": {
       "item": "silverlight:dragon_scrap"
-    },
-    "E": {
-      "item": "minecraft:end_stone_bricks"
-    },
-    "S": {
-      "item": "minecraft:sandstone_stairs"
     }
   },
   "pattern": [
-    "CE",
-    "D ",
-    "BS"
+    "C",
+    "D",
+    "B"
   ],
   "result": {
     "count": 1,
