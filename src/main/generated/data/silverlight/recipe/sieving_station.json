@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:smooth_stone"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "W": {
+      "item": "minecraft:andesite_wall"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "W W"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:sieving_station"
+  }
+}

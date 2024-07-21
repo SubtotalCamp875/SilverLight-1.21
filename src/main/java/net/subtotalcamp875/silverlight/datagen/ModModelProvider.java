@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_PLANT, TomatoPlantBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
     }
 
     @Override

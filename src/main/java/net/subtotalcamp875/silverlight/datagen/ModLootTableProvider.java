@@ -26,5 +26,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.TOMATO_PLANT, cropDrops(ModBlocks.TOMATO_PLANT, ModItems.TOMATO, ModItems.TOMATO_SEED, builder2));
         addDrop(ModBlocks.DRAGON_PROCESSING_STATION);
+        addDrop(ModBlocks.SIEVING_STATION);
     }
 }

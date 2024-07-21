@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TOMATO_SEED);
 
                         entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
+                        entries.add(ModBlocks.SIEVING_STATION);
 
 
                     }).build());

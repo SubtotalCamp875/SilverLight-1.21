@@ -14,10 +14,7 @@ import net.subtotalcamp875.silverlight.component.type.BackpackContentsComponent;
 import net.subtotalcamp875.silverlight.entity.ModEntities;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipComponent;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipData;
-import net.subtotalcamp875.silverlight.screen.BackpackScreen;
-import net.subtotalcamp875.silverlight.screen.DragonProcessingScreen;
-import net.subtotalcamp875.silverlight.screen.ModScreenHandlerTypes;
-import net.subtotalcamp875.silverlight.screen.ModScreenHandlers;
+import net.subtotalcamp875.silverlight.screen.*;
 
 public class SilverLightClient implements ClientModInitializer {
     @Override
@@ -34,5 +31,6 @@ public class SilverLightClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.TOMATO_PROJECTILE, FlyingItemEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.DRAGON_PROCESSING_SCREEN_HANDLER, DragonProcessingScreen::new);
+        HandledScreens.register(ModScreenHandlers.SIEVING_SCREEN_HANDLER, SievingScreen::new);
     }
 }

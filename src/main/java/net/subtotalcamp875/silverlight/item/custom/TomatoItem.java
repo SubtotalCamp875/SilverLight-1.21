@@ -36,5 +36,4 @@ public class TomatoItem extends Item {
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
-
 }

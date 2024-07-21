@@ -120,6 +120,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.OBSIDIAN), conditionsFromItem(Items.OBSIDIAN))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.DRAGON_PROCESSING_STATION)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SIEVING_STATION, 1)
+                .pattern("CSC")
+                .pattern("W W")
+                .input('C', Items.SMOOTH_STONE)
+                .input('S', Items.STRING)
+                .input('W', Items.ANDESITE_WALL)
+                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.SIEVING_STATION)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOMATO_SEED, 1)
                 .pattern("T")
