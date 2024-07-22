@@ -19,6 +19,11 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(SievingStationBlockEntity::new,
                             ModBlocks.SIEVING_STATION).build());
 
+    public static final BlockEntityType<FermentingStationBlockEntity> FERMENTING_STATION_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(SilverLight.MOD_ID, "fermenting_be"),
+                    FabricBlockEntityTypeBuilder.create(FermentingStationBlockEntity::new,
+                            ModBlocks.FERMENTING_STATION).build());
+
 
     public static void registerBlockEntities() {
         SilverLight.LOGGER.info("Registering Block Entities for " + SilverLight.MOD_ID);

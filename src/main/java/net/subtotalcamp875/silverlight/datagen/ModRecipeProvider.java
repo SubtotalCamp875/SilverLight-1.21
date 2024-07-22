@@ -129,6 +129,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.SIEVING_STATION)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FERMENTING_STATION, 1)
+                .pattern("MPR")
+                .pattern("GBG")
+                .pattern("SSS")
+                .input('M', Items.BROWN_MUSHROOM)
+                .input('P', Items.OAK_PLANKS)
+                .input('R', Items.RED_MUSHROOM)
+                .input('G', Items.GLASS)
+                .input('B', Items.BARREL)
+                .input('S', Items.SMOOTH_STONE)
+                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.FERMENTING_STATION)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOMATO_SEED, 1)
                 .pattern("T")
                 .input('T', ModItems.TOMATO)

@@ -29,6 +29,10 @@ public class ModItems {
     public static final Item VOID_OBSIDIAN_SHEARS = registerItem("void_obsidian_shears", new Item(new Item.Settings().maxDamage(64)));
 
 
+
+    public static final Item POTION_OF_NAUSEA = registerItem("potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_NAUSEA)));
+    public static final Item POTENT_POTION_OF_NAUSEA = registerItem("potent_potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTENT_POTION_OF_NAUSEA)));
+
     public static final Item TOMATO_SEED = registerItem("tomato_seed",
             new AliasedBlockItem(ModBlocks.TOMATO_PLANT, new Item.Settings()));
     public static final Item TOMATO = registerItem("tomato",

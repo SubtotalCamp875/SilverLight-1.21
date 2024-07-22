@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.custom.DragonProcessingStationBlock;
+import net.subtotalcamp875.silverlight.block.custom.FermentingStationBlock;
 import net.subtotalcamp875.silverlight.block.custom.SievingStationBlock;
 import net.subtotalcamp875.silverlight.block.custom.TomatoPlantBlock;
 
@@ -24,6 +25,8 @@ public class ModBlocks {
             new DragonProcessingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block SIEVING_STATION = registerBlock("sieving_station",
             new SievingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+    public static final Block FERMENTING_STATION = registerBlock("fermenting_station",
+            new FermentingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
 
 

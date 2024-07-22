@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_PLANT, TomatoPlantBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
     }
 
     @Override
@@ -33,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.OBSIDIAN_SHEARS, Models.GENERATED);
         itemModelGenerator.register(ModItems.BURNING_OBSIDIAN_SHEARS, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOID_OBSIDIAN_SHEARS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_NAUSEA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTENT_POTION_OF_NAUSEA, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
     }
 }

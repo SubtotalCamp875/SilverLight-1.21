@@ -72,14 +72,14 @@ public class SievingStationBlockEntity extends BlockEntity implements ExtendedSc
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, false, registryLookup);
-        nbt.putInt("runicForgeProgress", progress);
+        nbt.putInt("SievingProgress", progress);
     }
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
         Inventories.readNbt(nbt, inventory, registryLookup);
-        progress = nbt.getInt("runicForgeProgress");
+        progress = nbt.getInt("SievingProgress");
     }
 
     @Nullable

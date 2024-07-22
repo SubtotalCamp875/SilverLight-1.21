@@ -9,6 +9,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
+import net.subtotalcamp875.silverlight.block.entity.FermentingStationBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.component.type.BackpackContentsComponent;
 import net.subtotalcamp875.silverlight.entity.ModEntities;
@@ -32,5 +33,6 @@ public class SilverLightClient implements ClientModInitializer {
 
         HandledScreens.register(ModScreenHandlers.DRAGON_PROCESSING_SCREEN_HANDLER, DragonProcessingScreen::new);
         HandledScreens.register(ModScreenHandlers.SIEVING_SCREEN_HANDLER, SievingScreen::new);
+        HandledScreens.register(ModScreenHandlers.FERMENTING_SCREEN_HANDLER, FermentingScreen::new);
     }
 }

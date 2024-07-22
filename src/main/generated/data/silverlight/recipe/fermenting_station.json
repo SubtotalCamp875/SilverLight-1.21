@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "M": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "R": {
+      "item": "minecraft:red_mushroom"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "MPR",
+    "GBG",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:fermenting_station"
+  }
+}

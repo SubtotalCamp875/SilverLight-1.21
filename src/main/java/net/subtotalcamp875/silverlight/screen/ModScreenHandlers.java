@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.entity.DragonProcessingStationBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.DragonProcessingStationData;
+import net.subtotalcamp875.silverlight.block.entity.FermentingStationData;
 import net.subtotalcamp875.silverlight.block.entity.SievingStationData;
 
 public class ModScreenHandlers {
@@ -21,7 +22,10 @@ public class ModScreenHandlers {
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "sieving"),
                     new ExtendedScreenHandlerType<>(SievingScreenHandler::new, SievingStationData.PACKET_CODEC));
 
-
+    public static final ScreenHandlerType<FermentingScreenHandler> FERMENTING_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "fermenting"),
+                    new ExtendedScreenHandlerType<>(FermentingScreenHandler::new, FermentingStationData.PACKET_CODEC));
+    
     public static void registerScreenHandlers() {
         SilverLight.LOGGER.info("Registering Screen Handlers for " + SilverLight.MOD_ID);
     }

@@ -26,11 +26,15 @@ public class ModItemGroups {
                         entries.add(ModItems.BURNING_OBSIDIAN_SHEARS);
                         entries.add(ModItems.VOID_OBSIDIAN_SHEARS);
 
+                        entries.add(ModItems.POTION_OF_NAUSEA);
+                        entries.add(ModItems.POTENT_POTION_OF_NAUSEA);
+
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);
 
                         entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
                         entries.add(ModBlocks.SIEVING_STATION);
+                        entries.add(ModBlocks.FERMENTING_STATION);
 
 
                     }).build());

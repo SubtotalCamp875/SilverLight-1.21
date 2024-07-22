@@ -1,6 +1,7 @@
 {
   "values": [
     "silverlight:dragon_processing_station",
-    "silverlight:sieving_station"
+    "silverlight:sieving_station",
+    "silverlight:fermenting_station"
   ]
 }
