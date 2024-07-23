@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "silverlight:single_condensed_blaze_rod"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:blaze_rod"
+  }
+}

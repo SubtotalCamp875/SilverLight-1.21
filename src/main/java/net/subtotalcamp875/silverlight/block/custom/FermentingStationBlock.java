@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.block.entity.FermentingStationBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.SievingStationBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.SievingStationData;
 import org.jetbrains.annotations.Nullable;
 
 public class FermentingStationBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -65,6 +67,7 @@ public class FermentingStationBlock extends BlockWithEntity implements BlockEnti
         SilverLight.LOGGER.info("test1");
         if (!world.isClient) {
             SilverLight.LOGGER.info("test2");
+
             NamedScreenHandlerFactory screenHandlerFactory = ((FermentingStationBlockEntity) world.getBlockEntity(pos));
             SilverLight.LOGGER.info("test3");
             if (screenHandlerFactory != null) {

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "silverlight:block/double_condensed_respawn_anchor"
+  }
+}

@@ -19,7 +19,7 @@ public class FermentingScreen extends HandledScreen<FermentingScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        titleY = 500;
+        titleY = 1000;
         playerInventoryTitleY = 1000;
     }
 

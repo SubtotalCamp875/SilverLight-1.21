@@ -10,5 +10,8 @@ public class ModFoodComponents {
     public static final FoodComponent POTION_OF_NAUSEA = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1200), 1f).alwaysEdible().build();
     public static final FoodComponent POTENT_POTION_OF_NAUSEA = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 72000), 1f).alwaysEdible().build();
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 72000), 1f)
+            .alwaysEdible().build();
 }
