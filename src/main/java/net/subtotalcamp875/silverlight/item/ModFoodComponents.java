@@ -20,6 +20,9 @@ public class ModFoodComponents {
             .saturationModifier(2)
             .alwaysEdible().build();
     public static final FoodComponent CRACKER = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 12000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 12000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 12000), 1f)
             .nutrition(1)
             .saturationModifier(20)
             .snack()

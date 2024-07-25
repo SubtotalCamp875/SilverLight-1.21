@@ -19,7 +19,7 @@ public class FermentingScreenHandler extends ScreenHandler {
 
     public FermentingScreenHandler(int syncId, PlayerInventory inventory, FermentingStationData data) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(data.pos()),
-                new ArrayPropertyDelegate(5));
+                new ArrayPropertyDelegate(8));
     }
 
     public FermentingScreenHandler(int syncId, PlayerInventory playerInventory,
@@ -51,9 +51,33 @@ public class FermentingScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the width in pixels of your arrow
+        int progressArrowSize = 26; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledTickProgress() {
+        int tickProgress = this.propertyDelegate.get(2);
+        int maxTickProgress = this.propertyDelegate.get(3);  // Max Progress
+        int progressArrowSize = 64; // This is the height in pixels of your arrow
+
+        return maxTickProgress != 0 && tickProgress != 0 ? tickProgress * progressArrowSize / maxTickProgress : 0;
+    }
+
+    public int getScaledSecondsProgress() {
+        int secondsProgress = this.propertyDelegate.get(4);
+        int maxSecondsProgress = this.propertyDelegate.get(5);  // Max Progress
+        int progressArrowSize = 64; // This is the height in pixels of your arrow
+
+        return maxSecondsProgress != 0 && secondsProgress != 0 ? secondsProgress * progressArrowSize / maxSecondsProgress : 0;
+    }
+
+    public int getScaledMinuteProgress() {
+        int minuteProgress = this.propertyDelegate.get(6);
+        int maxMinuteProgress = this.propertyDelegate.get(7);  // Max Progress
+        int progressArrowSize = 64; // This is the height in pixels of your arrow
+
+        return maxMinuteProgress != 0 && minuteProgress != 0 ? minuteProgress * progressArrowSize / maxMinuteProgress : 0;
     }
 
     @Override

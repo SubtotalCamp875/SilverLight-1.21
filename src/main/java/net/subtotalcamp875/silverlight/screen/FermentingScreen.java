@@ -34,11 +34,32 @@ public class FermentingScreen extends HandledScreen<FermentingScreenHandler> {
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         renderProgressArrow(context, x, y);
+        renderTickProgressArrow(context, x, y);
+        renderSecondsProgressArrow(context, x, y);
+        renderMinuteProgressArrow(context, x, y);
     }
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if (handler.isCrafting()) {
             context.drawTexture(TEXTURE, x + 85, y + 30, 176, 0, 8, handler.getScaledProgress());
+        }
+    }
+
+    private void renderTickProgressArrow(DrawContext context, int x, int y) {
+        if (handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 116, y + 11, 176, 29, 16, handler.getScaledTickProgress());
+        }
+    }
+
+    private void renderSecondsProgressArrow(DrawContext context, int x, int y) {
+        if (handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 134, y + 11, 176, 29, 16, handler.getScaledSecondsProgress());
+        }
+    }
+
+    private void renderMinuteProgressArrow(DrawContext context, int x, int y) {
+        if (handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 152, y + 11, 176, 29, 16, handler.getScaledMinuteProgress());
         }
     }
 

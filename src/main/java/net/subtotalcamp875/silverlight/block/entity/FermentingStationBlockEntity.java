@@ -36,14 +36,16 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     private static final int FERMENTING_SLOT_3 = 4;
 
     protected final PropertyDelegate propertyDelegate;
-    private int progress = 0;
-    private int tickProgress = 0;
-    private int secondsProgress = 0;
-    private int minuteProgress = 0;
-    private int maxProgress = 60;
+    private int maxProgress = 36000;
     private int maxTickProgress = 20;
     private int maxSecondsProgress = 60;
     private int maxMinuteProgress = 30;
+    private int minTickProgress = 0;
+    private int minSecondsProgress = 0;
+    private int progress = 0;
+    private int tickProgress = maxTickProgress;
+    private int secondsProgress = maxSecondsProgress;
+    private int minuteProgress = maxMinuteProgress;
 
     public FermentingStationBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FERMENTING_STATION_BLOCK_ENTITY, pos, state);
@@ -53,6 +55,12 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 return switch (index) {
                     case 0 -> FermentingStationBlockEntity.this.progress;
                     case 1 -> FermentingStationBlockEntity.this.maxProgress;
+                    case 2 -> FermentingStationBlockEntity.this.tickProgress;
+                    case 3 -> FermentingStationBlockEntity.this.maxTickProgress;
+                    case 4 -> FermentingStationBlockEntity.this.secondsProgress;
+                    case 5 -> FermentingStationBlockEntity.this.maxSecondsProgress;
+                    case 6 -> FermentingStationBlockEntity.this.minuteProgress;
+                    case 7 -> FermentingStationBlockEntity.this.maxMinuteProgress;
                     default -> 0;
                 };
             }
@@ -62,12 +70,18 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 switch (index) {
                     case 0 -> FermentingStationBlockEntity.this.progress = value;
                     case 1 -> FermentingStationBlockEntity.this.maxProgress = value;
+                    case 2 -> FermentingStationBlockEntity.this.tickProgress = value;
+                    case 3 -> FermentingStationBlockEntity.this.maxTickProgress = value;
+                    case 4 -> FermentingStationBlockEntity.this.secondsProgress = value;
+                    case 5 -> FermentingStationBlockEntity.this.maxSecondsProgress = value;
+                    case 6 -> FermentingStationBlockEntity.this.minuteProgress = value;
+                    case 7 -> FermentingStationBlockEntity.this.maxMinuteProgress = value;
                 }
             }
 
             @Override
             public int size() {
-                return 2;
+                return 8;
             }
         };
     }
@@ -87,6 +101,9 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, false, registryLookup);
         nbt.putInt("FermentingProgress", progress);
+        nbt.putInt("FermentingTickProgress", tickProgress);
+        nbt.putInt("FermentingSecondsProgress", secondsProgress);
+        nbt.putInt("FermentingMinuteProgress", minuteProgress);
     }
 
     @Override
@@ -94,6 +111,9 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         super.readNbt(nbt, registryLookup);
         Inventories.readNbt(nbt, inventory, registryLookup);
         progress = nbt.getInt("FermentingProgress");
+        tickProgress = nbt.getInt("FermentingTickProgress");
+        secondsProgress = nbt.getInt("FermentingSecondsProgress");
+        minuteProgress = nbt.getInt("FermentingMinuteProgress");
     }
 
     @Nullable
@@ -121,7 +141,6 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                     this.resetSecondProgress();
                     this.increaseMinuteProgress();
                 }
-                SilverLight.LOGGER.info(progress + " " + tickProgress + " " + secondsProgress + " " + minuteProgress);
 
                 markDirty(world, pos, state);
 
@@ -139,17 +158,17 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     private void resetProgress() {
         this.progress = 0;
-        this.tickProgress = 0;
-        this.secondsProgress = 0;
-        this.minuteProgress = 0;
+        this.tickProgress = maxTickProgress;
+        this.secondsProgress = maxSecondsProgress;
+        this.minuteProgress = maxMinuteProgress;
     }
 
     private void resetTickProgress() {
-        this.tickProgress = 0;
+        this.tickProgress = maxTickProgress;
     }
 
     private void resetSecondProgress() {
-        this.secondsProgress = 0;
+        this.secondsProgress = maxSecondsProgress;
     }
 
     private void craftItem() {
@@ -206,11 +225,11 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     }
 
     private boolean tickProgressFinished() {
-        return tickProgress >= maxTickProgress;
+        return tickProgress <= minTickProgress;
     }
 
     private boolean secondPrograssFinished() {
-        return secondsProgress >= maxSecondsProgress;
+        return secondsProgress <= minSecondsProgress;
     }
 
 
@@ -219,15 +238,15 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     }
 
     private void increaseTickProgress() {
-        tickProgress++;
+        tickProgress--;
     }
 
     private void increaseSecondsProgress() {
-        secondsProgress++;
+        secondsProgress--;
     }
 
     private void increaseMinuteProgress() {
-        minuteProgress++;
+        minuteProgress--;
     }
 
     private boolean hasInputRecipes() {
