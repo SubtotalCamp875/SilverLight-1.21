@@ -154,6 +154,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input('T', ModItems.TOMATO)
                     .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
                     .offerTo(exporter, Identifier.of(getRecipeName(ModItems.TOMATO_SEED)));
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRACKER, 3)
+                    .pattern("B")
+                    .input('B', Items.BREAD)
+                    .criterion(hasItem(ModItems.CRACKER), conditionsFromItem(ModItems.CRACKER))
+                    .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CRACKER)));
         }
         if (isBlackhole) {
             if (isMainBlackholeItems) {

@@ -165,6 +165,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.POTION_OF_NAUSEA);
                         entries.add(ModItems.POTENT_POTION_OF_NAUSEA);
+                        entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);

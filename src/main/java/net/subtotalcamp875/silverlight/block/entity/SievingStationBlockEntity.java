@@ -29,7 +29,7 @@ public class SievingStationBlockEntity extends BlockEntity implements ExtendedSc
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 20;
+    private int maxProgress = 16;
 
     public SievingStationBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.SIEVING_STATION_BLOCK_ENTITY, pos, state);
@@ -133,12 +133,12 @@ public class SievingStationBlockEntity extends BlockEntity implements ExtendedSc
 
         if (getStack(INPUT_SLOT).getItem() == Items.DIRT) {
             int drop = rand.nextInt(1000);
-            if (drop == 0) {result = new ItemStack(Items.MYCELIUM);}
-            if (drop >= 1 && drop <= 149) {result = new ItemStack(Items.MOSS_BLOCK);}
-            if (drop >= 150 && drop <= 199) {result = new ItemStack(Items.FLINT);}
-            if (drop >= 200 && drop <= 299) {result = new ItemStack(Items.COBBLESTONE);}
-            if (drop >= 300 && drop <= 499) {result = new ItemStack(Items.BONE_MEAL);}
-            if (drop >= 500) {result = new ItemStack(Items.DIRT);}
+            if (drop == 4) {result = new ItemStack(Items.MYCELIUM);}
+            if (drop >= 5 && drop <= 153) {result = new ItemStack(Items.MOSS_BLOCK);}
+            if (drop >= 154 && drop <= 203) {result = new ItemStack(Items.FLINT);}
+            if (drop >= 204 && drop <= 303) {result = new ItemStack(Items.COBBLESTONE);}
+            if (drop >= 304 && drop <= 503) {result = new ItemStack(Items.BONE_MEAL);}
+            if (drop >= 504) {result = new ItemStack(Items.DIRT);}
         }
 
         return result;

@@ -171,6 +171,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VOID_OBSIDIAN_SHEARS, Models.GENERATED);
         itemModelGenerator.register(ModItems.POTION_OF_NAUSEA, Models.GENERATED);
         itemModelGenerator.register(ModItems.POTENT_POTION_OF_NAUSEA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRACKER, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
     }
 }

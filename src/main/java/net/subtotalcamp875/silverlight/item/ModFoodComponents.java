@@ -12,6 +12,16 @@ public class ModFoodComponents {
     public static final FoodComponent POTENT_POTION_OF_NAUSEA = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 72000), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 72000), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 72000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 72000), 1f)
+            .nutrition(4)
+            .saturationModifier(2)
             .alwaysEdible().build();
+    public static final FoodComponent CRACKER = new FoodComponent.Builder()
+            .nutrition(1)
+            .saturationModifier(20)
+            .snack()
+            .build();
 }

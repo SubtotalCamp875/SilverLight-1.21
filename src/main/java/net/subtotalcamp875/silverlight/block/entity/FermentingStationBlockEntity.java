@@ -3,6 +3,7 @@ package net.subtotalcamp875.silverlight.block.entity;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.input.Input;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -18,6 +19,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.item.ModItems;
 import net.subtotalcamp875.silverlight.screen.FermentingScreenHandler;
 import org.jetbrains.annotations.Nullable;
@@ -38,7 +40,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     private int tickProgress = 0;
     private int secondsProgress = 0;
     private int minuteProgress = 0;
-    private int maxProgress = 36000;
+    private int maxProgress = 60;
     private int maxTickProgress = 20;
     private int maxSecondsProgress = 60;
     private int maxMinuteProgress = 30;
@@ -65,7 +67,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
             @Override
             public int size() {
-                return 5;
+                return 2;
             }
         };
     }
@@ -119,6 +121,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                     this.resetSecondProgress();
                     this.increaseMinuteProgress();
                 }
+                SilverLight.LOGGER.info(progress + " " + tickProgress + " " + secondsProgress + " " + minuteProgress);
 
                 markDirty(world, pos, state);
 
@@ -186,11 +189,11 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         for (int i = 0; i < 3; i++) {
             int slot = i+2;
 
-            if (getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA && getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA) {
+            if (getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA && getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA) {
                 chance += 25;
             }
 
-            if (getStack(slot).getItem() == Items.MYCELIUM && getStack(slot).getItem() == Items.POTION) {
+            if (getStack(slot).getItem() == Items.MYCELIUM && getStack(INPUT_SLOT).getItem() == Items.POTION) {
                 chance += 25;
             }
         }
