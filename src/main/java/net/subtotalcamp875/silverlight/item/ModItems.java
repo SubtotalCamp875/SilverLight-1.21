@@ -23,6 +23,7 @@ public class ModItems {
     public static final Item CORRUPTED_ESSENCE = registerItem("corrupted_essence", new Item(new Item.Settings()));
     public static final Item MULTI_PISTON = registerItem("multi_piston", new Item(new Item.Settings()));
     public static final Item LIFE_CORE = registerItem("life_core", new Item(new Item.Settings()));
+    public static final Item DESTRUCTIVE_CORE = registerItem("destructive_core", new Item(new Item.Settings()));
     public static final Item OVERWORLD_CORE = registerItem("overworld_core", new Item(new Item.Settings()));
     public static final Item NETHER_CORE = registerItem("nether_core", new Item(new Item.Settings()));
     public static final Item END_CORE = registerItem("end_core", new Item(new Item.Settings()));
@@ -37,6 +38,7 @@ public class ModItems {
     public static final Item SINGLE_CONDENSED_PHANTOM_MEMBRANE = registerItem("single_condensed_phantom_membrane", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_ELYTRA = registerItem("single_condensed_elytra", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_DRAGON_HEAD = registerItem("single_condensed_dragon_head", new Item(new Item.Settings()));
+    public static final Item SINGLE_CONDENSED_NETHER_STAR = registerItem("single_condensed_nether_star", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("double_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_FIREWORK_ROCKET = registerItem("double_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_BLAZE_ROD = registerItem("double_condensed_blaze_rod", new Item(new Item.Settings()));

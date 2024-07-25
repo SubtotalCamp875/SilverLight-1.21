@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "silverlight:quadruple_condensed_copper_block"
+    },
+    "I": {
+      "item": "silverlight:triple_condensed_iron_block"
+    },
+    "P": {
+      "item": "silverlight:quadruple_condensed_piston"
+    },
+    "R": {
+      "item": "silverlight:double_condensed_redstone_block"
+    },
+    "S": {
+      "item": "silverlight:quadruple_condensed_stone"
+    }
+  },
+  "pattern": [
+    "III",
+    "PCP",
+    "SRS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:multi_piston"
+  }
+}

@@ -17,8 +17,6 @@ import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.block.entity.FermentingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.SievingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.SievingStationData;
 import org.jetbrains.annotations.Nullable;
 
 public class FermentingStationBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -64,25 +62,19 @@ public class FermentingStationBlock extends BlockWithEntity implements BlockEnti
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        SilverLight.LOGGER.info("test1");
         if (!world.isClient) {
-            SilverLight.LOGGER.info("test2");
 
             NamedScreenHandlerFactory screenHandlerFactory = ((FermentingStationBlockEntity) world.getBlockEntity(pos));
-            SilverLight.LOGGER.info("test3");
             if (screenHandlerFactory != null) {
-                SilverLight.LOGGER.info("test4");
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
-        SilverLight.LOGGER.info("test5");
         return ActionResult.SUCCESS;
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        SilverLight.LOGGER.info("test0.1");
         return validateTicker(type, ModBlockEntities.FERMENTING_STATION_BLOCK_ENTITY,
                 (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }

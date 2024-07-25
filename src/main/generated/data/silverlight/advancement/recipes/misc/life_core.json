@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_life_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "silverlight:life_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:life_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_life_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:life_core"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "quadruple_condensed_nether_wart_block",
+  "ingredients": [
+    {
+      "item": "silverlight:quadruple_condensed_nether_wart_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:triple_condensed_nether_wart_block"
+  }
+}

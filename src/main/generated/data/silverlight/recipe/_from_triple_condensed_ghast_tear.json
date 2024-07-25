@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "triple_condensed_ghast_tear",
+  "ingredients": [
+    {
+      "item": "silverlight:triple_condensed_ghast_tear"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:double_condensed_ghast_tear"
+  }
+}

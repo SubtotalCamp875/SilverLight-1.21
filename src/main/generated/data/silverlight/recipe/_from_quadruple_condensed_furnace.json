@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "quadruple_condensed_furnace",
+  "ingredients": [
+    {
+      "item": "silverlight:quadruple_condensed_furnace"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:triple_condensed_furnace"
+  }
+}

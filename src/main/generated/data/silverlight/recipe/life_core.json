@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:creeper_head"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "S": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "W": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "X": {
+      "item": "silverlight:quadruple_condensed_experience_bottle"
+    },
+    "Z": {
+      "item": "minecraft:zombie_head"
+    }
+  },
+  "pattern": [
+    "XZX",
+    "CNS",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:life_core"
+  }
+}

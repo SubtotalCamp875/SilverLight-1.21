@@ -115,8 +115,10 @@ public class ModBlocks {
 
     public static final Block DRAGON_PROCESSING_STATION = registerBlock("dragon_processing_station",
             new DragonProcessingStationBlock(AbstractBlock.Settings.create().nonOpaque()));
+
     public static final Block SIEVING_STATION = registerBlock("sieving_station",
             new SievingStationBlock(AbstractBlock.Settings.create().nonOpaque()));
+
     public static final Block FERMENTING_STATION = registerBlock("fermenting_station",
             new FermentingStationBlock(AbstractBlock.Settings.create().nonOpaque()));
 

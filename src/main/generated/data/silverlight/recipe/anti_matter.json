@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "silverlight:corrupted_essence"
+    },
+    "L": {
+      "item": "silverlight:life_core"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CLC",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:anti_matter"
+  }
+}

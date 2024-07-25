@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "quadruple_condensed_gravel",
+  "ingredients": [
+    {
+      "item": "silverlight:quadruple_condensed_gravel"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:triple_condensed_gravel"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "single_condensed_redstone_block",
+  "ingredients": [
+    {
+      "item": "silverlight:single_condensed_redstone_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:redstone_block"
+  }
+}

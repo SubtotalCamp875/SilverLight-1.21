@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "single_condensed_glow_stone",
+  "ingredients": [
+    {
+      "item": "silverlight:single_condensed_glow_stone"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:glowstone"
+  }
+}

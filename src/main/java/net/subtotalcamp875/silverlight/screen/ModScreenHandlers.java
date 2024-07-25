@@ -8,7 +8,6 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.block.entity.DragonProcessingStationBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.DragonProcessingStationData;
 import net.subtotalcamp875.silverlight.block.entity.FermentingStationData;
 import net.subtotalcamp875.silverlight.block.entity.SievingStationData;

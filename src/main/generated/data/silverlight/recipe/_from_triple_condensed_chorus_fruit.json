@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "triple_condensed_chorus_fruit",
+  "ingredients": [
+    {
+      "item": "silverlight:triple_condensed_chorus_fruit"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:double_condensed_chorus_fruit"
+  }
+}

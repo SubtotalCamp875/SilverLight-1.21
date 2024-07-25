@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "double_condensed_furnace",
+  "ingredients": [
+    {
+      "item": "silverlight:double_condensed_furnace"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:single_condensed_furnace"
+  }
+}

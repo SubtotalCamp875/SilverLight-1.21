@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CORRUPTED_ESSENCE);
                         entries.add(ModItems.MULTI_PISTON);
                         entries.add(ModItems.LIFE_CORE);
+                        entries.add(ModItems.DESTRUCTIVE_CORE);
                         entries.add(ModItems.OVERWORLD_CORE);
                         entries.add(ModItems.NETHER_CORE);
                         entries.add(ModItems.END_CORE);
@@ -37,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SINGLE_CONDENSED_PHANTOM_MEMBRANE);
                         entries.add(ModItems.SINGLE_CONDENSED_ELYTRA);
                         entries.add(ModItems.SINGLE_CONDENSED_DRAGON_HEAD);
+                        entries.add(ModItems.SINGLE_CONDENSED_NETHER_STAR);
                         entries.add(ModItems.DOUBLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.DOUBLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.DOUBLE_CONDENSED_BLAZE_ROD);

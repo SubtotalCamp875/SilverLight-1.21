@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_single_condensed_piston": {
+      "conditions": {
+        "items": [
+          {
+            "items": "silverlight:single_condensed_piston"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:double_condensed_piston"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_single_condensed_piston"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:double_condensed_piston"
+    ]
+  }
+}

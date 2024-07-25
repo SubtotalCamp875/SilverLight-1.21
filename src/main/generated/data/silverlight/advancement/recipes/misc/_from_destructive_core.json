@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_destructive_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "silverlight:destructive_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:_from_destructive_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_destructive_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:_from_destructive_core"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "silverlight:multi_piston"
+    },
+    "R": {
+      "item": "silverlight:triple_condensed_redstone_block"
+    },
+    "S": {
+      "item": "silverlight:triple_condensed_slime_block"
+    }
+  },
+  "pattern": [
+    "RSR",
+    "SPS",
+    "RSR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:mechanical_machine"
+  }
+}

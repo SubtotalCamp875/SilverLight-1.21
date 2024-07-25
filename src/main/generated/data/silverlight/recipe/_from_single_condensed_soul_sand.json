@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "single_condensed_soul_sand",
+  "ingredients": [
+    {
+      "item": "silverlight:single_condensed_soul_sand"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:soul_sand"
+  }
+}

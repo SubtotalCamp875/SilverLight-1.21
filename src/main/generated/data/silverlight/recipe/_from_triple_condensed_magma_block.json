@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "triple_condensed_magma_block",
+  "ingredients": [
+    {
+      "item": "silverlight:triple_condensed_magma_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:double_condensed_magma_block"
+  }
+}

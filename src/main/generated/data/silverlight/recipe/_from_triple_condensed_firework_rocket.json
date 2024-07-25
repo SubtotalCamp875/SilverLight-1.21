@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "triple_condensed_firework_rocket",
+  "ingredients": [
+    {
+      "item": "silverlight:triple_condensed_firework_rocket"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "silverlight:double_condensed_firework_rocket"
+  }
+}

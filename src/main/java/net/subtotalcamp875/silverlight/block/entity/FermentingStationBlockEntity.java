@@ -18,7 +18,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.item.ModItems;
 import net.subtotalcamp875.silverlight.screen.FermentingScreenHandler;
 import org.jetbrains.annotations.Nullable;
@@ -36,11 +35,16 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
+    private int tickProgress = 0;
+    private int secondsProgress = 0;
+    private int minuteProgress = 0;
     private int maxProgress = 36000;
+    private int maxTickProgress = 20;
+    private int maxSecondsProgress = 60;
+    private int maxMinuteProgress = 30;
 
     public FermentingStationBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FERMENTING_STATION_BLOCK_ENTITY, pos, state);
-        SilverLight.LOGGER.info("test0.2");
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
@@ -68,8 +72,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     @Override
     public Text getDisplayName() {
-        //return Text.literal("Fermenting Station Progress: " + progress + "/" + maxProgress);
-        return Text.literal("Fermenting Station Progress: ");
+        return Text.literal("Fermenting Progress: " + progress + "/" + maxProgress);
     }
 
     @Override
@@ -94,7 +97,6 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        SilverLight.LOGGER.info("test0.3");
         return new FermentingScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
@@ -104,8 +106,20 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         }
 
         if(isOutputSlotEmptyOrReceivable()) {
+
             if(this.hasInputRecipes() && this.hasFermentingRecipes()) {
                 this.increaseCraftProgress();
+                this.increaseTickProgress();
+
+                if (tickProgressFinished()) {
+                    this.resetTickProgress();
+                    this.increaseSecondsProgress();
+                }
+                if (secondPrograssFinished()) {
+                    this.resetSecondProgress();
+                    this.increaseMinuteProgress();
+                }
+
                 markDirty(world, pos, state);
 
                 if(hasCraftingFinished()) {
@@ -122,6 +136,17 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     private void resetProgress() {
         this.progress = 0;
+        this.tickProgress = 0;
+        this.secondsProgress = 0;
+        this.minuteProgress = 0;
+    }
+
+    private void resetTickProgress() {
+        this.tickProgress = 0;
+    }
+
+    private void resetSecondProgress() {
+        this.secondsProgress = 0;
     }
 
     private void craftItem() {
@@ -177,8 +202,29 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         return progress >= maxProgress;
     }
 
+    private boolean tickProgressFinished() {
+        return tickProgress >= maxTickProgress;
+    }
+
+    private boolean secondPrograssFinished() {
+        return secondsProgress >= maxSecondsProgress;
+    }
+
+
     private void increaseCraftProgress() {
         progress++;
+    }
+
+    private void increaseTickProgress() {
+        tickProgress++;
+    }
+
+    private void increaseSecondsProgress() {
+        secondsProgress++;
+    }
+
+    private void increaseMinuteProgress() {
+        minuteProgress++;
     }
 
     private boolean hasInputRecipes() {
@@ -210,13 +256,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     }
 
     private boolean isOutputSlotEmptyOrReceivable() {
-        for (int i = 0; i < 9; i++) {
-            int slot = i+1;
-            if (this.getStack(slot).isEmpty() || this.getStack(slot).getCount() < this.getStack(slot).getMaxCount()) {
-                return true;
-            }
-        }
-        return false;
+        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
     }
 
     @Override

@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "silverlight:double_condensed_copper_bulb"
+    },
+    "E": {
+      "item": "silverlight:quadruple_condensed_end_rod"
+    },
+    "F": {
+      "item": "silverlight:quadruple_condensed_furnace"
+    },
+    "G": {
+      "item": "silverlight:quadruple_condensed_glow_stone"
+    },
+    "L": {
+      "item": "silverlight:double_condensed_lantern"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "R": {
+      "item": "silverlight:double_condensed_respawn_anchor"
+    },
+    "S": {
+      "item": "silverlight:double_condensed_sea_lantern"
+    },
+    "T": {
+      "item": "silverlight:quadruple_condensed_torch"
+    }
+  },
+  "pattern": [
+    "RTC",
+    "GNE",
+    "LFS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:core_of_light"
+  }
+}

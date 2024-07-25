@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "single_condensed_copper_bulb",
+  "ingredients": [
+    {
+      "item": "silverlight:single_condensed_copper_bulb"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:copper_bulb"
+  }
+}
