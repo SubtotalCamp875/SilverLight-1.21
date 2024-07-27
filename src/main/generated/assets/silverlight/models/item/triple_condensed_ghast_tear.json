@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "silverlight:item/triple_condensed_ghast_tear"
-  }
-}

@@ -49,7 +49,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
-        addDrop(ModBlocks.SINGLE_CONDENSED_LANTERN);
         addDrop(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
         addDrop(ModBlocks.SINGLE_CONDENSED_SCULK);
         addDrop(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
@@ -75,7 +74,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_LANTERN);
         addDrop(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
         addDrop(ModBlocks.DOUBLE_CONDENSED_SCULK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);

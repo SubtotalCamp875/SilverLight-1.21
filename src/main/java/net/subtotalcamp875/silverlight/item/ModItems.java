@@ -39,6 +39,7 @@ public class ModItems {
     public static final Item SINGLE_CONDENSED_ELYTRA = registerItem("single_condensed_elytra", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_DRAGON_HEAD = registerItem("single_condensed_dragon_head", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_NETHER_STAR = registerItem("single_condensed_nether_star", new Item(new Item.Settings()));
+    public static final Item SINGLE_CONDENSED_LANTERN = registerItem("single_condensed_lantern", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("double_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_FIREWORK_ROCKET = registerItem("double_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_BLAZE_ROD = registerItem("double_condensed_blaze_rod", new Item(new Item.Settings()));
@@ -48,6 +49,7 @@ public class ModItems {
     public static final Item DOUBLE_CONDENSED_PHANTOM_MEMBRANE = registerItem("double_condensed_phantom_membrane", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_ELYTRA = registerItem("double_condensed_elytra", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_DRAGON_HEAD = registerItem("double_condensed_dragon_head", new Item(new Item.Settings()));
+    public static final Item DOUBLE_CONDENSED_LANTERN = registerItem("double_condensed_lantern", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("triple_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_FIREWORK_ROCKET = registerItem("triple_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_BLAZE_ROD = registerItem("triple_condensed_blaze_rod", new Item(new Item.Settings()));

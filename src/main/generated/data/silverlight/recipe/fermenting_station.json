@@ -5,26 +5,13 @@
     "B": {
       "item": "minecraft:barrel"
     },
-    "G": {
-      "item": "minecraft:glass"
-    },
-    "M": {
-      "item": "minecraft:brown_mushroom"
-    },
-    "P": {
-      "item": "minecraft:oak_planks"
-    },
-    "R": {
-      "item": "minecraft:red_mushroom"
-    },
     "S": {
-      "item": "minecraft:smooth_stone"
+      "item": "minecraft:brewing_stand"
     }
   },
   "pattern": [
-    "MPR",
-    "GBG",
-    "SSS"
+    "S",
+    "B"
   ],
   "result": {
     "count": 1,

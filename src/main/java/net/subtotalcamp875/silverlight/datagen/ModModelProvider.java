@@ -20,7 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
-
+/**
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SAND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_DIRT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_STONE);
@@ -41,7 +41,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SCULK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
@@ -67,7 +66,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SCULK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);
@@ -111,11 +109,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_FURNACE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_PISTON);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
+ **/
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        /**
         itemModelGenerator.register(ModItems.BLACK_HOLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WINGS_OF_THE_END, Models.GENERATED);
         itemModelGenerator.register(ModItems.OMNI_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ANTI_MATTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.MECHANICAL_MACHINE, Models.GENERATED);
@@ -136,6 +137,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SINGLE_CONDENSED_PHANTOM_MEMBRANE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SINGLE_CONDENSED_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.SINGLE_CONDENSED_DRAGON_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SINGLE_CONDENSED_LANTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_EXPERIENCE_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_FIREWORK_ROCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_BLAZE_ROD, Models.GENERATED);
@@ -145,6 +147,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_PHANTOM_MEMBRANE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_DRAGON_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_LANTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_EXPERIENCE_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_FIREWORK_ROCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_BLAZE_ROD, Models.GENERATED);
@@ -157,7 +160,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_BLAZE_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_CHORUS_FRUIT, Models.GENERATED);
 
-
+**/
 
         itemModelGenerator.register(ModItems.BACKPACK, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRETCHY_LEATHER, Models.GENERATED);

@@ -38,7 +38,6 @@ public class ModBlocks {
     public static final Block SINGLE_CONDENSED_SLIME_BLOCK = registerBlock("single_condensed_slime_block", new Block(AbstractBlock.Settings.create()));
     public static final Block SINGLE_CONDENSED_REDSTONE_BLOCK = registerBlock("single_condensed_redstone_block", new Block(AbstractBlock.Settings.create()));
     public static final Block SINGLE_CONDENSED_IRON_BLOCK = registerBlock("single_condensed_iron_block", new Block(AbstractBlock.Settings.create()));
-    public static final Block SINGLE_CONDENSED_LANTERN = registerBlock("single_condensed_lantern", new Block(AbstractBlock.Settings.create()));
     public static final Block SINGLE_CONDENSED_SEA_LANTERN = registerBlock("single_condensed_sea_lantern", new Block(AbstractBlock.Settings.create()));
     public static final Block SINGLE_CONDENSED_SCULK = registerBlock("single_condensed_sculk", new Block(AbstractBlock.Settings.create()));
     public static final Block SINGLE_CONDENSED_RESPAWN_ANCHOR = registerBlock("single_condensed_respawn_anchor", new Block(AbstractBlock.Settings.create()));
@@ -64,7 +63,6 @@ public class ModBlocks {
     public static final Block DOUBLE_CONDENSED_SLIME_BLOCK = registerBlock("double_condensed_slime_block", new Block(AbstractBlock.Settings.create()));
     public static final Block DOUBLE_CONDENSED_REDSTONE_BLOCK = registerBlock("double_condensed_redstone_block", new Block(AbstractBlock.Settings.create()));
     public static final Block DOUBLE_CONDENSED_IRON_BLOCK = registerBlock("double_condensed_iron_block", new Block(AbstractBlock.Settings.create()));
-    public static final Block DOUBLE_CONDENSED_LANTERN = registerBlock("double_condensed_lantern", new Block(AbstractBlock.Settings.create()));
     public static final Block DOUBLE_CONDENSED_SEA_LANTERN = registerBlock("double_condensed_sea_lantern", new Block(AbstractBlock.Settings.create()));
     public static final Block DOUBLE_CONDENSED_SCULK = registerBlock("double_condensed_sculk", new Block(AbstractBlock.Settings.create()));
     public static final Block DOUBLE_CONDENSED_RESPAWN_ANCHOR = registerBlock("double_condensed_respawn_anchor", new Block(AbstractBlock.Settings.create()));
@@ -111,7 +109,7 @@ public class ModBlocks {
 
 
     public static final Block TOMATO_PLANT = Registry.register(Registries.BLOCK, Identifier.of(SilverLight.MOD_ID, "tomato_plant"),
-            new TomatoPlantBlock(AbstractBlock.Settings.create()));
+            new TomatoPlantBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     public static final Block DRAGON_PROCESSING_STATION = registerBlock("dragon_processing_station",
             new DragonProcessingStationBlock(AbstractBlock.Settings.create().nonOpaque()));

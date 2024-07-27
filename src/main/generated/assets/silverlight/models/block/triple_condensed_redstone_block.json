@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "silverlight:block/triple_condensed_redstone_block"
-  }
-}

@@ -28,7 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NETHER_CORE);
                         entries.add(ModItems.END_CORE);
                         entries.add(ModItems.CORE_OF_LIGHT);
-
+/**
                         entries.add(ModItems.SINGLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.SINGLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.SINGLE_CONDENSED_BLAZE_ROD);
@@ -39,6 +39,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SINGLE_CONDENSED_ELYTRA);
                         entries.add(ModItems.SINGLE_CONDENSED_DRAGON_HEAD);
                         entries.add(ModItems.SINGLE_CONDENSED_NETHER_STAR);
+                        entries.add(ModItems.SINGLE_CONDENSED_LANTERN);
                         entries.add(ModItems.DOUBLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.DOUBLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.DOUBLE_CONDENSED_BLAZE_ROD);
@@ -48,6 +49,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DOUBLE_CONDENSED_PHANTOM_MEMBRANE);
                         entries.add(ModItems.DOUBLE_CONDENSED_ELYTRA);
                         entries.add(ModItems.DOUBLE_CONDENSED_DRAGON_HEAD);
+                        entries.add(ModItems.DOUBLE_CONDENSED_LANTERN);
                         entries.add(ModItems.TRIPLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.TRIPLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.TRIPLE_CONDENSED_BLAZE_ROD);
@@ -80,7 +82,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_LANTERN);
                         entries.add(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
                         entries.add(ModBlocks.SINGLE_CONDENSED_SCULK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
@@ -106,7 +107,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_LANTERN);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SCULK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);
@@ -150,7 +150,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_FURNACE);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_PISTON);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
-
+**/
 
                         entries.add(ModItems.BACKPACK);
                         entries.add(ModItems.STRETCHY_LEATHER);

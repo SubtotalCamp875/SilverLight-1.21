@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "silverlight:item/quadruple_condensed_blaze_rod"
-  }
-}

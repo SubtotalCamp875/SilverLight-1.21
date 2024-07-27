@@ -1,5 +1,4 @@
-// 1.21	2024-07-25T12:49:47.0693793	SilverLight/Block Loot Tables
-aa81cd54dbb70aad1368db68ce84f9515615b3f3 data\silverlight\loot_table\blocks\double_condensed_lantern.json
+// 1.21	2024-07-26T21:10:36.6057686	SilverLight/Block Loot Tables
 308e5498a0a5abf1a5b5ba1aefdaa8f18299d27f data\silverlight\loot_table\blocks\sieving_station.json
 e21be4aa0d829717c45496c4a34cc6411b385cf6 data\silverlight\loot_table\blocks\double_condensed_netherrack.json
 2eef97a8ed2f40bdf0c68fe519df3b3f10b281ac data\silverlight\loot_table\blocks\single_condensed_copper_block.json
@@ -18,7 +17,6 @@ dbe29d3d49e4a383d2ddcad3d3a12a3495b4b22a data\silverlight\loot_table\blocks\doub
 536e71a6ad0a302d1f8b1906e05f91f107479199 data\silverlight\loot_table\blocks\double_condensed_copper_block.json
 2b1f788cf679eb6181c3332b97cc16ce74f49523 data\silverlight\loot_table\blocks\single_condensed_slime_block.json
 2ceb7f54e34c2bf926067549d323d11f7d901e74 data\silverlight\loot_table\blocks\quadruple_condensed_copper_block.json
-b098712137528e38900fa1a19e6f1364338278ad data\silverlight\loot_table\blocks\single_condensed_lantern.json
 6ee0750f2d25ed20dd6393a75bab76520ac94740 data\silverlight\loot_table\blocks\double_condensed_obsidian.json
 6f7b461949473ccd002d402fa4632624e4bc68eb data\silverlight\loot_table\blocks\double_condensed_copper_bulb.json
 d3efed5a41af56e60b64ef07376cf11579148344 data\silverlight\loot_table\blocks\double_condensed_iron_block.json
