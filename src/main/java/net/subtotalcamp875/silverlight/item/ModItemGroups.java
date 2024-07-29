@@ -28,7 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NETHER_CORE);
                         entries.add(ModItems.END_CORE);
                         entries.add(ModItems.CORE_OF_LIGHT);
-/**
+
                         entries.add(ModItems.SINGLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.SINGLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.SINGLE_CONDENSED_BLAZE_ROD);
@@ -57,10 +57,17 @@ public class ModItemGroups {
                         entries.add(ModItems.TRIPLE_CONDENSED_SHULKER_SHELL);
                         entries.add(ModItems.TRIPLE_CONDENSED_GHAST_TEAR);
                         entries.add(ModItems.TRIPLE_CONDENSED_PHANTOM_MEMBRANE);
+                        entries.add(ModItems.TRIPLE_CONDENSED_LANTERN);
                         entries.add(ModItems.QUADRUPLE_CONDENSED_EXPERIENCE_BOTTLE);
                         entries.add(ModItems.QUADRUPLE_CONDENSED_FIREWORK_ROCKET);
                         entries.add(ModItems.QUADRUPLE_CONDENSED_BLAZE_ROD);
                         entries.add(ModItems.QUADRUPLE_CONDENSED_CHORUS_FRUIT);
+                        entries.add(ModItems.QUADRUPLE_CONDENSED_LANTERN);
+                        entries.add(ModItems.SINGLE_CONDENSED_TORCH);
+                        entries.add(ModItems.DOUBLE_CONDENSED_TORCH);
+                        entries.add(ModItems.TRIPLE_CONDENSED_TORCH);
+                        entries.add(ModItems.QUADRUPLE_CONDENSED_TORCH);
+
 
                         entries.add(ModBlocks.SINGLE_CONDENSED_SAND);
                         entries.add(ModBlocks.SINGLE_CONDENSED_DIRT);
@@ -73,19 +80,18 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SINGLE_CONDENSED_OBSIDIAN);
                         entries.add(ModBlocks.SINGLE_CONDENSED_PURPUR_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_TORCH);
                         entries.add(ModBlocks.SINGLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_END_ROD);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_FURNACE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_PISTON);
+                        entries.add(ModBlocks.SINGLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+                        entries.add(ModBlocks.SINGLE_CONDENSED_CRYING_OBSIDIAN);
+                        entries.add(ModBlocks.SINGLE_CONDENSED_SHROOMLIGHT);
                         entries.add(ModBlocks.SINGLE_CONDENSED_COPPER_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
                         entries.add(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
                         entries.add(ModBlocks.SINGLE_CONDENSED_SCULK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
                         entries.add(ModBlocks.SINGLE_CONDENSED_COPPER_BULB);
+                        entries.add(ModBlocks.SINGLE_CONDENSED_DIAMOND_BLOCK);
 
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SAND);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_DIRT);
@@ -98,19 +104,18 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DOUBLE_CONDENSED_OBSIDIAN);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_PURPUR_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_TORCH);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_END_ROD);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_FURNACE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_PISTON);
+                        entries.add(ModBlocks.DOUBLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+                        entries.add(ModBlocks.DOUBLE_CONDENSED_CRYING_OBSIDIAN);
+                        entries.add(ModBlocks.DOUBLE_CONDENSED_SHROOMLIGHT);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_COPPER_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_SCULK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);
                         entries.add(ModBlocks.DOUBLE_CONDENSED_COPPER_BULB);
+                        entries.add(ModBlocks.DOUBLE_CONDENSED_DIAMOND_BLOCK);
 
                         entries.add(ModBlocks.TRIPLE_CONDENSED_SAND);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_DIRT);
@@ -123,15 +128,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TRIPLE_CONDENSED_OBSIDIAN);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_PURPUR_BLOCK);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_TORCH);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_END_ROD);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_FURNACE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_PISTON);
+                        entries.add(ModBlocks.TRIPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+                        entries.add(ModBlocks.TRIPLE_CONDENSED_COPPER_BULB);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_COPPER_BLOCK);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_SLIME_BLOCK);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_REDSTONE_BLOCK);
                         entries.add(ModBlocks.TRIPLE_CONDENSED_IRON_BLOCK);
+                        entries.add(ModBlocks.TRIPLE_CONDENSED_DIAMOND_BLOCK);
 
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_SAND);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_DIRT);
@@ -144,13 +148,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_OBSIDIAN);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_PURPUR_BLOCK);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_TORCH);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_END_ROD);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_FURNACE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_PISTON);
+                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BULB);
                         entries.add(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
-**/
 
                         entries.add(ModItems.BACKPACK);
                         entries.add(ModItems.STRETCHY_LEATHER);
@@ -165,6 +166,17 @@ public class ModItemGroups {
 
                         entries.add(ModItems.POTION_OF_NAUSEA);
                         entries.add(ModItems.POTENT_POTION_OF_NAUSEA);
+                        entries.add(ModItems.POTION_OF_SHRINK);
+                        entries.add(ModItems.POTION_OF_DWARF);
+                        entries.add(ModItems.POTION_OF_SHORTEN);
+                        entries.add(ModItems.POTION_OF_FAIRY);
+                        entries.add(ModItems.POTION_OF_TALL);
+                        entries.add(ModItems.POTION_OF_ENLARGE);
+                        entries.add(ModItems.POTION_OF_GIANT);
+                        entries.add(ModItems.POTION_OF_GRAVITY);
+                        entries.add(ModItems.POTION_OF_ANTI_GRAVITY);
+                        entries.add(ModItems.POTION_OF_DISPROPORTION);
+                        entries.add(ModItems.POTION_OF_HAPPY_FEET);
                         entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.TOMATO);

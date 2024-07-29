@@ -2,6 +2,8 @@ package net.subtotalcamp875.silverlight.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -40,6 +42,7 @@ public class ModItems {
     public static final Item SINGLE_CONDENSED_DRAGON_HEAD = registerItem("single_condensed_dragon_head", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_NETHER_STAR = registerItem("single_condensed_nether_star", new Item(new Item.Settings()));
     public static final Item SINGLE_CONDENSED_LANTERN = registerItem("single_condensed_lantern", new Item(new Item.Settings()));
+
     public static final Item DOUBLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("double_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_FIREWORK_ROCKET = registerItem("double_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_BLAZE_ROD = registerItem("double_condensed_blaze_rod", new Item(new Item.Settings()));
@@ -50,6 +53,7 @@ public class ModItems {
     public static final Item DOUBLE_CONDENSED_ELYTRA = registerItem("double_condensed_elytra", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_DRAGON_HEAD = registerItem("double_condensed_dragon_head", new Item(new Item.Settings()));
     public static final Item DOUBLE_CONDENSED_LANTERN = registerItem("double_condensed_lantern", new Item(new Item.Settings()));
+
     public static final Item TRIPLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("triple_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_FIREWORK_ROCKET = registerItem("triple_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_BLAZE_ROD = registerItem("triple_condensed_blaze_rod", new Item(new Item.Settings()));
@@ -57,10 +61,18 @@ public class ModItems {
     public static final Item TRIPLE_CONDENSED_SHULKER_SHELL = registerItem("triple_condensed_shulker_shell", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_GHAST_TEAR = registerItem("triple_condensed_ghast_tear", new Item(new Item.Settings()));
     public static final Item TRIPLE_CONDENSED_PHANTOM_MEMBRANE = registerItem("triple_condensed_phantom_membrane", new Item(new Item.Settings()));
+    public static final Item TRIPLE_CONDENSED_LANTERN = registerItem("triple_condensed_lantern", new Item(new Item.Settings()));
+
     public static final Item QUADRUPLE_CONDENSED_EXPERIENCE_BOTTLE = registerItem("quadruple_condensed_experience_bottle", new Item(new Item.Settings()));
     public static final Item QUADRUPLE_CONDENSED_FIREWORK_ROCKET = registerItem("quadruple_condensed_firework_rocket", new Item(new Item.Settings()));
     public static final Item QUADRUPLE_CONDENSED_BLAZE_ROD = registerItem("quadruple_condensed_blaze_rod", new Item(new Item.Settings()));
     public static final Item QUADRUPLE_CONDENSED_CHORUS_FRUIT = registerItem("quadruple_condensed_chorus_fruit", new Item(new Item.Settings()));
+    public static final Item QUADRUPLE_CONDENSED_LANTERN = registerItem("quadruple_condensed_lantern", new Item(new Item.Settings()));
+
+    public static final Item SINGLE_CONDENSED_TORCH = registerItem("single_condensed_torch", new Item(new Item.Settings()));
+    public static final Item DOUBLE_CONDENSED_TORCH = registerItem("double_condensed_torch", new Item(new Item.Settings()));
+    public static final Item TRIPLE_CONDENSED_TORCH = registerItem("triple_condensed_torch", new Item(new Item.Settings()));
+    public static final Item QUADRUPLE_CONDENSED_TORCH = registerItem("quadruple_condensed_torch", new Item(new Item.Settings()));
 
     public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings().maxCount(1)));
 
@@ -78,12 +90,24 @@ public class ModItems {
 
     public static final Item POTION_OF_NAUSEA = registerItem("potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_NAUSEA).maxCount(1)));
     public static final Item POTENT_POTION_OF_NAUSEA = registerItem("potent_potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTENT_POTION_OF_NAUSEA).maxCount(1)));
+    public static final Item POTION_OF_SHRINK = registerItem("potion_of_shrink", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHRINK).maxCount(1)));
+    public static final Item POTION_OF_DWARF = registerItem("potion_of_dwarf", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DWARF).maxCount(1)));
+    public static final Item POTION_OF_SHORTEN = registerItem("potion_of_shorten", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHORTEN).maxCount(1)));
+    public static final Item POTION_OF_FAIRY = registerItem("potion_of_fairy", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_FAIRY).maxCount(1)));
+    public static final Item POTION_OF_TALL = registerItem("potion_of_tall", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_TALL).maxCount(1)));
+    public static final Item POTION_OF_ENLARGE = registerItem("potion_of_enlarge", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ENLARGE).maxCount(1)));
+    public static final Item POTION_OF_GIANT = registerItem("potion_of_giant", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GIANT).maxCount(1)));
+    public static final Item POTION_OF_GRAVITY = registerItem("potion_of_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GRAVITY).maxCount(1)));
+    public static final Item POTION_OF_ANTI_GRAVITY = registerItem("potion_of_anti_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ANTI_GRAVITY).maxCount(1)));
+    public static final Item POTION_OF_DISPROPORTION = registerItem("potion_of_disproportion", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DISPROPORTION).maxCount(1)));
+    public static final Item POTION_OF_HAPPY_FEET = registerItem("potion_of_happy_feet", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_HAPPY_FEET).maxCount(1)));
     public static final Item CRACKER = registerItem("cracker", new Item(new Item.Settings().food(ModFoodComponents.CRACKER).maxCount(64)));
 
     public static final Item TOMATO_SEED = registerItem("tomato_seed",
             new AliasedBlockItem(ModBlocks.TOMATO_PLANT, new Item.Settings()));
     public static final Item TOMATO = registerItem("tomato",
             new TomatoItem(new Item.Settings()));
+
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

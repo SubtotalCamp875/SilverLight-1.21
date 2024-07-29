@@ -3,7 +3,6 @@ package net.subtotalcamp875.silverlight.block.entity;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.input.Input;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -39,7 +38,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     private int maxProgress = 36000;
     private int maxTickProgress = 20;
     private int maxSecondsProgress = 60;
-    private int maxMinuteProgress = 30;
+    private int maxMinuteProgress = 31;
     private int minTickProgress = 0;
     private int minSecondsProgress = 0;
     private int progress = 0;
@@ -137,7 +136,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                     this.resetTickProgress();
                     this.increaseSecondsProgress();
                 }
-                if (secondPrograssFinished()) {
+                if (secondProgressFinished()) {
                     this.resetSecondProgress();
                     this.increaseMinuteProgress();
                 }
@@ -186,38 +185,37 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     private ItemStack getLoot() {
         Random rand = new Random();
-        ItemStack result = new ItemStack(Items.DIRT);
-        int chance = chanceIncrease();
         int drop = rand.nextInt(100);
-
-        if (getStack(INPUT_SLOT).getItem() == Items.POTION && drop <= chance) {
-            result = new ItemStack(ModItems.POTION_OF_NAUSEA);
-        } else if (getStack(INPUT_SLOT).getItem() == Items.POTION && drop > chance) {
-            result = getStack(INPUT_SLOT);
-        } else if (getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA && drop <= chance) {
-            result = new ItemStack(ModItems.POTENT_POTION_OF_NAUSEA);
-        } else if (getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA && drop > chance) {
-            result = getStack(INPUT_SLOT);
-        }
-
-        return result;
-    }
-
-    private int chanceIncrease() {
+        ItemStack result = new ItemStack(Items.POTION);
         int chance = 0;
+
         for (int i = 0; i < 3; i++) {
             int slot = i+2;
 
             if (getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA && getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA) {
                 chance += 25;
+                if (drop <= chance) {result = new ItemStack(ModItems.POTENT_POTION_OF_NAUSEA);}
             }
 
             if (getStack(slot).getItem() == Items.MYCELIUM && getStack(INPUT_SLOT).getItem() == Items.POTION) {
                 chance += 25;
+                if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_NAUSEA);}
             }
+
+            if (getStack(slot).getItem() == Items.BROWN_MUSHROOM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHRINK);}}
+            if (getStack(slot).getItem() == Items.STONE && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DWARF);}}
+            if (getStack(slot).getItem() == Items.GRAVEL && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHORTEN);}}
+            if (getStack(slot).getItem() == Items.BLAZE_POWDER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_FAIRY);}}
+            if (getStack(slot).getItem() == Items.ENDER_PEARL && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_TALL);}}
+            if (getStack(slot).getItem() == Items.MILK_BUCKET && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_ENLARGE);}}
+            if (getStack(slot).getItem() == Items.ROTTEN_FLESH && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_GIANT);}}
+            if (getStack(slot).getItem() == Items.IRON_BLOCK && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_GRAVITY);}}
+            if (getStack(slot).getItem() == Items.FEATHER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_ANTI_GRAVITY);}}
+            if (getStack(slot).getItem() == Items.STICK && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DISPROPORTION);}}
+            if (getStack(slot).getItem() == Items.RABBIT_FOOT && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_HAPPY_FEET);}}
         }
 
-        return chance;
+        return result;
     }
 
     private boolean hasCraftingFinished() {
@@ -228,7 +226,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         return tickProgress <= minTickProgress;
     }
 
-    private boolean secondPrograssFinished() {
+    private boolean secondProgressFinished() {
         return secondsProgress <= minSecondsProgress;
     }
 
@@ -258,15 +256,65 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
 
     private boolean hasFermentingRecipes() {
         boolean hasInput =
-                getStack(FERMENTING_SLOT_1).getItem() == Items.MYCELIUM
-                || getStack(FERMENTING_SLOT_2).getItem() == Items.MYCELIUM
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.MYCELIUM
-
+            getStack(FERMENTING_SLOT_1).getItem() == Items.MYCELIUM
                 || getStack(FERMENTING_SLOT_1).getItem() == ModItems.POTION_OF_NAUSEA
-                || getStack(FERMENTING_SLOT_2).getItem() == ModItems.POTION_OF_NAUSEA
-                || getStack(FERMENTING_SLOT_3).getItem() == ModItems.POTION_OF_NAUSEA;
 
-        return hasInput;
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.STONE
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.STONE
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.STONE
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.BROWN_MUSHROOM
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.BROWN_MUSHROOM
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.BROWN_MUSHROOM
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.GRAVEL
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.GRAVEL
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.GRAVEL
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.ENDER_PEARL
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.ENDER_PEARL
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.ENDER_PEARL
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.MILK_BUCKET
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.MILK_BUCKET
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.MILK_BUCKET
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.ROTTEN_FLESH
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.ROTTEN_FLESH
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.ROTTEN_FLESH
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.FEATHER
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.FEATHER
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.FEATHER
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.IRON_BLOCK
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.IRON_BLOCK
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.IRON_BLOCK
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT;
+        boolean hasSameFermentingInput = hasSameFermentingRecipes();
+
+        return hasInput && hasSameFermentingInput;
+    }
+
+    private boolean hasSameFermentingRecipes() {
+        boolean isSame = false;
+        int airCount = 0;
+
+        if(getStack(FERMENTING_SLOT_1).getItem() == Items.AIR) airCount++;
+        if(getStack(FERMENTING_SLOT_2).getItem() == Items.AIR) airCount++;
+        if(getStack(FERMENTING_SLOT_3).getItem() == Items.AIR) airCount++;
+
+        if(airCount == 3) isSame = false;
+        else if(airCount == 2) isSame = true;
+        else if(airCount == 1) {
+            if(getStack(FERMENTING_SLOT_1).getItem() == Items.AIR) isSame = getStack(FERMENTING_SLOT_2).getItem() == getStack(FERMENTING_SLOT_3).getItem();
+            else if(getStack(FERMENTING_SLOT_2).getItem() == Items.AIR) isSame = getStack(FERMENTING_SLOT_1).getItem() == getStack(FERMENTING_SLOT_3).getItem();
+            else if(getStack(FERMENTING_SLOT_3).getItem() == Items.AIR) isSame = getStack(FERMENTING_SLOT_1).getItem() == getStack(FERMENTING_SLOT_2).getItem();
+        }
+        else isSame = (getStack(FERMENTING_SLOT_1).getItem() == getStack(FERMENTING_SLOT_3).getItem() && getStack(FERMENTING_SLOT_1).getItem() == getStack(FERMENTING_SLOT_2).getItem());
+
+        return isSame;
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

@@ -1,5 +1,5 @@
-// 1.21	2024-07-26T21:10:36.6134858	SilverLight/Tags for minecraft:block
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_iron_tool.json
+// 1.21	2024-07-28T21:53:43.1125329	SilverLight/Tags for minecraft:block
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_diamond_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_iron_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_stone_tool.json
-995437c1feddb726869eabf120c00b270dd7bc28 data\minecraft\tags\block\mineable\pickaxe.json
+8a428dd6bec19757666606366c83f4e4268f7a18 data\minecraft\tags\block\mineable\pickaxe.json

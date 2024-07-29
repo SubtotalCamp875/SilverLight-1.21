@@ -3,6 +3,7 @@ package net.subtotalcamp875.silverlight.entity.custom;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.hit.BlockHitResult;
@@ -41,5 +42,9 @@ public class TomatoEntity extends ThrownItemEntity {
             entityHitResult.getEntity().damage(this.getDamageSources().lightningBolt(), 0.1f);
         }
 
+    }
+
+    public void test(PlayerEntity livingEntity) {
+        livingEntity.addCommandTag("test");
     }
 }

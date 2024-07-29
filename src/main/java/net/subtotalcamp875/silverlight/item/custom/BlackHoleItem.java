@@ -3,11 +3,13 @@ package net.subtotalcamp875.silverlight.item.custom;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.SilverLight;
+import org.apache.logging.log4j.core.jmx.Server;
 
 public class BlackHoleItem extends Item {
     public BlackHoleItem(Settings settings) {
@@ -20,7 +22,8 @@ public class BlackHoleItem extends Item {
 
         if (!world.isClient) {
             SilverLight.LOGGER.info("black hole");
-            System.exit(100);
+            MinecraftServer server = user.getServer();
+            server.close();
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

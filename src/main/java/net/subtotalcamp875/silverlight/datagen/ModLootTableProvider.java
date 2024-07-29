@@ -40,19 +40,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SINGLE_CONDENSED_OBSIDIAN);
         addDrop(ModBlocks.SINGLE_CONDENSED_PURPUR_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_END_STONE);
-        addDrop(ModBlocks.SINGLE_CONDENSED_TORCH);
         addDrop(ModBlocks.SINGLE_CONDENSED_GLOWSTONE);
-        addDrop(ModBlocks.SINGLE_CONDENSED_END_ROD);
-        addDrop(ModBlocks.SINGLE_CONDENSED_FURNACE);
-        addDrop(ModBlocks.SINGLE_CONDENSED_PISTON);
+        addDrop(ModBlocks.SINGLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        addDrop(ModBlocks.SINGLE_CONDENSED_CRYING_OBSIDIAN);
+        addDrop(ModBlocks.SINGLE_CONDENSED_SHROOMLIGHT);
         addDrop(ModBlocks.SINGLE_CONDENSED_COPPER_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
         addDrop(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
         addDrop(ModBlocks.SINGLE_CONDENSED_SCULK);
-        addDrop(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
         addDrop(ModBlocks.SINGLE_CONDENSED_COPPER_BULB);
+        addDrop(ModBlocks.SINGLE_CONDENSED_DIAMOND_BLOCK);
 
         addDrop(ModBlocks.DOUBLE_CONDENSED_SAND);
         addDrop(ModBlocks.DOUBLE_CONDENSED_DIRT);
@@ -65,19 +64,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DOUBLE_CONDENSED_OBSIDIAN);
         addDrop(ModBlocks.DOUBLE_CONDENSED_PURPUR_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_END_STONE);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_TORCH);
         addDrop(ModBlocks.DOUBLE_CONDENSED_GLOWSTONE);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_END_ROD);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_FURNACE);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_PISTON);
+        addDrop(ModBlocks.DOUBLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        addDrop(ModBlocks.DOUBLE_CONDENSED_CRYING_OBSIDIAN);
+        addDrop(ModBlocks.DOUBLE_CONDENSED_SHROOMLIGHT);
         addDrop(ModBlocks.DOUBLE_CONDENSED_COPPER_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
         addDrop(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
         addDrop(ModBlocks.DOUBLE_CONDENSED_SCULK);
-        addDrop(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);
         addDrop(ModBlocks.DOUBLE_CONDENSED_COPPER_BULB);
+        addDrop(ModBlocks.DOUBLE_CONDENSED_DIAMOND_BLOCK);
 
         addDrop(ModBlocks.TRIPLE_CONDENSED_SAND);
         addDrop(ModBlocks.TRIPLE_CONDENSED_DIRT);
@@ -90,15 +88,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TRIPLE_CONDENSED_OBSIDIAN);
         addDrop(ModBlocks.TRIPLE_CONDENSED_PURPUR_BLOCK);
         addDrop(ModBlocks.TRIPLE_CONDENSED_END_STONE);
-        addDrop(ModBlocks.TRIPLE_CONDENSED_TORCH);
         addDrop(ModBlocks.TRIPLE_CONDENSED_GLOWSTONE);
-        addDrop(ModBlocks.TRIPLE_CONDENSED_END_ROD);
-        addDrop(ModBlocks.TRIPLE_CONDENSED_FURNACE);
-        addDrop(ModBlocks.TRIPLE_CONDENSED_PISTON);
+        addDrop(ModBlocks.TRIPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        addDrop(ModBlocks.TRIPLE_CONDENSED_COPPER_BULB);
         addDrop(ModBlocks.TRIPLE_CONDENSED_COPPER_BLOCK);
         addDrop(ModBlocks.TRIPLE_CONDENSED_SLIME_BLOCK);
         addDrop(ModBlocks.TRIPLE_CONDENSED_REDSTONE_BLOCK);
         addDrop(ModBlocks.TRIPLE_CONDENSED_IRON_BLOCK);
+        addDrop(ModBlocks.TRIPLE_CONDENSED_DIAMOND_BLOCK);
 
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_SAND);
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_DIRT);
@@ -111,11 +108,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_OBSIDIAN);
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_PURPUR_BLOCK);
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_END_STONE);
-        addDrop(ModBlocks.QUADRUPLE_CONDENSED_TORCH);
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_GLOWSTONE);
-        addDrop(ModBlocks.QUADRUPLE_CONDENSED_END_ROD);
-        addDrop(ModBlocks.QUADRUPLE_CONDENSED_FURNACE);
-        addDrop(ModBlocks.QUADRUPLE_CONDENSED_PISTON);
+        addDrop(ModBlocks.QUADRUPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        addDrop(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BULB);
         addDrop(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
     }
 }

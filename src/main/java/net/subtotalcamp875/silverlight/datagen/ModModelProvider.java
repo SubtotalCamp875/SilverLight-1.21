@@ -32,19 +32,18 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_OBSIDIAN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_PURPUR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_END_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_TORCH);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_GLOWSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_END_ROD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_FURNACE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_PISTON);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_CRYING_OBSIDIAN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SHROOMLIGHT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_COPPER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_SCULK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_RESPAWN_ANCHOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_COPPER_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SINGLE_CONDENSED_DIAMOND_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SAND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_DIRT);
@@ -57,19 +56,18 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_OBSIDIAN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_PURPUR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_END_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_TORCH);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_GLOWSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_END_ROD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_FURNACE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_PISTON);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_CRYING_OBSIDIAN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SHROOMLIGHT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_COPPER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_SCULK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_RESPAWN_ANCHOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_COPPER_BULB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DOUBLE_CONDENSED_DIAMOND_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_SAND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_DIRT);
@@ -82,15 +80,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_OBSIDIAN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_PURPUR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_END_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_TORCH);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_GLOWSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_END_ROD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_FURNACE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_PISTON);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_COPPER_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_COPPER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_SLIME_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_REDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_IRON_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_CONDENSED_DIAMOND_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_SAND);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_DIRT);
@@ -103,18 +100,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_OBSIDIAN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_PURPUR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_END_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_TORCH);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_GLOWSTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_END_ROD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_FURNACE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_PISTON);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BULB);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
- **/
+**/
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        /**
+/**
         itemModelGenerator.register(ModItems.BLACK_HOLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.WINGS_OF_THE_END, Models.GENERATED);
         itemModelGenerator.register(ModItems.OMNI_CORE, Models.GENERATED);
@@ -155,11 +150,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_SHULKER_SHELL, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_GHAST_TEAR, Models.GENERATED);
         itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_PHANTOM_MEMBRANE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_LANTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_EXPERIENCE_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_FIREWORK_ROCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_BLAZE_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_CHORUS_FRUIT, Models.GENERATED);
-
+        itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_LANTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SINGLE_CONDENSED_TORCH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DOUBLE_CONDENSED_TORCH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TRIPLE_CONDENSED_TORCH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUADRUPLE_CONDENSED_TORCH, Models.GENERATED);
 **/
 
         itemModelGenerator.register(ModItems.BACKPACK, Models.GENERATED);
@@ -174,6 +174,17 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VOID_OBSIDIAN_SHEARS, Models.GENERATED);
         itemModelGenerator.register(ModItems.POTION_OF_NAUSEA, Models.GENERATED);
         itemModelGenerator.register(ModItems.POTENT_POTION_OF_NAUSEA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_SHRINK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_DWARF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_SHORTEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_FAIRY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_TALL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_ENLARGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_GIANT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_GRAVITY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_ANTI_GRAVITY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_DISPROPORTION, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_HAPPY_FEET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRACKER, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
     }
