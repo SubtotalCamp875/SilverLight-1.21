@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "silverlight:block/quadruple_condensed_purpur_block"
-  }
-}

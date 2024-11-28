@@ -15,143 +15,6 @@ public class ModItemGroups {
             Identifier.of(SilverLight.MOD_ID, "silverlight"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.silverlight"))
                     .icon(() -> new ItemStack(ModItems.BACKPACK)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.BLACK_HOLE);
-                        entries.add(ModItems.WINGS_OF_THE_END);
-                        entries.add(ModItems.OMNI_CORE);
-                        entries.add(ModItems.ANTI_MATTER);
-                        entries.add(ModItems.MECHANICAL_MACHINE);
-                        entries.add(ModItems.CORRUPTED_ESSENCE);
-                        entries.add(ModItems.MULTI_PISTON);
-                        entries.add(ModItems.LIFE_CORE);
-                        entries.add(ModItems.DESTRUCTIVE_CORE);
-                        entries.add(ModItems.OVERWORLD_CORE);
-                        entries.add(ModItems.NETHER_CORE);
-                        entries.add(ModItems.END_CORE);
-                        entries.add(ModItems.CORE_OF_LIGHT);
-
-                        entries.add(ModItems.SINGLE_CONDENSED_EXPERIENCE_BOTTLE);
-                        entries.add(ModItems.SINGLE_CONDENSED_FIREWORK_ROCKET);
-                        entries.add(ModItems.SINGLE_CONDENSED_BLAZE_ROD);
-                        entries.add(ModItems.SINGLE_CONDENSED_CHORUS_FRUIT);
-                        entries.add(ModItems.SINGLE_CONDENSED_SHULKER_SHELL);
-                        entries.add(ModItems.SINGLE_CONDENSED_GHAST_TEAR);
-                        entries.add(ModItems.SINGLE_CONDENSED_PHANTOM_MEMBRANE);
-                        entries.add(ModItems.SINGLE_CONDENSED_ELYTRA);
-                        entries.add(ModItems.SINGLE_CONDENSED_DRAGON_HEAD);
-                        entries.add(ModItems.SINGLE_CONDENSED_NETHER_STAR);
-                        entries.add(ModItems.SINGLE_CONDENSED_LANTERN);
-                        entries.add(ModItems.DOUBLE_CONDENSED_EXPERIENCE_BOTTLE);
-                        entries.add(ModItems.DOUBLE_CONDENSED_FIREWORK_ROCKET);
-                        entries.add(ModItems.DOUBLE_CONDENSED_BLAZE_ROD);
-                        entries.add(ModItems.DOUBLE_CONDENSED_CHORUS_FRUIT);
-                        entries.add(ModItems.DOUBLE_CONDENSED_SHULKER_SHELL);
-                        entries.add(ModItems.DOUBLE_CONDENSED_GHAST_TEAR);
-                        entries.add(ModItems.DOUBLE_CONDENSED_PHANTOM_MEMBRANE);
-                        entries.add(ModItems.DOUBLE_CONDENSED_ELYTRA);
-                        entries.add(ModItems.DOUBLE_CONDENSED_DRAGON_HEAD);
-                        entries.add(ModItems.DOUBLE_CONDENSED_LANTERN);
-                        entries.add(ModItems.TRIPLE_CONDENSED_EXPERIENCE_BOTTLE);
-                        entries.add(ModItems.TRIPLE_CONDENSED_FIREWORK_ROCKET);
-                        entries.add(ModItems.TRIPLE_CONDENSED_BLAZE_ROD);
-                        entries.add(ModItems.TRIPLE_CONDENSED_CHORUS_FRUIT);
-                        entries.add(ModItems.TRIPLE_CONDENSED_SHULKER_SHELL);
-                        entries.add(ModItems.TRIPLE_CONDENSED_GHAST_TEAR);
-                        entries.add(ModItems.TRIPLE_CONDENSED_PHANTOM_MEMBRANE);
-                        entries.add(ModItems.TRIPLE_CONDENSED_LANTERN);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_EXPERIENCE_BOTTLE);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_FIREWORK_ROCKET);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_BLAZE_ROD);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_CHORUS_FRUIT);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_LANTERN);
-                        entries.add(ModItems.SINGLE_CONDENSED_TORCH);
-                        entries.add(ModItems.DOUBLE_CONDENSED_TORCH);
-                        entries.add(ModItems.TRIPLE_CONDENSED_TORCH);
-                        entries.add(ModItems.QUADRUPLE_CONDENSED_TORCH);
-
-
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SAND);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_DIRT);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_STONE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_GRAVEL);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SOUL_SAND);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_NETHERRACK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_MAGMA_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_NETHER_WART_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_OBSIDIAN);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_PURPUR_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_PEARLESCENT_FROGLIGHT);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_CRYING_OBSIDIAN);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SHROOMLIGHT);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_COPPER_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SLIME_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_REDSTONE_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_IRON_BLOCK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SEA_LANTERN);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_SCULK);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_COPPER_BULB);
-                        entries.add(ModBlocks.SINGLE_CONDENSED_DIAMOND_BLOCK);
-
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SAND);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_DIRT);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_STONE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_GRAVEL);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SOUL_SAND);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_NETHERRACK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_MAGMA_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_NETHER_WART_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_OBSIDIAN);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_PURPUR_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_PEARLESCENT_FROGLIGHT);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_CRYING_OBSIDIAN);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SHROOMLIGHT);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_COPPER_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SLIME_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_REDSTONE_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_IRON_BLOCK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SEA_LANTERN);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_SCULK);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_COPPER_BULB);
-                        entries.add(ModBlocks.DOUBLE_CONDENSED_DIAMOND_BLOCK);
-
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_SAND);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_DIRT);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_STONE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_GRAVEL);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_SOUL_SAND);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_NETHERRACK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_MAGMA_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_NETHER_WART_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_OBSIDIAN);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_PURPUR_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_COPPER_BULB);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_COPPER_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_SLIME_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_REDSTONE_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_IRON_BLOCK);
-                        entries.add(ModBlocks.TRIPLE_CONDENSED_DIAMOND_BLOCK);
-
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_SAND);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_DIRT);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_STONE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_GRAVEL);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_SOUL_SAND);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_NETHERRACK);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_MAGMA_BLOCK);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_NETHER_WART_BLOCK);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_OBSIDIAN);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_PURPUR_BLOCK);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_END_STONE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_GLOWSTONE);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_PEARLESCENT_FROGLIGHT);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BULB);
-                        entries.add(ModBlocks.QUADRUPLE_CONDENSED_COPPER_BLOCK);
 
                         entries.add(ModItems.BACKPACK);
                         entries.add(ModItems.STRETCHY_LEATHER);
@@ -186,6 +49,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SIEVING_STATION);
                         entries.add(ModBlocks.FERMENTING_STATION);
 
+                        //season 7 code
+
+                        entries.add(ModItems.RIGHT_RING);
+                        entries.add(ModItems.LEFT_RING);
+                        entries.add(ModItems.FAKE_ELYTRA);
+                        entries.add(ModItems.XP_TANK);
 
                     }).build());
 

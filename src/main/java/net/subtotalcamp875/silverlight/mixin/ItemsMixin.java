@@ -14,7 +14,6 @@ public class ItemsMixin {
     @ModifyExpressionValue(method = "<clinit>", slice = @Slice(from = @At(value = "FIELD", target = "Lnet/minecraft/block/Blocks;DRAGON_EGG:Lnet/minecraft/block/Block;", opcode = Opcodes.GETSTATIC)),
             at = @At(value = "NEW", target = "net/minecraft/item/Item$Settings", ordinal = 0))
     private static Item.Settings changeRecipeRemainderOfDragonEgg(Item.Settings original) {
-        SilverLight.LOGGER.info("test");
         return original.recipeRemainder(Items.DRAGON_EGG);
     }
 }

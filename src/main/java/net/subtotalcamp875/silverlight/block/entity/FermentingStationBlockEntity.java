@@ -286,11 +286,11 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 || getStack(FERMENTING_SLOT_1).getItem() == Items.IRON_BLOCK
                 || getStack(FERMENTING_SLOT_2).getItem() == Items.IRON_BLOCK
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.IRON_BLOCK
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.STICK
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.STICK
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.RABBIT_FOOT
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.RABBIT_FOOT
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT;
         boolean hasSameFermentingInput = hasSameFermentingRecipes();
 

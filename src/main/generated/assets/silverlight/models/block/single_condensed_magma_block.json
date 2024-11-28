@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "silverlight:block/single_condensed_magma_block"
-  }
-}
