@@ -62,7 +62,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.YACKAMAID, Models.GENERATED);
         itemModelGenerator.register(ModItems.BITCOIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEECH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRONG_LEECH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHIELD_GENERATOR, Models.GENERATED);
 
     }
 }

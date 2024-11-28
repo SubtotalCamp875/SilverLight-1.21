@@ -61,7 +61,12 @@ public class ModItemGroups {
                         entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.REAPERS_SCYTHE);
                         entries.add(ModItems.AVA);
+                        entries.add(ModItems.YACKAMAID);
                         entries.add(ModItems.BITCOIN);
+                        entries.add(ModItems.LEECH);
+                        entries.add(ModItems.LONG_LEECH);
+                        entries.add(ModItems.STRONG_LEECH);
+                        entries.add(ModItems.SHIELD_GENERATOR);
 
                     }).build());
 

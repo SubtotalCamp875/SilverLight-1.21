@@ -87,8 +87,46 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item YACKAMAID = registerItem("yackamaid", new Item(new Item.Settings()) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.yackamaid.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item BITCOIN = registerItem("bitcoin", new Item(new Item.Settings()));
-
+    public static final Item LEECH = registerItem("leech", new LeechItem(new Item.Settings().maxDamage(3600).maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.leech.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item LONG_LEECH = registerItem("long_leech", new LongLeechItem(new Item.Settings().maxDamage(120).maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.long_leech.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item STRONG_LEECH = registerItem("strong_leech", new StrongLeechItem(new Item.Settings().maxDamage(120).maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.strong_leech.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item SHIELD_GENERATOR = registerItem("shield_generator", new ShieldGeneratorItem(new Item.Settings().maxDamage(172800).maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip1"));
+            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip2"));
+            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip3"));
+            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip4"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
 
 
     public static final Item REAPERS_SCYTHE = registerItem("reapers_scythe",

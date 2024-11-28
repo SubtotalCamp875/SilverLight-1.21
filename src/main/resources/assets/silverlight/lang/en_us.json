@@ -60,13 +60,27 @@
   "item.silverlight.grounded": "To the Ground!",
   "item.silverlight.reapers_scythe": "Reaper's Scythe",
   "item.silverlight.ava": "Ava",
+  "item.silverlight.yackamaid": "YackaMaid",
   "item.silverlight.bitcoin": "Bitcoin",
+  "item.silverlight.leech": "Leech",
+  "item.silverlight.long_leech": "Long Leech",
+  "item.silverlight.strong_leech": "Strong Leech",
+  "item.silverlight.shield_generator": "Shield Generator",
 
   "tooltip.silverlight.fake_elytra.tooltip": "1.) Equip it, 2.) Jump off the tallest cliff, 3.) FLY!!!",
   "tooltip.silverlight.right_ring.tooltip": "A ring missing half its body. Grants powerful blessings when fully restored",
   "tooltip.silverlight.reapers_scythe.tooltip": "Worn down replica of the legendary scythe used by the reaper himself",
   "tooltip.silverlight.ava.tooltip": "Literally just an item. Has 0 functions and is useless",
+  "tooltip.silverlight.yackamaid.tooltip": "Honestly the best item in the game. That wasn't a question :)",
   "tooltip.silverlight.fake_diamond_block.tooltip": "Diamonds!!",
+  "tooltip.silverlight.leech.tooltip": "It Hurts!",
+  "tooltip.silverlight.long_leech.tooltip": "It's Growing!!",
+  "tooltip.silverlight.strong_leech.tooltip": "BLOOD!!!",
+  "tooltip.silverlight.shield_generator.tooltip": "Right Click to toggle (10 days of activation time)",
+  "tooltip.silverlight.shield_generator.tooltip1": "Gain 2 extra hearts if",
+  "tooltip.silverlight.shield_generator.tooltip2": "- the player is on full health",
+  "tooltip.silverlight.shield_generator.tooltip3": "- has not taken damage for 5 seconds",
+  "tooltip.silverlight.shield_generator.tooltip4": "*Logging out will turn off the generator",
 
 
   "itemgroup.silverlight": "Silver Light Group"
