@@ -4,15 +4,15 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.item.custom.*;
+
+import javax.tools.Tool;
 
 public class ModItems {
     public static final Item BACKPACK = registerItem("backpack", new BackpackItem(new Item.Settings().maxCount(1)));
@@ -55,6 +55,11 @@ public class ModItems {
     public static final Item LEFT_RING = registerItem("left_ring", new Item(new Item.Settings().maxCount(1)));
     public static final Item FAKE_ELYTRA = registerItem("fake_elytra", new Item(new Item.Settings().maxCount(1)));
     public static final Item XP_TANK = registerItem("xp_tank", new XPTankItem(new Item.Settings().maxCount(1).maxDamage(1125)));
+    public static final Item UP = registerItem("up", new UpItem(new Item.Settings().maxCount(1)));
+    public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1)));
+    public static final Item REAPERS_SCYTHE = registerItem("reapers_scythe",
+            new SwordItem(ModToolMaterials.REAPERS_SCYTHE_MATERIAL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.REAPERS_SCYTHE_MATERIAL, 1000, -1f))));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

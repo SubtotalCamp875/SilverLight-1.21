@@ -55,6 +55,9 @@ public class ModItemGroups {
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.FAKE_ELYTRA);
                         entries.add(ModItems.XP_TANK);
+                        entries.add(ModItems.UP);
+                        entries.add(ModItems.GROUNDED);
+                        entries.add(ModItems.REAPERS_SCYTHE);
 
                     }).build());
 

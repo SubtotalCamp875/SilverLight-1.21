@@ -68,6 +68,12 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.GENERIC_STEP_HEIGHT, Identifier.of(SilverLight.MOD_ID, "happy_feet"),
                             9.4F, EntityAttributeModifier.Operation.ADD_VALUE));
 
+
+    // season 7 code
+
+    public static final RegistryEntry<StatusEffect> DRUNK = registerEffect(
+            "drunk", new BasicEffect(StatusEffectCategory.HARMFUL, 0));
+
     private static RegistryEntry<StatusEffect> registerEffect(String id, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(SilverLight.MOD_ID, id), statusEffect);
     }

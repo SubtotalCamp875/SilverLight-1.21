@@ -56,6 +56,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEFT_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.XP_TANK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.UP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
 
     }
 }

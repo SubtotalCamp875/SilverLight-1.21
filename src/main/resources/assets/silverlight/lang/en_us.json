@@ -34,6 +34,7 @@
   "effect.silverlight.anti_gravity": "Anti Gravity",
   "effect.silverlight.disproportion": "Disproportion",
   "effect.silverlight.happy_feet": "happy Feet",
+  "effect.silverlight.drunk": "drunk",
 
   "item.silverlight.potion_of_shrink": "Potion of Shrink",
   "item.silverlight.potion_of_dwarf": "Potion of Dwarf",
@@ -53,6 +54,9 @@
   "item.silverlight.left_ring": "Left Ring",
   "item.silverlight.fake_elytra": "Elytra?",
   "item.silverlight.xp_tank": "XP Tank",
+  "item.silverlight.up": "Up Up and Away!",
+  "item.silverlight.grounded": "To the Ground!",
+  "item.silverlight.reapers_scythe": "Reaper's Scythe",
 
   "itemgroup.silverlight": "Silver Light Group"
 }
