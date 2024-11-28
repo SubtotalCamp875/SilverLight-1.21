@@ -20,11 +20,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_DIAMOND_BLOCK);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BACKPACK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLACK_HOLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRETCHY_LEATHER, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUILL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CANONICAL_BOOK, Models.GENERATED);
@@ -59,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.UP, Models.GENERATED);
         itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BITCOIN, Models.GENERATED);
 
     }
 }

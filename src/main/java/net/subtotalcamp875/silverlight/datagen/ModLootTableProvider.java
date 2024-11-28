@@ -28,6 +28,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DRAGON_PROCESSING_STATION);
         addDrop(ModBlocks.SIEVING_STATION);
         addDrop(ModBlocks.FERMENTING_STATION);
+        addDrop(ModBlocks.FAKE_DIAMOND_BLOCK);
 
     }
 }

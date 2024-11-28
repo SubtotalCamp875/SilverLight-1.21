@@ -2,6 +2,7 @@
   "values": [
     "silverlight:dragon_processing_station",
     "silverlight:sieving_station",
-    "silverlight:fermenting_station"
+    "silverlight:fermenting_station",
+    "silverlight:fake_diamond_block"
   ]
 }

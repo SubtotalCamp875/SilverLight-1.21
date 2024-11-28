@@ -1,5 +1,6 @@
-// 1.21	2024-11-27T20:06:23.6546373	SilverLight/Block Loot Tables
+// 1.21	2024-11-28T14:25:03.9165925	SilverLight/Block Loot Tables
 225324905fe1725d154b0b2526e1b3c8999d335c data\silverlight\loot_table\blocks\tomato_plant.json
 308e5498a0a5abf1a5b5ba1aefdaa8f18299d27f data\silverlight\loot_table\blocks\sieving_station.json
 2fdc0178b05bc1ae1090f8ab7aaecae5e9fcccb8 data\silverlight\loot_table\blocks\dragon_processing_station.json
+48a6e09842786b465b959991dd57fd0d378f9dfa data\silverlight\loot_table\blocks\fake_diamond_block.json
 fdac9fa71d1bf4ae184bb2ff40e898a81d1dcad3 data\silverlight\loot_table\blocks\fermenting_station.json

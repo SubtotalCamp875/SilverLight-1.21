@@ -6,14 +6,18 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 import net.subtotalcamp875.silverlight.entity.custom.TomatoEntity;
 import net.subtotalcamp875.silverlight.item.ModItems;
+
+import java.util.List;
 
 public class RightRingItem extends Item {
     public RightRingItem(Settings settings) {
@@ -44,4 +48,5 @@ public class RightRingItem extends Item {
 
         return TypedActionResult.success(itemStack, world.isClient());
     }
+
 }

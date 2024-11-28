@@ -22,7 +22,7 @@ public class UpItem extends Item {
                 SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!world.isClient) {
-            user.teleport(user.getX(), (user.getY()), user.getZ(), true);
+            user.teleport(user.getX(), (user.getY() + 300), user.getZ(), true);
 
             if (!user.getAbilities().creativeMode) {
                 itemStack.decrement(1);

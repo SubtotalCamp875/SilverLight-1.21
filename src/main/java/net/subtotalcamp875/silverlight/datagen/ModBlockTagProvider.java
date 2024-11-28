@@ -19,7 +19,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.DRAGON_PROCESSING_STATION)
                 .add(ModBlocks.SIEVING_STATION)
-                .add(ModBlocks.FERMENTING_STATION);
+                .add(ModBlocks.FERMENTING_STATION)
+                .add(ModBlocks.FAKE_DIAMOND_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 

@@ -1,5 +1,6 @@
 {
   "item.silverlight.backpack": "Backpack",
+  "item.silverlight.black_hole": "Black Hole",
   "item.silverlight.stretchy_leather": "Stretchy Leather",
   "item.silverlight.quill": "Quill",
   "item.silverlight.canonical_book": "Canonical Book",
@@ -22,6 +23,7 @@
   "block.silverlight.dragon_processing_station": "Dragon Processing Station",
   "block.silverlight.sieving_station": "Sieving Station",
   "block.silverlight.fermenting_station": "Fermenting Station",
+  "block.silverlight.fake_diamond_block": "Diamond Blocks",
 
   "effect.silverlight.shrink": "Shrink",
   "effect.silverlight.dwarf": "Dwarf",
@@ -57,6 +59,15 @@
   "item.silverlight.up": "Up Up and Away!",
   "item.silverlight.grounded": "To the Ground!",
   "item.silverlight.reapers_scythe": "Reaper's Scythe",
+  "item.silverlight.ava": "Ava",
+  "item.silverlight.bitcoin": "Bitcoin",
+
+  "tooltip.silverlight.fake_elytra.tooltip": "1.) Equip it, 2.) Jump off the tallest cliff, 3.) FLY!!!",
+  "tooltip.silverlight.right_ring.tooltip": "A ring missing half its body. Grants powerful blessings when fully restored",
+  "tooltip.silverlight.reapers_scythe.tooltip": "Worn down replica of the legendary scythe used by the reaper himself",
+  "tooltip.silverlight.ava.tooltip": "Literally just an item. Has 0 functions and is useless",
+  "tooltip.silverlight.fake_diamond_block.tooltip": "Diamonds!!",
+
 
   "itemgroup.silverlight": "Silver Light Group"
 }

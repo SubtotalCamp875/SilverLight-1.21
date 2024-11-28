@@ -17,6 +17,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.BACKPACK)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.BACKPACK);
+                        entries.add(ModItems.BLACK_HOLE);
                         entries.add(ModItems.STRETCHY_LEATHER);
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
@@ -48,6 +49,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
                         entries.add(ModBlocks.SIEVING_STATION);
                         entries.add(ModBlocks.FERMENTING_STATION);
+                        entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
 
                         //season 7 code
 
@@ -58,6 +60,8 @@ public class ModItemGroups {
                         entries.add(ModItems.UP);
                         entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.REAPERS_SCYTHE);
+                        entries.add(ModItems.AVA);
+                        entries.add(ModItems.BITCOIN);
 
                     }).build());
 
