@@ -12,6 +12,7 @@ import net.subtotalcamp875.silverlight.SilverLight;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> REAPERS_SCYTHE_MATERIAL = createTag("reapers_scythe_material");
+        public static final TagKey<Block> MINIGUN_STICK_MATERIAL = createTag("minigun_stick_material");
 
         private static TagKey<net.minecraft.block.Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(SilverLight.MOD_ID, name));

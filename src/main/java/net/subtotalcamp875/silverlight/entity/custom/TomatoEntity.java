@@ -39,12 +39,12 @@ public class TomatoEntity extends ThrownItemEntity {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
         if (entity instanceof LivingEntity) {
-            entityHitResult.getEntity().damage(this.getDamageSources().lightningBolt(), 0.1f);
+            entityHitResult.getEntity().damage(this.getDamageSources().sweetBerryBush(), 0.1f);
         }
 
     }
 
     public void test(PlayerEntity livingEntity) {
-        livingEntity.addCommandTag("test");
+        livingEntity.addCommandTag("Silverlight Tomato Entity test");
     }
 }

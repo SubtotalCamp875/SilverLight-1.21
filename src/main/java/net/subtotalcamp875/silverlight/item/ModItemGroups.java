@@ -66,7 +66,9 @@ public class ModItemGroups {
                         entries.add(ModItems.LEECH);
                         entries.add(ModItems.LONG_LEECH);
                         entries.add(ModItems.STRONG_LEECH);
-                        entries.add(ModItems.SHIELD_GENERATOR);
+                        entries.add(ModItems.HOLY_SHIELD_GENERATOR);
+                        entries.add(ModItems.MINIGUN_STICK);
+                        entries.add(ModItems.ARROW_STAFF);
 
                     }).build());
 

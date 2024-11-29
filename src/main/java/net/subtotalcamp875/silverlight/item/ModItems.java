@@ -78,9 +78,9 @@ public class ModItems {
         }
     });
     public static final Item XP_TANK = registerItem("xp_tank", new XPTankItem(new Item.Settings().maxCount(1).maxDamage(1125)));
-    public static final Item UP = registerItem("up", new UpItem(new Item.Settings().maxCount(1)));
-    public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1)));
-    public static final Item AVA = registerItem("ava", new Item(new Item.Settings().maxCount(1)) {
+    public static final Item UP = registerItem("up", new UpItem(new Item.Settings().maxCount(1).maxDamage(16)));
+    public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1).maxDamage(16)));
+    public static final Item AVA = registerItem("ava", new AvaItem(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.ava.tooltip"));
@@ -116,28 +116,35 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item SHIELD_GENERATOR = registerItem("shield_generator", new ShieldGeneratorItem(new Item.Settings().maxDamage(172800).maxCount(1)) {
+    public static final Item HOLY_SHIELD_GENERATOR = registerItem("holy_shield_generator", new ShieldGeneratorItem(new Item.Settings().maxDamage(28800).maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip"));
-            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip1"));
-            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip2"));
-            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip3"));
-            tooltip.add(Text.translatable("tooltip.silverlight.shield_generator.tooltip4"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip1"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip2"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip3"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip4"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
 
+    public static final Item ARROW_STAFF = registerItem("arrow_staff", new ArrowStaffItem(new Item.Settings().maxDamage(100).maxCount(1)));
 
     public static final Item REAPERS_SCYTHE = registerItem("reapers_scythe",
             new SwordItem(ModToolMaterials.REAPERS_SCYTHE_MATERIAL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.REAPERS_SCYTHE_MATERIAL, 1000, -1f))){
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.REAPERS_SCYTHE_MATERIAL, 1998, 0f))){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe1.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
+    public static final Item MINIGUN_STICK = registerItem("minigun_stick",
+            new SwordItem(ModToolMaterials.MINIGUN_STICK_MATERIAL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MINIGUN_STICK_MATERIAL, 5, 1000f))));
+
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

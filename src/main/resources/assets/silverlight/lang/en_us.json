@@ -29,14 +29,15 @@
   "effect.silverlight.dwarf": "Dwarf",
   "effect.silverlight.shorten": "Shorten",
   "effect.silverlight.fairy": "Fairy",
+  "effect.silverlight.strong_fairy": "Strong Fairy",
   "effect.silverlight.tall": "Tall",
   "effect.silverlight.enlarge": "Enlarge",
   "effect.silverlight.giant": "Giant",
   "effect.silverlight.gravity": "Gravity",
   "effect.silverlight.anti_gravity": "Anti Gravity",
   "effect.silverlight.disproportion": "Disproportion",
-  "effect.silverlight.happy_feet": "happy Feet",
-  "effect.silverlight.drunk": "drunk",
+  "effect.silverlight.happy_feet": "Happy Feet",
+  "effect.silverlight.drunk": "Drunk",
 
   "item.silverlight.potion_of_shrink": "Potion of Shrink",
   "item.silverlight.potion_of_dwarf": "Potion of Dwarf",
@@ -49,7 +50,6 @@
   "item.silverlight.potion_of_anti_gravity": "Potion of Anti Gravity",
   "item.silverlight.potion_of_disproportion": "Potion of Disproportion",
   "item.silverlight.potion_of_happy_feet": "Potion of Happy Feet",
-
 
 
   "item.silverlight.right_ring": "Right Ring",
@@ -65,23 +65,29 @@
   "item.silverlight.leech": "Leech",
   "item.silverlight.long_leech": "Long Leech",
   "item.silverlight.strong_leech": "Strong Leech",
-  "item.silverlight.shield_generator": "Shield Generator",
+  "item.silverlight.holy_shield_generator": "Shield Generator",
+  "item.silverlight.minigun_stick": "Minigun But Stick!",
+  "item.silverlight.arrow_staff": "Arrow Staff",
+
 
   "tooltip.silverlight.fake_elytra.tooltip": "1.) Equip it, 2.) Jump off the tallest cliff, 3.) FLY!!!",
   "tooltip.silverlight.right_ring.tooltip": "A ring missing half its body. Grants powerful blessings when fully restored",
   "tooltip.silverlight.reapers_scythe.tooltip": "Worn down replica of the legendary scythe used by the reaper himself",
-  "tooltip.silverlight.ava.tooltip": "Literally just an item. Has 0 functions and is useless",
-  "tooltip.silverlight.yackamaid.tooltip": "Honestly the best item in the game. That wasn't a question :)",
+  "tooltip.silverlight.reapers_scythe1.tooltip": "It can kill any entity instantly. Usable once.",
+  "tooltip.silverlight.ava.tooltip": "It's so useless it's even harmful to the environment",
+  "tooltip.silverlight.yackamaid.tooltip": "Honestly the best item in the game. That wasn't a question.",
   "tooltip.silverlight.fake_diamond_block.tooltip": "Diamonds!!",
   "tooltip.silverlight.leech.tooltip": "It Hurts!",
   "tooltip.silverlight.long_leech.tooltip": "It's Growing!!",
   "tooltip.silverlight.strong_leech.tooltip": "BLOOD!!!",
-  "tooltip.silverlight.shield_generator.tooltip": "Right Click to toggle (10 days of activation time)",
-  "tooltip.silverlight.shield_generator.tooltip1": "Gain 2 extra hearts if",
-  "tooltip.silverlight.shield_generator.tooltip2": "- the player is on full health",
-  "tooltip.silverlight.shield_generator.tooltip3": "- has not taken damage for 5 seconds",
-  "tooltip.silverlight.shield_generator.tooltip4": "*Logging out will turn off the generator",
+  "tooltip.silverlight.holy_shield_generator.tooltip": "Right Click to toggle (5 days of activation time)",
+  "tooltip.silverlight.holy_shield_generator.tooltip1": "Gain 2 extra hearts if",
+  "tooltip.silverlight.holy_shield_generator.tooltip2": "- the player is on full health",
+  "tooltip.silverlight.holy_shield_generator.tooltip3": "- has not taken damage for 15 seconds",
+  "tooltip.silverlight.holy_shield_generator.tooltip4": "*Logging out will turn off the generator",
+  "tooltip.silverlight.arrow_staff.tooltip4": "It's Raining!",
 
+  "effect.silverlight.holy_shield": "Holy Shield",
 
   "itemgroup.silverlight": "Silver Light Group"
 }

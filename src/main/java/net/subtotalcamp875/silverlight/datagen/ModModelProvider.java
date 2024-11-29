@@ -67,7 +67,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRONG_LEECH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SHIELD_GENERATOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOLY_SHIELD_GENERATOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MINIGUN_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
 
     }
 }

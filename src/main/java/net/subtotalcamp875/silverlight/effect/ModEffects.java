@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.effect.custom.BasicEffect;
 import net.subtotalcamp875.silverlight.effect.custom.ArmorlessEffect;
+import net.subtotalcamp875.silverlight.effect.custom.HolyShieldStatusEffect;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> SHRINK = registerEffect(
@@ -29,8 +30,13 @@ public class ModEffects {
                             -0.75F, EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static final RegistryEntry<StatusEffect> FAIRY = registerEffect(
-            "fairy", new ArmorlessEffect(StatusEffectCategory.HARMFUL, 0)
+            "fairy", new ArmorlessEffect(StatusEffectCategory.BENEFICIAL, 0)
                     .addAttributeModifier(EntityAttributes.GENERIC_SCALE, Identifier.of(SilverLight.MOD_ID, "fairy"),
+                            -0.99F, EntityAttributeModifier.Operation.ADD_VALUE));
+
+    public static final RegistryEntry<StatusEffect> STRONG_FAIRY = registerEffect(
+            "strong_fairy", new BasicEffect(StatusEffectCategory.BENEFICIAL, 0)
+                    .addAttributeModifier(EntityAttributes.GENERIC_SCALE, Identifier.of(SilverLight.MOD_ID, "strong_fairy"),
                             -0.99F, EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static final RegistryEntry<StatusEffect> TALL = registerEffect(
@@ -67,6 +73,11 @@ public class ModEffects {
             "happy_feet", new BasicEffect(StatusEffectCategory.BENEFICIAL, 0)
                     .addAttributeModifier(EntityAttributes.GENERIC_STEP_HEIGHT, Identifier.of(SilverLight.MOD_ID, "happy_feet"),
                             9.4F, EntityAttributeModifier.Operation.ADD_VALUE));
+
+    public static final RegistryEntry<StatusEffect> HOLY_SHIELD = registerEffect(
+            "holy_shield", new HolyShieldStatusEffect(StatusEffectCategory.BENEFICIAL, 2445989)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_ABSORPTION, Identifier.of(SilverLight.MOD_ID, "holy_shield"),
+                            4f, EntityAttributeModifier.Operation.ADD_VALUE));
 
 
     // season 7 code

@@ -24,7 +24,10 @@ public class GroundedItem extends Item {
             user.teleport(user.getX(), user.getY(), user.getZ(), true);
 
             if (!user.getAbilities().creativeMode) {
-                itemStack.decrement(1);
+                itemStack.setDamage(itemStack.getDamage() + 1);
+                if (itemStack.getDamage() == itemStack.getMaxDamage()) {
+                    itemStack.decrement(1);
+                }
             }
         }
 

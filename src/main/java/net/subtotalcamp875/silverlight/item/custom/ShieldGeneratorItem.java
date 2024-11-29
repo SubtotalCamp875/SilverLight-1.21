@@ -32,7 +32,7 @@ public class ShieldGeneratorItem extends Item {
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             } else {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                        SoundEvents.BLOCK_GLASS_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                        SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             }
             isActivated = !isActivated;
         }
@@ -49,8 +49,8 @@ public class ShieldGeneratorItem extends Item {
             if (!world.isClient) {
                 if (user.getMaxHealth() == user.getHealth()) {
                     tick++;
-                    if (tick == 100 && user.getAbsorptionAmount() < 10) {
-                        user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 120), user);
+                    if (tick == 300 && user.getAbsorptionAmount() < 10) {
+                        user.addStatusEffect(new StatusEffectInstance(ModEffects.HOLY_SHIELD, 320), user);
                         stack.setDamage(stack.getDamage() + 1);
                         tick = 0;
                     }

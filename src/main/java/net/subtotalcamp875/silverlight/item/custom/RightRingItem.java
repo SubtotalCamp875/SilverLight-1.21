@@ -33,7 +33,7 @@ public class RightRingItem extends Item {
         if (!world.isClient) {
             if (user.getStackInHand(hand) == ModItems.RIGHT_RING.getDefaultStack()) {
                 if (user.getOffHandStack() == ModItems.LEFT_RING.getDefaultStack()) {
-                    user.addStatusEffect(new StatusEffectInstance(ModEffects.FAIRY, 100), user);
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 100), user);
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100), user);
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100), user);
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100), user);
