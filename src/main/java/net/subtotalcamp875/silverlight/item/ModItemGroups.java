@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STRETCHY_LEATHER);
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
+                        entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
                         entries.add(ModItems.DRAGON_OMELET);
                         entries.add(ModItems.DRAGON_SCRAP);
                         entries.add(ModItems.BLACK_EGG);
@@ -28,6 +29,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BURNING_OBSIDIAN_SHEARS);
                         entries.add(ModItems.VOID_OBSIDIAN_SHEARS);
 
+                        entries.add(ModBlocks.FERMENTING_STATION);
                         entries.add(ModItems.POTION_OF_NAUSEA);
                         entries.add(ModItems.POTENT_POTION_OF_NAUSEA);
                         entries.add(ModItems.POTION_OF_SHRINK);
@@ -45,21 +47,18 @@ public class ModItemGroups {
 
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEED);
-
-                        entries.add(ModBlocks.DRAGON_PROCESSING_STATION);
                         entries.add(ModBlocks.SIEVING_STATION);
-                        entries.add(ModBlocks.FERMENTING_STATION);
-                        entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
+
 
                         //season 7 code
 
-                        entries.add(ModItems.RIGHT_RING);
-                        entries.add(ModItems.LEFT_RING);
+                        entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
                         entries.add(ModItems.FAKE_ELYTRA);
+                        entries.add(ModItems.LEFT_RING);
+                        entries.add(ModItems.RIGHT_RING);
                         entries.add(ModItems.XP_TANK);
                         entries.add(ModItems.UP);
                         entries.add(ModItems.GROUNDED);
-                        entries.add(ModItems.REAPERS_SCYTHE);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.YACKAMAID);
                         entries.add(ModItems.BITCOIN);
@@ -67,8 +66,14 @@ public class ModItemGroups {
                         entries.add(ModItems.LONG_LEECH);
                         entries.add(ModItems.STRONG_LEECH);
                         entries.add(ModItems.HOLY_SHIELD_GENERATOR);
+                        entries.add(ModItems.REAPERS_SCYTHE);
                         entries.add(ModItems.MINIGUN_STICK);
                         entries.add(ModItems.ARROW_STAFF);
+                        entries.add(ModItems.SOUND_STAFF);
+                        entries.add(ModItems.DICE_STAFF);
+                        entries.add(ModItems.DEATH_STAFF);
+                        entries.add(ModItems.DEATHS_DOLL);
+                        entries.add(ModItems.DEATHS_BOMB);
 
                     }).build());
 

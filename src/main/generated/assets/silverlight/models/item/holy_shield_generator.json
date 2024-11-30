@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "silverlight:item/shield_generator"
+    "layer0": "silverlight:item/holy_shield_generator"
   }
 }

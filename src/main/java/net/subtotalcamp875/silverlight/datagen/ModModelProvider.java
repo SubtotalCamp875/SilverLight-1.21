@@ -70,6 +70,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HOLY_SHIELD_GENERATOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.MINIGUN_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOUND_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DICE_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DEATH_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DEATHS_DOLL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DEATHS_BOMB, Models.GENERATED);
 
     }
 }

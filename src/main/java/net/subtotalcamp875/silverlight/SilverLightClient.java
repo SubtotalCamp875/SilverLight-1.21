@@ -27,6 +27,7 @@ public class SilverLightClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TOMATO_PLANT, RenderLayer.getCutout());
         EntityRendererRegistry.register(ModEntities.TOMATO_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.DEATHS_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.DRAGON_PROCESSING_SCREEN_HANDLER, DragonProcessingScreen::new);
         HandledScreens.register(ModScreenHandlers.SIEVING_SCREEN_HANDLER, SievingScreen::new);

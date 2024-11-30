@@ -16,7 +16,7 @@ public class LeechItem extends Item {
         super(settings);
 
     }
-    private int damage = 0;
+    private static int tick = 0;
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
@@ -26,11 +26,11 @@ public class LeechItem extends Item {
             assert user != null;
             if (!world.isClient && !user.getAbilities().creativeMode) {
 
-                damage++;
-                if (damage == 100) {
+                tick++;
+                if (tick == 100) {
                     user.setHealth(user.getHealth() - 1f);
                     stack.setDamage(stack.getDamage() + 1);
-                    damage = 0;
+                    tick = 0;
                 }
 
 

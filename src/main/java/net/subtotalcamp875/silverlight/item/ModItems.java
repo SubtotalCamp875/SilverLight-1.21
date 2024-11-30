@@ -138,12 +138,32 @@ public class ModItems {
             tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe1.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
+
         }
     });
 
     public static final Item MINIGUN_STICK = registerItem("minigun_stick",
             new SwordItem(ModToolMaterials.MINIGUN_STICK_MATERIAL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MINIGUN_STICK_MATERIAL, 5, 1000f))));
+
+    public static final Item SOUND_STAFF = registerItem("sound_staff", new SoundStaffItem(new Item.Settings().maxCount(1).maxDamage(5)));
+    public static final Item DICE_STAFF = registerItem("dice_staff", new DiceStaffItem(new Item.Settings().maxCount(1).maxDamage(64)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.dice_staff.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item DEATH_STAFF = registerItem("death_staff", new DeathStaffItem(new Item.Settings().maxCount(1).maxDamage(100)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.death_staff.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item DEATHS_DOLL = registerItem("deaths_doll", new DeathsDollItem(new Item.Settings().maxCount(1).maxDamage(10)));
+    public static final Item DEATHS_BOMB = registerItem("deaths_bomb", new DeathsBombItem(new Item.Settings().maxCount(1)));
+
 
 
 
