@@ -69,7 +69,7 @@ public class SoundStaffItem extends Item {
             tooltip.add(Text.translatable("tooltip.silverlight.sound_staff_shift_down7.tooltip"));
         } else {
             tooltip.add(Text.translatable("tooltip.silverlight.sound_staff.tooltip"));
-            tooltip.add(Text.translatable("tooltip.silverlight.sound_staff1.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.shift.tooltip"));
         }
 
         super.appendTooltip(stack, context, tooltip, type);

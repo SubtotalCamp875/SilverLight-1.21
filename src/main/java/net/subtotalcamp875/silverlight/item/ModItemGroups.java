@@ -75,6 +75,9 @@ public class ModItemGroups {
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
                         entries.add(ModItems.HORN_OF_BRAN_GALED);
+                        entries.add(ModItems.LIGHTNING_ORB);
+                        entries.add(ModItems.THORS_HAMMER);
+                        entries.add(ModItems.CANDY_CANE);
 
                     }).build());
 

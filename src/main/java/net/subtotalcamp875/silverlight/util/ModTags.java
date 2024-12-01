@@ -13,6 +13,8 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> REAPERS_SCYTHE_MATERIAL = createTag("reapers_scythe_material");
         public static final TagKey<Block> MINIGUN_STICK_MATERIAL = createTag("minigun_stick_material");
+        public static final TagKey<Block> THORS_HAMMER_MATERIAL = createTag("thors_hammer_material");
+        public static final TagKey<Block> CANDY_CANE_MATERIAL = createTag("candy_cane_material");
 
         private static TagKey<net.minecraft.block.Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(SilverLight.MOD_ID, name));

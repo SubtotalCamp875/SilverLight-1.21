@@ -164,7 +164,17 @@ public class ModItems {
     public static final Item DEATHS_DOLL = registerItem("deaths_doll", new DeathsDollItem(new Item.Settings().maxCount(1).maxDamage(10)));
     public static final Item DEATHS_BOMB = registerItem("deaths_bomb", new DeathsBombItem(new Item.Settings().maxCount(1)));
     public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
-
+    public static final Item LIGHTNING_ORB = registerItem("lightning_orb", new Item(new Item.Settings()));
+    public static final Item THORS_HAMMER = registerItem("thors_hammer", new ThorsHammer(ModToolMaterials.THORS_HAMMER_MATERIAL, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THORS_HAMMER_MATERIAL, 12, -3.2f))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item CANDY_CANE = registerItem("candy_cane", new CandyCaneItem(ModToolMaterials.CANDY_CANE_MATERIAL, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CANDY_CANE_MATERIAL, 0, -2f))));
 
 
 
