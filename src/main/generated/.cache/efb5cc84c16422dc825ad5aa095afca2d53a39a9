@@ -1,4 +1,4 @@
-// 1.21	2024-11-29T19:56:03.6980766	SilverLight/Model Definitions
+// 1.21	2024-11-30T11:14:47.5394597	SilverLight/Model Definitions
 b04ef570a79d3c13fad99a2673a862a50030f8de assets\silverlight\models\item\potion_of_shorten.json
 fc41496e354baf60fd9dab47fa3e36a4933d5c6a assets\silverlight\models\item\reapers_scythe.json
 657422ecbc7e74ff5e090c7caf1d9fd9861f46ce assets\silverlight\models\item\strong_leech.json
@@ -13,6 +13,7 @@ b19fcd2281304cfb66c29000c049bd13a027b7ed assets\silverlight\blockstates\dragon_p
 3d9dc2aab48abce7eddd0936f67338752846e656 assets\silverlight\models\item\potion_of_dwarf.json
 3f8c6d77dd53530397973aba01f4cb7a93be053d assets\silverlight\models\item\right_ring.json
 55a3ec031b790ca648e46ac419cae08003c46cd9 assets\silverlight\models\item\long_leech.json
+6721cc16ce7c7e6fa988f6569cfc641e02d191f1 assets\silverlight\models\item\blessed_ring.json
 467cc6ec9494d99cc84fb8eeb0c2b7b6e3215579 assets\silverlight\models\block\tomato_plant_stage2.json
 493ed40f57d3391b9dd4c4bb3b00fbda2987e1b1 assets\silverlight\blockstates\fake_diamond_block.json
 a753be9d56cefdb45c789d684296e909f9cf1178 assets\silverlight\blockstates\tomato_plant.json
@@ -42,8 +43,8 @@ cd172aea909795cc13eb4d3ca9e274d491ae1ebf assets\silverlight\models\item\potion_o
 0fca27fcb023a94bee1c844619626ef15b8c6032 assets\silverlight\models\item\quill.json
 1e9c1b1e9a48c005cf9a52acb8f3c3a2610520f7 assets\silverlight\models\item\tomato_seed.json
 6d7f9e38b153bb464f15e2bfa80f40adcc0918f3 assets\silverlight\models\item\potent_potion_of_nausea.json
-9b3e8e9cf849a241506a970ec5290c6122b04537 assets\silverlight\models\item\dragon_processing_station.json
 a58f1b9cbe7bfdb8b028e94c9a4f10c7b7bdffdf assets\silverlight\models\item\arrow_staff.json
+9b3e8e9cf849a241506a970ec5290c6122b04537 assets\silverlight\models\item\dragon_processing_station.json
 d5ad1d34e1e3689fb4b3ca898d8448c6fa30f0fe assets\silverlight\models\item\yackamaid.json
 bcc488504ca11a795bc9a72f40ed7b6d60946305 assets\silverlight\models\item\potion_of_gravity.json
 0d0b2781895c671dd0d134af5bc3394164b0ec43 assets\silverlight\models\item\stretchy_leather.json

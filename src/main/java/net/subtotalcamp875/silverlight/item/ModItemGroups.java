@@ -56,8 +56,8 @@ public class ModItemGroups {
                         entries.add(ModItems.FAKE_ELYTRA);
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.RIGHT_RING);
+                        entries.add(ModItems.BLESSED_RING);
                         entries.add(ModItems.XP_TANK);
-                        entries.add(ModItems.UP);
                         entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.YACKAMAID);
@@ -74,6 +74,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DEATH_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
+                        entries.add(ModItems.HORN_OF_BRAN_GALED);
 
                     }).build());
 

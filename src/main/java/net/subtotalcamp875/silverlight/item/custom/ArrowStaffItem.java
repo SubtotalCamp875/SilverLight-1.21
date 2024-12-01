@@ -54,7 +54,7 @@ public class ArrowStaffItem extends RangedWeaponItem {
         if (!itemStack.isEmpty()) {
             List<ItemStack> list = load(stack, itemStack, user);
             if (world instanceof ServerWorld serverWorld && !list.isEmpty()) {
-                this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 3.0F, 1.0F, true, null);
+                this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 2F, 1.0F, false, null);
             }
 
             world.playSound(
@@ -65,7 +65,7 @@ public class ArrowStaffItem extends RangedWeaponItem {
                     SoundEvents.ENTITY_ARROW_SHOOT,
                     SoundCategory.PLAYERS,
                     1.0F,
-                    1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 1 * 0.5F
+                    1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 0.9f * 0.5F
             );
         }
         return TypedActionResult.fail(stack);

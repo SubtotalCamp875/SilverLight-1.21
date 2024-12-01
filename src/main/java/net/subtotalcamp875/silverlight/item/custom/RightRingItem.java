@@ -30,18 +30,20 @@ public class RightRingItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
+
         if (!world.isClient) {
-            if (user.getStackInHand(hand) == ModItems.RIGHT_RING.getDefaultStack()) {
-                if (user.getOffHandStack() == ModItems.LEFT_RING.getDefaultStack()) {
-                    user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 100), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200), user);
+            if (user.getStackInHand(hand).getItem() == ModItems.RIGHT_RING) {
+                if (user.getOffHandStack().getItem() == ModItems.LEFT_RING) {
+                    user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 200), user);
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200), user);
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 200), user);
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200), user);
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200), user);
+
 
                     itemStack.decrement(1);
                     user.getOffHandStack().decrement(1);
+                    user.giveItemStack(ModItems.BLESSED_RING.getDefaultStack());
                 }
             }
         }

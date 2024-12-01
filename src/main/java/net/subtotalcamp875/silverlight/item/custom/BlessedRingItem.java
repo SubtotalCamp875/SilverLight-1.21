@@ -1,39 +1,35 @@
 package net.subtotalcamp875.silverlight.item.custom;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
-public class LongLeechItem extends Item {
-    public LongLeechItem(Settings settings) {
+public class BlessedRingItem extends Item {
+    public BlessedRingItem(Settings settings) {
         super(settings);
-
     }
-    private int tick = 0;
+
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        stack.copyComponentsToNewStack(stack.getItem(), 1);
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;
-            if (!world.isClient && !user.getAbilities().creativeMode) {
+            if (!world.isClient) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 40), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 40), user);
 
-                tick++;
-                if (tick == 20) {
-                    user.setHealth(user.getHealth() - 1f);
+                if (!user.getAbilities().creativeMode) {
                     stack.setDamage(stack.getDamage() + 1);
-                    tick = 0;
-                }
-
-
-                if (stack.getDamage() == stack.getMaxDamage()) {
-                    stack.decrement(1);
-                    user.giveItemStack(ModItems.STRONG_LEECH.getDefaultStack());
+                    if (stack.getDamage() == stack.getMaxDamage()) {
+                        stack.decrement(1);
+                    }
                 }
             }
         }

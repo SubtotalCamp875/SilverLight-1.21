@@ -56,9 +56,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.RIGHT_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEFT_RING, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLESSED_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.XP_TANK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.UP, Models.GENERATED);
         itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
@@ -75,6 +75,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DEATH_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_DOLL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_BOMB, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HORN_OF_BRAN_GALED, Models.GENERATED);
 
     }
 }

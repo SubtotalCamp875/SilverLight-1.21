@@ -16,7 +16,8 @@ public class StrongLeechItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (entity.isPlayer()) {
+        stack.copyComponentsToNewStack(stack.getItem(), 1);
+        if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;
@@ -24,7 +25,7 @@ public class StrongLeechItem extends Item {
 
                 tick++;
                 if (tick == 20) {
-                    user.setHealth(user.getHealth() - 1f);
+                    user.setHealth(user.getHealth() - 2f);
                     stack.setDamage(stack.getDamage() + 1);
                     tick = 0;
                 }

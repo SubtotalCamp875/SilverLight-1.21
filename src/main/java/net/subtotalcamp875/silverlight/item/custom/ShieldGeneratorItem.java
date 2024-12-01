@@ -42,7 +42,8 @@ public class ShieldGeneratorItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (entity.isPlayer() && isActivated) {
+        stack.copyComponentsToNewStack(stack.getItem(), 1);
+        if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;

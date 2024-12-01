@@ -54,9 +54,9 @@
 
   "item.silverlight.right_ring": "Right Ring",
   "item.silverlight.left_ring": "Left Ring",
+  "item.silverlight.blessed_ring": "Blessed Ring",
   "item.silverlight.fake_elytra": "Elytra?",
   "item.silverlight.xp_tank": "XP Tank",
-  "item.silverlight.up": "Up Up and Away!",
   "item.silverlight.grounded": "To the Ground!",
   "item.silverlight.reapers_scythe": "Reaper's Scythe",
   "item.silverlight.ava": "Ava",
@@ -73,10 +73,12 @@
   "item.silverlight.death_staff": "Death Staff",
   "item.silverlight.deaths_doll": "Death's Doll",
   "item.silverlight.deaths_bomb": "Death's Bomb",
+  "item.silverlight.horn_of_bran_galeb": "Horn Of Bran Galen",
 
 
   "tooltip.silverlight.fake_elytra.tooltip": "1.) Equip it, 2.) Jump off the tallest cliff, 3.) FLY!!!",
   "tooltip.silverlight.right_ring.tooltip": "A ring missing half its body. Grants powerful §6blessings§r when fully restored",
+  "tooltip.silverlight.blessed_ring.tooltip": "Grants powerful §6blessings§r. Fully restored!",
   "tooltip.silverlight.reapers_scythe.tooltip": "Worn down replica of the legendary scythe used by the §4Reaper§r himself",
   "tooltip.silverlight.reapers_scythe1.tooltip": "It can kill §4any§r entity instantly. Usable once.",
   "tooltip.silverlight.ava.tooltip": "It's so useless it's even §4harmful§r to the environment",

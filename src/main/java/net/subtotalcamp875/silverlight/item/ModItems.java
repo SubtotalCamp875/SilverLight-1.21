@@ -70,6 +70,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item BLESSED_RING = registerItem("blessed_ring", new BlessedRingItem(new Item.Settings().maxCount(1).maxDamage(3456000)));
     public static final Item FAKE_ELYTRA = registerItem("fake_elytra", new Item(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -78,7 +79,6 @@ public class ModItems {
         }
     });
     public static final Item XP_TANK = registerItem("xp_tank", new XPTankItem(new Item.Settings().maxCount(1).maxDamage(1125)));
-    public static final Item UP = registerItem("up", new UpItem(new Item.Settings().maxCount(1).maxDamage(16)));
     public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1).maxDamage(16)));
     public static final Item AVA = registerItem("ava", new AvaItem(new Item.Settings().maxCount(1)) {
         @Override
@@ -144,7 +144,7 @@ public class ModItems {
 
     public static final Item MINIGUN_STICK = registerItem("minigun_stick",
             new SwordItem(ModToolMaterials.MINIGUN_STICK_MATERIAL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MINIGUN_STICK_MATERIAL, 5, 1000f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MINIGUN_STICK_MATERIAL, 2, 1000f))));
 
     public static final Item SOUND_STAFF = registerItem("sound_staff", new SoundStaffItem(new Item.Settings().maxCount(1).maxDamage(5)));
     public static final Item DICE_STAFF = registerItem("dice_staff", new DiceStaffItem(new Item.Settings().maxCount(1).maxDamage(64)) {
@@ -163,6 +163,7 @@ public class ModItems {
     });
     public static final Item DEATHS_DOLL = registerItem("deaths_doll", new DeathsDollItem(new Item.Settings().maxCount(1).maxDamage(10)));
     public static final Item DEATHS_BOMB = registerItem("deaths_bomb", new DeathsBombItem(new Item.Settings().maxCount(1)));
+    public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
 
 
 

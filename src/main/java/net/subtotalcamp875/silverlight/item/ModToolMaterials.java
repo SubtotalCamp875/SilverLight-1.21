@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     MINIGUN_STICK_MATERIAL(ModTags.Blocks.MINIGUN_STICK_MATERIAL,
-            360000, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.STICK)),
+            3600, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.STICK)),
     REAPERS_SCYTHE_MATERIAL(ModTags.Blocks.REAPERS_SCYTHE_MATERIAL,
             1, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.SKELETON_SKULL));
 
