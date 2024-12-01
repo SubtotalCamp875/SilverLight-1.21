@@ -38,6 +38,7 @@
   "effect.silverlight.disproportion": "Disproportion",
   "effect.silverlight.happy_feet": "Happy Feet",
   "effect.silverlight.drunk": "Drunk",
+  "effect.silverlight.say10s_curse": "Say10's Curse",
 
   "item.silverlight.potion_of_shrink": "Potion of Shrink",
   "item.silverlight.potion_of_dwarf": "Potion of Dwarf",
@@ -77,6 +78,8 @@
   "item.silverlight.lightning_orb": "Lightning Orb",
   "item.silverlight.thors_hammer": "Thor's Hammer",
   "item.silverlight.candy_cane": "Candy Cane",
+  "item.silverlight.say10s_contract": "Say10's Contract",
+  "item.silverlight.say10s_charm": "Say10's Charm",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",
@@ -113,6 +116,8 @@
   "tooltip.silverlight.candy_cane_shift_down1.tooltip": "§eDamage = Durability Missing / 40§r",
   "tooltip.silverlight.candy_cane_shift_down2.tooltip": "§b+1 Attack Damage§r = 20 Durability Missing",
   "tooltip.silverlight.candy_cane_shift_down3.tooltip": "§4* Damage Calculation Ignores Armor§r",
+  "tooltip.silverlight.say10s_contract.tooltip": "§4§kasdjkn§r§4DO NOT USE§koweij§r",
+  "tooltip.silverlight.say10s_charm.tooltip": "§4ARE YOU HAPPY NOW?§r",
 
   "effect.silverlight.holy_shield": "Holy Shield",
 

@@ -74,16 +74,20 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.GENERIC_STEP_HEIGHT, Identifier.of(SilverLight.MOD_ID, "happy_feet"),
                             9.4F, EntityAttributeModifier.Operation.ADD_VALUE));
 
+
+    public static final RegistryEntry<StatusEffect> DRUNK = registerEffect(
+            "drunk", new BasicEffect(StatusEffectCategory.HARMFUL, 0));
+
     public static final RegistryEntry<StatusEffect> HOLY_SHIELD = registerEffect(
             "holy_shield", new HolyShieldStatusEffect(StatusEffectCategory.BENEFICIAL, 2445989)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_ABSORPTION, Identifier.of(SilverLight.MOD_ID, "holy_shield"),
                             4f, EntityAttributeModifier.Operation.ADD_VALUE));
 
+    public static final RegistryEntry<StatusEffect> SAY10S_CURSE = registerEffect(
+            "say10s_curse", new BasicEffect(StatusEffectCategory.HARMFUL, 0)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, Identifier.of(SilverLight.MOD_ID, "say10s_curse"),
+                            -4f, EntityAttributeModifier.Operation.ADD_VALUE));
 
-    // season 7 code
-
-    public static final RegistryEntry<StatusEffect> DRUNK = registerEffect(
-            "drunk", new BasicEffect(StatusEffectCategory.HARMFUL, 0));
 
     private static RegistryEntry<StatusEffect> registerEffect(String id, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(SilverLight.MOD_ID, id), statusEffect);

@@ -2,8 +2,6 @@ package net.subtotalcamp875.silverlight.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -14,7 +12,6 @@ import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.item.custom.*;
 
-import javax.tools.Tool;
 import java.util.List;
 
 public class ModItems {
@@ -174,7 +171,22 @@ public class ModItems {
         }
     });
     public static final Item CANDY_CANE = registerItem("candy_cane", new CandyCaneItem(ModToolMaterials.CANDY_CANE_MATERIAL, new Item.Settings()
-            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CANDY_CANE_MATERIAL, 0, -2f))));
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CANDY_CANE_MATERIAL, 0, -3f))));
+    public static final Item SAY10S_CONTRACT = registerItem("say10s_contract", new Say10sContractItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.say10s_contract.tooltip"));
+
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item SAY10S_CHARM = registerItem("say10s_charm", new Say10sCharmItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.say10s_charm.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
 
 
 

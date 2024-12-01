@@ -78,6 +78,8 @@ public class ModItemGroups {
                         entries.add(ModItems.LIGHTNING_ORB);
                         entries.add(ModItems.THORS_HAMMER);
                         entries.add(ModItems.CANDY_CANE);
+                        entries.add(ModItems.SAY10S_CONTRACT);
+                        entries.add(ModItems.SAY10S_CHARM);
 
                     }).build());
 
