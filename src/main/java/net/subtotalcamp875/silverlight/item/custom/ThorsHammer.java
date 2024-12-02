@@ -28,12 +28,10 @@ public class ThorsHammer extends SwordItem {
 
         if (!world.isClient) {
             LightningOrbEntity lightningOrbEntity = new LightningOrbEntity(user, world);
-            lightningOrbEntity.setItem(itemStack);
             lightningOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2f, 0.0f);
             world.spawnEntity(lightningOrbEntity);
         }
 
-        user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
             itemStack.setDamage(itemStack.getDamage() + 1);
             if (itemStack.getDamage() == itemStack.getMaxDamage()) {

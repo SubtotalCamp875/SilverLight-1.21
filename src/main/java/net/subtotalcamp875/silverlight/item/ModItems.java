@@ -84,10 +84,25 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item YACKAMAID = registerItem("yackamaid", new Item(new Item.Settings()) {
+    public static final Item YACKAMAID = registerItem("yackamaid", new YackaMaidItem(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.yackamaid.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item JIMMYLOGZ = registerItem("jimmylogz", new JimmyLogzItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.jimmylogz.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item WADDLES = registerItem("waddles", new WaddlesItem(new Item.Settings().maxCount(1).maxDamage(1)));
+    public static final Item DEVCAMP = registerItem("dev_camp", new DevCampItem(new Item.Settings().maxCount(1).maxDamage(2)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.dev_camp.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -151,6 +166,8 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item VORTEX_STAFF = registerItem("vortex_staff", new VortexStaffItem(new Item.Settings().maxCount(1).maxDamage(10)));
+    public static final Item VORTEX = registerItem("vortex", new VortexStaffItem(new Item.Settings()));
     public static final Item DEATH_STAFF = registerItem("death_staff", new DeathStaffItem(new Item.Settings().maxCount(1).maxDamage(100)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

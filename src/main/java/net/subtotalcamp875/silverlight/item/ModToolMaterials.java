@@ -21,7 +21,7 @@ public enum ModToolMaterials implements ToolMaterial {
     THORS_HAMMER_MATERIAL(ModTags.Blocks.THORS_HAMMER_MATERIAL,
             600, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.LIGHTNING_ROD)),
     REAPERS_SCYTHE_MATERIAL(ModTags.Blocks.REAPERS_SCYTHE_MATERIAL,
-            3000, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.SKELETON_SKULL));
+            1, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.SKELETON_SKULL));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

@@ -70,6 +70,8 @@
   "item.silverlight.minigun_stick": "Minigun But Stick!",
   "item.silverlight.arrow_staff": "Arrow Staff",
   "item.silverlight.sound_staff": "Sound Staff",
+  "item.silverlight.vortex_staff": "Vortex Staff",
+  "item.silverlight.vortex": "Vortex",
   "item.silverlight.dice_staff": "Dice Staff",
   "item.silverlight.death_staff": "Death Staff",
   "item.silverlight.deaths_doll": "Death's Doll",
@@ -80,6 +82,9 @@
   "item.silverlight.candy_cane": "Candy Cane",
   "item.silverlight.say10s_contract": "Say10's Contract",
   "item.silverlight.say10s_charm": "Say10's Charm",
+  "item.silverlight.jimmylogz": "Jimmy Logz",
+  "item.silverlight.waddles": "Waddles",
+  "item.silverlight.dev_camp": "Developer875",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",
@@ -118,6 +123,8 @@
   "tooltip.silverlight.candy_cane_shift_down3.tooltip": "§4* Damage Calculation Ignores Armor§r",
   "tooltip.silverlight.say10s_contract.tooltip": "§4§kasdjkn§r§4DO NOT USE§koweij§r",
   "tooltip.silverlight.say10s_charm.tooltip": "§4ARE YOU HAPPY NOW?§r",
+  "tooltip.silverlight.jimmylogz.tooltip": "Destruction? Nah",
+  "tooltip.silverlight.dev_camp.tooltip": "Need more content ideas",
 
   "effect.silverlight.holy_shield": "Holy Shield",
 

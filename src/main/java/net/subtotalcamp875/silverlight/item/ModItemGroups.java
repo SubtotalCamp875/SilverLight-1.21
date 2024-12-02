@@ -61,6 +61,9 @@ public class ModItemGroups {
                         entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.YACKAMAID);
+                        entries.add(ModItems.JIMMYLOGZ);
+                        entries.add(ModItems.WADDLES);
+                        entries.add(ModItems.DEVCAMP);
                         entries.add(ModItems.BITCOIN);
                         entries.add(ModItems.LEECH);
                         entries.add(ModItems.LONG_LEECH);
@@ -71,6 +74,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ARROW_STAFF);
                         entries.add(ModItems.SOUND_STAFF);
                         entries.add(ModItems.DICE_STAFF);
+                        entries.add(ModItems.VORTEX_STAFF);
+                        entries.add(ModItems.VORTEX);
                         entries.add(ModItems.DEATH_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);

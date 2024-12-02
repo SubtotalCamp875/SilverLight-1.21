@@ -63,6 +63,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
         itemModelGenerator.register(ModItems.YACKAMAID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JIMMYLOGZ, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WADDLES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DEVCAMP, Models.GENERATED);
         itemModelGenerator.register(ModItems.BITCOIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
@@ -72,6 +75,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.SOUND_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.DICE_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VORTEX_STAFF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VORTEX, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATH_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_DOLL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_BOMB, Models.GENERATED);
