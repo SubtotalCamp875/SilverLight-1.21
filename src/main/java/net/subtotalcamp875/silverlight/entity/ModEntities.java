@@ -6,10 +6,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.entity.custom.DeathsBombEntity;
-import net.subtotalcamp875.silverlight.entity.custom.LightningOrbEntity;
-import net.subtotalcamp875.silverlight.entity.custom.TomatoEntity;
-import net.subtotalcamp875.silverlight.entity.custom.VortexEntity;
+import net.subtotalcamp875.silverlight.entity.custom.*;
 
 public class ModEntities {
     public static final EntityType<TomatoEntity> TOMATO_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
@@ -30,7 +27,17 @@ public class ModEntities {
     public static final EntityType<VortexEntity> VORTEX_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "vortex_projectile"),
             EntityType.Builder.<VortexEntity>create(VortexEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f).build());
+                    .dimensions(0.2f, 0.2f).build());
+
+    public static final EntityType<LightOrbEntity> LIGHT_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "light_projectile"),
+            EntityType.Builder.<LightOrbEntity>create(LightOrbEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.1f, 0.1f).build());
+
+    public static final EntityType<AimOrbEntity> AIM_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "aim_projectile"),
+            EntityType.Builder.<AimOrbEntity>create(AimOrbEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.1f, 0.1f).build());
 
     public static void registerModEntities() {
         SilverLight.LOGGER.info("Registering Entities for " + SilverLight.MOD_ID);

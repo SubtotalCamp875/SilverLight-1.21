@@ -167,7 +167,11 @@ public class ModItems {
         }
     });
     public static final Item VORTEX_STAFF = registerItem("vortex_staff", new VortexStaffItem(new Item.Settings().maxCount(1).maxDamage(10)));
-    public static final Item VORTEX = registerItem("vortex", new VortexStaffItem(new Item.Settings()));
+    public static final Item VORTEX = registerItem("vortex", new Item(new Item.Settings()));
+    public static final Item LIGHT_STAFF = registerItem("light_staff", new LightStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
+    public static final Item LIGHT_ORB = registerItem("light_orb", new Item(new Item.Settings()));
+    public static final Item AIM_ORB = registerItem("aim_orb", new Item(new Item.Settings()));
+    public static final Item METEOR_STAFF = registerItem("meteor_staff", new MeteorStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
     public static final Item DEATH_STAFF = registerItem("death_staff", new DeathStaffItem(new Item.Settings().maxCount(1).maxDamage(100)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

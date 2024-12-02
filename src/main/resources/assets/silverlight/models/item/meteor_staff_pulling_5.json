@@ -1,0 +1,6 @@
+{
+  "parent": "silverlight:item/meteor_staff",
+  "textures": {
+    "layer0": "silverlight:item/meteor_staff_pulling_5"
+  }
+}

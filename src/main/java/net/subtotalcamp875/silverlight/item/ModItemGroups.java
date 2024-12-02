@@ -76,6 +76,10 @@ public class ModItemGroups {
                         entries.add(ModItems.DICE_STAFF);
                         entries.add(ModItems.VORTEX_STAFF);
                         entries.add(ModItems.VORTEX);
+                        entries.add(ModItems.LIGHT_STAFF);
+                        entries.add(ModItems.LIGHT_ORB);
+                        entries.add(ModItems.AIM_ORB);
+                        entries.add(ModItems.METEOR_STAFF);
                         entries.add(ModItems.DEATH_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);

@@ -20,7 +20,6 @@ public class YackaMaidItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        //user.getItemCooldownManager().set(this, 1728000);
         user.getItemCooldownManager().set(this, 5);
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
