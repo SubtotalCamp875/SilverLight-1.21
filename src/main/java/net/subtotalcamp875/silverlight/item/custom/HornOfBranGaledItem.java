@@ -21,14 +21,16 @@ public class HornOfBranGaledItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        user.getItemCooldownManager().set(this, 10);
+        user.getItemCooldownManager().set(this, 40);
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.ENTITY_WANDERING_TRADER_DRINK_POTION, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
 
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1), user);
+            if (user.getHungerManager().getFoodLevel() < 19f) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1), user);
+            }
         }
 
         return TypedActionResult.success(itemStack, world.isClient());

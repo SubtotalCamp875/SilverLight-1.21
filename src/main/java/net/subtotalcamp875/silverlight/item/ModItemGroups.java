@@ -89,6 +89,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CANDY_CANE);
                         entries.add(ModItems.SAY10S_CONTRACT);
                         entries.add(ModItems.SAY10S_CHARM);
+                        entries.add(ModItems.MOUTHWASH);
 
                     }).build());
 

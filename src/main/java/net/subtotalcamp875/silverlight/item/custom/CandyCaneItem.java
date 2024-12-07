@@ -25,7 +25,9 @@ public class CandyCaneItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.setHealth(attacker.getHealth()-(stack.getDamage()/40f));
+        target.setHealth(target.getHealth()-(stack.getDamage()/40f));
+        attacker.setHealth(attacker.getHealth()-((stack.getDamage()/40f)*0.6f));
+        attacker.tiltScreen(target.getX() - attacker.getX(), target.getZ() - attacker.getZ());
 
         return super.postHit(stack, target, attacker);
     }

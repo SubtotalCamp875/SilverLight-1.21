@@ -89,6 +89,7 @@
   "item.silverlight.jimmylogz": "Jimmy Logz",
   "item.silverlight.waddles": "Waddles",
   "item.silverlight.dev_camp": "Developer875",
+  "item.silverlight.mouthwash": "Mouthwash",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",
@@ -123,8 +124,8 @@
   "tooltip.silverlight.thors_hammer.tooltip": "The Hammer that summons §eLightning§r!",
   "tooltip.silverlight.candy_cane.tooltip": "Does more Damage the §elower§r the Durability!",
   "tooltip.silverlight.candy_cane_shift_down1.tooltip": "§eDamage = Durability Missing / 40§r",
-  "tooltip.silverlight.candy_cane_shift_down2.tooltip": "§b+1 Attack Damage§r = 20 Durability Missing",
-  "tooltip.silverlight.candy_cane_shift_down3.tooltip": "§4* Damage Calculation Ignores Armor§r",
+  "tooltip.silverlight.candy_cane_shift_down2.tooltip": "§b+1 Attack Damage§r = 40 Durability Missing",
+  "tooltip.silverlight.candy_cane_shift_down3.tooltip": "§4*The user takes 60% of the damage back§r",
   "tooltip.silverlight.say10s_contract.tooltip": "§4§kasdjkn§r§4DO NOT USE§koweij§r",
   "tooltip.silverlight.say10s_charm.tooltip": "§4ARE YOU HAPPY NOW?§r",
   "tooltip.silverlight.jimmylogz.tooltip": "Destruction? Nah",
@@ -137,8 +138,10 @@
   "tooltip.silverlight.light_staff_shift_down1.tooltip": "When holding in hand, sends out a §aaim guide line§r.",
   "tooltip.silverlight.light_staff_shift_down2.tooltip": "§aAim guide§r does §4not§r do damage but serves as a §6warning§r",
   "tooltip.silverlight.light_staff_shift_down3.tooltip": "The §4attack§r will follow the same path as the §aguide§r",
+  "tooltip.silverlight.light_staff_shift_down4.tooltip": "You can only §4damage§r players §b10+ blocks§r away.",
 
   "effect.silverlight.holy_shield": "Holy Shield",
+  "sounds.silverlight.light_staff_shoot": "Light Staff Shoot",
 
   "itemgroup.silverlight": "Silver Light Group"
 }

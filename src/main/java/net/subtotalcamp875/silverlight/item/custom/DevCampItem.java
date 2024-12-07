@@ -79,7 +79,7 @@ public class DevCampItem extends Item {
                 } else if (action == 16) {
                     user.giveItemStack(ModItems.DICE_STAFF.getDefaultStack());
                 } else if (action == 17) {
-                    user.giveItemStack(ModItems.VORTEX_STAFF.getDefaultStack());
+                    user.giveItemStack(ModItems.MOUTHWASH.getDefaultStack());
                 } else if (action == 18) {
                     user.giveItemStack(ModItems.LIGHT_STAFF.getDefaultStack());
                 } else if (action == 19) {

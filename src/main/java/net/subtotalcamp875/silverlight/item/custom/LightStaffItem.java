@@ -21,6 +21,7 @@ import net.subtotalcamp875.silverlight.entity.custom.AimOrbEntity;
 import net.subtotalcamp875.silverlight.entity.custom.LightOrbEntity;
 import net.subtotalcamp875.silverlight.entity.custom.LightningOrbEntity;
 import net.subtotalcamp875.silverlight.item.ModItems;
+import net.subtotalcamp875.silverlight.sound.ModSounds;
 
 import java.util.List;
 
@@ -33,14 +34,17 @@ public class LightStaffItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 100);
+        //user.getItemCooldownManager().set(this, 100);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.NEUTRAL, 10f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                ModSounds.LIGHT_STAFF_SHOOT, SoundCategory.NEUTRAL, 10f, 0.6f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!world.isClient) {
+            Vec3d vec3d = user.getRotationVec(1.0F);
+
             LightOrbEntity lightOrbEntity = new LightOrbEntity(user, world);
-            lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 100f, 0.0f);
-            lightOrbEntity.setPosition(user.getX(), user.getY() + 1, user.getZ());
+            //lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 100f, 0.0f);
+            lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1f, 0.0f);
+            lightOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1, user.getZ() + vec3d.z * 10.0);
             world.spawnEntity(lightOrbEntity);
         }
 
@@ -79,6 +83,7 @@ public class LightStaffItem extends Item {
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down1.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down2.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down3.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down4.tooltip"));
         } else {
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.shift.tooltip"));

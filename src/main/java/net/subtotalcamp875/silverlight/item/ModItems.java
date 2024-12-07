@@ -184,7 +184,7 @@ public class ModItems {
     public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
     public static final Item LIGHTNING_ORB = registerItem("lightning_orb", new Item(new Item.Settings()));
     public static final Item THORS_HAMMER = registerItem("thors_hammer", new ThorsHammer(ModToolMaterials.THORS_HAMMER_MATERIAL, new Item.Settings()
-            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THORS_HAMMER_MATERIAL, 12, -3.2f))){
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THORS_HAMMER_MATERIAL, 8, -3.2f))){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip"));
@@ -208,6 +208,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item MOUTHWASH = registerItem("mouthwash", new Item(new Item.Settings().food(ModFoodComponents.MOUTHWASH).maxCount(100)));
 
 
 

@@ -21,6 +21,7 @@ public class SoundStaffItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        user.getItemCooldownManager().set(this, 10);
         ItemStack itemStack = user.getStackInHand(hand);
 
 

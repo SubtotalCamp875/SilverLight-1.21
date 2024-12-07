@@ -31,6 +31,7 @@ public class BlessedRingItem extends Item {
                         stack.decrement(1);
                     }
                 }
+
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);

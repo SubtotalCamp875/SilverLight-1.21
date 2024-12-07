@@ -19,7 +19,7 @@ public enum ModToolMaterials implements ToolMaterial {
     CANDY_CANE_MATERIAL(ModTags.Blocks.CANDY_CANE_MATERIAL,
             100, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.SUGAR)),
     THORS_HAMMER_MATERIAL(ModTags.Blocks.THORS_HAMMER_MATERIAL,
-            600, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.LIGHTNING_ROD)),
+            500, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.LIGHTNING_ROD)),
     REAPERS_SCYTHE_MATERIAL(ModTags.Blocks.REAPERS_SCYTHE_MATERIAL,
             1, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.SKELETON_SKULL));
 

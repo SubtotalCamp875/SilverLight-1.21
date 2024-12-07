@@ -77,8 +77,7 @@ public class MeteorStaffItem extends RangedWeaponItem {
             f = 10.0F;
         }
 
-        setFireballStrength(f);
-        System.out.println(f/2);
+        setFireballStrength(f/2);
         return f;
     }
 
@@ -135,7 +134,7 @@ public class MeteorStaffItem extends RangedWeaponItem {
                 Vec3d vec3d2 = new Vec3d(f, g, h);
 
                 FireballEntity fireballEntity = new FireballEntity(world, shooter, vec3d2.normalize(), this.getFireballStrength());
-                fireballEntity.setPosition(shooter.getX() + vec3d.x * 3.0, shooter.getY(), fireballEntity.getZ() + vec3d.z * 3.0);
+                fireballEntity.setPosition(shooter.getX() + vec3d.x * 3.0, shooter.getY()+1, fireballEntity.getZ() + vec3d.z * 3.0);
                 world.spawnEntity(fireballEntity);
 
                 stack.damage(this.getWeaponStackDamage(itemStack), shooter, LivingEntity.getSlotForHand(hand));

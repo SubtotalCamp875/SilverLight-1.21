@@ -64,4 +64,6 @@ public class ModFoodComponents {
             .saturationModifier(20)
             .snack()
             .build();
+    public static final FoodComponent MOUTHWASH = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 36000), 1f).alwaysEdible().build();
 }

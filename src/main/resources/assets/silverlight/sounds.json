@@ -1,0 +1,8 @@
+{
+  "light_staff_shoot": {
+    "subtitle": "sounds.silverlight.light_staff_shoot",
+    "sounds": [
+      "silverlight:light_staff_shoot"
+    ]
+  }
+}
