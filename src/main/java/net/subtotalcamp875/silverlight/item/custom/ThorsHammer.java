@@ -28,7 +28,7 @@ public class ThorsHammer extends SwordItem {
 
         if (!world.isClient) {
             LightningOrbEntity lightningOrbEntity = new LightningOrbEntity(user, world);
-            lightningOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2f, 0.0f);
+            lightningOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1f, 0.0f);
             world.spawnEntity(lightningOrbEntity);
         }
 

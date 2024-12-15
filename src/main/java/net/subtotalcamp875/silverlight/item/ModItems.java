@@ -209,6 +209,11 @@ public class ModItems {
         }
     });
     public static final Item MOUTHWASH = registerItem("mouthwash", new Item(new Item.Settings().food(ModFoodComponents.MOUTHWASH).maxCount(100)));
+    public static final Item BLACK_PAPER = registerItem("black_paper", new Item(new Item.Settings()));
+    public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1).maxDamage(1728000)));
+    public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1).maxDamage(72000)));
+    public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)));
+    public static final Item FAKE_BREAD = registerItem("fake_bread", new Item(new Item.Settings().food(ModFoodComponents.FAKE_BREAD)));
 
 
 

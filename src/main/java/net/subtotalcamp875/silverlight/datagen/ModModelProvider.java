@@ -90,6 +90,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAY10S_CONTRACT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAY10S_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOUTHWASH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CLOUD_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIBRATION_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLACK_PAPER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COSMIC_BROWNIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FAKE_BREAD, Models.GENERATED);
 
     }
 }

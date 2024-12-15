@@ -64,6 +64,22 @@ public class ModFoodComponents {
             .saturationModifier(20)
             .snack()
             .build();
+
     public static final FoodComponent MOUTHWASH = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 36000), 1f).alwaysEdible().build();
+
+    public static final FoodComponent COSMIC_BROWNIE = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 1f)
+            .nutrition(1)
+            .snack()
+            .build();
+
+    public static final FoodComponent FAKE_BREAD = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 2400), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.1f)
+            .nutrition(5)
+            .build();
 }

@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.entity.ModEntities;
@@ -16,10 +17,12 @@ import net.subtotalcamp875.silverlight.item.ModItems;
 public class LightningOrbEntity extends ThrownItemEntity {
     public LightningOrbEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
+
     }
 
     public LightningOrbEntity(LivingEntity livingEntity, World world) {
         super(ModEntities.LIGHTNING_ORB_PROJECTILE, livingEntity, world);
+        this.setNoGravity(true);
     }
 
     @Override
@@ -95,12 +98,10 @@ public class LightningOrbEntity extends ThrownItemEntity {
             world.spawnEntity(lightningEntity18);
             world.spawnEntity(lightningEntity19);
 
-
             this.discard();
         }
         super.onBlockHit(blockHitResult);
     }
-
 
     public void test(PlayerEntity livingEntity) {
         livingEntity.addCommandTag("Silverlight Lightning Orb Entity test");

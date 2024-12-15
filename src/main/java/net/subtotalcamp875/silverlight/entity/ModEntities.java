@@ -22,7 +22,7 @@ public class ModEntities {
     public static final EntityType<LightningOrbEntity> LIGHTNING_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "lightning_orb_projectile"),
             EntityType.Builder.<LightningOrbEntity>create(LightningOrbEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f).build());
+                    .dimensions(1f, 1f).build());
 
     public static final EntityType<VortexEntity> VORTEX_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "vortex_projectile"),

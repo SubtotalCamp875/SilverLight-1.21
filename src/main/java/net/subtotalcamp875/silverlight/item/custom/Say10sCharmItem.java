@@ -6,6 +6,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 
@@ -24,6 +26,9 @@ public class Say10sCharmItem extends Item {
             assert user != null;
             if (!world.isClient) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 60), user);
+                if (user.getWorld() instanceof ServerWorld serverWorld) {
+                    serverWorld.spawnParticles(ParticleTypes.FLAME, user.getX(), user.getY(), user.getZ(), 2, 0.05, 0.05, 0.05, 0.05);
+                }
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);
