@@ -16,18 +16,18 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "silverlight:tomato_plant",
+                  "block": "silverlight:strawberry_plant",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "8"
                   }
                 }
               ],
-              "name": "silverlight:tomato"
+              "name": "silverlight:strawberry"
             },
             {
               "type": "minecraft:item",
-              "name": "silverlight:tomato_seed"
+              "name": "silverlight:strawberry_seed"
             }
           ]
         }
@@ -38,7 +38,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "silverlight:tomato_plant",
+          "block": "silverlight:strawberry_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "8"
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "silverlight:tomato_seed"
+          "name": "silverlight:strawberry_seed"
         }
       ],
       "rolls": 1.0

@@ -30,15 +30,26 @@ public class DeathStaffItem extends Item {
 
         if (!world.isClient) {
             if (!user.getAbilities().creativeMode) {
+
                 if (itemStack.getDamage() == itemStack.getMaxDamage()) {
                     user.sendMessage(Text.of("The Effect of §4Death's Staff§r has been §etriggered§r! Granting a random item (out of 2) to the selected user!"));
-                    int chance = world.getRandom().nextInt(2);
-                    if (chance == 0) {
-                        user.giveItemStack(ModItems.DEATHS_DOLL.getDefaultStack());
+
+                    if (user.getOffHandStack().getItem() == ModItems.DEATHS_DOLL) {
+                        user.sendMessage(Text.of("§The God Of Death Is Happy With You Sacrifice! Granting Reaper's Scythe To The Player!§r"));
+                        user.getOffHandStack().decrement(1);
+                        user.giveItemStack(ModItems.REAPERS_SCYTHE.getDefaultStack());
                     } else {
-                        user.giveItemStack(ModItems.DEATHS_BOMB.getDefaultStack());
+                        int chance = world.getRandom().nextInt(2);
+                        if (chance == 0) {
+                            user.giveItemStack(ModItems.DEATHS_DOLL.getDefaultStack());
+                        } else {
+                            user.giveItemStack(ModItems.DEATHS_BOMB.getDefaultStack());
+                        }
                     }
+
                     itemStack.decrement(1);
+
+
                 } else {
                     user.kill();
                     itemStack.setDamage(itemStack.getDamage() + 1);

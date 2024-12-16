@@ -12,18 +12,18 @@ import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.entity.ModEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
-public class TomatoEntity extends ThrownItemEntity {
-    public TomatoEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
+public class StrawberryEntity extends ThrownItemEntity {
+    public StrawberryEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public TomatoEntity(LivingEntity livingEntity, World world) {
-        super(ModEntities.TOMATO_PROJECTILE, livingEntity, world);
+    public StrawberryEntity(LivingEntity livingEntity, World world) {
+        super(ModEntities.STRAWBERRY_PROJECTILE, livingEntity, world);
     }
 
     @Override
     protected Item getDefaultItem() {
-        return ModItems.TOMATO;
+        return ModItems.STRAWBERRY;
     }
 
     @Override
@@ -45,6 +45,6 @@ public class TomatoEntity extends ThrownItemEntity {
     }
 
     public void test(PlayerEntity livingEntity) {
-        livingEntity.addCommandTag("Silverlight Tomato Entity test");
+        livingEntity.addCommandTag("Silverlight Strawberry Entity test");
     }
 }

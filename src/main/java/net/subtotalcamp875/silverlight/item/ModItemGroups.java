@@ -45,8 +45,8 @@ public class ModItemGroups {
                         entries.add(ModItems.POTION_OF_HAPPY_FEET);
                         entries.add(ModItems.CRACKER);
 
-                        entries.add(ModItems.TOMATO);
-                        entries.add(ModItems.TOMATO_SEED);
+                        entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.STRAWBERRY_SEED);
                         entries.add(ModBlocks.SIEVING_STATION);
 
 
@@ -67,7 +67,6 @@ public class ModItemGroups {
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.RIGHT_RING);
                         entries.add(ModItems.BLESSED_RING);
-                        entries.add(ModItems.XP_TANK);
                         entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.YACKAMAID);
@@ -93,14 +92,18 @@ public class ModItemGroups {
                         entries.add(ModItems.DEATH_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
+                        entries.add(ModItems.SMOKE_BOMB);
                         entries.add(ModItems.HORN_OF_BRAN_GALED);
                         entries.add(ModItems.LIGHTNING_ORB);
                         entries.add(ModItems.THORS_HAMMER);
                         entries.add(ModItems.CANDY_CANE);
                         entries.add(ModItems.SAY10S_CONTRACT);
                         entries.add(ModItems.SAY10S_CHARM);
+                        entries.add(ModItems.METEOR_CHARM);
+                        entries.add(ModItems.XP_CHARM);
                         entries.add(ModItems.CLOUD_CHARM);
                         entries.add(ModItems.VIBRATION_CHARM);
+                        entries.add(ModItems.SCREECHING_CHARM);
                         entries.add(ModItems.VIKING_PATTERN);
                         entries.add(ModItems.VIKING_HORN);
                         entries.add(ModItems.VIKING_AXE);

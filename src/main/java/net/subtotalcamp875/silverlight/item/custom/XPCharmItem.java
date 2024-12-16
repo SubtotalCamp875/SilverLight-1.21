@@ -14,8 +14,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class CloudCharm extends Item {
-    public CloudCharm(Settings settings) {
+public class XPCharmItem extends Item {
+    public XPCharmItem(Settings settings) {
         super(settings);
     }
 
@@ -44,11 +44,18 @@ public class CloudCharm extends Item {
         stack.copyComponentsToNewStack(stack.getItem(), 1);
         if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                    SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
             assert user != null;
             if (!world.isClient) {
-                if (user.getWorld() instanceof ServerWorld serverWorld) {
-                    serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 50, 2, 2, 2, 0.1);
+                user.addExperience(1);
+
+                if (!user.getAbilities().creativeMode) {
+                    stack.setDamage(stack.getDamage() + 1);
+                    if (stack.getDamage() == stack.getMaxDamage()) {
+                        stack.decrement(1);
+                    }
                 }
             }
         }

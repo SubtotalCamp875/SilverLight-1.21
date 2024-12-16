@@ -13,9 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
-import java.lang.reflect.Field;
-
-public class TomatoPlantBlock extends CropBlock {
+public class StrawberryPlantBlock extends CropBlock {
     public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
@@ -32,7 +30,7 @@ public class TomatoPlantBlock extends CropBlock {
     public static final IntProperty AGE = IntProperty.of("age", 0, 8);
 
 
-    public TomatoPlantBlock(Settings settings) {
+    public StrawberryPlantBlock(Settings settings) {
         super(settings);
     }
 
@@ -88,7 +86,7 @@ public class TomatoPlantBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.TOMATO_SEED;
+        return ModItems.STRAWBERRY_SEED;
     }
 
     @Override

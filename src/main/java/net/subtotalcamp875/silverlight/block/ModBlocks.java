@@ -1,34 +1,29 @@
 package net.subtotalcamp875.silverlight.block;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.custom.DragonProcessingStationBlock;
 import net.subtotalcamp875.silverlight.block.custom.FermentingStationBlock;
 import net.subtotalcamp875.silverlight.block.custom.SievingStationBlock;
-import net.subtotalcamp875.silverlight.block.custom.TomatoPlantBlock;
+import net.subtotalcamp875.silverlight.block.custom.StrawberryPlantBlock;
 
 import java.util.List;
 
 public class ModBlocks {
 
-    public static final Block TOMATO_PLANT = Registry.register(Registries.BLOCK, Identifier.of(SilverLight.MOD_ID, "tomato_plant"),
-            new TomatoPlantBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block STRAWBERRY_PLANT = Registry.register(Registries.BLOCK, Identifier.of(SilverLight.MOD_ID, "strawberry_plant"),
+            new StrawberryPlantBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     public static final Block DRAGON_PROCESSING_STATION = registerBlock("dragon_processing_station",
             new DragonProcessingStationBlock(AbstractBlock.Settings.create().nonOpaque()));

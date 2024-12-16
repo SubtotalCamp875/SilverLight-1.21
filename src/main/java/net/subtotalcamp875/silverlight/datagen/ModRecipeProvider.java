@@ -138,11 +138,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BARREL), conditionsFromItem(Items.BARREL))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModBlocks.FERMENTING_STATION)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TOMATO_SEED, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STRAWBERRY_SEED, 1)
                 .pattern("T")
-                .input('T', ModItems.TOMATO)
-                .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
-                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.TOMATO_SEED)));
+                .input('T', ModItems.STRAWBERRY)
+                .criterion(hasItem(ModItems.STRAWBERRY), conditionsFromItem(ModItems.STRAWBERRY))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.STRAWBERRY_SEED)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRACKER, 3)
                 .pattern("B")

@@ -1,11 +1,6 @@
 package net.subtotalcamp875.silverlight.item.custom;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.damage.DamageEffects;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageSources;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,8 +9,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.effect.ModEffects;
-import net.subtotalcamp875.silverlight.entity.custom.TomatoEntity;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class LeechItem extends Item {

@@ -6,7 +6,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
-import net.subtotalcamp875.silverlight.block.custom.TomatoPlantBlock;
+import net.subtotalcamp875.silverlight.block.custom.StrawberryPlantBlock;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -16,7 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_PLANT, TomatoPlantBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_PLANT, StrawberryPlantBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
@@ -50,7 +50,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.POTION_OF_DISPROPORTION, Models.GENERATED);
         itemModelGenerator.register(ModItems.POTION_OF_HAPPY_FEET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRACKER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
 
         // season 7 code
 
@@ -58,7 +58,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEFT_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLESSED_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_ELYTRA, Models.GENERATED);
-        itemModelGenerator.register(ModItems.XP_TANK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.XP_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
@@ -104,6 +104,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ZILLOW_FIVE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_TEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_HUNDRED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.METEOR_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCREECHING_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SMOKE_BOMB, Models.GENERATED);
 
     }
 }

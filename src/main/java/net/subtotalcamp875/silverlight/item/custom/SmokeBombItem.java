@@ -9,11 +9,11 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.entity.custom.TomatoEntity;
+import net.subtotalcamp875.silverlight.entity.custom.SmokeBombEntity;
+import net.subtotalcamp875.silverlight.entity.custom.StrawberryEntity;
 
-public class TomatoItem extends Item {
-    public TomatoItem(Settings settings) {
+public class SmokeBombItem extends Item {
+    public SmokeBombItem(Settings settings) {
         super(settings);
     }
 
@@ -24,10 +24,11 @@ public class TomatoItem extends Item {
                 SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!world.isClient) {
-            TomatoEntity tomatoEntity = new TomatoEntity(user, world);
-            tomatoEntity.setItem(itemStack);
-            tomatoEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
-            world.spawnEntity(tomatoEntity);
+            SmokeBombEntity smokeBombEntity = new SmokeBombEntity(user, world);
+            smokeBombEntity.setItem(itemStack);
+            smokeBombEntity.setVelocity(user, 0, 0, 0.0f, 0f, 0f);
+            smokeBombEntity.setPosition(user.getX(), user.getY()+4f, user.getZ());
+            world.spawnEntity(smokeBombEntity);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

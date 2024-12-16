@@ -49,7 +49,7 @@ public class DevCampItem extends Item {
                 } else if (action == 1) {
                     user.giveItemStack(ModItems.RIGHT_RING.getDefaultStack());
                 } else if (action == 2) {
-                    user.giveItemStack(ModItems.XP_TANK.getDefaultStack());
+                    user.giveItemStack(ModItems.XP_CHARM.getDefaultStack());
                 } else if (action == 3) {
                     user.giveItemStack(ModItems.GROUNDED.getDefaultStack());
                 } else if (action == 4) {

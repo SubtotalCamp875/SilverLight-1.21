@@ -15,9 +15,9 @@
   "item.silverlight.potent_potion_of_nausea": "Strong Potion of Nausea",
 
 
-  "item.silverlight.tomato_plant": "Tomato Plant",
-  "item.silverlight.tomato": "Tomato",
-  "item.silverlight.tomato_seed": "Tomato Seeds",
+  "item.silverlight.strawberry_plant": "Strawberry Plant",
+  "item.silverlight.strawberry": "Strawberry",
+  "item.silverlight.strawberry_seed": "Strawberry Seeds",
 
 
   "block.silverlight.dragon_processing_station": "Dragon Processing Station",
@@ -57,7 +57,7 @@
   "item.silverlight.left_ring": "Left Ring",
   "item.silverlight.blessed_ring": "Blessed Ring",
   "item.silverlight.fake_elytra": "Elytra?",
-  "item.silverlight.xp_tank": "XP Tank",
+  "item.silverlight.xp_charm": "XP Charm",
   "item.silverlight.grounded": "To the Ground!",
   "item.silverlight.reapers_scythe": "Reaper's Scythe",
   "item.silverlight.ava": "Ava",
@@ -104,6 +104,9 @@
   "item.silverlight.zillow_five": "ꅀ5",
   "item.silverlight.zillow_ten": "ꅀ10",
   "item.silverlight.zillow_hundred": "ꅀ100",
+  "item.silverlight.meteor_charm": "Meteor Charm",
+  "item.silverlight.screeching_charm": "Screeching Charm",
+  "item.silverlight.smoke_bomb": "Smoke Bomb",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",

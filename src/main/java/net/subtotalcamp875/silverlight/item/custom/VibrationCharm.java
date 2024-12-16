@@ -10,9 +10,11 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class VibrationCharm extends Item {
     public VibrationCharm(Settings settings) {
@@ -26,14 +28,20 @@ public class VibrationCharm extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
 
         if (!world.isClient) {
-            if (!isActivated) {
+            if (user.getOffHandStack().getItem() == ModItems.CLOUD_CHARM) {
+                user.sendMessage(Text.of("§4The God Of Noise is Happy With You Sacrifice! Granting Screeching Charm To The Player!§r"));
+                user.getOffHandStack().decrement(1);
+                user.giveItemStack(ModItems.SCREECHING_CHARM.getDefaultStack());
+                itemStack.decrement(1);
+            } else if (!isActivated) {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                isActivated = !isActivated;
             } else {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                isActivated = !isActivated;
             }
-            isActivated = !isActivated;
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
@@ -48,13 +56,8 @@ public class VibrationCharm extends Item {
             assert user != null;
             if (!world.isClient) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 2), user);
-                stack.setDamage(stack.getDamage() + 1);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.SCULK_CHARGE_POP, user.getX(), user.getY(), user.getZ(), 50, 0.2, 0.2, 0.2, 0.05);
-                }
-
-                if (stack.getDamage() == stack.getMaxDamage()) {
-                    stack.decrement(1);
                 }
             }
         }

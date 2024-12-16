@@ -9,10 +9,10 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.entity.custom.DeathsBombEntity;
+import net.subtotalcamp875.silverlight.entity.custom.StrawberryEntity;
 
-public class DeathsBombItem extends Item {
-    public DeathsBombItem(Settings settings) {
+public class StrawberryItem extends Item {
+    public StrawberryItem(Settings settings) {
         super(settings);
     }
 
@@ -23,10 +23,10 @@ public class DeathsBombItem extends Item {
                 SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!world.isClient) {
-            DeathsBombEntity deathsBombEntity = new DeathsBombEntity(user, world);
-            deathsBombEntity.setItem(itemStack);
-            deathsBombEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
-            world.spawnEntity(deathsBombEntity);
+            StrawberryEntity strawberryEntity = new StrawberryEntity(user, world);
+            strawberryEntity.setItem(itemStack);
+            strawberryEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
+            world.spawnEntity(strawberryEntity);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

@@ -45,10 +45,10 @@ public class ModItems {
     public static final Item POTION_OF_HAPPY_FEET = registerItem("potion_of_happy_feet", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_HAPPY_FEET).maxCount(1)));
     public static final Item CRACKER = registerItem("cracker", new Item(new Item.Settings().food(ModFoodComponents.CRACKER).maxCount(64)));
 
-    public static final Item TOMATO_SEED = registerItem("tomato_seed",
-            new AliasedBlockItem(ModBlocks.TOMATO_PLANT, new Item.Settings()));
-    public static final Item TOMATO = registerItem("tomato",
-            new TomatoItem(new Item.Settings()));
+    public static final Item STRAWBERRY_SEED = registerItem("strawberry_seed",
+            new AliasedBlockItem(ModBlocks.STRAWBERRY_PLANT, new Item.Settings()));
+    public static final Item STRAWBERRY = registerItem("strawberry",
+            new StrawberryItem(new Item.Settings()));
 
     //season 7 code starts here
 
@@ -75,7 +75,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item XP_TANK = registerItem("xp_tank", new XPTankItem(new Item.Settings().maxCount(1).maxDamage(1125)));
+    public static final Item XP_CHARM = registerItem("xp_charm", new XPCharmItem(new Item.Settings().maxCount(1).maxDamage(1125)));
     public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1).maxDamage(16)));
     public static final Item AVA = registerItem("ava", new AvaItem(new Item.Settings().maxCount(1)) {
         @Override
@@ -210,8 +210,8 @@ public class ModItems {
     });
     public static final Item MOUTHWASH = registerItem("mouthwash", new Item(new Item.Settings().food(ModFoodComponents.MOUTHWASH).maxCount(100)));
     public static final Item BLACK_PAPER = registerItem("black_paper", new Item(new Item.Settings()));
-    public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1).maxDamage(1728000)));
-    public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1).maxDamage(72000)));
+    public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1)));
+    public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1)));
     public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)));
     public static final Item FAKE_BREAD = registerItem("fake_bread", new Item(new Item.Settings().food(ModFoodComponents.FAKE_BREAD)));
     public static final Item HONEY_CAKE_ON_A_STICK = registerItem("honey_cake_on_a_stick", new Item(new Item.Settings().food(ModFoodComponents.HONEY_CAKE).maxCount(1)));
@@ -225,6 +225,9 @@ public class ModItems {
     public static final Item ZILLOW_FIVE = registerItem("zillow_five", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_TEN = registerItem("zillow_ten", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_HUNDRED = registerItem("zillow_hundred", new Item(new Item.Settings().maxCount(50)));
+    public static final Item METEOR_CHARM = registerItem("meteor_charm", new MeteorCharmItem(new Item.Settings().maxCount(1)));
+    public static final Item SCREECHING_CHARM = registerItem("screeching_charm", new ScreechingCharmItem(new Item.Settings().maxCount(1)));
+    public static final Item SMOKE_BOMB = registerItem("smoke_bomb", new SmokeBombItem(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

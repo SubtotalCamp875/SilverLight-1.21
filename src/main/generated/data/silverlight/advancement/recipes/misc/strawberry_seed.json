@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:tomato_seed"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_tomato": {
+    "has_strawberry": {
       "conditions": {
         "items": [
           {
-            "items": "silverlight:tomato"
+            "items": "silverlight:strawberry"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:strawberry_seed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_tomato"
+      "has_strawberry"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tomato_seed"
+      "minecraft:strawberry_seed"
     ]
   }
 }

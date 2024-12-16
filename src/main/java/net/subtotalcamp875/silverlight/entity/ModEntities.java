@@ -9,9 +9,9 @@ import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.entity.custom.*;
 
 public class ModEntities {
-    public static final EntityType<TomatoEntity> TOMATO_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(SilverLight.MOD_ID, "tomato_projectile"),
-            EntityType.Builder.<TomatoEntity>create(TomatoEntity::new, SpawnGroup.MISC)
+    public static final EntityType<StrawberryEntity> STRAWBERRY_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "strawberry_projectile"),
+            EntityType.Builder.<StrawberryEntity>create(StrawberryEntity::new, SpawnGroup.MISC)
                     .dimensions(0.25f, 0.25f).build());
 
     public static final EntityType<DeathsBombEntity> DEATHS_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
@@ -38,6 +38,11 @@ public class ModEntities {
             Identifier.of(SilverLight.MOD_ID, "aim_projectile"),
             EntityType.Builder.<AimOrbEntity>create(AimOrbEntity::new, SpawnGroup.MISC)
                     .dimensions(0.1f, 0.1f).build());
+
+    public static final EntityType<SmokeBombEntity> SMOKE_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "smoke_bomb"),
+            EntityType.Builder.<SmokeBombEntity>create(SmokeBombEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.2f, 0.2f).build());
 
     public static void registerModEntities() {
         SilverLight.LOGGER.info("Registering Entities for " + SilverLight.MOD_ID);

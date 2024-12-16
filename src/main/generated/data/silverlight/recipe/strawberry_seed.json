@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "T": {
-      "item": "silverlight:tomato"
+      "item": "silverlight:strawberry"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "silverlight:tomato_seed"
+    "id": "silverlight:strawberry_seed"
   }
 }
