@@ -12,6 +12,7 @@ import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.effect.custom.BasicEffect;
 import net.subtotalcamp875.silverlight.effect.custom.ArmorlessEffect;
 import net.subtotalcamp875.silverlight.effect.custom.HolyShieldStatusEffect;
+import net.subtotalcamp875.silverlight.effect.custom.SatisfiedEffect;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> SHRINK = registerEffect(
@@ -87,6 +88,11 @@ public class ModEffects {
             "say10s_curse", new BasicEffect(StatusEffectCategory.HARMFUL, 0)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, Identifier.of(SilverLight.MOD_ID, "say10s_curse"),
                             -4f, EntityAttributeModifier.Operation.ADD_VALUE));
+
+    public static final RegistryEntry<StatusEffect> SATISFIED = registerEffect(
+            "satisfied", new SatisfiedEffect(StatusEffectCategory.BENEFICIAL, 0)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(SilverLight.MOD_ID, "satisfied"),
+                            -0.015f, EntityAttributeModifier.Operation.ADD_VALUE));
 
 
     private static RegistryEntry<StatusEffect> registerEffect(String id, StatusEffect statusEffect) {

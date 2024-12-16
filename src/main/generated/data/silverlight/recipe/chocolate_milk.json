@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:glass_bottle"
+    },
+    "C": {
+      "item": "silverlight:cosmic_brownie"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "pattern": [
+    "BCB",
+    "BMB",
+    "BBB"
+  ],
+  "result": {
+    "count": 7,
+    "id": "silverlight:chocolate_milk"
+  }
+}

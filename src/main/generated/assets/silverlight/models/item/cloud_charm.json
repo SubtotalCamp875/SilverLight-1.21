@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "silverlight:item/weak_invisibility_charm"
+    "layer0": "silverlight:item/cloud_charm"
   }
 }

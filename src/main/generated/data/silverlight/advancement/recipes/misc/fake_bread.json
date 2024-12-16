@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fake_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": "silverlight:fake_bread"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fake_bread"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fake_bread"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fake_bread"
+    ]
+  }
+}

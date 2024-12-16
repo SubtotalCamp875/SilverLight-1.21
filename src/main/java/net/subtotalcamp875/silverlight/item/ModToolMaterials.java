@@ -16,6 +16,8 @@ import java.util.function.Supplier;
 public enum ModToolMaterials implements ToolMaterial {
     MINIGUN_STICK_MATERIAL(ModTags.Blocks.MINIGUN_STICK_MATERIAL,
             3600, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.STICK)),
+    VIKING_AXE_MATERIAL(ModTags.Blocks.VIKING_AXE_MATERIAL,
+            2031, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.STICK)),
     CANDY_CANE_MATERIAL(ModTags.Blocks.CANDY_CANE_MATERIAL,
             100, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.SUGAR)),
     THORS_HAMMER_MATERIAL(ModTags.Blocks.THORS_HAMMER_MATERIAL,

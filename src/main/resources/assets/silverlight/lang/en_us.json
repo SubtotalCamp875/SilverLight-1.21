@@ -95,6 +95,15 @@
   "item.silverlight.black_paper": "Black Paper",
   "item.silverlight.cosmic_brownie": "Cosmic Brownie",
   "item.silverlight.fake_bread": "Bread",
+  "item.silverlight.honey_cake_on_a_stick": "Honey Cake on a stick",
+  "item.silverlight.viking_pattern": "Viking Pattern",
+  "item.silverlight.viking_horn": "Viking Horn",
+  "item.silverlight.viking_axe": "Viking Axe",
+  "item.silverlight.chocolate_milk": "Chocolate Milk",
+  "item.silverlight.zillow_one": "ꅀ1",
+  "item.silverlight.zillow_five": "ꅀ5",
+  "item.silverlight.zillow_ten": "ꅀ10",
+  "item.silverlight.zillow_hundred": "ꅀ100",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",
@@ -137,8 +146,8 @@
   "tooltip.silverlight.dev_camp.tooltip": "Need more content ideas",
   "tooltip.silverlight.meteor_staff.tooltip": "§6First experiments of the powerful mages§r.",
   "tooltip.silverlight.meteor_staff_shift_down1.tooltip": "The staff contains the power to conjure §4Fire Balls§r from arrows.",
-  "tooltip.silverlight.meteor_staff_shift_down2.tooltip": "However, the power only increases in level every §b10 seconds§r.",
-  "tooltip.silverlight.meteor_staff_shift_down3.tooltip": "and the largest §4Fire Ball§r is only §bpower 5§r",
+  "tooltip.silverlight.meteor_staff_shift_down2.tooltip": "However, the power only increases 20% every §b10 seconds§r.",
+  "tooltip.silverlight.meteor_staff_shift_down3.tooltip": "and the largest §4Fire Ball§r is only §b100%§r",
   "tooltip.silverlight.light_staff.tooltip": "§6Prototype of lasers created by condensing light§r.",
   "tooltip.silverlight.light_staff_shift_down1.tooltip": "When holding in hand, sends out a §aaim guide line§r.",
   "tooltip.silverlight.light_staff_shift_down2.tooltip": "§aAim guide§r does §4not§r do damage but serves as a §6warning§r",
@@ -146,7 +155,9 @@
   "tooltip.silverlight.light_staff_shift_down4.tooltip": "You can only §4damage§r players §b10+ blocks§r away.",
 
   "effect.silverlight.holy_shield": "Holy Shield",
+  "effect.silverlight.satisfied": "Satisfied",
   "sounds.silverlight.light_staff_shoot": "Light Staff Shoot",
+  "sounds.silverlight.viking_horn_sound": "Viking Horn",
 
   "itemgroup.silverlight": "Silver Light Group"
 }

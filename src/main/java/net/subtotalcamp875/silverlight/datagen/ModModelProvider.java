@@ -95,6 +95,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLACK_PAPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.COSMIC_BROWNIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HONEY_CAKE_ON_A_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIKING_HORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIKING_AXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIKING_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHOCOLATE_MILK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZILLOW_ONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZILLOW_FIVE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZILLOW_TEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZILLOW_HUNDRED, Models.GENERATED);
 
     }
 }

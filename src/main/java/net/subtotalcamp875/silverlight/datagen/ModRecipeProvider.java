@@ -150,12 +150,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CRACKER), conditionsFromItem(ModItems.CRACKER))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CRACKER)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAKE_BREAD, 3)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAKE_BREAD, 1)
                 .pattern("D")
                 .pattern("B")
                 .input('D', Items.DIRT)
                 .input('B', Items.BREAD)
                 .criterion(hasItem(ModItems.FAKE_BREAD), conditionsFromItem(ModItems.FAKE_BREAD))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.FAKE_BREAD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HONEY_CAKE_ON_A_STICK, 1)
+                .pattern("HC")
+                .pattern("SH")
+                .input('S', Items.STICK)
+                .input('C', Items.CAKE)
+                .input('H', Items.HONEYCOMB)
+                .criterion(hasItem(ModItems.HONEY_CAKE_ON_A_STICK), conditionsFromItem(ModItems.HONEY_CAKE_ON_A_STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.HONEY_CAKE_ON_A_STICK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIKING_AXE, 1)
+                .pattern("P")
+                .pattern("X")
+                .input('P', ModItems.VIKING_PATTERN)
+                .input('X', Items.NETHERITE_AXE)
+                .criterion(hasItem(ModItems.VIKING_AXE), conditionsFromItem(ModItems.VIKING_AXE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.VIKING_AXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHOCOLATE_MILK, 7)
+                .pattern("BCB")
+                .pattern("BMB")
+                .pattern("BBB")
+                .input('C', ModItems.COSMIC_BROWNIE)
+                .input('M', Items.MILK_BUCKET)
+                .input('B', Items.GLASS_BOTTLE)
+                .criterion(hasItem(ModItems.CHOCOLATE_MILK), conditionsFromItem(ModItems.CHOCOLATE_MILK))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CHOCOLATE_MILK)));
     }
 }

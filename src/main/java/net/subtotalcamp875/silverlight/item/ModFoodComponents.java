@@ -72,7 +72,7 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 2400), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 1f)
-            .nutrition(1)
+            .nutrition(2)
             .snack()
             .build();
 
@@ -81,5 +81,18 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 2400), 0.1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.1f)
             .nutrition(5)
+            .build();
+
+    public static final FoodComponent HONEY_CAKE = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(ModEffects.SATISFIED, 6000), 1f)
+            .nutrition(10)
+            .saturationModifier(10)
+            .build();
+
+    public static final FoodComponent CHOCOLATE_MILK = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 1f)
+            .nutrition(4)
             .build();
 }

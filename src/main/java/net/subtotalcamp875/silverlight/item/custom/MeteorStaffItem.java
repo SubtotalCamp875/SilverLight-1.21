@@ -138,7 +138,9 @@ public class MeteorStaffItem extends RangedWeaponItem {
                 world.spawnEntity(fireballEntity);
 
                 stack.damage(this.getWeaponStackDamage(itemStack), shooter, LivingEntity.getSlotForHand(hand));
-                shooter.sendMessage(Text.of(shooter.getName() + " summoned Fire Ball with the power of " + getFireballStrength()));
+                if (getFireballStrength() == 5) {
+                    shooter.sendMessage(Text.of("You summoned a Max Power Fire Ball"));
+                }
                 if (stack.isEmpty()) {
                     break;
                 }

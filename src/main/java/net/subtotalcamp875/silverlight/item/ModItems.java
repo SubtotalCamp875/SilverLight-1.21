@@ -214,8 +214,17 @@ public class ModItems {
     public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1).maxDamage(72000)));
     public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)));
     public static final Item FAKE_BREAD = registerItem("fake_bread", new Item(new Item.Settings().food(ModFoodComponents.FAKE_BREAD)));
-
-
+    public static final Item HONEY_CAKE_ON_A_STICK = registerItem("honey_cake_on_a_stick", new Item(new Item.Settings().food(ModFoodComponents.HONEY_CAKE).maxCount(1)));
+    public static final Item VIKING_HORN = registerItem("viking_horn", new VikingHornItem(new Item.Settings().maxCount(1)));
+    public static final Item VIKING_PATTERN = registerItem("viking_pattern", new Item(new Item.Settings()));
+    public static final Item VIKING_AXE = registerItem("viking_axe",
+            new SwordItem(ModToolMaterials.VIKING_AXE_MATERIAL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VIKING_AXE_MATERIAL, 13, -3f))));
+    public static final Item CHOCOLATE_MILK = registerItem("chocolate_milk", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE_MILK)));
+    public static final Item ZILLOW_ONE = registerItem("zillow_one", new Item(new Item.Settings().maxCount(50)));
+    public static final Item ZILLOW_FIVE = registerItem("zillow_five", new Item(new Item.Settings().maxCount(50)));
+    public static final Item ZILLOW_TEN = registerItem("zillow_ten", new Item(new Item.Settings().maxCount(50)));
+    public static final Item ZILLOW_HUNDRED = registerItem("zillow_hundred", new Item(new Item.Settings().maxCount(50)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

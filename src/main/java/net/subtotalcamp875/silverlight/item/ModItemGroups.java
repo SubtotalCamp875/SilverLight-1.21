@@ -52,8 +52,18 @@ public class ModItemGroups {
 
                         //season 7 code
 
+                        entries.add(ModItems.BLACK_PAPER);
+                        entries.add(ModItems.ZILLOW_ONE);
+                        entries.add(ModItems.ZILLOW_FIVE);
+                        entries.add(ModItems.ZILLOW_TEN);
+                        entries.add(ModItems.ZILLOW_HUNDRED);
                         entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
                         entries.add(ModItems.FAKE_ELYTRA);
+                        entries.add(ModItems.FAKE_BREAD);
+                        entries.add(ModItems.COSMIC_BROWNIE);
+                        entries.add(ModItems.CHOCOLATE_MILK);
+                        entries.add(ModItems.HONEY_CAKE_ON_A_STICK);
+                        entries.add(ModItems.MOUTHWASH);
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.RIGHT_RING);
                         entries.add(ModItems.BLESSED_RING);
@@ -91,10 +101,9 @@ public class ModItemGroups {
                         entries.add(ModItems.SAY10S_CHARM);
                         entries.add(ModItems.CLOUD_CHARM);
                         entries.add(ModItems.VIBRATION_CHARM);
-                        entries.add(ModItems.MOUTHWASH);
-                        entries.add(ModItems.BLACK_PAPER);
-                        entries.add(ModItems.COSMIC_BROWNIE);
-                        entries.add(ModItems.FAKE_BREAD);
+                        entries.add(ModItems.VIKING_PATTERN);
+                        entries.add(ModItems.VIKING_HORN);
+                        entries.add(ModItems.VIKING_AXE);
 
                     }).build());
 

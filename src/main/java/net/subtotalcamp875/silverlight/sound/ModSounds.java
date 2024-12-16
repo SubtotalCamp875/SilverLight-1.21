@@ -10,6 +10,7 @@ import net.subtotalcamp875.silverlight.SilverLight;
 public class ModSounds {
 
     public static final SoundEvent LIGHT_STAFF_SHOOT = registerSoundEvent("light_staff_shoot");
+    public static final SoundEvent VIKING_HORN_SOUND = registerSoundEvent("viking_horn_sound");
 
 
     private static SoundEvent registerSoundEvent(String name) {

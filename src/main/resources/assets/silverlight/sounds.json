@@ -4,5 +4,11 @@
     "sounds": [
       "silverlight:light_staff_shoot"
     ]
+  },
+  "viking_horn_sound": {
+    "subtitle": "sounds.silverlight.viking_horn_sound",
+    "sounds": [
+      "silverlight:viking_horn_sound"
+    ]
   }
 }

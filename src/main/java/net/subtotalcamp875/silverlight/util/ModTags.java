@@ -13,6 +13,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> REAPERS_SCYTHE_MATERIAL = createTag("reapers_scythe_material");
         public static final TagKey<Block> MINIGUN_STICK_MATERIAL = createTag("minigun_stick_material");
+        public static final TagKey<Block> VIKING_AXE_MATERIAL = createTag("viking_axe_material");
         public static final TagKey<Block> THORS_HAMMER_MATERIAL = createTag("thors_hammer_material");
         public static final TagKey<Block> CANDY_CANE_MATERIAL = createTag("candy_cane_material");
 
