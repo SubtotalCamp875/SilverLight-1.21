@@ -33,7 +33,7 @@ public class LightStaffItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 100);
+        user.getItemCooldownManager().set(this, 200);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 ModSounds.LIGHT_STAFF_SHOOT, SoundCategory.NEUTRAL, 10f, 0.6f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
@@ -77,6 +77,8 @@ public class LightStaffItem extends Item {
                     aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 4f, 0.0f);
                     aimOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1 + vec3d.y * 10.0, user.getZ() + vec3d.z * 10.0);
                     world.spawnEntity(aimOrbEntity);
+                } else {
+                    user.getItemCooldownManager().set(this, 200);
                 }
             }
         }

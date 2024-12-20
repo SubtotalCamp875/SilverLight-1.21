@@ -181,7 +181,7 @@ public class ModItems {
         }
     });
     public static final Item VORTEX = registerItem("vortex", new Item(new Item.Settings()));
-    public static final Item LIGHT_STAFF = registerItem("light_staff", new LightStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
+    public static final Item LIGHT_STAFF = registerItem("light_staff", new LightStaffItem(new Item.Settings().maxDamage(1500).maxCount(1)));
     public static final Item LIGHT_ORB = registerItem("light_orb", new Item(new Item.Settings()));
     public static final Item AIM_ORB = registerItem("aim_orb", new Item(new Item.Settings()));
     public static final Item METEOR_STAFF = registerItem("meteor_staff", new MeteorStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
@@ -251,7 +251,7 @@ public class ModItems {
     public static final Item VIKING_PATTERN = registerItem("viking_pattern", new Item(new Item.Settings()));
     public static final Item VIKING_AXE = registerItem("viking_axe",
             new SwordItem(ModToolMaterials.VIKING_AXE_MATERIAL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VIKING_AXE_MATERIAL, 13, -3f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VIKING_AXE_MATERIAL, 9, -3f))));
     public static final Item CHOCOLATE_MILK = registerItem("chocolate_milk", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE_MILK)));
     public static final Item ZILLOW_ONE = registerItem("zillow_one", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_FIVE = registerItem("zillow_five", new Item(new Item.Settings().maxCount(50)));

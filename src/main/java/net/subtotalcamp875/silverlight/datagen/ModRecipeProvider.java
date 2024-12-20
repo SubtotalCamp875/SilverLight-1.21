@@ -171,7 +171,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("P")
                 .pattern("X")
                 .input('P', ModItems.VIKING_PATTERN)
-                .input('X', Items.NETHERITE_AXE)
+                .input('X', Items.DIAMOND_AXE)
                 .criterion(hasItem(ModItems.VIKING_AXE), conditionsFromItem(ModItems.VIKING_AXE))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.VIKING_AXE)));
 
