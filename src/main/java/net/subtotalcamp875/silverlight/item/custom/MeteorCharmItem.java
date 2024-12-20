@@ -10,12 +10,32 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class MeteorCharmItem extends Item {
     public MeteorCharmItem(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+
+        if (!world.isClient) {
+            if (user.getOffHandStack().getItem() == ModItems.CLOUD_CHARM) {
+                user.sendMessage(Text.of("§6The God Of Fire Is Happy With You Sacrifice! Granting Inferno Charm To The Player!§r"));
+                user.getOffHandStack().decrement(1);
+                user.giveItemStack(ModItems.INFERNO_CHARM.getDefaultStack());
+                itemStack.decrement(1);
+            }
+        }
+
+        return TypedActionResult.success(itemStack, world.isClient());
     }
 
     @Override

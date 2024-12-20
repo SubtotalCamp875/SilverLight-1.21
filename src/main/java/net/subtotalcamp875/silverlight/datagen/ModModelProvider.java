@@ -70,7 +70,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRONG_LEECH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.HOLY_SHIELD_GENERATOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOLY_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MINIGUN_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.SOUND_STAFF, Models.GENERATED);
@@ -103,10 +103,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ZILLOW_ONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_FIVE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_TEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZILLOW_TWENTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_HUNDRED, Models.GENERATED);
         itemModelGenerator.register(ModItems.METEOR_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.SCREECHING_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.SMOKE_BOMB, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INFERNO_CHARM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OENOBEER, Models.GENERATED);
 
     }
 }

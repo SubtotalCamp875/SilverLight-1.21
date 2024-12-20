@@ -40,7 +40,7 @@ public class DevCampItem extends Item {
                         SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.NEUTRAL, 2f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
             } else {
-                int action = world.getRandom().nextInt(25);
+                int action = world.getRandom().nextInt(29);
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.NEUTRAL, 2f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
@@ -49,9 +49,9 @@ public class DevCampItem extends Item {
                 } else if (action == 1) {
                     user.giveItemStack(ModItems.RIGHT_RING.getDefaultStack());
                 } else if (action == 2) {
-                    user.giveItemStack(ModItems.XP_CHARM.getDefaultStack());
-                } else if (action == 3) {
                     user.giveItemStack(ModItems.GROUNDED.getDefaultStack());
+                } else if (action == 3) {
+                    user.giveItemStack(ModItems.VORTEX_STAFF.getDefaultStack());
                 } else if (action == 4) {
                     user.giveItemStack(ModItems.AVA.getDefaultStack());
                 } else if (action == 5) {
@@ -67,7 +67,7 @@ public class DevCampItem extends Item {
                 } else if (action == 10) {
                     user.giveItemStack(ModItems.LEECH.getDefaultStack());
                 } else if (action == 11) {
-                    user.giveItemStack(ModItems.HOLY_SHIELD_GENERATOR.getDefaultStack());
+                    user.giveItemStack(ModItems.HOLY_CHARM.getDefaultStack());
                 } else if (action == 12) {
                     user.giveItemStack(ModItems.REAPERS_SCYTHE.getDefaultStack());
                 } else if (action == 13) {
@@ -89,11 +89,21 @@ public class DevCampItem extends Item {
                 } else if (action == 21) {
                     user.giveItemStack(ModItems.HORN_OF_BRAN_GALED.getDefaultStack());
                 } else if (action == 22) {
-                    user.giveItemStack(ModItems.THORS_HAMMER.getDefaultStack());
+                    user.giveItemStack(ModItems.SMOKE_BOMB.getDefaultStack());
                 } else if (action == 23) {
-                    user.giveItemStack(ModItems.CANDY_CANE.getDefaultStack());
+                    user.giveItemStack(ModItems.THORS_HAMMER.getDefaultStack());
                 } else if (action == 24) {
+                    user.giveItemStack(ModItems.CANDY_CANE.getDefaultStack());
+                } else if (action == 25) {
                     user.giveItemStack(ModItems.SAY10S_CONTRACT.getDefaultStack());
+                } else if (action == 26) {
+                    user.giveItemStack(ModItems.METEOR_CHARM.getDefaultStack());
+                } else if (action == 27) {
+                    user.giveItemStack(ModItems.XP_CHARM.getDefaultStack());
+                } else if (action == 28) {
+                    user.giveItemStack(ModItems.CLOUD_CHARM.getDefaultStack());
+                } else if (action == 29) {
+                    user.giveItemStack(ModItems.VIBRATION_CHARM.getDefaultStack());
                 }
 
                 if (!user.getAbilities().creativeMode) {

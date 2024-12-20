@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -32,7 +33,36 @@ public class ModBlocks {
             new SievingStationBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     public static final Block FERMENTING_STATION = registerBlock("fermenting_station",
-            new FermentingStationBlock(AbstractBlock.Settings.create().nonOpaque()));
+            new FermentingStationBlock(AbstractBlock.Settings.create().nonOpaque()) {
+                @Override
+                public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+
+                    if(Screen.hasShiftDown()) {
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down1.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down2.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down3.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down4.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down5.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down6.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down7.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down8.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down9.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down10.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down11.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down12.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down13.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down14.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down15.tooltip"));
+                    } else {
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.shift.tooltip"));
+                    }
+
+                    super.appendTooltip(stack, context, tooltip, options);
+                }
+            });
 
     public static final Block FAKE_DIAMOND_BLOCK = registerBlock("fake_diamond_block",
             new Block(AbstractBlock.Settings.create().hardness(5).resistance(6).requiresTool()) {

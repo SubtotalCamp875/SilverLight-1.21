@@ -38,12 +38,19 @@ public class LightStaffItem extends Item {
                 ModSounds.LIGHT_STAFF_SHOOT, SoundCategory.NEUTRAL, 10f, 0.6f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
         if (!world.isClient) {
-            Vec3d vec3d = user.getRotationVec(1.0F);
+            if (user.getOffHandStack().getItem() == ModItems.DEATH_STAFF) {
+                user.sendMessage(Text.of("§4The God Of Magic Is Happy With You Sacrifice! Granting Vortex Staff To The Player!§r"));
+                user.getOffHandStack().decrement(1);
+                user.giveItemStack(ModItems.DEATH_STAFF.getDefaultStack());
+                itemStack.decrement(1);
+            } else {
+                Vec3d vec3d = user.getRotationVec(1.0F);
 
-            LightOrbEntity lightOrbEntity = new LightOrbEntity(user, world);
-            lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 100f, 0.0f);
-            lightOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1 + vec3d.y * 10.0, user.getZ() + vec3d.z * 10.0);
-            world.spawnEntity(lightOrbEntity);
+                LightOrbEntity lightOrbEntity = new LightOrbEntity(user, world);
+                lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 100f, 0.0f);
+                lightOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1 + vec3d.y * 10.0, user.getZ() + vec3d.z * 10.0);
+                world.spawnEntity(lightOrbEntity);
+            }
         }
 
         if (!user.getAbilities().creativeMode) {

@@ -90,9 +90,36 @@ public class ModFoodComponents {
             .build();
 
     public static final FoodComponent CHOCOLATE_MILK = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 1f)
-            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 2400), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 1200), 0.25f)
             .nutrition(4)
+            .build();
+
+
+    public static final FoodComponent BEER = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 4800), 0.5f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent WINE = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 2400), 0.2f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 1200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 2400), 0.2f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent OENOBEER = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 2400), 0.2f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 1200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 2400), 0.2f)
+            .nutrition(4)
+            .alwaysEdible()
             .build();
 }

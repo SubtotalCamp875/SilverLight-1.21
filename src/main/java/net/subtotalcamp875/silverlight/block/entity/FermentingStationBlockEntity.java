@@ -202,6 +202,21 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_NAUSEA);}
             }
 
+            if (getStack(slot).getItem() == Items.WHEAT && getStack(INPUT_SLOT).getItem() == Items.POTION) {
+                chance += 25;
+                if (drop <= chance) {result = new ItemStack(ModItems.BEER);}
+            }
+
+            if (getStack(slot).getItem() == Items.APPLE && getStack(INPUT_SLOT).getItem() == Items.POTION) {
+                chance += 25;
+                if (drop <= chance) {result = new ItemStack(ModItems.WINE);}
+            }
+
+            if ((getStack(slot).getItem() == ModItems.WINE || getStack(slot).getItem() == ModItems.BEER) && getStack(INPUT_SLOT).getItem() == Items.POTION) {
+                chance += 25;
+                if (drop <= chance) {result = new ItemStack(ModItems.OENOBEER);}
+            }
+
             if (getStack(slot).getItem() == Items.BROWN_MUSHROOM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHRINK);}}
             if (getStack(slot).getItem() == Items.STONE && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DWARF);}}
             if (getStack(slot).getItem() == Items.GRAVEL && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHORTEN);}}
@@ -291,7 +306,19 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
                 || getStack(FERMENTING_SLOT_1).getItem() == Items.RABBIT_FOOT
                 || getStack(FERMENTING_SLOT_2).getItem() == Items.RABBIT_FOOT
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT;
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.WHEAT
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.WHEAT
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.WHEAT
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.APPLE
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.APPLE
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.APPLE
+                || getStack(FERMENTING_SLOT_1).getItem() == ModItems.BEER
+                || getStack(FERMENTING_SLOT_2).getItem() == ModItems.BEER
+                || getStack(FERMENTING_SLOT_3).getItem() == ModItems.BEER
+                || getStack(FERMENTING_SLOT_1).getItem() == ModItems.WINE
+                || getStack(FERMENTING_SLOT_2).getItem() == ModItems.WINE
+                || getStack(FERMENTING_SLOT_3).getItem() == ModItems.WINE;
         boolean hasSameFermentingInput = hasSameFermentingRecipes();
 
         return hasInput && hasSameFermentingInput;

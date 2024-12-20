@@ -48,7 +48,7 @@ public class CloudCharm extends Item {
             assert user != null;
             if (!world.isClient) {
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
-                    serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 50, 2, 2, 2, 0.1);
+                    serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 3, 2, 2, 2, 0.1);
                 }
             }
         }

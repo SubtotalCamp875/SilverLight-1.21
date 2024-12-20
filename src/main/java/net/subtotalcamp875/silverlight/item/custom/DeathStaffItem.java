@@ -31,14 +31,34 @@ public class DeathStaffItem extends Item {
         if (!world.isClient) {
             if (!user.getAbilities().creativeMode) {
 
-                if (itemStack.getDamage() == itemStack.getMaxDamage()) {
+                if (user.getOffHandStack().getItem() == ModItems.LONG_LEECH) {
+                    user.sendMessage(Text.of("§4The God Of Death Shivers In Fear§r"));
+                    user.getOffHandStack().decrement(1);
+                    user.giveItemStack(ModItems.LEECH.getDefaultStack());
+                    user.giveItemStack(ModItems.LEECH.getDefaultStack());
+
+                } else if (user.getOffHandStack().getItem() == ModItems.STRONG_LEECH) {
+                    user.sendMessage(Text.of("§4The God Of Death Refuses To Have The Underworld Be Consumed§r"));
+                    user.getOffHandStack().decrement(1);
+                    user.giveItemStack(ModItems.LEECH.getDefaultStack());
+                    user.giveItemStack(ModItems.LEECH.getDefaultStack());
+                    user.giveItemStack(ModItems.LEECH.getDefaultStack());
+
+                } else if (user.getOffHandStack().getItem() == ModItems.LIGHT_STAFF) {
+                    user.sendMessage(Text.of("§5The God Of Life and God Of Death Is Displeased. The God Of Void Grants The Player A Vortex Staff!§r"));
+                    user.getOffHandStack().decrement(1);
+                    user.giveItemStack(ModItems.VORTEX_STAFF.getDefaultStack());
+                    itemStack.decrement(1);
+
+                } else if (itemStack.getDamage() == itemStack.getMaxDamage()) {
                     user.sendMessage(Text.of("The Effect of §4Death's Staff§r has been §etriggered§r! Granting a random item (out of 2) to the selected user!"));
 
                     if (user.getOffHandStack().getItem() == ModItems.DEATHS_DOLL) {
-                        user.sendMessage(Text.of("§The God Of Death Is Happy With You Sacrifice! Granting Reaper's Scythe To The Player!§r"));
+                        user.sendMessage(Text.of("§4The God Of Death Is Happy With You Sacrifice! Granting Reaper's Scythe To The Player!§r"));
                         user.getOffHandStack().decrement(1);
                         user.giveItemStack(ModItems.REAPERS_SCYTHE.getDefaultStack());
                     } else {
+
                         int chance = world.getRandom().nextInt(2);
                         if (chance == 0) {
                             user.giveItemStack(ModItems.DEATHS_DOLL.getDefaultStack());
@@ -48,7 +68,6 @@ public class DeathStaffItem extends Item {
                     }
 
                     itemStack.decrement(1);
-
 
                 } else {
                     user.kill();

@@ -30,19 +30,19 @@ public class ModItems {
 
 
 
-    public static final Item POTION_OF_NAUSEA = registerItem("potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_NAUSEA).maxCount(1)));
-    public static final Item POTENT_POTION_OF_NAUSEA = registerItem("potent_potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTENT_POTION_OF_NAUSEA).maxCount(1)));
-    public static final Item POTION_OF_SHRINK = registerItem("potion_of_shrink", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHRINK).maxCount(1)));
-    public static final Item POTION_OF_DWARF = registerItem("potion_of_dwarf", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DWARF).maxCount(1)));
-    public static final Item POTION_OF_SHORTEN = registerItem("potion_of_shorten", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHORTEN).maxCount(1)));
-    public static final Item POTION_OF_FAIRY = registerItem("potion_of_fairy", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_FAIRY).maxCount(1)));
-    public static final Item POTION_OF_TALL = registerItem("potion_of_tall", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_TALL).maxCount(1)));
-    public static final Item POTION_OF_ENLARGE = registerItem("potion_of_enlarge", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ENLARGE).maxCount(1)));
-    public static final Item POTION_OF_GIANT = registerItem("potion_of_giant", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GIANT).maxCount(1)));
-    public static final Item POTION_OF_GRAVITY = registerItem("potion_of_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GRAVITY).maxCount(1)));
-    public static final Item POTION_OF_ANTI_GRAVITY = registerItem("potion_of_anti_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ANTI_GRAVITY).maxCount(1)));
-    public static final Item POTION_OF_DISPROPORTION = registerItem("potion_of_disproportion", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DISPROPORTION).maxCount(1)));
-    public static final Item POTION_OF_HAPPY_FEET = registerItem("potion_of_happy_feet", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_HAPPY_FEET).maxCount(1)));
+    public static final Item POTION_OF_NAUSEA = registerItem("potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_NAUSEA).maxCount(16)));
+    public static final Item POTENT_POTION_OF_NAUSEA = registerItem("potent_potion_of_nausea", new Item(new Item.Settings().food(ModFoodComponents.POTENT_POTION_OF_NAUSEA).maxCount(16)));
+    public static final Item POTION_OF_SHRINK = registerItem("potion_of_shrink", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHRINK).maxCount(16)));
+    public static final Item POTION_OF_DWARF = registerItem("potion_of_dwarf", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DWARF).maxCount(16)));
+    public static final Item POTION_OF_SHORTEN = registerItem("potion_of_shorten", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_SHORTEN).maxCount(16)));
+    public static final Item POTION_OF_FAIRY = registerItem("potion_of_fairy", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_FAIRY).maxCount(16)));
+    public static final Item POTION_OF_TALL = registerItem("potion_of_tall", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_TALL).maxCount(16)));
+    public static final Item POTION_OF_ENLARGE = registerItem("potion_of_enlarge", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ENLARGE).maxCount(16)));
+    public static final Item POTION_OF_GIANT = registerItem("potion_of_giant", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GIANT).maxCount(16)));
+    public static final Item POTION_OF_GRAVITY = registerItem("potion_of_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_GRAVITY).maxCount(16)));
+    public static final Item POTION_OF_ANTI_GRAVITY = registerItem("potion_of_anti_gravity", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_ANTI_GRAVITY).maxCount(16)));
+    public static final Item POTION_OF_DISPROPORTION = registerItem("potion_of_disproportion", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_DISPROPORTION).maxCount(16)));
+    public static final Item POTION_OF_HAPPY_FEET = registerItem("potion_of_happy_feet", new Item(new Item.Settings().food(ModFoodComponents.POTION_OF_HAPPY_FEET).maxCount(16)));
     public static final Item CRACKER = registerItem("cracker", new Item(new Item.Settings().food(ModFoodComponents.CRACKER).maxCount(64)));
 
     public static final Item STRAWBERRY_SEED = registerItem("strawberry_seed",
@@ -67,7 +67,13 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item BLESSED_RING = registerItem("blessed_ring", new BlessedRingItem(new Item.Settings().maxCount(1).maxDamage(3456000)));
+    public static final Item BLESSED_RING = registerItem("blessed_ring", new BlessedRingItem(new Item.Settings().maxCount(1).maxDamage(3456000)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item FAKE_ELYTRA = registerItem("fake_elytra", new Item(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -128,14 +134,14 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item HOLY_SHIELD_GENERATOR = registerItem("holy_shield_generator", new ShieldGeneratorItem(new Item.Settings().maxDamage(28800).maxCount(1)) {
+    public static final Item HOLY_CHARM = registerItem("holy_charm", new HolyCharmItem(new Item.Settings().maxDamage(28800).maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip"));
-            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip1"));
-            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip2"));
-            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip3"));
-            tooltip.add(Text.translatable("tooltip.silverlight.holy_shield_generator.tooltip4"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip1"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip2"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip3"));
+            tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip4"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -149,6 +155,7 @@ public class ModItems {
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.reapers_scythe1.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
 
         }
@@ -166,7 +173,13 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item VORTEX_STAFF = registerItem("vortex_staff", new VortexStaffItem(new Item.Settings().maxCount(1).maxDamage(10)));
+    public static final Item VORTEX_STAFF = registerItem("vortex_staff", new VortexStaffItem(new Item.Settings().maxCount(1).maxDamage(10)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item VORTEX = registerItem("vortex", new Item(new Item.Settings()));
     public static final Item LIGHT_STAFF = registerItem("light_staff", new LightStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
     public static final Item LIGHT_ORB = registerItem("light_orb", new Item(new Item.Settings()));
@@ -179,8 +192,20 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item DEATHS_DOLL = registerItem("deaths_doll", new DeathsDollItem(new Item.Settings().maxCount(1).maxDamage(10)));
-    public static final Item DEATHS_BOMB = registerItem("deaths_bomb", new DeathsBombItem(new Item.Settings().maxCount(1)));
+    public static final Item DEATHS_DOLL = registerItem("deaths_doll", new DeathsDollItem(new Item.Settings().maxCount(1).maxDamage(10)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item DEATHS_BOMB = registerItem("deaths_bomb", new DeathsBombItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
     public static final Item LIGHTNING_ORB = registerItem("lightning_orb", new Item(new Item.Settings()));
     public static final Item THORS_HAMMER = registerItem("thors_hammer", new ThorsHammer(ModToolMaterials.THORS_HAMMER_MATERIAL, new Item.Settings()
@@ -205,6 +230,7 @@ public class ModItems {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.say10s_charm.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -212,7 +238,13 @@ public class ModItems {
     public static final Item BLACK_PAPER = registerItem("black_paper", new Item(new Item.Settings()));
     public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1)));
     public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1)));
-    public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)));
+    public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item FAKE_BREAD = registerItem("fake_bread", new Item(new Item.Settings().food(ModFoodComponents.FAKE_BREAD)));
     public static final Item HONEY_CAKE_ON_A_STICK = registerItem("honey_cake_on_a_stick", new Item(new Item.Settings().food(ModFoodComponents.HONEY_CAKE).maxCount(1)));
     public static final Item VIKING_HORN = registerItem("viking_horn", new VikingHornItem(new Item.Settings().maxCount(1)));
@@ -224,10 +256,27 @@ public class ModItems {
     public static final Item ZILLOW_ONE = registerItem("zillow_one", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_FIVE = registerItem("zillow_five", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_TEN = registerItem("zillow_ten", new Item(new Item.Settings().maxCount(50)));
+    public static final Item ZILLOW_TWENTY = registerItem("zillow_twenty", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_HUNDRED = registerItem("zillow_hundred", new Item(new Item.Settings().maxCount(50)));
     public static final Item METEOR_CHARM = registerItem("meteor_charm", new MeteorCharmItem(new Item.Settings().maxCount(1)));
-    public static final Item SCREECHING_CHARM = registerItem("screeching_charm", new ScreechingCharmItem(new Item.Settings().maxCount(1)));
+    public static final Item SCREECHING_CHARM = registerItem("screeching_charm", new ScreechingCharmItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item SMOKE_BOMB = registerItem("smoke_bomb", new SmokeBombItem(new Item.Settings()));
+    public static final Item INFERNO_CHARM = registerItem("inferno_charm", new InfernoCharmItem(new Item.Settings().maxCount(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.easter_egg_item.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item BEER = registerItem("beer", new Item(new Item.Settings().food(ModFoodComponents.BEER).maxCount(16)));
+    public static final Item WINE = registerItem("wine", new Item(new Item.Settings().food(ModFoodComponents.WINE).maxCount(16)));
+    public static final Item OENOBEER = registerItem("oenobeer", new Item(new Item.Settings().food(ModFoodComponents.OENOBEER).maxCount(16)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }
