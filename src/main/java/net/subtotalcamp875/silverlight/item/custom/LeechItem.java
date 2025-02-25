@@ -1,5 +1,6 @@
 package net.subtotalcamp875.silverlight.item.custom;
 
+import net.minecraft.client.sound.Sound;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -10,6 +11,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.item.ModItems;
+import net.subtotalcamp875.silverlight.sound.ModSounds;
 
 public class LeechItem extends Item {
     public LeechItem(Settings settings) {

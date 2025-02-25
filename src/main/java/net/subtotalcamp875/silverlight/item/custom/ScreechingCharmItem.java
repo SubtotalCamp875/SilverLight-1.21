@@ -68,8 +68,8 @@ public class ScreechingCharmItem extends Item {
 
             assert user != null;
             if (!world.isClient) {
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 2), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60), user);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.SCULK_CHARGE_POP, user.getX(), user.getY(), user.getZ(), 50, 0.2, 0.2, 0.2, 0.05);
                 }

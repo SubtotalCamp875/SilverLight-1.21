@@ -26,19 +26,16 @@ public class RightRingItem extends Item {
 
 
         if (!world.isClient) {
-            if (user.getStackInHand(hand).getItem() == ModItems.RIGHT_RING) {
-                if (user.getOffHandStack().getItem() == ModItems.LEFT_RING) {
-                    user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 200), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 200), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200), user);
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200), user);
+            if (user.getOffHandStack().getItem() == ModItems.LEFT_RING) {
+                user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 200), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 200), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200), user);
 
-
-                    itemStack.decrement(1);
-                    user.getOffHandStack().decrement(1);
-                    user.giveItemStack(ModItems.BLESSED_RING.getDefaultStack());
-                }
+                user.giveItemStack(ModItems.BLESSED_RING.getDefaultStack());
+                user.getOffHandStack().decrement(1);
+                itemStack.decrement(1);
             }
         }
 

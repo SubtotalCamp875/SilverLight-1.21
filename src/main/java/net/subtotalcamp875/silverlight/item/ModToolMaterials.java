@@ -15,15 +15,15 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     MINIGUN_STICK_MATERIAL(ModTags.Blocks.MINIGUN_STICK_MATERIAL,
-            3600, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.STICK)),
+            3600, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.BEDROCK)),
     VIKING_AXE_MATERIAL(ModTags.Blocks.VIKING_AXE_MATERIAL,
-            2031, 1.0F, 0f, 0, () -> Ingredient.ofItems(Items.STICK)),
+            2031, 1.0F, 0f, 0, () -> Ingredient.ofItems(Items.BEDROCK)),
     CANDY_CANE_MATERIAL(ModTags.Blocks.CANDY_CANE_MATERIAL,
-            100, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.SUGAR)),
+            100, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.BEDROCK)),
     THORS_HAMMER_MATERIAL(ModTags.Blocks.THORS_HAMMER_MATERIAL,
-            500, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.LIGHTNING_ROD)),
+            500, 0.0F, 0f, 0, () -> Ingredient.ofItems(Items.BEDROCK)),
     REAPERS_SCYTHE_MATERIAL(ModTags.Blocks.REAPERS_SCYTHE_MATERIAL,
-            1, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.SKELETON_SKULL));
+            1, 0.0F, 1f, 0, () -> Ingredient.ofItems(Items.BEDROCK));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

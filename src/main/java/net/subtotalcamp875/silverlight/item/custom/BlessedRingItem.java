@@ -22,8 +22,8 @@ public class BlessedRingItem extends Item {
 
             assert user != null;
             if (!world.isClient) {
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 40), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 40), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 60), user);
 
                 if (!user.getAbilities().creativeMode) {
                     stack.setDamage(stack.getDamage() + 1);

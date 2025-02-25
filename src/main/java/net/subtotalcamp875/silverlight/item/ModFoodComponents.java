@@ -86,7 +86,7 @@ public class ModFoodComponents {
     public static final FoodComponent HONEY_CAKE = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(ModEffects.SATISFIED, 6000), 1f)
             .nutrition(14)
-            .saturationModifier(20)
+            .saturationModifier(1)
             .build();
 
     public static final FoodComponent CHOCOLATE_MILK = new FoodComponent.Builder()

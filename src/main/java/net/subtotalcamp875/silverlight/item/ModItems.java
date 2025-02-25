@@ -120,14 +120,14 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item LONG_LEECH = registerItem("long_leech", new LongLeechItem(new Item.Settings().maxDamage(120).maxCount(1)) {
+    public static final Item LONG_LEECH = registerItem("long_leech", new LongLeechItem(new Item.Settings().maxDamage(7200).maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.long_leech.tooltip"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item STRONG_LEECH = registerItem("strong_leech", new StrongLeechItem(new Item.Settings().maxDamage(120).maxCount(1)) {
+    public static final Item STRONG_LEECH = registerItem("strong_leech", new StrongLeechItem(new Item.Settings().maxDamage(7200).maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.strong_leech.tooltip"));
@@ -251,7 +251,7 @@ public class ModItems {
     public static final Item VIKING_PATTERN = registerItem("viking_pattern", new Item(new Item.Settings()));
     public static final Item VIKING_AXE = registerItem("viking_axe",
             new SwordItem(ModToolMaterials.VIKING_AXE_MATERIAL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VIKING_AXE_MATERIAL, 9, -3f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VIKING_AXE_MATERIAL, 10, -3f))));
     public static final Item CHOCOLATE_MILK = registerItem("chocolate_milk", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE_MILK)));
     public static final Item ZILLOW_ONE = registerItem("zillow_one", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_FIVE = registerItem("zillow_five", new Item(new Item.Settings().maxCount(50)));

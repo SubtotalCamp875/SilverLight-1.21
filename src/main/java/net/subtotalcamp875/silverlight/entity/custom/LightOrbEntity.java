@@ -43,7 +43,7 @@ public class LightOrbEntity extends ThrownItemEntity {
         Entity entity = entityHitResult.getEntity();
         World world = entity.getWorld();
         if (entity instanceof LivingEntity) {
-            entityHitResult.getEntity().damage(this.getDamageSources().generic(), 10f);
+            entityHitResult.getEntity().damage(this.getDamageSources().generic(), 4f);
         }
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
                 SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.NEUTRAL, 10f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));

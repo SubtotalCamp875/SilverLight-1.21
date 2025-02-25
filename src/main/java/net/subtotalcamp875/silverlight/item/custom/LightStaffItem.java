@@ -48,7 +48,7 @@ public class LightStaffItem extends Item {
 
                 LightOrbEntity lightOrbEntity = new LightOrbEntity(user, world);
                 lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 100f, 0.0f);
-                lightOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1 + vec3d.y * 10.0, user.getZ() + vec3d.z * 10.0);
+                lightOrbEntity.setPosition(user.getX() + vec3d.x * 20.0, user.getY() + 1 + vec3d.y * 20.0, user.getZ() + vec3d.z * 20.0);
                 world.spawnEntity(lightOrbEntity);
             }
         }
@@ -73,9 +73,10 @@ public class LightStaffItem extends Item {
                 Vec3d vec3d = user.getRotationVec(1.0F);
 
                 if (user.getMainHandStack().getItem() == ModItems.LIGHT_STAFF || user.getOffHandStack().getItem() == ModItems.LIGHT_STAFF) {
+                    user.setGlowing(true);
                     AimOrbEntity aimOrbEntity = new AimOrbEntity(user, world);
                     aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 4f, 0.0f);
-                    aimOrbEntity.setPosition(user.getX() + vec3d.x * 10.0, user.getY() + 1 + vec3d.y * 10.0, user.getZ() + vec3d.z * 10.0);
+                    aimOrbEntity.setPosition(user.getX() + vec3d.x * 20.0, user.getY() + 1 + vec3d.y * 20.0, user.getZ() + vec3d.z * 20.0);
                     world.spawnEntity(aimOrbEntity);
                 } else {
                     user.getItemCooldownManager().set(this, 200);
