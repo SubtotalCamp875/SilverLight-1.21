@@ -15,6 +15,9 @@ import net.subtotalcamp875.silverlight.entity.ModEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class VortexEntity extends ThrownItemEntity {
+
+    private int lifeSpan = 6000;
+
     public VortexEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -31,6 +34,15 @@ public class VortexEntity extends ThrownItemEntity {
     }
 
     @Override
+    public void tick() {
+        lifeSpan--;
+        if (lifeSpan <= 0) {
+            this.discard();
+        }
+        super.tick();
+    }
+
+    @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
         if (!this.getWorld().isClient) {
             this.discard();
@@ -39,26 +51,19 @@ public class VortexEntity extends ThrownItemEntity {
     }
 
     @Override
-    public void onStruckByLightning(ServerWorld world, LightningEntity lightning) {
-        if (!this.getWorld().isClient) {
-            this.discard();
-        }
-        super.onStruckByLightning(world, lightning);
-    }
-
-    @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
+        World world = this.getWorld();
         Entity entity = entityHitResult.getEntity();
         if (entity instanceof LivingEntity) {
-            ((LivingEntity) entity).setHealth(0);
+            ((LivingEntity) entity).damage(world.getDamageSources().magic(), 100f);
         }
-
     }
 
     @Override
     public void onPlayerCollision(PlayerEntity player) {
-        player.setHealth(0);
+        World world = this.getWorld();
+        player.damage(world.getDamageSources().magic(), 100f);
         super.onPlayerCollision(player);
     }
 

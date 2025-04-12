@@ -10,7 +10,13 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
-import net.subtotalcamp875.silverlight.item.custom.*;
+import net.subtotalcamp875.silverlight.item.custom.charms.*;
+import net.subtotalcamp875.silverlight.item.custom.leeches.LeechItem;
+import net.subtotalcamp875.silverlight.item.custom.leeches.LongLeechItem;
+import net.subtotalcamp875.silverlight.item.custom.leeches.StrongLeechItem;
+import net.subtotalcamp875.silverlight.item.custom.misc.*;
+import net.subtotalcamp875.silverlight.item.custom.playerItems.*;
+import net.subtotalcamp875.silverlight.item.custom.staffs.*;
 
 import java.util.List;
 

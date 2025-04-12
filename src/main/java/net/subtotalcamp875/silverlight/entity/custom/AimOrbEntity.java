@@ -12,10 +12,12 @@ import net.subtotalcamp875.silverlight.entity.ModEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class AimOrbEntity extends ThrownItemEntity {
+
+    private int lifeSpan = 40;
+
     public AimOrbEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
-
     public AimOrbEntity(LivingEntity livingEntity, World world) {
         super(ModEntities.AIM_ORB_PROJECTILE, livingEntity, world);
         this.setNoGravity(true);
@@ -24,6 +26,15 @@ public class AimOrbEntity extends ThrownItemEntity {
     @Override
     protected Item getDefaultItem() {
         return ModItems.AIM_ORB;
+    }
+
+    @Override
+    public void tick() {
+        lifeSpan--;
+        if (lifeSpan <= 0) {
+            this.discard();
+        }
+        super.tick();
     }
 
     @Override

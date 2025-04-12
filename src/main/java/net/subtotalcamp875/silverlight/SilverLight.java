@@ -6,8 +6,11 @@ import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.component.ModDataComponentTypes;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 import net.subtotalcamp875.silverlight.entity.ModEntities;
-import net.subtotalcamp875.silverlight.item.ModItemGroups;
 import net.subtotalcamp875.silverlight.item.ModItems;
+import net.subtotalcamp875.silverlight.item.itemGroups.SilverlightConsumables;
+import net.subtotalcamp875.silverlight.item.itemGroups.SilverlightMain;
+import net.subtotalcamp875.silverlight.item.itemGroups.SilverlightPlayerItems;
+import net.subtotalcamp875.silverlight.item.itemGroups.SilverlightStaffs;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlerTypes;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlers;
 import net.subtotalcamp875.silverlight.sound.ModSounds;
@@ -20,7 +23,10 @@ public class SilverLight implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerItemGroups();
+		SilverlightMain.registerMainItemGroups();
+		SilverlightStaffs.registerStaffsItemGroups();
+		SilverlightConsumables.registerConsumablesItemGroups();
+		SilverlightPlayerItems.registerPlayerItemsItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEffects.registerModEffects();

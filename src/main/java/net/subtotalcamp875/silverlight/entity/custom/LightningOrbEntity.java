@@ -15,6 +15,9 @@ import net.subtotalcamp875.silverlight.entity.ModEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class LightningOrbEntity extends ThrownItemEntity {
+
+    private int lifeSpan = 400;
+
     public LightningOrbEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
 
@@ -28,6 +31,15 @@ public class LightningOrbEntity extends ThrownItemEntity {
     @Override
     protected Item getDefaultItem() {
         return ModItems.LIGHTNING_ORB;
+    }
+
+    @Override
+    public void tick() {
+        lifeSpan--;
+        if (lifeSpan <= 0) {
+            this.discard();
+        }
+        super.tick();
     }
 
     @Override

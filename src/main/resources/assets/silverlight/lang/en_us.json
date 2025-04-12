@@ -185,5 +185,8 @@
   "sounds.silverlight.light_staff_shoot": "Light Staff Shoot",
   "sounds.silverlight.viking_horn_sound": "Viking Horn",
 
-  "itemgroup.silverlight": "Silver Light Group"
+  "itemgroup.main": "Silverlight",
+  "itemgroup.staffs": "Staffs",
+  "itemgroup.consumables": "Consumables",
+  "itemgroup.player_items": "Player Items"
 }
