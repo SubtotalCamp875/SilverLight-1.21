@@ -191,6 +191,8 @@ public class ModItems {
     public static final Item LIGHT_ORB = registerItem("light_orb", new Item(new Item.Settings()));
     public static final Item AIM_ORB = registerItem("aim_orb", new Item(new Item.Settings()));
     public static final Item METEOR_STAFF = registerItem("meteor_staff", new MeteorStaffItem(new Item.Settings().maxDamage(500).maxCount(1)));
+    public static final Item EXPLOSION_RAIN_STAFF = registerItem("explosion_rain_staff", new ExplosionRainStaffItem(new Item.Settings().maxDamage(5).maxCount(1)));
+    public static final Item EXPLOSION_RAIN_ORB = registerItem("explosion_rain_orb", new Item(new Item.Settings()));
     public static final Item DEATH_STAFF = registerItem("death_staff", new DeathStaffItem(new Item.Settings().maxCount(1).maxDamage(100)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -212,6 +214,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
     public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
     public static final Item LIGHTNING_ORB = registerItem("lightning_orb", new Item(new Item.Settings()));
     public static final Item THORS_HAMMER = registerItem("thors_hammer", new ThorsHammer(ModToolMaterials.THORS_HAMMER_MATERIAL, new Item.Settings()

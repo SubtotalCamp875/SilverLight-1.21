@@ -93,6 +93,7 @@ public class SilverlightMain {
                         entries.add(ModItems.VORTEX_STAFF);
                         entries.add(ModItems.LIGHT_STAFF);
                         entries.add(ModItems.METEOR_STAFF);
+                        entries.add(ModItems.EXPLOSION_RAIN_STAFF);
                         entries.add(ModItems.DEATH_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
@@ -101,6 +102,7 @@ public class SilverlightMain {
                         entries.add(ModItems.LIGHT_ORB);
                         entries.add(ModItems.AIM_ORB);
                         entries.add(ModItems.LIGHTNING_ORB);
+                        entries.add(ModItems.EXPLOSION_RAIN_ORB);
                         entries.add(ModItems.SAY10S_CONTRACT);
                         entries.add(ModItems.SAY10S_CHARM);
                         entries.add(ModItems.HOLY_CHARM);

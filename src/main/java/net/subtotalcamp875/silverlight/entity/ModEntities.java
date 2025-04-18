@@ -44,6 +44,11 @@ public class ModEntities {
             EntityType.Builder.<SmokeBombEntity>create(SmokeBombEntity::new, SpawnGroup.MISC)
                     .dimensions(0.2f, 0.2f).build());
 
+    public static final EntityType<ExplosionRainOrbEntity> EXPLOSION_RAIN_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "explosion_rain_orb"),
+            EntityType.Builder.<ExplosionRainOrbEntity>create(ExplosionRainOrbEntity::new, SpawnGroup.MISC)
+                    .dimensions(1.0f, 1.0f).build());
+
     public static void registerModEntities() {
         SilverLight.LOGGER.info("Registering Entities for " + SilverLight.MOD_ID);
     }

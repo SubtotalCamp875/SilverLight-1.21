@@ -23,12 +23,14 @@ public class SilverlightStaffs {
                         entries.add(ModItems.LIGHT_STAFF);
                         entries.add(ModItems.METEOR_STAFF);
                         entries.add(ModItems.DEATH_STAFF);
+                        entries.add(ModItems.EXPLOSION_RAIN_STAFF);
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
                         entries.add(ModItems.VORTEX);
                         entries.add(ModItems.LIGHT_ORB);
                         entries.add(ModItems.AIM_ORB);
                         entries.add(ModItems.LIGHTNING_ORB);
+                        entries.add(ModItems.EXPLOSION_RAIN_ORB);
 
                     }).build());
 

@@ -8,10 +8,12 @@ import net.minecraft.item.RangedWeaponItem;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -46,7 +48,14 @@ public class ArrowStaffItem extends RangedWeaponItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         ItemStack itemStack = user.getProjectileType(stack);
-        if (!itemStack.isEmpty()) {
+
+        if (user.getOffHandStack().getItem() == ModItems.METEOR_STAFF) {
+            user.sendMessage(Text.of("§6Arrows fused with the power of Meteors - How could a single staff possibly handle all this power?§r"));
+            user.getOffHandStack().decrement(1);
+            user.giveItemStack(ModItems.EXPLOSION_RAIN_STAFF.getDefaultStack());
+            itemStack.decrement(1);
+
+        } else if (!itemStack.isEmpty()) {
             List<ItemStack> list = load(stack, itemStack, user);
             if (world instanceof ServerWorld serverWorld && !list.isEmpty()) {
                 this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 2F, 1.0F, false, null);
