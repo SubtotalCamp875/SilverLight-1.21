@@ -35,9 +35,11 @@ public class VortexEntity extends ThrownItemEntity {
 
     @Override
     public void tick() {
-        lifeSpan--;
-        if (lifeSpan <= 0) {
-            this.discard();
+        if (!this.getWorld().isClient) {
+            lifeSpan--;
+            if (lifeSpan <= 0) {
+                this.discard();
+            }
         }
         super.tick();
     }

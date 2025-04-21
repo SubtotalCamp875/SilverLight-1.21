@@ -26,18 +26,17 @@ public class LongLeechItem extends Item {
 
             assert user != null;
             if (!world.isClient && !user.getAbilities().creativeMode) {
+                if (stack.getDamage() != stack.getMaxDamage()) { //stops when out of durability
+                    tick++;
+                    if (tick == 20) {
+                        user.damage(world.getDamageSources().magic(), 1f);
+                        stack.setDamage(stack.getDamage() + 1);
+                        tick = 0;
+                    }
 
-                tick++;
-                if (tick == 20) {
-                    user.damage(world.getDamageSources().magic(), 1f);
-                    stack.setDamage(stack.getDamage() + 1);
-                    tick = 0;
-                }
-
-
-                if (stack.getDamage() == stack.getMaxDamage()) {
-                    stack.decrement(1);
-                    user.giveItemStack(ModItems.STRONG_LEECH.getDefaultStack());
+                    if (stack.getDamage() == stack.getMaxDamage()) {
+                        user.giveItemStack(ModItems.STRONG_LEECH.getDefaultStack());
+                    }
                 }
             }
         }

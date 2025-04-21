@@ -6,6 +6,7 @@ import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -38,18 +39,19 @@ public class ExplosionRainOrbEntity extends ThrownItemEntity {
     public void tick() {
         World world = this.getWorld();
         BlockPos blockPos = this.getBlockPos();
+        if (!this.getWorld().isClient) {
+            lifeSpan--;
+            if (lifeSpan <= 0) {
+                this.discard();
+            }
 
-        lifeSpan--;
-        if (lifeSpan <= 0) {
-            this.discard();
-        }
-
-        rainIntervalTick--;
-        if (rainIntervalTick <= 0) {
-            TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-            tntEntity.setPosition(blockPos.toCenterPos());
-            world.spawnEntity(tntEntity);
-            rainIntervalTick = rainInterval;
+            rainIntervalTick--;
+            if (rainIntervalTick <= 0) {
+                TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
+                tntEntity.setPosition(blockPos.toCenterPos());
+                world.spawnEntity(tntEntity);
+                rainIntervalTick = rainInterval;
+            }
         }
 
         super.tick();

@@ -114,6 +114,10 @@
   "item.silverlight.beer": "Beer",
   "item.silverlight.wine": "Wine",
   "item.silverlight.oenobeer": "Oenobeer",
+  "item.silverlight.mysterious_compass": "Mysterious Compass",
+  "item.silverlight.activated_mysterious_compass": "Activated Mysterious Compass",
+  "item.silverlight.mysterious_essence": "Mysterious Essence",
+  "item.silverlight.soap_stone": "Soap Stone",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",
@@ -155,6 +159,8 @@
   "tooltip.silverlight.say10s_charm.tooltip": "§4ARE YOU HAPPY NOW?§r",
   "tooltip.silverlight.jimmylogz.tooltip": "Destruction? Nah",
   "tooltip.silverlight.dev_camp.tooltip": "Need more content ideas",
+  "tooltip.silverlight.mysterious_compass": "§jThis compass doesn't point, it tells...§r",
+  "tooltip.silverlight.activated_mysterious_compass": "§jCompass teeming with energy, as if it has something to tell you...§r",
   "tooltip.silverlight.meteor_staff.tooltip": "§6First experiments of the powerful mages§r.",
   "tooltip.silverlight.meteor_staff_shift_down1.tooltip": "The staff contains the power to conjure §4Fire Balls§r from arrows.",
   "tooltip.silverlight.meteor_staff_shift_down2.tooltip": "However, the power only increases 20% every §b10 seconds§r.",
@@ -191,7 +197,7 @@
   "sounds.silverlight.viking_horn_sound": "Viking Horn",
 
   "itemgroup.main": "Silverlight",
-  "itemgroup.staffs": "Staffs",
-  "itemgroup.consumables": "Consumables",
-  "itemgroup.player_items": "Player Items"
+  "itemgroup.staffs": "Silverlight Staffs",
+  "itemgroup.consumables": "Silverlight Consumables",
+  "itemgroup.player_items": "Silverlight Player Items"
 }

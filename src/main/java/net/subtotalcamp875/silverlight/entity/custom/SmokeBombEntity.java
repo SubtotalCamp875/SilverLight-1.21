@@ -16,7 +16,7 @@ import net.subtotalcamp875.silverlight.item.ModItems;
 
 public class SmokeBombEntity extends ThrownItemEntity {
 
-    private int lifeSpan = 1200;
+    private int lifeSpan = 200;
 
     public SmokeBombEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
@@ -44,10 +44,11 @@ public class SmokeBombEntity extends ThrownItemEntity {
     public void tick() {
         if (this.getWorld() instanceof ServerWorld serverWorld) {
             serverWorld.spawnParticles(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, this.getX(), this.getY(), this.getZ(), 300, 3, 3, 3, 0.05);
-        }
-        lifeSpan--;
-        if (lifeSpan <= 0) {
-            this.discard();
+            lifeSpan--;
+            System.out.println(lifeSpan);
+            if (lifeSpan <= 0) {
+                this.discard();
+            }
         }
         super.tick();
     }

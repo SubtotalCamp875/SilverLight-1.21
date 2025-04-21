@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:compass"
+    },
+    "E": {
+      "item": "silverlight:mysterious_essence"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "EOE",
+    "OCO",
+    "EOE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "silverlight:mysterious_compass"
+  }
+}

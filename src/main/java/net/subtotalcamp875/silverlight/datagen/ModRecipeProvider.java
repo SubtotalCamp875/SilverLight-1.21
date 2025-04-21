@@ -184,5 +184,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.GLASS_BOTTLE)
                 .criterion(hasItem(ModItems.CHOCOLATE_MILK), conditionsFromItem(ModItems.CHOCOLATE_MILK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CHOCOLATE_MILK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYSTERIOUS_ESSENCE, 8)
+                .pattern("BBB")
+                .pattern("BSB")
+                .pattern("BBB")
+                .input('S', Items.SKELETON_SKULL)
+                .input('B', Items.BLACK_DYE)
+                .criterion(hasItem(ModItems.MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.MYSTERIOUS_ESSENCE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYSTERIOUS_COMPASS, 1)
+                .pattern("EOE")
+                .pattern("OCO")
+                .pattern("EOE")
+                .input('C', Items.COMPASS)
+                .input('O', Items.OBSIDIAN)
+                .input('E', ModItems.MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.MYSTERIOUS_COMPASS), conditionsFromItem(ModItems.MYSTERIOUS_COMPASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.MYSTERIOUS_COMPASS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.SKELETON_SKULL, 1)
+                .pattern("BBB")
+                .pattern("BSB")
+                .pattern("BBB")
+                .input('S', ModItems.SOAP_STONE)
+                .input('B', Items.WITHER_SKELETON_SKULL)
+                .criterion(hasItem(ModItems.MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("wither_skull_to_skeleton_skull"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SOAP_STONE, 1)
+                .pattern("EGE")
+                .pattern("ESE")
+                .pattern("EGE")
+                .input('E', ModItems.MYSTERIOUS_ESSENCE)
+                .input('S', Items.STONE)
+                .input('G', Items.GUNPOWDER)
+                .criterion(hasItem(ModItems.MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.SOAP_STONE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MOUTHWASH, 8)
+                .pattern("BBB")
+                .pattern("BSB")
+                .pattern("BBB")
+                .input('S', ModItems.SOAP_STONE)
+                .input('B', Items.POTION)
+                .criterion(hasItem(ModItems.MOUTHWASH), conditionsFromItem(ModItems.MOUTHWASH))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.MOUTHWASH)));
     }
 }

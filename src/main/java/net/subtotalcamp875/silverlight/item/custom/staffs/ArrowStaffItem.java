@@ -3,6 +3,7 @@ package net.subtotalcamp875.silverlight.item.custom.staffs;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.RangedWeaponItem;
 import net.minecraft.server.world.ServerWorld;
@@ -48,17 +49,19 @@ public class ArrowStaffItem extends RangedWeaponItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         ItemStack itemStack = user.getProjectileType(stack);
+        ItemStack offHandStack = user.getOffHandStack();
 
-        if (user.getOffHandStack().getItem() == ModItems.METEOR_STAFF) {
+        if ((offHandStack.getItem() == ModItems.METEOR_CHARM) && (itemStack.getDamage() != itemStack.getMaxDamage()) && (offHandStack.getDamage() != offHandStack.getMaxDamage())) {
             user.sendMessage(Text.of("§6Arrows fused with the power of Meteors - How could a single staff possibly handle all this power?§r"));
-            user.getOffHandStack().decrement(1);
+            offHandStack.setDamage(offHandStack.getMaxDamage());
+            itemStack.setDamage(itemStack.getMaxDamage());
             user.giveItemStack(ModItems.EXPLOSION_RAIN_STAFF.getDefaultStack());
-            itemStack.decrement(1);
 
-        } else if (!itemStack.isEmpty()) {
+        } else if (!itemStack.isEmpty() && (itemStack.getDamage() != itemStack.getMaxDamage())) {
             List<ItemStack> list = load(stack, itemStack, user);
             if (world instanceof ServerWorld serverWorld && !list.isEmpty()) {
                 this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 2F, 1.0F, false, null);
+                itemStack.setDamage(itemStack.getDamage() +1);
             }
 
             world.playSound(
@@ -71,6 +74,8 @@ public class ArrowStaffItem extends RangedWeaponItem {
                     1.0F,
                     1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 0.9f * 0.5F
             );
+        } else {
+            user.sendMessage(Text.of("This item has already been used"));
         }
         return TypedActionResult.fail(stack);
     }

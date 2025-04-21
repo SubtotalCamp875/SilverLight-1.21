@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -27,18 +28,17 @@ public class LeechItem extends Item {
 
             assert user != null;
             if (!world.isClient && !user.getAbilities().creativeMode) {
+                if (stack.getDamage() != stack.getMaxDamage()) { //stops when out of durability
+                    tick++;
+                    if (tick == 100) {
+                        user.damage(world.getDamageSources().magic(), 1f);
+                        stack.setDamage(stack.getDamage() + 1);
+                        tick = 0;
+                    }
 
-                tick++;
-                if (tick == 100) {
-                    user.damage(world.getDamageSources().magic(), 1f);
-                    stack.setDamage(stack.getDamage() + 1);
-                    tick = 0;
-                }
-
-
-                if (stack.getDamage() == stack.getMaxDamage()) {
-                    stack.decrement(1);
-                    user.giveItemStack(ModItems.LONG_LEECH.getDefaultStack());
+                    if (stack.getDamage() == stack.getMaxDamage()) { //final action before loop closes
+                        user.giveItemStack(ModItems.LONG_LEECH.getDefaultStack());
+                    }
                 }
             }
         }

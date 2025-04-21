@@ -16,6 +16,7 @@ import net.subtotalcamp875.silverlight.item.custom.leeches.LongLeechItem;
 import net.subtotalcamp875.silverlight.item.custom.leeches.StrongLeechItem;
 import net.subtotalcamp875.silverlight.item.custom.misc.*;
 import net.subtotalcamp875.silverlight.item.custom.playerItems.*;
+import net.subtotalcamp875.silverlight.item.custom.progression.MysteriousCompassItem;
 import net.subtotalcamp875.silverlight.item.custom.staffs.*;
 
 import java.util.List;
@@ -58,7 +59,7 @@ public class ModItems {
 
     //season 7 code starts here
 
-    public static final Item RIGHT_RING = registerItem("right_ring", new RightRingItem(new Item.Settings().maxCount(1)) {
+    public static final Item RIGHT_RING = registerItem("right_ring", new RightRingItem(new Item.Settings().maxCount(1).maxDamage(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.right_ring.tooltip"));
@@ -66,7 +67,7 @@ public class ModItems {
 
         }
     });
-    public static final Item LEFT_RING = registerItem("left_ring", new Item(new Item.Settings().maxCount(1)) {
+    public static final Item LEFT_RING = registerItem("left_ring", new Item(new Item.Settings().maxCount(1).maxDamage(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.right_ring.tooltip"));
@@ -227,7 +228,7 @@ public class ModItems {
     });
     public static final Item CANDY_CANE = registerItem("candy_cane", new CandyCaneItem(ModToolMaterials.CANDY_CANE_MATERIAL, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CANDY_CANE_MATERIAL, 0, -3f))));
-    public static final Item SAY10S_CONTRACT = registerItem("say10s_contract", new Say10sContractItem(new Item.Settings().maxCount(1)) {
+    public static final Item SAY10S_CONTRACT = registerItem("say10s_contract", new Say10sContractItem(new Item.Settings().maxCount(1).maxDamage(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.say10s_contract.tooltip"));
@@ -245,8 +246,8 @@ public class ModItems {
     });
     public static final Item MOUTHWASH = registerItem("mouthwash", new Item(new Item.Settings().food(ModFoodComponents.MOUTHWASH).maxCount(100)));
     public static final Item BLACK_PAPER = registerItem("black_paper", new Item(new Item.Settings()));
-    public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1)));
-    public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1)));
+    public static final Item CLOUD_CHARM = registerItem("cloud_charm", new CloudCharm(new Item.Settings().maxCount(1).maxDamage(1)));
+    public static final Item VIBRATION_CHARM = registerItem("vibration_charm", new VibrationCharm(new Item.Settings().maxCount(1).maxDamage(1)));
     public static final Item COSMIC_BROWNIE = registerItem("cosmic_brownie", new Item(new Item.Settings().food(ModFoodComponents.COSMIC_BROWNIE)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -267,7 +268,7 @@ public class ModItems {
     public static final Item ZILLOW_TEN = registerItem("zillow_ten", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_TWENTY = registerItem("zillow_twenty", new Item(new Item.Settings().maxCount(50)));
     public static final Item ZILLOW_HUNDRED = registerItem("zillow_hundred", new Item(new Item.Settings().maxCount(50)));
-    public static final Item METEOR_CHARM = registerItem("meteor_charm", new MeteorCharmItem(new Item.Settings().maxCount(1)));
+    public static final Item METEOR_CHARM = registerItem("meteor_charm", new MeteorCharmItem(new Item.Settings().maxCount(1).maxDamage(1)));
     public static final Item SCREECHING_CHARM = registerItem("screeching_charm", new ScreechingCharmItem(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -286,6 +287,16 @@ public class ModItems {
     public static final Item BEER = registerItem("beer", new Item(new Item.Settings().food(ModFoodComponents.BEER).maxCount(16)));
     public static final Item WINE = registerItem("wine", new Item(new Item.Settings().food(ModFoodComponents.WINE).maxCount(16)));
     public static final Item OENOBEER = registerItem("oenobeer", new Item(new Item.Settings().food(ModFoodComponents.OENOBEER).maxCount(16)));
+    public static final Item MYSTERIOUS_COMPASS = registerItem("mysterious_compass", new MysteriousCompassItem(new Item.Settings().maxCount(1).maxDamage(1)) {
+        @Override
+        public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.silverlight.mysterious_compass"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item ACTIVATED_MYSTERIOUS_COMPASS = registerItem("activated_mysterious_compass", new Item(new Item.Settings().maxCount(1)));
+    public static final Item MYSTERIOUS_ESSENCE = registerItem("mysterious_essence", new Item(new Item.Settings()));
+    public static final Item SOAP_STONE = registerItem("soap_stone", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

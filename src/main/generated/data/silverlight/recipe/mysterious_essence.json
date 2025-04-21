@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "S": {
+      "item": "minecraft:skeleton_skull"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BSB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "id": "silverlight:mysterious_essence"
+  }
+}

@@ -21,21 +21,22 @@ public class RightRingItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
+        ItemStack offHandStack = user.getOffHandStack();
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
 
         if (!world.isClient) {
-            if (user.getOffHandStack().getItem() == ModItems.LEFT_RING) {
-                user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 200), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 200), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200), user);
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200), user);
+            if ((offHandStack.getItem() == ModItems.LEFT_RING) && (itemStack.getDamage() != itemStack.getMaxDamage()) && (offHandStack.getDamage() != offHandStack.getMaxDamage())) {
+                user.addStatusEffect(new StatusEffectInstance(ModEffects.STRONG_FAIRY, 400), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 400), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 400), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 400), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400), user);
 
                 user.giveItemStack(ModItems.BLESSED_RING.getDefaultStack());
-                user.getOffHandStack().decrement(1);
-                itemStack.decrement(1);
+                offHandStack.setDamage(offHandStack.getMaxDamage());
+                itemStack.setDamage(itemStack.getMaxDamage());
             }
         }
 

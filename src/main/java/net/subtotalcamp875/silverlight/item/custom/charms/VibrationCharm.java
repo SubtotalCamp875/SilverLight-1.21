@@ -27,12 +27,13 @@ public class VibrationCharm extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
-        if (!world.isClient) {
+        if (!world.isClient && (itemStack.getDamage() != itemStack.getMaxDamage())) {
             if (user.getOffHandStack().getItem() == ModItems.CLOUD_CHARM) {
                 user.sendMessage(Text.of("§3The God Of Noise Is Happy With You Sacrifice! Granting Screeching Charm To The Player!§r"));
-                user.getOffHandStack().decrement(1);
+                user.getOffHandStack().setDamage(user.getOffHandStack().getMaxDamage());
+                itemStack.setDamage(itemStack.getMaxDamage());
                 user.giveItemStack(ModItems.SCREECHING_CHARM.getDefaultStack());
-                itemStack.decrement(1);
+
             } else if (!isActivated) {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
@@ -42,6 +43,9 @@ public class VibrationCharm extends Item {
                         SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
                 isActivated = !isActivated;
             }
+
+        } else if (!world.isClient) {
+            user.sendMessage(Text.of("This item has already been used"));
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
@@ -50,7 +54,7 @@ public class VibrationCharm extends Item {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         stack.copyComponentsToNewStack(stack.getItem(), 1);
-        if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
+        if (entity.isPlayer() && isActivated && !entity.isSpectator() && (stack.getDamage() != stack.getMaxDamage())) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;

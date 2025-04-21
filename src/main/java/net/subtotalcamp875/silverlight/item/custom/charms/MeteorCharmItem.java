@@ -22,30 +22,45 @@ public class MeteorCharmItem extends Item {
         super(settings);
     }
 
+    private boolean isActivated = false;
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
-        if (!world.isClient) {
+        if (!world.isClient && (itemStack.getDamage() != itemStack.getMaxDamage())) {
             if (user.getOffHandStack().getItem() == ModItems.CLOUD_CHARM) {
                 user.sendMessage(Text.of("§6The God Of Fire Is Happy With You Sacrifice! Granting Inferno Charm To The Player!§r"));
-                user.getOffHandStack().decrement(1);
+                user.getOffHandStack().setDamage(user.getOffHandStack().getMaxDamage());
+                itemStack.setDamage(itemStack.getMaxDamage());
                 user.giveItemStack(ModItems.INFERNO_CHARM.getDefaultStack());
-                itemStack.decrement(1);
+
+
+            } else if (!isActivated) {
+                world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                        SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                isActivated = !isActivated;
+            } else {
+                world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                        SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                isActivated = !isActivated;
             }
+
+        } else if (!world.isClient) {
+            user.sendMessage(Text.of("This item has already been used"));
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        stack.copyComponentsToNewStack(stack.getItem(), 1);
+    public void inventoryTick(ItemStack itemStack, World world, Entity entity, int slot, boolean selected) {
+        itemStack.copyComponentsToNewStack(itemStack.getItem(), 1);
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;
-            if (!world.isClient && !user.isOnGround()) {
+            if (!world.isClient && !user.isOnGround() && (itemStack.getDamage() != itemStack.getMaxDamage()) && isActivated) {
 
                 boolean active = true;
                 for (int i = 0; i <= 5; i++) {
@@ -65,6 +80,6 @@ public class MeteorCharmItem extends Item {
                 }
             }
         }
-        super.inventoryTick(stack, world, entity, slot, selected);
+        super.inventoryTick(itemStack, world, entity, slot, selected);
     }
 }

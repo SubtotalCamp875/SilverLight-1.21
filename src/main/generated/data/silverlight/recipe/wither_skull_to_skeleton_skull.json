@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "S": {
+      "item": "silverlight:soap_stone"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BSB",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:skeleton_skull"
+  }
+}

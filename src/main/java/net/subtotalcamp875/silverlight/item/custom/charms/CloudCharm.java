@@ -8,6 +8,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -24,14 +25,18 @@ public class CloudCharm extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
 
         if (!world.isClient) {
-            if (!isActivated) {
-                world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                        SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+            if (itemStack.getDamage() != itemStack.getMaxDamage()) {
+                if (!isActivated) {
+                    world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                            SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                } else {
+                    world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                            SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                }
+                isActivated = !isActivated;
             } else {
-                world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                        SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                user.sendMessage(Text.of("This item has already been used"));
             }
-            isActivated = !isActivated;
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
@@ -40,7 +45,7 @@ public class CloudCharm extends Item {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         stack.copyComponentsToNewStack(stack.getItem(), 1);
-        if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
+        if (entity.isPlayer() && isActivated && !entity.isSpectator() && (stack.getDamage() != stack.getMaxDamage())) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             assert user != null;

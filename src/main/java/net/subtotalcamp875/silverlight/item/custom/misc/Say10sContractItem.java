@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -23,9 +24,15 @@ public class Say10sContractItem extends Item {
 
 
         if (!world.isClient) {
-            user.addCommandTag("say10s_contract");
-            user.giveItemStack(ModItems.SAY10S_CHARM.getDefaultStack());
-            itemStack.decrement(1);
+            if (itemStack.getDamage() != itemStack.getMaxDamage()) {
+                user.sendMessage(Text.of("This item has already been used"));
+            } else if (user.getCommandTags().contains("say10s_contract")) {
+                user.sendMessage(Text.of("You have already been cursed!"));
+            } else {
+                user.addCommandTag("say10s_contract");
+                user.giveItemStack(ModItems.SAY10S_CHARM.getDefaultStack());
+                itemStack.setDamage(itemStack.getMaxDamage());
+            }
         }
 
         return TypedActionResult.success(itemStack, world.isClient());

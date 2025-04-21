@@ -116,6 +116,14 @@ public class SilverlightMain {
                         entries.add(ModItems.VIKING_HORN);
                         entries.add(ModItems.VIKING_AXE);
 
+                        // Season 8
+
+                        entries.add(ModItems.MYSTERIOUS_COMPASS);
+                        entries.add(ModItems.ACTIVATED_MYSTERIOUS_COMPASS);
+                        entries.add(ModItems.MYSTERIOUS_ESSENCE);
+                        entries.add(ModItems.SOAP_STONE);
+
+
                     }).build());
 
 

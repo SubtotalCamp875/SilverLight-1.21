@@ -26,18 +26,17 @@ public class StrongLeechItem extends Item {
 
             assert user != null;
             if (!world.isClient && !user.getAbilities().creativeMode) {
+                if (stack.getDamage() != stack.getMaxDamage()) { //stops when out of durability
+                    tick++;
+                    if (tick == 20) {
+                        user.damage(world.getDamageSources().magic(), 2f);
+                        stack.setDamage(stack.getDamage() + 1);
+                        tick = 0;
+                    }
 
-                tick++;
-                if (tick == 20) {
-                    user.damage(world.getDamageSources().magic(), 2f);
-                    stack.setDamage(stack.getDamage() + 1);
-                    tick = 0;
-                }
-
-
-                if (stack.getDamage() == stack.getMaxDamage()) {
-                    stack.decrement(1);
-                    user.giveItemStack(ModItems.BLACK_HOLE.getDefaultStack());
+                    if (stack.getDamage() == stack.getMaxDamage()) {
+                        user.giveItemStack(ModItems.BLACK_HOLE.getDefaultStack());
+                    }
                 }
             }
         }

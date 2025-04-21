@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
@@ -30,9 +31,11 @@ public class AimOrbEntity extends ThrownItemEntity {
 
     @Override
     public void tick() {
-        lifeSpan--;
-        if (lifeSpan <= 0) {
-            this.discard();
+        if (!this.getWorld().isClient) {
+            lifeSpan--;
+            if (lifeSpan <= 0) {
+                this.discard();
+            }
         }
         super.tick();
     }
