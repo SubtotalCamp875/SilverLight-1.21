@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.block.custom.StrawberryPlantBlock;
 import net.subtotalcamp875.silverlight.item.ModItems;
@@ -115,5 +116,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.WINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.OENOBEER, Models.GENERATED);
 
+        //season 8
+
+        itemModelGenerator.register(ModItems.MYSTERIOUS_COMPASS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ACTIVATED_MYSTERIOUS_COMPASS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOAP_STONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MYSTERIOUS_ESSENCE, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_BOOTS));
     }
 }

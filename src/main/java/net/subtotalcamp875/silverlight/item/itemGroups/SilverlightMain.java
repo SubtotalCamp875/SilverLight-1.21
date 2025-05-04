@@ -18,7 +18,6 @@ public class SilverlightMain {
                     .icon(() -> new ItemStack(ModItems.BACKPACK)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.BACKPACK);
-                        entries.add(ModItems.BLACK_HOLE);
                         entries.add(ModItems.STRETCHY_LEATHER);
                         entries.add(ModItems.QUILL);
                         entries.add(ModItems.CANONICAL_BOOK);
@@ -122,6 +121,10 @@ public class SilverlightMain {
                         entries.add(ModItems.ACTIVATED_MYSTERIOUS_COMPASS);
                         entries.add(ModItems.MYSTERIOUS_ESSENCE);
                         entries.add(ModItems.SOAP_STONE);
+                        entries.add(ModItems.CHARGED_CRYSTAL_HELMET);
+                        entries.add(ModItems.CHARGED_CRYSTAL_CHESTPLATE);
+                        entries.add(ModItems.CHARGED_CRYSTAL_LEGGINGS);
+                        entries.add(ModItems.CHARGED_CRYSTAL_BOOTS);
 
 
                     }).build());

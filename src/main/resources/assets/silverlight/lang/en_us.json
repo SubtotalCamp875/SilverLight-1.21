@@ -118,6 +118,10 @@
   "item.silverlight.activated_mysterious_compass": "Activated Mysterious Compass",
   "item.silverlight.mysterious_essence": "Mysterious Essence",
   "item.silverlight.soap_stone": "Soap Stone",
+  "item.silverlight.charged_crystal_helmet": "Crystal Helmet",
+  "item.silverlight.charged_crystal_chestplate": "Crystal Chestplate",
+  "item.silverlight.charged_crystal_leggings": "Crystal Leggings",
+  "item.silverlight.charged_crystal_boots": "Crystal Boots",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",

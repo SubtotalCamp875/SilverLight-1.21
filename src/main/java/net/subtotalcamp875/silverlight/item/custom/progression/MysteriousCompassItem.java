@@ -31,11 +31,13 @@ public class MysteriousCompassItem extends Item {
         if (!world.isClient) {
             if (itemStack.getDamage() == itemStack.getMaxDamage()) {
                 user.sendMessage(Text.of("This item has already been used"));
-            } else if ((-0.1 < position.getX() && position.getX() < 0.1) && (-0.1 < position.getZ() && position.getZ() < 0.1)) {
+
+
+            } else if ((-0.05 < position.getX() && position.getX() < 0.05) && (-0.05 < position.getZ() && position.getZ() < 0.05)) {
                 user.sendMessage(Text.of("§dThe Compass has created a noise...§r"));
                 itemStack.setDamage(itemStack.getMaxDamage());
                 user.giveItemStack(ModItems.ACTIVATED_MYSTERIOUS_COMPASS.getDefaultStack());
-            } else if ((-1 < position.getX() && position.getX() < 1) && (-1 < position.getZ() && position.getZ() < 1)) {
+            } else if ((-1.5 < position.getX() && position.getX() < 1.5) && (-1.5 < position.getZ() && position.getZ() < 1.5)) {
                 user.sendMessage(Text.of("§dThe Compass is v§kib§r§dr§kat§r§ding with MYSTERIOUS energy...§r"));
 
             } else if (isX(position)) {
