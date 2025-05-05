@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silverlight:clumped_energy_orb"
+    }
+  },
+  "pattern": [
+    "#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "silverlight:energy_orb"
+  }
+}

@@ -37,6 +37,7 @@ public class SilverlightConsumables {
                         entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.FAKE_BREAD);
+                        entries.add(ModItems.GOLDEN_APPLE);
                         entries.add(ModItems.COSMIC_BROWNIE);
                         entries.add(ModItems.CHOCOLATE_MILK);
                         entries.add(ModItems.HONEY_CAKE_ON_A_STICK);

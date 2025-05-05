@@ -6,10 +6,10 @@
       "item": "minecraft:compass"
     },
     "E": {
-      "item": "silverlight:mysterious_essence"
+      "item": "minecraft:copper_ingot"
     },
     "O": {
-      "item": "minecraft:obsidian"
+      "item": "minecraft:black_wool"
     }
   },
   "pattern": [

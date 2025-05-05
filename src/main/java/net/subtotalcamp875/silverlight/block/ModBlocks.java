@@ -14,10 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.block.custom.DragonProcessingStationBlock;
-import net.subtotalcamp875.silverlight.block.custom.FermentingStationBlock;
-import net.subtotalcamp875.silverlight.block.custom.SievingStationBlock;
-import net.subtotalcamp875.silverlight.block.custom.StrawberryPlantBlock;
+import net.subtotalcamp875.silverlight.block.custom.*;
 
 import java.util.List;
 
@@ -72,6 +69,9 @@ public class ModBlocks {
                     super.appendTooltip(stack, context, tooltip, options);
                 }
             });
+
+    public static final Block ESSENCE_GENERATOR = registerBlock("essence_generator",
+            new EssenceGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

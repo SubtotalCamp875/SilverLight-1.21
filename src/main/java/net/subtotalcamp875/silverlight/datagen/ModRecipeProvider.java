@@ -158,6 +158,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FAKE_BREAD), conditionsFromItem(ModItems.FAKE_BREAD))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.FAKE_BREAD)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLDEN_APPLE, 1)
+                .pattern("D")
+                .pattern("B")
+                .input('D', Items.GOLD_NUGGET)
+                .input('B', Items.APPLE)
+                .criterion(hasItem(ModItems.GOLDEN_APPLE), conditionsFromItem(ModItems.GOLDEN_APPLE))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.GOLDEN_APPLE)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HONEY_CAKE_ON_A_STICK, 1)
                 .pattern("HC")
                 .pattern("SH")
@@ -199,8 +207,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("OCO")
                 .pattern("EOE")
                 .input('C', Items.COMPASS)
-                .input('O', Items.OBSIDIAN)
-                .input('E', ModItems.MYSTERIOUS_ESSENCE)
+                .input('O', Items.BLACK_WOOL)
+                .input('E', Items.COPPER_INGOT)
                 .criterion(hasItem(ModItems.MYSTERIOUS_COMPASS), conditionsFromItem(ModItems.MYSTERIOUS_COMPASS))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.MYSTERIOUS_COMPASS)));
 
@@ -231,5 +239,62 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.POTION)
                 .criterion(hasItem(ModItems.MOUTHWASH), conditionsFromItem(ModItems.MOUTHWASH))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.MOUTHWASH)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WEAK_MYSTERIOUS_ESSENCE, 8)
+                .pattern("#")
+                .input('#', ModItems.MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.WEAK_MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.WEAK_MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("essence_to_weak_essence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYSTERIOUS_ESSENCE, 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.WEAK_MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("weak_essence_to_essence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYSTERIOUS_ESSENCE, 8)
+                .pattern("#")
+                .input('#', ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("crystallized_essence_to_essence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE, 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("essence_to_crystallized_essence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE, 8)
+                .pattern("#")
+                .input('#', ModItems.CRYSTAL)
+                .criterion(hasItem(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE), conditionsFromItem(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE))
+                .offerTo(exporter, Identifier.of("crystal_to_crystallized_essence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSTAL, 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE)
+                .criterion(hasItem(ModItems.CRYSTAL), conditionsFromItem(ModItems.CRYSTAL))
+                .offerTo(exporter, Identifier.of("crystallized_essence_to_crystal"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENERGY_ORB, 8)
+                .pattern("#")
+                .input('#', ModItems.CLUMPED_ENERGY_ORB)
+                .criterion(hasItem(ModItems.ENERGY_ORB), conditionsFromItem(ModItems.ENERGY_ORB))
+                .offerTo(exporter, Identifier.of("clumped_orb_to_orb"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLUMPED_ENERGY_ORB, 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.ENERGY_ORB)
+                .criterion(hasItem(ModItems.CLUMPED_ENERGY_ORB), conditionsFromItem(ModItems.CLUMPED_ENERGY_ORB))
+                .offerTo(exporter, Identifier.of("orb_to_clumped_orb"));
+
     }
 }

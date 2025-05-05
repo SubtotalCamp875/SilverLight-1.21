@@ -78,8 +78,16 @@ public class ModFoodComponents {
 
     public static final FoodComponent FAKE_BREAD = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400), 0.1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 2400), 0.1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 0.1f)
+            .nutrition(5)
+            .build();
+
+    public static final FoodComponent GOLDEN_APPLE = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 2400), 0.5f)
             .nutrition(5)
             .build();
 

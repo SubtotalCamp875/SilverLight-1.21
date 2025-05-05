@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "silverlight:mysterious_essence"
+    }
+  },
+  "pattern": [
+    "#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "silverlight:weak_mysterious_essence"
+  }
+}

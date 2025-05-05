@@ -21,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.ESSENCE_GENERATOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_DIAMOND_BLOCK);
     }
 
@@ -74,7 +75,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HOLY_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MINIGUN_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SOUND_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.DICE_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.VORTEX_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.VORTEX, Models.GENERATED);
@@ -98,6 +98,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLACK_PAPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.COSMIC_BROWNIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GOLDEN_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.HONEY_CAKE_ON_A_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIKING_HORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIKING_AXE, Models.GENERATED);
@@ -121,7 +122,19 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MYSTERIOUS_COMPASS, Models.GENERATED);
         itemModelGenerator.register(ModItems.ACTIVATED_MYSTERIOUS_COMPASS, Models.GENERATED);
         itemModelGenerator.register(ModItems.SOAP_STONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGY_ORB, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CLUMPED_ENERGY_ORB, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGY_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INKWISP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INKLING, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INKSHADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INKLOOM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INKVOID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WEAK_MYSTERIOUS_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYSTERIOUS_ESSENCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_CRYSTAL, Models.GENERATED);
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_CHESTPLATE));

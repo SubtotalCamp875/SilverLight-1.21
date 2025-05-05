@@ -18,7 +18,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.component.ModDataComponentTypes;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipData;
-import net.subtotalcamp875.silverlight.screen.BackpackScreenHandler;
+import net.subtotalcamp875.silverlight.screen.custom.BackpackScreenHandler;
 
 import java.util.Optional;
 

@@ -64,6 +64,7 @@ public class SilverlightMain {
                         entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
                         entries.add(ModItems.FAKE_ELYTRA);
                         entries.add(ModItems.FAKE_BREAD);
+                        entries.add(ModItems.GOLDEN_APPLE);
                         entries.add(ModItems.COSMIC_BROWNIE);
                         entries.add(ModItems.CHOCOLATE_MILK);
                         entries.add(ModItems.HONEY_CAKE_ON_A_STICK);
@@ -119,12 +120,25 @@ public class SilverlightMain {
 
                         entries.add(ModItems.MYSTERIOUS_COMPASS);
                         entries.add(ModItems.ACTIVATED_MYSTERIOUS_COMPASS);
-                        entries.add(ModItems.MYSTERIOUS_ESSENCE);
                         entries.add(ModItems.SOAP_STONE);
+                        entries.add(ModItems.ENERGY_ORB);
+                        entries.add(ModItems.CLUMPED_ENERGY_ORB);
+                        entries.add(ModItems.ENERGY_CRYSTAL);
+                        entries.add(ModItems.INKWISP);
+                        entries.add(ModItems.INKLING);
+                        entries.add(ModItems.INKSHADE);
+                        entries.add(ModItems.INKLOOM);
+                        entries.add(ModItems.INKVOID);
+                        entries.add(ModItems.WEAK_MYSTERIOUS_ESSENCE);
+                        entries.add(ModItems.MYSTERIOUS_ESSENCE);
+                        entries.add(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE);
+                        entries.add(ModItems.CRYSTAL);
+                        entries.add(ModItems.CHARGED_CRYSTAL);
                         entries.add(ModItems.CHARGED_CRYSTAL_HELMET);
                         entries.add(ModItems.CHARGED_CRYSTAL_CHESTPLATE);
                         entries.add(ModItems.CHARGED_CRYSTAL_LEGGINGS);
                         entries.add(ModItems.CHARGED_CRYSTAL_BOOTS);
+                        entries.add(ModBlocks.ESSENCE_GENERATOR);
 
 
                     }).build());

@@ -8,6 +8,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
+import net.subtotalcamp875.silverlight.screen.custom.BackpackScreenHandler;
 
 public class ModScreenHandlerTypes {
     public static final ScreenHandlerType<BackpackScreenHandler> BACKPACK = registerScreenHandlerType("backpack",

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clumped_energy_orb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "silverlight:clumped_energy_orb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:orb_to_clumped_orb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clumped_energy_orb"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:orb_to_clumped_orb"
+    ]
+  }
+}

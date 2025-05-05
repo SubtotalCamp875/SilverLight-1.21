@@ -10,6 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
+import net.subtotalcamp875.silverlight.item.custom.ModArmorItem;
 import net.subtotalcamp875.silverlight.item.custom.charms.*;
 import net.subtotalcamp875.silverlight.item.custom.leeches.LeechItem;
 import net.subtotalcamp875.silverlight.item.custom.leeches.LongLeechItem;
@@ -256,6 +257,7 @@ public class ModItems {
         }
     });
     public static final Item FAKE_BREAD = registerItem("fake_bread", new Item(new Item.Settings().food(ModFoodComponents.FAKE_BREAD)));
+    public static final Item GOLDEN_APPLE = registerItem("golden_apple", new Item(new Item.Settings().food(ModFoodComponents.GOLDEN_APPLE)));
     public static final Item HONEY_CAKE_ON_A_STICK = registerItem("honey_cake_on_a_stick", new Item(new Item.Settings().food(ModFoodComponents.HONEY_CAKE).maxCount(1)));
     public static final Item VIKING_HORN = registerItem("viking_horn", new VikingHornItem(new Item.Settings().maxCount(1)));
     public static final Item VIKING_PATTERN = registerItem("viking_pattern", new Item(new Item.Settings()));
@@ -295,11 +297,10 @@ public class ModItems {
         }
     });
     public static final Item ACTIVATED_MYSTERIOUS_COMPASS = registerItem("activated_mysterious_compass", new Item(new Item.Settings().maxCount(1)));
-    public static final Item MYSTERIOUS_ESSENCE = registerItem("mysterious_essence", new Item(new Item.Settings()));
     public static final Item SOAP_STONE = registerItem("soap_stone", new Item(new Item.Settings()));
 
     public static final Item CHARGED_CRYSTAL_HELMET = registerItem("charged_crystal_helmet",
-            new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
     public static final Item CHARGED_CRYSTAL_CHESTPLATE = registerItem("charged_crystal_chestplate",
             new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
@@ -310,6 +311,20 @@ public class ModItems {
     public static final Item CHARGED_CRYSTAL_BOOTS = registerItem("charged_crystal_boots",
             new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
+
+    public static final Item ENERGY_ORB = registerItem("energy_orb", new Item(new Item.Settings()));
+    public static final Item CLUMPED_ENERGY_ORB = registerItem("clumped_energy_orb", new Item(new Item.Settings()));
+    public static final Item ENERGY_CRYSTAL = registerItem("energy_crystal", new Item(new Item.Settings()));
+    public static final Item INKWISP = registerItem("inkwisp", new Item(new Item.Settings()));
+    public static final Item INKLING = registerItem("inkling", new Item(new Item.Settings()));
+    public static final Item INKSHADE = registerItem("inkshade", new Item(new Item.Settings()));
+    public static final Item INKLOOM = registerItem("inkloom", new Item(new Item.Settings()));
+    public static final Item INKVOID = registerItem("inkvoid", new Item(new Item.Settings()));
+    public static final Item WEAK_MYSTERIOUS_ESSENCE = registerItem("weak_mysterious_essence", new Item(new Item.Settings()));
+    public static final Item MYSTERIOUS_ESSENCE = registerItem("mysterious_essence", new Item(new Item.Settings()));
+    public static final Item CRYSTALLIZED_MYSTERIOUS_ESSENCE = registerItem("crystallized_mysterious_essence", new Item(new Item.Settings()));
+    public static final Item CRYSTAL = registerItem("crystal", new Item(new Item.Settings()));
+    public static final Item CHARGED_CRYSTAL = registerItem("charged_crystal", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

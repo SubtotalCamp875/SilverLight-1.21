@@ -14,9 +14,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
-import net.subtotalcamp875.silverlight.block.entity.FermentingStationBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.FermentingStationBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class FermentingStationBlock extends BlockWithEntity implements BlockEntityProvider {
