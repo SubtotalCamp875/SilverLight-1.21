@@ -19,7 +19,7 @@ import net.subtotalcamp875.silverlight.block.entity.custom.SievingStationBlockEn
 import org.jetbrains.annotations.Nullable;
 
 public class SievingStationBlock extends BlockWithEntity implements BlockEntityProvider {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 12, 16);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 13, 16);
 
     public SievingStationBlock(Settings settings) {
         super(settings);
@@ -75,6 +75,10 @@ public class SievingStationBlock extends BlockWithEntity implements BlockEntityP
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if(world.isClient()) {
+            return null;
+        }
+
         return validateTicker(type, ModBlockEntities.SIEVING_STATION_BLOCK_ENTITY,
                 (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }

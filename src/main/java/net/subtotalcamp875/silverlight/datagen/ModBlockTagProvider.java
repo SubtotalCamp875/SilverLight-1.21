@@ -20,7 +20,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DRAGON_PROCESSING_STATION)
                 .add(ModBlocks.SIEVING_STATION)
                 .add(ModBlocks.FERMENTING_STATION)
-                .add(ModBlocks.FAKE_DIAMOND_BLOCK);
+                .add(ModBlocks.FAKE_DIAMOND_BLOCK)
+                .add(ModBlocks.ESSENCE_GENERATOR);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 

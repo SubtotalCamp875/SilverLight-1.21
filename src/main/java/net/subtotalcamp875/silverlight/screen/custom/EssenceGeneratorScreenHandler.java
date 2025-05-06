@@ -5,28 +5,61 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ArrayPropertyDelegate;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
+import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorData;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlers;
 
 public class EssenceGeneratorScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private final PropertyDelegate propertyDelegate;
+    public final EssenceGeneratorBlockEntity blockEntity;
 
     public EssenceGeneratorScreenHandler(int syncId, PlayerInventory playerInventory, EssenceGeneratorData data) {
-        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(data.pos()));
+        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(data.pos()),
+                new ArrayPropertyDelegate(4));
     }
 
-    public EssenceGeneratorScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {
+    public EssenceGeneratorScreenHandler(int syncId, PlayerInventory playerInventory,
+                                         BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.ESSENCE_GENERATOR_SCREEN_HANDLER, syncId);
+        checkSize(((Inventory) blockEntity), 2);
         this.inventory = ((Inventory) blockEntity);
+        this.propertyDelegate = arrayPropertyDelegate;
+        this.blockEntity = ((EssenceGeneratorBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 17, 60));
-        this.addSlot(new Slot(inventory, 1, 44, 60));
+        this.addSlot(new Slot(inventory, 0, 44, 60));
+        this.addSlot(new Slot(inventory, 1, 17, 60));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
+
+        addProperties(arrayPropertyDelegate);
+    }
+
+    public boolean isCrafting() {
+        return propertyDelegate.get(0) > 0;
+    }
+
+    public int getScaledProgress() {
+        int progress = this.propertyDelegate.get(0);
+        int maxProgress = this.propertyDelegate.get(1); // Max Progress
+        int arrowPixelSize = 17; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
+
+    public int getScaledCharge1() {
+        int chargeAmountTotal = this.propertyDelegate.get(2);
+        int maxCharge = this.propertyDelegate.get(3); // Max Progress
+        int arrowPixelSize = 67; // This is the height in pixels of your arrow
+
+        return maxCharge != 0 && chargeAmountTotal != 0 ? chargeAmountTotal * arrowPixelSize / maxCharge : 0;
     }
 
     @Override

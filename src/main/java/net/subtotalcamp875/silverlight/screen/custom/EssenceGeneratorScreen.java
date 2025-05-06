@@ -33,6 +33,21 @@ public class EssenceGeneratorScreen extends HandledScreen<EssenceGeneratorScreen
 
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
+        renderProgressArrow(context, x, y);
+        renderCharge1(context, x, y);
+    }
+
+
+    private void renderProgressArrow(DrawContext context, int x, int y) {
+        if(handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 22, y + 38, 176, 0, 8,
+                    handler.getScaledProgress());
+        }
+    }
+
+    private void renderCharge1(DrawContext context, int x, int y) {
+        context.drawTexture(TEXTURE, x + 60, y + 9, 176, 20, 12,
+                68 - handler.getScaledCharge1());
     }
 
     @Override

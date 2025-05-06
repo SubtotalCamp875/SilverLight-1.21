@@ -10,6 +10,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.effect.ModEffects;
 import net.subtotalcamp875.silverlight.item.ModArmorMaterials;
 
 import java.util.List;
@@ -19,7 +20,10 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.SPEED, 400, 4, false, false),
+                            List.of(new StatusEffectInstance(StatusEffects.SPEED, 400, 1, false, false),
+                                    new StatusEffectInstance(StatusEffects.SLOW_FALLING, 400, 0, false, false),
+                                    new StatusEffectInstance(StatusEffects.HASTE, 400, 2, false, false),
+                                    new StatusEffectInstance(ModEffects.DISPROPORTION, 400, 2, false, false),
                                     new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false))).build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
