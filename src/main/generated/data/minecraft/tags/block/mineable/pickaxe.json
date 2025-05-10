@@ -4,6 +4,6 @@
     "silverlight:sieving_station",
     "silverlight:fermenting_station",
     "silverlight:fake_diamond_block",
-    "silverlight:essence_generator"
+    "silverlight:charge_generator"
   ]
 }

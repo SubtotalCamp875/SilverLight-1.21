@@ -6,11 +6,8 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -18,16 +15,15 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
-import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class EssenceGeneratorBlock extends BlockWithEntity implements BlockEntityProvider {
+public class ChargeGeneratorBlock extends BlockWithEntity implements BlockEntityProvider {
     private static final VoxelShape SHAPE =
             Block.createCuboidShape(0, 0, 0, 16, 16, 16);
-    public static final MapCodec<EssenceGeneratorBlock> CODEC = EssenceGeneratorBlock.createCodec(EssenceGeneratorBlock::new);
+    public static final MapCodec<ChargeGeneratorBlock> CODEC = ChargeGeneratorBlock.createCodec(ChargeGeneratorBlock::new);
 
-    public EssenceGeneratorBlock(Settings settings) {
+    public ChargeGeneratorBlock(Settings settings) {
         super(settings);
     }
 
@@ -44,7 +40,7 @@ public class EssenceGeneratorBlock extends BlockWithEntity implements BlockEntit
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new EssenceGeneratorBlockEntity(pos, state);
+        return new ChargeGeneratorBlockEntity(pos, state);
     }
 
     @Override
@@ -56,8 +52,8 @@ public class EssenceGeneratorBlock extends BlockWithEntity implements BlockEntit
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if(state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if(blockEntity instanceof EssenceGeneratorBlockEntity) {
-                ItemScatterer.spawn(world, pos, ((EssenceGeneratorBlockEntity) blockEntity));
+            if(blockEntity instanceof ChargeGeneratorBlockEntity) {
+                ItemScatterer.spawn(world, pos, ((ChargeGeneratorBlockEntity) blockEntity));
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -67,7 +63,7 @@ public class EssenceGeneratorBlock extends BlockWithEntity implements BlockEntit
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = ((EssenceGeneratorBlockEntity) world.getBlockEntity(pos));
+            NamedScreenHandlerFactory screenHandlerFactory = ((ChargeGeneratorBlockEntity) world.getBlockEntity(pos));
 
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);
@@ -84,7 +80,7 @@ public class EssenceGeneratorBlock extends BlockWithEntity implements BlockEntit
             return null;
         }
 
-        return validateTicker(type, ModBlockEntities.ESSENCE_GENERATOR_BLOCK_ENTITY,
+        return validateTicker(type, ModBlockEntities.CHARGE_GENERATOR_BLOCK_ENTITY,
                 (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

@@ -1,15 +1,11 @@
 package net.subtotalcamp875.silverlight.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.client.input.Input;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -24,15 +20,13 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.block.entity.ImplementedInventory;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
-import net.subtotalcamp875.silverlight.screen.custom.DragonProcessingScreenHandler;
-import net.subtotalcamp875.silverlight.screen.custom.EssenceGeneratorScreenHandler;
+import net.subtotalcamp875.silverlight.screen.custom.ChargeGeneratorScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
-public class EssenceGeneratorBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory {
+public class ChargeGeneratorBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
     private static final int INPUT_SLOT = 0;
@@ -41,19 +35,19 @@ public class EssenceGeneratorBlockEntity extends BlockEntity implements Implemen
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int chargeAmountTotal = 0;
-    private int maxProgress = 20; //time in ticks
+    private int maxProgress = 20*32; //time in ticks
     private int maxCharge = 64*6; //Max charge per stack
 
-    public EssenceGeneratorBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.ESSENCE_GENERATOR_BLOCK_ENTITY, pos, state);
+    public ChargeGeneratorBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.CHARGE_GENERATOR_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> EssenceGeneratorBlockEntity.this.progress;
-                    case 1 -> EssenceGeneratorBlockEntity.this.maxProgress;
-                    case 2 -> EssenceGeneratorBlockEntity.this.chargeAmountTotal;
-                    case 3 -> EssenceGeneratorBlockEntity.this.maxCharge;
+                    case 0 -> ChargeGeneratorBlockEntity.this.progress;
+                    case 1 -> ChargeGeneratorBlockEntity.this.maxProgress;
+                    case 2 -> ChargeGeneratorBlockEntity.this.chargeAmountTotal;
+                    case 3 -> ChargeGeneratorBlockEntity.this.maxCharge;
                     default -> 0;
                 };
             }
@@ -61,10 +55,10 @@ public class EssenceGeneratorBlockEntity extends BlockEntity implements Implemen
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> EssenceGeneratorBlockEntity.this.progress = value;
-                    case 1 -> EssenceGeneratorBlockEntity.this.maxProgress = value;
-                    case 2 -> EssenceGeneratorBlockEntity.this.chargeAmountTotal = value;
-                    case 3 -> EssenceGeneratorBlockEntity.this.maxCharge = value;
+                    case 0 -> ChargeGeneratorBlockEntity.this.progress = value;
+                    case 1 -> ChargeGeneratorBlockEntity.this.maxProgress = value;
+                    case 2 -> ChargeGeneratorBlockEntity.this.chargeAmountTotal = value;
+                    case 3 -> ChargeGeneratorBlockEntity.this.maxCharge = value;
                 }
             }
 
@@ -84,16 +78,16 @@ public class EssenceGeneratorBlockEntity extends BlockEntity implements Implemen
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, registryLookup);
-        nbt.putInt("EssenceGenerating", progress);
-        nbt.putInt("EssenceGeneratingCharge", chargeAmountTotal);
+        nbt.putInt("ChargeGenerating", progress);
+        nbt.putInt("ChargeGeneratingCharge", chargeAmountTotal);
     }
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
         Inventories.readNbt(nbt, inventory, registryLookup);
-        progress = nbt.getInt("essence_generating");
-        chargeAmountTotal = nbt.getInt("EssenceGeneratingCharge");
+        progress = nbt.getInt("charge_generating");
+        chargeAmountTotal = nbt.getInt("ChargeGeneratingCharge");
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
@@ -168,18 +162,18 @@ public class EssenceGeneratorBlockEntity extends BlockEntity implements Implemen
 
     @Override
     public Object getScreenOpeningData(ServerPlayerEntity player) {
-        return new EssenceGeneratorData(this.pos);
+        return new ChargeGeneratorData(this.pos);
     }
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Essence Generator");
+        return Text.literal("Charge Generator");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new EssenceGeneratorScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new ChargeGeneratorScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     @Nullable

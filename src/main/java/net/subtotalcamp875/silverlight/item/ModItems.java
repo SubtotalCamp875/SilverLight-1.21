@@ -142,7 +142,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item HOLY_CHARM = registerItem("holy_charm", new HolyCharmItem(new Item.Settings().maxDamage(28800).maxCount(1)) {
+    public static final Item HOLY_CHARM = registerItem("holy_charm", new HolyCharmItem(new Item.Settings().maxDamage(57600).maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.holy_charm.tooltip"));

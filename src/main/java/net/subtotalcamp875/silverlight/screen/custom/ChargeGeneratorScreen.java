@@ -9,10 +9,10 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 
-public class EssenceGeneratorScreen extends HandledScreen<EssenceGeneratorScreenHandler> {
-    private static final Identifier TEXTURE = Identifier.of(SilverLight.MOD_ID, "textures/gui/essence_generator_gui.png");
+public class ChargeGeneratorScreen extends HandledScreen<ChargeGeneratorScreenHandler> {
+    private static final Identifier TEXTURE = Identifier.of(SilverLight.MOD_ID, "textures/gui/charge_generator_gui.png");
 
-    public EssenceGeneratorScreen(EssenceGeneratorScreenHandler handler, PlayerInventory inventory, Text title) {
+    public ChargeGeneratorScreen(ChargeGeneratorScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

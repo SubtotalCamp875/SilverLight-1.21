@@ -9,29 +9,27 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.math.BlockPos;
-import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorData;
+import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorData;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlers;
 
-public class EssenceGeneratorScreenHandler extends ScreenHandler {
+public class ChargeGeneratorScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    public final EssenceGeneratorBlockEntity blockEntity;
+    public final ChargeGeneratorBlockEntity blockEntity;
 
-    public EssenceGeneratorScreenHandler(int syncId, PlayerInventory playerInventory, EssenceGeneratorData data) {
+    public ChargeGeneratorScreenHandler(int syncId, PlayerInventory playerInventory, ChargeGeneratorData data) {
         this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(data.pos()),
                 new ArrayPropertyDelegate(4));
     }
 
-    public EssenceGeneratorScreenHandler(int syncId, PlayerInventory playerInventory,
-                                         BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
-        super(ModScreenHandlers.ESSENCE_GENERATOR_SCREEN_HANDLER, syncId);
+    public ChargeGeneratorScreenHandler(int syncId, PlayerInventory playerInventory,
+                                        BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+        super(ModScreenHandlers.CHARGE_GENERATOR_SCREEN_HANDLER, syncId);
         checkSize(((Inventory) blockEntity), 2);
         this.inventory = ((Inventory) blockEntity);
         this.propertyDelegate = arrayPropertyDelegate;
-        this.blockEntity = ((EssenceGeneratorBlockEntity) blockEntity);
+        this.blockEntity = ((ChargeGeneratorBlockEntity) blockEntity);
 
         this.addSlot(new Slot(inventory, 0, 44, 60));
         this.addSlot(new Slot(inventory, 1, 17, 60));

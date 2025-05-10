@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
 import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.EssenceGeneratorBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.custom.FermentingStationBlockEntity;
 import net.subtotalcamp875.silverlight.block.entity.custom.SievingStationBlockEntity;
 
@@ -28,10 +28,10 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(FermentingStationBlockEntity::new,
                             ModBlocks.FERMENTING_STATION).build());
 
-    public static final BlockEntityType<EssenceGeneratorBlockEntity> ESSENCE_GENERATOR_BLOCK_ENTITY =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(SilverLight.MOD_ID, "essence_generating_be"),
-                    FabricBlockEntityTypeBuilder.create(EssenceGeneratorBlockEntity::new,
-                            ModBlocks.ESSENCE_GENERATOR).build());
+    public static final BlockEntityType<ChargeGeneratorBlockEntity> CHARGE_GENERATOR_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(SilverLight.MOD_ID, "charge_generating_be"),
+                    FabricBlockEntityTypeBuilder.create(ChargeGeneratorBlockEntity::new,
+                            ModBlocks.CHARGE_GENERATOR).build());
 
 
     public static void registerBlockEntities() {

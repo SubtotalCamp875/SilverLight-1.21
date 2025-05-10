@@ -70,8 +70,8 @@ public class ModBlocks {
                 }
             });
 
-    public static final Block ESSENCE_GENERATOR = registerBlock("essence_generator",
-            new EssenceGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
+    public static final Block CHARGE_GENERATOR = registerBlock("charge_generator",
+            new ChargeGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

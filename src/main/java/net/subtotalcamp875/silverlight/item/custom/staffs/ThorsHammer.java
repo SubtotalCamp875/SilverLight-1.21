@@ -1,5 +1,11 @@
 package net.subtotalcamp875.silverlight.item.custom.staffs;
 
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -8,8 +14,11 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.entity.custom.LightningOrbEntity;
+
+import java.util.Random;
 
 public class ThorsHammer extends SwordItem {
     public ThorsHammer(ToolMaterial toolMaterial, Settings settings) {
@@ -37,4 +46,25 @@ public class ThorsHammer extends SwordItem {
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
+
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        PlayerEntity user = (PlayerEntity) attacker;
+        World world = target.getWorld();
+        BlockPos blockPos = target.getBlockPos();
+
+
+        int roll = (int)(Math.random() * 100); // 0 to 99
+        int lightningChancePercentage = 33;
+        if (roll <= lightningChancePercentage) {
+            LightningEntity lightningEntity = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
+            lightningEntity.setPosition(blockPos.toCenterPos());
+            world.spawnEntity(lightningEntity);
+        }
+
+
+        return super.postHit(stack, target, attacker);
+    }
+
+    
 }

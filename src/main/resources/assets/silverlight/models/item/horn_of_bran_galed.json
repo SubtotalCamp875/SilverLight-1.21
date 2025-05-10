@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "minecraft:item/goat_horn",
   "textures": {
     "layer0": "silverlight:item/horn_of_bran_galed"
   }

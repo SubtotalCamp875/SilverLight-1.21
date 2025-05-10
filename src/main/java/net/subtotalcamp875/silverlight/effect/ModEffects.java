@@ -82,7 +82,7 @@ public class ModEffects {
     public static final RegistryEntry<StatusEffect> HOLY_SHIELD = registerEffect(
             "holy_shield", new HolyShieldStatusEffect(StatusEffectCategory.BENEFICIAL, 2445989)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_ABSORPTION, Identifier.of(SilverLight.MOD_ID, "holy_shield"),
-                            4f, EntityAttributeModifier.Operation.ADD_VALUE));
+                            12f, EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static final RegistryEntry<StatusEffect> SAY10S_CURSE = registerEffect(
             "say10s_curse", new BasicEffect(StatusEffectCategory.HARMFUL, 0)

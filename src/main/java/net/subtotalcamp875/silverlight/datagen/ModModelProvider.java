@@ -21,7 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.ESSENCE_GENERATOR);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.CHARGE_GENERATOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_DIAMOND_BLOCK);
     }
 
@@ -63,11 +63,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.XP_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AVA, Models.GENERATED);
         itemModelGenerator.register(ModItems.YACKAMAID, Models.GENERATED);
         itemModelGenerator.register(ModItems.JIMMYLOGZ, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WADDLES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DEVCAMP, Models.GENERATED);
         itemModelGenerator.register(ModItems.BITCOIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
@@ -86,7 +83,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DEATH_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_DOLL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATHS_BOMB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.HORN_OF_BRAN_GALED, Models.GENERATED);
         itemModelGenerator.register(ModItems.LIGHTNING_ORB, Models.GENERATED);
         itemModelGenerator.register(ModItems.THORS_HAMMER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CANDY_CANE, Models.GENERATED);
@@ -100,8 +96,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FAKE_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLDEN_APPLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.HONEY_CAKE_ON_A_STICK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.VIKING_HORN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.VIKING_AXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIKING_PATTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHOCOLATE_MILK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_ONE, Models.GENERATED);
