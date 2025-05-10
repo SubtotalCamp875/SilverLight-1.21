@@ -60,6 +60,7 @@ public class SilverLightClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.SIEVING_SCREEN_HANDLER, SievingScreen::new);
         HandledScreens.register(ModScreenHandlers.FERMENTING_SCREEN_HANDLER, FermentingScreen::new);
         HandledScreens.register(ModScreenHandlers.CHARGE_GENERATOR_SCREEN_HANDLER, ChargeGeneratorScreen::new);
+        HandledScreens.register(ModScreenHandlers.ENERGY_GENERATOR_SCREEN_HANDLER, EnergyGeneratorScreen::new);
         HandledScreens.register(ModScreenHandlers.MIMIC_SCREEN_HANDLER, MimicScreen::new);
         registerModelPredicateProviders();
 

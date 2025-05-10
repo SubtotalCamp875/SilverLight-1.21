@@ -23,10 +23,10 @@ import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.block.entity.ImplementedInventory;
 import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import net.subtotalcamp875.silverlight.item.ModItems;
-import net.subtotalcamp875.silverlight.screen.custom.ChargeGeneratorScreenHandler;
+import net.subtotalcamp875.silverlight.screen.custom.EnergyGeneratorScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
-public class ChargeGeneratorBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory {
+public class EnergyGeneratorBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
     private static final int INPUT_SLOT = 0;
@@ -35,19 +35,19 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int chargeAmountTotal = 0;
-    private int maxProgress = 20*32; //time in ticks
-    private int maxCharge = 64*6; //Max charge per stack
+    private int maxProgress = 20*32*6; //time in ticks
+    private int maxCharge = 64*6*9;
 
-    public ChargeGeneratorBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CHARGE_GENERATOR_BLOCK_ENTITY, pos, state);
+    public EnergyGeneratorBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.ENERGY_GENERATOR_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> ChargeGeneratorBlockEntity.this.progress;
-                    case 1 -> ChargeGeneratorBlockEntity.this.maxProgress;
-                    case 2 -> ChargeGeneratorBlockEntity.this.chargeAmountTotal;
-                    case 3 -> ChargeGeneratorBlockEntity.this.maxCharge;
+                    case 0 -> EnergyGeneratorBlockEntity.this.progress;
+                    case 1 -> EnergyGeneratorBlockEntity.this.maxProgress;
+                    case 2 -> EnergyGeneratorBlockEntity.this.chargeAmountTotal;
+                    case 3 -> EnergyGeneratorBlockEntity.this.maxCharge;
                     default -> 0;
                 };
             }
@@ -55,10 +55,10 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> ChargeGeneratorBlockEntity.this.progress = value;
-                    case 1 -> ChargeGeneratorBlockEntity.this.maxProgress = value;
-                    case 2 -> ChargeGeneratorBlockEntity.this.chargeAmountTotal = value;
-                    case 3 -> ChargeGeneratorBlockEntity.this.maxCharge = value;
+                    case 0 -> EnergyGeneratorBlockEntity.this.progress = value;
+                    case 1 -> EnergyGeneratorBlockEntity.this.maxProgress = value;
+                    case 2 -> EnergyGeneratorBlockEntity.this.chargeAmountTotal = value;
+                    case 3 -> EnergyGeneratorBlockEntity.this.maxCharge = value;
                 }
             }
 
@@ -78,16 +78,16 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, registryLookup);
-        nbt.putInt("ChargeGenerating", progress);
-        nbt.putInt("ChargeGeneratingCharge", chargeAmountTotal);
+        nbt.putInt("EnergyGenerating", progress);
+        nbt.putInt("EnergyGeneratingCharge", chargeAmountTotal);
     }
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
         Inventories.readNbt(nbt, inventory, registryLookup);
-        progress = nbt.getInt("ChargeGenerating");
-        chargeAmountTotal = nbt.getInt("ChargeGeneratingCharge");
+        progress = nbt.getInt("EnergyGenerating");
+        chargeAmountTotal = nbt.getInt("EnergyGeneratingCharge");
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
@@ -96,8 +96,7 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
         }
 
         if(hasRecipe()) {
-            increaseChargeAmount();
-            consumeItem();
+            fuelGenerator();
         }
         if(hasPowerAndCanInsert()) {
             increaseCraftingProgress();
@@ -118,16 +117,24 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.ENERGY_ORB, 1);
+        ItemStack output = new ItemStack(ModItems.ENERGY_CRYSTAL, 1);
 
-        this.chargeAmountTotal -= 32;
+        this.chargeAmountTotal -= 32*6;
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
     }
 
-    private void consumeItem() {
-        this.setStack(INPUT_SLOT, new ItemStack(getStack(INPUT_SLOT).getItem(), getStack(INPUT_SLOT).getCount() - 1));
+    private void fuelGenerator() {
+        int remainingSpace = this.maxCharge - this.chargeAmountTotal;
+        int growth = getStack(INPUT_SLOT).getCount();
+        if (getStack(INPUT_SLOT).getCount() > remainingSpace) {
+            growth = remainingSpace;
+        }
+
+        this.setStack(INPUT_SLOT, new ItemStack(getStack(INPUT_SLOT).getItem(), getStack(INPUT_SLOT).getCount() - growth));
+        this.chargeAmountTotal += growth;
     }
+
 
     private boolean hasCraftingFinished() {
         return this.progress >= this.maxProgress;
@@ -137,16 +144,12 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
         this.progress++;
     }
 
-    private void increaseChargeAmount() {
-        this.chargeAmountTotal++;
-    }
-
     private boolean hasRecipe() {
         return this.getStack(INPUT_SLOT).getItem() != Items.AIR && this.chargeAmountTotal < this.maxCharge && this.getStack(INPUT_SLOT).getItem().getMaxCount() > 1;
     }
 
     private boolean hasPowerAndCanInsert() {
-        ItemStack output = new ItemStack(ModItems.ENERGY_ORB, 1);
+        ItemStack output = new ItemStack(ModItems.ENERGY_CRYSTAL, 1);
 
         return this.chargeAmountTotal >= 32 &&
                 canInsertAmountIntoOutputSlot(output) && canInsertItemIntoOutputSlot(output);
@@ -162,18 +165,18 @@ public class ChargeGeneratorBlockEntity extends BlockEntity implements Implement
 
     @Override
     public Object getScreenOpeningData(ServerPlayerEntity player) {
-        return new ChargeGeneratorData(this.pos);
+        return new EnergyGeneratorData(this.pos);
     }
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Charge Generator");
+        return Text.literal("Energy Generator");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new ChargeGeneratorScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new EnergyGeneratorScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     @Nullable

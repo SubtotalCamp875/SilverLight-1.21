@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.CHARGE_GENERATOR);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.ENERGY_GENERATOR);
         blockStateModelGenerator.registerSimpleState(ModBlocks.MIMIC);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_DIAMOND_BLOCK);
     }

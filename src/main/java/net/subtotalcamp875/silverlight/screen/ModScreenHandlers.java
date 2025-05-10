@@ -26,6 +26,10 @@ public class ModScreenHandlers {
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "charge_generating"),
                     new ExtendedScreenHandlerType<>(ChargeGeneratorScreenHandler::new, ChargeGeneratorData.PACKET_CODEC));
 
+    public static final ScreenHandlerType<EnergyGeneratorScreenHandler> ENERGY_GENERATOR_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "energy_generating"),
+                    new ExtendedScreenHandlerType<>(EnergyGeneratorScreenHandler::new, EnergyGeneratorData.PACKET_CODEC));
+
     public static final ScreenHandlerType<MimicScreenHandler> MIMIC_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "mimic"),
                     new ExtendedScreenHandlerType<>(MimicScreenHandler::new, MimicData.PACKET_CODEC));

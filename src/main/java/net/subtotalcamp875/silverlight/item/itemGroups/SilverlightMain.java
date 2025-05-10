@@ -139,6 +139,8 @@ public class SilverlightMain {
                         entries.add(ModItems.CHARGED_CRYSTAL_LEGGINGS);
                         entries.add(ModItems.CHARGED_CRYSTAL_BOOTS);
                         entries.add(ModBlocks.CHARGE_GENERATOR);
+                        entries.add(ModBlocks.ENERGY_GENERATOR);
+                        entries.add(ModBlocks.MIMIC);
 
 
                     }).build());

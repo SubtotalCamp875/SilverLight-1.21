@@ -5,6 +5,7 @@
     "silverlight:fermenting_station",
     "silverlight:fake_diamond_block",
     "silverlight:charge_generator",
+    "silverlight:energy_generator",
     "silverlight:mimic"
   ]
 }

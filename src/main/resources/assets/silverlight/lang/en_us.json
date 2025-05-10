@@ -25,6 +25,8 @@
   "block.silverlight.fermenting_station": "Fermenting Station",
   "block.silverlight.fake_diamond_block": "Diamond Blocks",
   "block.silverlight.charge_generator": "Charge Generator",
+  "block.silverlight.energy_generator": "Energy Generator",
+  "block.silverlight.mimic": "Mimic",
 
   "effect.silverlight.shrink": "Shrink",
   "effect.silverlight.dwarf": "Dwarf",
