@@ -1,7 +1,8 @@
-// 1.21	2025-05-08T17:34:05.0547573	SilverLight/Block Loot Tables
+// 1.21	2025-05-10T12:09:55.4406669	SilverLight/Block Loot Tables
 48a6e09842786b465b959991dd57fd0d378f9dfa data\silverlight\loot_table\blocks\fake_diamond_block.json
+cc0bd14af078a45a84110bc1c10291b6e9fc004d data\silverlight\loot_table\blocks\mimic.json
 72aa09ff15d885bcddb507d7d427b7f13d9b5cac data\silverlight\loot_table\blocks\strawberry_plant.json
-308e5498a0a5abf1a5b5ba1aefdaa8f18299d27f data\silverlight\loot_table\blocks\sieving_station.json
 2dd3dbd3c6e7ea4b2cf83f96efdc549b1d66813f data\silverlight\loot_table\blocks\charge_generator.json
+308e5498a0a5abf1a5b5ba1aefdaa8f18299d27f data\silverlight\loot_table\blocks\sieving_station.json
 2fdc0178b05bc1ae1090f8ab7aaecae5e9fcccb8 data\silverlight\loot_table\blocks\dragon_processing_station.json
 fdac9fa71d1bf4ae184bb2ff40e898a81d1dcad3 data\silverlight\loot_table\blocks\fermenting_station.json

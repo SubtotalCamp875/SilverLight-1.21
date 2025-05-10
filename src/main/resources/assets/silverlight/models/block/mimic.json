@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "silverlight:block/mimic_bottom",
+    "side": "silverlight:block/mimic_side",
+    "top": "silverlight:block/mimic_top"
+  }
+}

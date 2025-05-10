@@ -73,6 +73,9 @@ public class ModBlocks {
     public static final Block CHARGE_GENERATOR = registerBlock("charge_generator",
             new ChargeGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final Block MIMIC = registerBlock("mimic",
+            new MimicBlock(AbstractBlock.Settings.create().nonOpaque()));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(SilverLight.MOD_ID, name), block);

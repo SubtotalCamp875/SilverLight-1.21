@@ -6,10 +6,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationData;
-import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorData;
-import net.subtotalcamp875.silverlight.block.entity.custom.FermentingStationData;
-import net.subtotalcamp875.silverlight.block.entity.custom.SievingStationData;
+import net.subtotalcamp875.silverlight.block.entity.custom.*;
 import net.subtotalcamp875.silverlight.screen.custom.*;
 
 public class ModScreenHandlers {
@@ -28,6 +25,10 @@ public class ModScreenHandlers {
     public static final ScreenHandlerType<ChargeGeneratorScreenHandler> CHARGE_GENERATOR_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "charge_generating"),
                     new ExtendedScreenHandlerType<>(ChargeGeneratorScreenHandler::new, ChargeGeneratorData.PACKET_CODEC));
+
+    public static final ScreenHandlerType<MimicScreenHandler> MIMIC_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(SilverLight.MOD_ID, "mimic"),
+                    new ExtendedScreenHandlerType<>(MimicScreenHandler::new, MimicData.PACKET_CODEC));
     
     public static void registerScreenHandlers() {
         SilverLight.LOGGER.info("Registering Screen Handlers for " + SilverLight.MOD_ID);

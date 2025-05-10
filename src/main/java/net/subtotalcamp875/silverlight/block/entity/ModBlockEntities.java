@@ -7,10 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
-import net.subtotalcamp875.silverlight.block.entity.custom.DragonProcessingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.ChargeGeneratorBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.FermentingStationBlockEntity;
-import net.subtotalcamp875.silverlight.block.entity.custom.SievingStationBlockEntity;
+import net.subtotalcamp875.silverlight.block.entity.custom.*;
 
 public class ModBlockEntities {
     public static final BlockEntityType<DragonProcessingStationBlockEntity> DRAGON_PROCESSING_STATION_BLOCK_ENTITY =
@@ -33,6 +30,10 @@ public class ModBlockEntities {
                     FabricBlockEntityTypeBuilder.create(ChargeGeneratorBlockEntity::new,
                             ModBlocks.CHARGE_GENERATOR).build());
 
+    public static final BlockEntityType<MimicBlockEntity> MIMIC_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(SilverLight.MOD_ID, "mimic_be"),
+                    FabricBlockEntityTypeBuilder.create(MimicBlockEntity::new,
+                            ModBlocks.MIMIC).build());
 
     public static void registerBlockEntities() {
         SilverLight.LOGGER.info("Registering Block Entities for " + SilverLight.MOD_ID);
