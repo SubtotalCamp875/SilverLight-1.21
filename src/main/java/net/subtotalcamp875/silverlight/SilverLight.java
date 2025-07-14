@@ -14,6 +14,7 @@ import net.subtotalcamp875.silverlight.item.itemGroups.SilverlightStaffs;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlerTypes;
 import net.subtotalcamp875.silverlight.screen.ModScreenHandlers;
 import net.subtotalcamp875.silverlight.sound.ModSounds;
+import net.subtotalcamp875.silverlight.util.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,6 +32,7 @@ public class SilverLight implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModEffects.registerModEffects();
 		ModSounds.registerSounds();
+		ModLootTableModifiers.modifyLootTables();
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();

@@ -17,7 +17,6 @@ import net.subtotalcamp875.silverlight.item.custom.leeches.LongLeechItem;
 import net.subtotalcamp875.silverlight.item.custom.leeches.StrongLeechItem;
 import net.subtotalcamp875.silverlight.item.custom.misc.*;
 import net.subtotalcamp875.silverlight.item.custom.playerItems.*;
-import net.subtotalcamp875.silverlight.item.custom.progression.MysteriousCompassItem;
 import net.subtotalcamp875.silverlight.item.custom.staffs.*;
 
 import java.util.List;
@@ -90,7 +89,6 @@ public class ModItems {
         }
     });
     public static final Item XP_CHARM = registerItem("xp_charm", new XPCharmItem(new Item.Settings().maxCount(1).maxDamage(1125)));
-    public static final Item GROUNDED = registerItem("grounded", new GroundedItem(new Item.Settings().maxCount(1).maxDamage(16)));
     public static final Item AVA = registerItem("ava", new AvaItem(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -289,42 +287,7 @@ public class ModItems {
     public static final Item BEER = registerItem("beer", new Item(new Item.Settings().food(ModFoodComponents.BEER).maxCount(16)));
     public static final Item WINE = registerItem("wine", new Item(new Item.Settings().food(ModFoodComponents.WINE).maxCount(16)));
     public static final Item OENOBEER = registerItem("oenobeer", new Item(new Item.Settings().food(ModFoodComponents.OENOBEER).maxCount(16)));
-    public static final Item MYSTERIOUS_COMPASS = registerItem("mysterious_compass", new MysteriousCompassItem(new Item.Settings().maxCount(1).maxDamage(1)) {
-        @Override
-        public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("tooltip.silverlight.mysterious_compass"));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
-    });
-    public static final Item ACTIVATED_MYSTERIOUS_COMPASS = registerItem("activated_mysterious_compass", new Item(new Item.Settings().maxCount(1)));
-    public static final Item SOAP_STONE = registerItem("soap_stone", new Item(new Item.Settings()));
-
-    public static final Item CHARGED_CRYSTAL_HELMET = registerItem("charged_crystal_helmet",
-            new ModArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
-    public static final Item CHARGED_CRYSTAL_CHESTPLATE = registerItem("charged_crystal_chestplate",
-            new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(37))));
-    public static final Item CHARGED_CRYSTAL_LEGGINGS = registerItem("charged_crystal_leggings",
-            new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(37))));
-    public static final Item CHARGED_CRYSTAL_BOOTS = registerItem("charged_crystal_boots",
-            new ArmorItem(ModArmorMaterials.CHARGED_CRYSTAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
-
-    public static final Item ENERGY_ORB = registerItem("energy_orb", new Item(new Item.Settings()));
-    public static final Item CLUMPED_ENERGY_ORB = registerItem("clumped_energy_orb", new Item(new Item.Settings()));
-    public static final Item ENERGY_CRYSTAL = registerItem("energy_crystal", new Item(new Item.Settings()));
-    public static final Item INKWISP = registerItem("inkwisp", new Item(new Item.Settings()));
-    public static final Item INKLING = registerItem("inkling", new Item(new Item.Settings()));
-    public static final Item INKSHADE = registerItem("inkshade", new Item(new Item.Settings()));
-    public static final Item INKLOOM = registerItem("inkloom", new Item(new Item.Settings()));
-    public static final Item INKVOID = registerItem("inkvoid", new Item(new Item.Settings()));
-    public static final Item WEAK_MYSTERIOUS_ESSENCE = registerItem("weak_mysterious_essence", new Item(new Item.Settings()));
-    public static final Item MYSTERIOUS_ESSENCE = registerItem("mysterious_essence", new Item(new Item.Settings()));
-    public static final Item CRYSTALLIZED_MYSTERIOUS_ESSENCE = registerItem("crystallized_mysterious_essence", new Item(new Item.Settings()));
-    public static final Item CRYSTAL = registerItem("crystal", new Item(new Item.Settings()));
-    public static final Item CHARGED_CRYSTAL = registerItem("charged_crystal", new Item(new Item.Settings()));
+    public static final Item SILVER_TOKEN = registerItem("silver_token", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

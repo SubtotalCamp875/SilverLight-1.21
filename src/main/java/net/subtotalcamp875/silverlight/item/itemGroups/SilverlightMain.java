@@ -74,7 +74,6 @@ public class SilverlightMain {
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.RIGHT_RING);
                         entries.add(ModItems.BLESSED_RING);
-                        entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.YACKAMAID);
                         entries.add(ModItems.JIMMYLOGZ);
@@ -118,29 +117,8 @@ public class SilverlightMain {
 
                         // Season 8
 
-                        entries.add(ModItems.MYSTERIOUS_COMPASS);
-                        entries.add(ModItems.ACTIVATED_MYSTERIOUS_COMPASS);
-                        entries.add(ModItems.SOAP_STONE);
-                        entries.add(ModItems.ENERGY_ORB);
-                        entries.add(ModItems.CLUMPED_ENERGY_ORB);
-                        entries.add(ModItems.ENERGY_CRYSTAL);
-                        entries.add(ModItems.INKWISP);
-                        entries.add(ModItems.INKLING);
-                        entries.add(ModItems.INKSHADE);
-                        entries.add(ModItems.INKLOOM);
-                        entries.add(ModItems.INKVOID);
-                        entries.add(ModItems.WEAK_MYSTERIOUS_ESSENCE);
-                        entries.add(ModItems.MYSTERIOUS_ESSENCE);
-                        entries.add(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE);
-                        entries.add(ModItems.CRYSTAL);
-                        entries.add(ModItems.CHARGED_CRYSTAL);
-                        entries.add(ModItems.CHARGED_CRYSTAL_HELMET);
-                        entries.add(ModItems.CHARGED_CRYSTAL_CHESTPLATE);
-                        entries.add(ModItems.CHARGED_CRYSTAL_LEGGINGS);
-                        entries.add(ModItems.CHARGED_CRYSTAL_BOOTS);
-                        entries.add(ModBlocks.CHARGE_GENERATOR);
-                        entries.add(ModBlocks.ENERGY_GENERATOR);
                         entries.add(ModBlocks.MIMIC);
+                        entries.add(ModItems.SILVER_TOKEN);
 
 
                     }).build());

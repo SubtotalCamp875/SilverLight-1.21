@@ -70,12 +70,6 @@ public class ModBlocks {
                 }
             });
 
-    public static final Block CHARGE_GENERATOR = registerBlock("charge_generator",
-            new ChargeGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
-
-    public static final Block ENERGY_GENERATOR = registerBlock("energy_generator",
-            new EnergyGeneratorBlock(AbstractBlock.Settings.create().nonOpaque()));
-
     public static final Block MIMIC = registerBlock("mimic",
             new MimicBlock(AbstractBlock.Settings.create().nonOpaque()));
 

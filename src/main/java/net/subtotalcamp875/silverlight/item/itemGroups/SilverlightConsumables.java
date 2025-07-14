@@ -46,7 +46,6 @@ public class SilverlightConsumables {
 
                         entries.add(ModItems.LEFT_RING);
                         entries.add(ModItems.RIGHT_RING);
-                        entries.add(ModItems.GROUNDED);
                         entries.add(ModItems.SAY10S_CONTRACT);
                         entries.add(ModItems.XP_CHARM);
 

@@ -2,6 +2,8 @@ package net.subtotalcamp875.silverlight.item.custom.staffs;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
@@ -60,9 +62,9 @@ public class LightStaffItem extends Item {
                 Vec3d vec3d = user.getRotationVec(1.0F);
 
                 if (user.getMainHandStack().getItem() == ModItems.LIGHT_STAFF || user.getOffHandStack().getItem() == ModItems.LIGHT_STAFF) {
-                    user.setGlowing(true);
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60), user);
                     AimOrbEntity aimOrbEntity = new AimOrbEntity(user, world);
-                    aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 4f, 0.0f);
+                    aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2f, 0.0f);
                     aimOrbEntity.setPosition(user.getX() + vec3d.x, user.getY() + 1 + vec3d.y, user.getZ() + vec3d.z);
                     world.spawnEntity(aimOrbEntity);
                 }

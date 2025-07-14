@@ -21,8 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.DRAGON_PROCESSING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SIEVING_STATION);
         blockStateModelGenerator.registerSimpleState(ModBlocks.FERMENTING_STATION);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.CHARGE_GENERATOR);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.ENERGY_GENERATOR);
         blockStateModelGenerator.registerSimpleState(ModBlocks.MIMIC);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_DIAMOND_BLOCK);
     }
@@ -63,7 +61,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLESSED_RING, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.XP_CHARM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GROUNDED, Models.GENERATED);
         itemModelGenerator.register(ModItems.REAPERS_SCYTHE, Models.GENERATED);
         itemModelGenerator.register(ModItems.YACKAMAID, Models.GENERATED);
         itemModelGenerator.register(ModItems.BITCOIN, Models.GENERATED);
@@ -114,26 +111,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         //season 8
 
-        itemModelGenerator.register(ModItems.MYSTERIOUS_COMPASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ACTIVATED_MYSTERIOUS_COMPASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SOAP_STONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ENERGY_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CLUMPED_ENERGY_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ENERGY_CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.INKWISP, Models.GENERATED);
-        itemModelGenerator.register(ModItems.INKLING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.INKSHADE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.INKLOOM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.INKVOID, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WEAK_MYSTERIOUS_ESSENCE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MYSTERIOUS_ESSENCE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CRYSTALLIZED_MYSTERIOUS_ESSENCE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CHARGED_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_TOKEN, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.CHARGED_CRYSTAL_BOOTS));
     }
 }

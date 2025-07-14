@@ -39,9 +39,7 @@ public class DevCampItem extends Item {
                     user.giveItemStack(ModItems.LEFT_RING.getDefaultStack());
                 } else if (action == 1) {
                     user.giveItemStack(ModItems.RIGHT_RING.getDefaultStack());
-                } else if (action == 2) {
-                    user.giveItemStack(ModItems.GROUNDED.getDefaultStack());
-                } else if (action == 3) {
+                }else if (action == 3) {
                     user.giveItemStack(ModItems.VORTEX_STAFF.getDefaultStack());
                 } else if (action == 4) {
                     user.giveItemStack(ModItems.AVA.getDefaultStack());

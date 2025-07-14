@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "silverlight:item/clumped_energy_orb"
+    "layer0": "silverlight:item/silver_token"
   }
 }
