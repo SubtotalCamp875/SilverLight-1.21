@@ -21,6 +21,7 @@ public class SilverlightPlayerItems {
                         entries.add(ModItems.MOUTHWASH);
                         entries.add(ModItems.AVA);
                         entries.add(ModItems.POTION_OF_HAPPY_FEET);
+                        entries.add(ModItems.ELM);
                         entries.add(ModItems.YACKAMAID);
                         entries.add(ModItems.JIMMYLOGZ);
                         entries.add(ModItems.WADDLES);

@@ -24,8 +24,6 @@
   "block.silverlight.sieving_station": "Sieving Station",
   "block.silverlight.fermenting_station": "Fermenting Station",
   "block.silverlight.fake_diamond_block": "Diamond Blocks",
-  "block.silverlight.charge_generator": "Charge Generator",
-  "block.silverlight.energy_generator": "Energy Generator",
   "block.silverlight.mimic": "Mimic",
 
   "effect.silverlight.shrink": "Shrink",
@@ -90,6 +88,7 @@
   "item.silverlight.candy_cane": "Candy Cane",
   "item.silverlight.say10s_contract": "Say10's Contract",
   "item.silverlight.say10s_charm": "Say10's Relic",
+  "item.silverlight.elm": "Elm",
   "item.silverlight.jimmylogz": "Jimmy Logz",
   "item.silverlight.waddles": "Waddles",
   "item.silverlight.dev_camp": "Developer875",

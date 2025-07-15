@@ -111,6 +111,7 @@ public class ModItems {
         }
     });
     public static final Item WADDLES = registerItem("waddles", new WaddlesItem(new Item.Settings().maxCount(1).maxDamage(1)));
+    public static final Item ELM = registerItem("elm", new ElmItem(new Item.Settings().maxCount(1)));
     public static final Item DEVCAMP = registerItem("dev_camp", new DevCampItem(new Item.Settings().maxCount(1).maxDamage(2)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

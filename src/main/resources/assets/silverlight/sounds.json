@@ -10,5 +10,11 @@
     "sounds": [
       "silverlight:viking_horn_sound"
     ]
+  },
+  "elm_fox_squeak": {
+    "subtitle": "sounds.silverlight.elm_fox_squeak",
+    "sounds": [
+      "silverlight:elm_fox_squeak"
+    ]
   }
 }

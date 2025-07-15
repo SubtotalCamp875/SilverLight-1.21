@@ -75,6 +75,7 @@ public class SilverlightMain {
                         entries.add(ModItems.RIGHT_RING);
                         entries.add(ModItems.BLESSED_RING);
                         entries.add(ModItems.AVA);
+                        entries.add(ModItems.ELM);
                         entries.add(ModItems.YACKAMAID);
                         entries.add(ModItems.JIMMYLOGZ);
                         entries.add(ModItems.WADDLES);
