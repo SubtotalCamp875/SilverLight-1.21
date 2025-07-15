@@ -3,6 +3,7 @@ package net.subtotalcamp875.silverlight.item;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.stat.Stat;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 
 public class ModFoodComponents {
@@ -77,15 +78,15 @@ public class ModFoodComponents {
             .build();
 
     public static final FoodComponent FAKE_BREAD = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400), 0.1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200, 2), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 1), 0.1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 2), 0.1f)
             .nutrition(5)
             .build();
 
     public static final FoodComponent GOLDEN_APPLE = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400), 0.5f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2400, 2), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 2400, 1), 0.5f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2400), 0.5f)
             .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 2400), 0.5f)
             .nutrition(5)
@@ -99,34 +100,60 @@ public class ModFoodComponents {
 
     public static final FoodComponent CHOCOLATE_MILK = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1200), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 1200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 1200, 1), 0.25f)
             .nutrition(4)
             .build();
 
 
     public static final FoodComponent BEER = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 4800), 0.5f)
-            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 4800), 0.5f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 4800), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 2400), 0.5f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 2400), 0.5f)
             .nutrition(4)
             .alwaysEdible()
             .build();
 
     public static final FoodComponent WINE = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 2400), 0.2f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 1200), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 2400), 0.2f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2400), 0.8f)
             .nutrition(4)
             .alwaysEdible()
             .build();
 
     public static final FoodComponent OENOBEER = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 4800), 0.5f)
-            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 4800), 0.5f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 4800), 0.5f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 2400), 0.2f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 1200), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 2400), 0.2f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 2400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2400), 1f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent ENLIVENED_MUSHROOM_STEW = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 160), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 14), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 240), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 320), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 200), 0.25f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent ALCHEMIZED_MILK = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1800), 0.9f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 400), 0.9f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent FERMENTED_MAGMA_CREAM = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 24000), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 400), 1f)
+            .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent BLOOD_ORANGE_ALE = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 3600), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300), 0.9f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 1800), 0.9f)
             .nutrition(4)
             .alwaysEdible()
             .build();

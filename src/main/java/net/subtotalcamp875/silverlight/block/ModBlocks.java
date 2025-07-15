@@ -37,24 +37,37 @@ public class ModBlocks {
                     if(Screen.hasShiftDown()) {
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down1.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down2.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down3.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down4.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down5.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down6.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down7.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down8.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down9.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down10.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down11.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down12.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down13.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down14.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down15.tooltip"));
-                    } else {
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_1.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_2.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_3.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_4.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_5.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_6.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_7.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_8.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_9.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_10.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_11.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_12.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_13.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_14.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_15.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_16.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_17.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_18.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_19.tooltip"));
+                    } else if (Screen.hasControlDown()) {
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down_1.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down_2.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down_3.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down_4.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down_5.tooltip"));
+                    }else {
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
                         tooltip.add(Text.translatable("tooltip.silverlight.shift.tooltip"));
+                        tooltip.add(Text.translatable("tooltip.silverlight.control.tooltip"));
                     }
 
                     super.appendTooltip(stack, context, tooltip, options);

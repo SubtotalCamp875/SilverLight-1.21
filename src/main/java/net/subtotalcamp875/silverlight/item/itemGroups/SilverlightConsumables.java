@@ -34,6 +34,10 @@ public class SilverlightConsumables {
                         entries.add(ModItems.BEER);
                         entries.add(ModItems.WINE);
                         entries.add(ModItems.OENOBEER);
+                        entries.add(ModItems.ENLIVENED_MUSHROOM_STEW);
+                        entries.add(ModItems.ALCHEMIZED_MILK);
+                        entries.add(ModItems.FERMENTED_MAGMA_CREAM);
+                        entries.add(ModItems.BLOOD_ORANGE_ALE);
                         entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.FAKE_BREAD);

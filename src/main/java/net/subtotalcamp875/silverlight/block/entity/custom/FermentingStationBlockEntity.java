@@ -36,7 +36,8 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     private static final int FERMENTING_SLOT_3 = 4;
 
     protected final PropertyDelegate propertyDelegate;
-    private int maxProgress = 36000;
+    //private int maxProgress = 36000;
+    private int maxProgress = 1;
     private int maxTickProgress = 20;
     private int maxSecondsProgress = 60;
     private int maxMinuteProgress = 31;
@@ -193,31 +194,11 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
         for (int i = 0; i < 3; i++) {
             int slot = i+2;
 
-            if (getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA && getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA) {
-                chance += 25;
-                if (drop <= chance) {result = new ItemStack(ModItems.POTENT_POTION_OF_NAUSEA);}
-            }
-
-            if (getStack(slot).getItem() == Items.MYCELIUM && getStack(INPUT_SLOT).getItem() == Items.POTION) {
-                chance += 25;
-                if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_NAUSEA);}
-            }
-
-            if (getStack(slot).getItem() == Items.WHEAT && getStack(INPUT_SLOT).getItem() == Items.POTION) {
-                chance += 25;
-                if (drop <= chance) {result = new ItemStack(ModItems.BEER);}
-            }
-
-            if (getStack(slot).getItem() == Items.APPLE && getStack(INPUT_SLOT).getItem() == Items.POTION) {
-                chance += 25;
-                if (drop <= chance) {result = new ItemStack(ModItems.WINE);}
-            }
-
-            if ((getStack(slot).getItem() == ModItems.WINE || getStack(slot).getItem() == ModItems.BEER) && getStack(INPUT_SLOT).getItem() == Items.POTION) {
-                chance += 25;
-                if (drop <= chance) {result = new ItemStack(ModItems.OENOBEER);}
-            }
-
+            if (getStack(slot).getItem() == ModItems.POTION_OF_NAUSEA && getStack(INPUT_SLOT).getItem() == ModItems.POTION_OF_NAUSEA) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.POTENT_POTION_OF_NAUSEA);}}
+            if (getStack(slot).getItem() == Items.MYCELIUM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_NAUSEA);}}
+            if (getStack(slot).getItem() == Items.WHEAT && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.BEER);}}
+            if (getStack(slot).getItem() == Items.APPLE && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.WINE);}}
+            if ((getStack(slot).getItem() == ModItems.WINE || getStack(slot).getItem() == ModItems.BEER) && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.OENOBEER);}}
             if (getStack(slot).getItem() == Items.BROWN_MUSHROOM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHRINK);}}
             if (getStack(slot).getItem() == Items.STONE && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DWARF);}}
             if (getStack(slot).getItem() == Items.GRAVEL && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_SHORTEN);}}
@@ -229,6 +210,10 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
             if (getStack(slot).getItem() == Items.FEATHER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_ANTI_GRAVITY);}}
             if (getStack(slot).getItem() == Items.STICK && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DISPROPORTION);}}
             if (getStack(slot).getItem() == Items.RABBIT_FOOT && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_HAPPY_FEET);}}
+            if (getStack(slot).getItem() == Items.WARPED_FUNGUS && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 30; if (drop <= chance) {result = new ItemStack(ModItems.ENLIVENED_MUSHROOM_STEW);}}
+            if (getStack(slot).getItem() == Items.BLAZE_POWDER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.ALCHEMIZED_MILK);}}
+            if (getStack(slot).getItem() == Items.MAGMA_CREAM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 40; if (drop <= chance) {result = new ItemStack(ModItems.FERMENTED_MAGMA_CREAM);}}
+            if (getStack(slot).getItem() == Items.PLAYER_HEAD && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.BLOOD_ORANGE_ALE);}}
         }
 
         return result;
@@ -314,6 +299,18 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 || getStack(FERMENTING_SLOT_1).getItem() == Items.APPLE
                 || getStack(FERMENTING_SLOT_2).getItem() == Items.APPLE
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.APPLE
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.WARPED_FUNGUS
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.WARPED_FUNGUS
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.WARPED_FUNGUS
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.BLAZE_POWDER
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.MAGMA_CREAM
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.MAGMA_CREAM
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.MAGMA_CREAM
+                || getStack(FERMENTING_SLOT_1).getItem() == Items.PLAYER_HEAD
+                || getStack(FERMENTING_SLOT_2).getItem() == Items.PLAYER_HEAD
+                || getStack(FERMENTING_SLOT_3).getItem() == Items.PLAYER_HEAD
                 || getStack(FERMENTING_SLOT_1).getItem() == ModItems.BEER
                 || getStack(FERMENTING_SLOT_2).getItem() == ModItems.BEER
                 || getStack(FERMENTING_SLOT_3).getItem() == ModItems.BEER
@@ -354,7 +351,7 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     }
 
     private boolean isOutputSlotEmptyOrReceivable() {
-        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount();
+        return this.getStack(OUTPUT_SLOT).isEmpty() || (this.getStack(OUTPUT_SLOT).getCount() < this.getStack(OUTPUT_SLOT).getMaxCount() && this.getStack(OUTPUT_SLOT) == getLoot());
     }
 
     @Override

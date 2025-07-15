@@ -10,7 +10,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.block.ModBlocks;
-import net.subtotalcamp875.silverlight.item.custom.ModArmorItem;
 import net.subtotalcamp875.silverlight.item.custom.charms.*;
 import net.subtotalcamp875.silverlight.item.custom.leeches.LeechItem;
 import net.subtotalcamp875.silverlight.item.custom.leeches.LongLeechItem;
@@ -288,6 +287,10 @@ public class ModItems {
     public static final Item BEER = registerItem("beer", new Item(new Item.Settings().food(ModFoodComponents.BEER).maxCount(16)));
     public static final Item WINE = registerItem("wine", new Item(new Item.Settings().food(ModFoodComponents.WINE).maxCount(16)));
     public static final Item OENOBEER = registerItem("oenobeer", new Item(new Item.Settings().food(ModFoodComponents.OENOBEER).maxCount(16)));
+    public static final Item ENLIVENED_MUSHROOM_STEW = registerItem("enlivened_mushroom_stew", new Item(new Item.Settings().food(ModFoodComponents.ENLIVENED_MUSHROOM_STEW).maxCount(16)));
+    public static final Item ALCHEMIZED_MILK = registerItem("alchemized_milk", new Item(new Item.Settings().food(ModFoodComponents.ALCHEMIZED_MILK).maxCount(16)));
+    public static final Item FERMENTED_MAGMA_CREAM = registerItem("fermented_magma_cream", new Item(new Item.Settings().food(ModFoodComponents.FERMENTED_MAGMA_CREAM).maxCount(16)));
+    public static final Item BLOOD_ORANGE_ALE = registerItem("blood_orange_ale", new Item(new Item.Settings().food(ModFoodComponents.BLOOD_ORANGE_ALE).maxCount(16)));
     public static final Item SILVER_TOKEN = registerItem("silver_token", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
