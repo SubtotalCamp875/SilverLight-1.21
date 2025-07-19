@@ -89,7 +89,6 @@ public class SilverlightMain {
                         entries.add(ModItems.LONG_LEECH);
                         entries.add(ModItems.STRONG_LEECH);
                         entries.add(ModItems.REAPERS_SCYTHE);
-                        entries.add(ModItems.MINIGUN_STICK);
                         entries.add(ModItems.THORS_HAMMER);
                         entries.add(ModItems.ARROW_STAFF);
                         entries.add(ModItems.SOUND_STAFF);

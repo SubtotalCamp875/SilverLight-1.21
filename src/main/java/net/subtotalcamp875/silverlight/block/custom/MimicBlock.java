@@ -68,7 +68,7 @@ public class MimicBlock extends BlockWithEntity implements BlockEntityProvider {
         if (!world.isClient) {
             NamedScreenHandlerFactory screenHandlerFactory = ((MimicBlockEntity) world.getBlockEntity(pos));
             world.playSound(null, pos.getX(), pos.getY(), pos.getZ(),
-                    SoundEvents.BLOCK_PORTAL_AMBIENT, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                    SoundEvents.BLOCK_PORTAL_AMBIENT, SoundCategory.NEUTRAL, 1.5f, 0.6f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);

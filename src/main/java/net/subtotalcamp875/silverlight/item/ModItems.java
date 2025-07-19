@@ -167,10 +167,6 @@ public class ModItems {
         }
     });
 
-    public static final Item MINIGUN_STICK = registerItem("minigun_stick",
-            new SwordItem(ModToolMaterials.MINIGUN_STICK_MATERIAL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MINIGUN_STICK_MATERIAL, 2, 1000f))));
-
     public static final Item SOUND_STAFF = registerItem("sound_staff", new SoundStaffItem(new Item.Settings().maxCount(1).maxDamage(5)));
     public static final Item DICE_STAFF = registerItem("dice_staff", new DiceStaffItem(new Item.Settings().maxCount(1).maxDamage(64)) {
         @Override

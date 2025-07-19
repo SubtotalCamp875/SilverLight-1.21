@@ -36,8 +36,8 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
     private static final int FERMENTING_SLOT_3 = 4;
 
     protected final PropertyDelegate propertyDelegate;
-    //private int maxProgress = 36000;
-    private int maxProgress = 1;
+    private int maxProgress = 36000;
+    //private int maxProgress = 1;
     private int maxTickProgress = 20;
     private int maxSecondsProgress = 60;
     private int maxMinuteProgress = 31;

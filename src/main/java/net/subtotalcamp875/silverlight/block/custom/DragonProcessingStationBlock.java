@@ -19,7 +19,7 @@ import net.subtotalcamp875.silverlight.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.Nullable;
 
 public class DragonProcessingStationBlock extends BlockWithEntity implements BlockEntityProvider {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 12, 16);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16, 16);
 
     public DragonProcessingStationBlock(Settings settings) {
         super(settings);

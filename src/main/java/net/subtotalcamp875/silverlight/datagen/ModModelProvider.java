@@ -68,32 +68,17 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LONG_LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRONG_LEECH, Models.GENERATED);
         itemModelGenerator.register(ModItems.HOLY_CHARM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MINIGUN_STICK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ARROW_STAFF, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DICE_STAFF, Models.GENERATED);
-        itemModelGenerator.register(ModItems.VORTEX_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.VORTEX, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_STAFF, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHT_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AIM_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.EXPLOSION_RAIN_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.EXPLOSION_RAIN_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DEATH_STAFF, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DEATHS_DOLL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DEATHS_BOMB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LIGHTNING_ORB, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THORS_HAMMER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CANDY_CANE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAY10S_CONTRACT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAY10S_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOUTHWASH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CLOUD_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIBRATION_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLACK_PAPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.COSMIC_BROWNIE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAKE_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLDEN_APPLE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.HONEY_CAKE_ON_A_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIKING_PATTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHOCOLATE_MILK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_ONE, Models.GENERATED);
@@ -101,13 +86,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ZILLOW_TEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_TWENTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.ZILLOW_HUNDRED, Models.GENERATED);
-        itemModelGenerator.register(ModItems.METEOR_CHARM, Models.GENERATED);
         itemModelGenerator.register(ModItems.SCREECHING_CHARM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SMOKE_BOMB, Models.GENERATED);
         itemModelGenerator.register(ModItems.INFERNO_CHARM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BEER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WINE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.OENOBEER, Models.GENERATED);
 
         //season 8
 

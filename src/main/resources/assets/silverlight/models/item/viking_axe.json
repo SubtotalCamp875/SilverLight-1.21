@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "silverlight:item/viking_axe",
 	"texture_size": [64, 64],
@@ -548,9 +549,9 @@
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [0, 0, -49],
-			"translation": [0, -4.25, 4.5],
-			"scale": [0.5, 0.5, 0.5]
+			"rotation": [0, 0, -45],
+			"translation": [0.5, -5, 4.5],
+			"scale": [0.6, 0.6, 0.6]
 		},
 		"head": {
 			"rotation": [0, 0, -62],
@@ -558,9 +559,9 @@
 			"scale": [1.5, 1.5, 1.5]
 		},
 		"fixed": {
-			"rotation": [0, -180, -49],
-			"translation": [0.5, -5.25, -4.25],
-			"scale": [0.65, 0.65, 0.65]
+			"rotation": [0, -180, -45],
+			"translation": [-0.75, -5.75, -4.25],
+			"scale": [0.7, 0.7, 0.7]
 		}
 	},
 	"groups": [

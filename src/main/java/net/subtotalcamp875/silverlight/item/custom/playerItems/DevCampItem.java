@@ -59,8 +59,6 @@ public class DevCampItem extends Item {
                     user.giveItemStack(ModItems.HOLY_CHARM.getDefaultStack());
                 } else if (action == 12) {
                     user.giveItemStack(ModItems.REAPERS_SCYTHE.getDefaultStack());
-                } else if (action == 13) {
-                    user.giveItemStack(ModItems.MINIGUN_STICK.getDefaultStack());
                 } else if (action == 14) {
                     user.giveItemStack(ModItems.ARROW_STAFF.getDefaultStack());
                 } else if (action == 15) {
