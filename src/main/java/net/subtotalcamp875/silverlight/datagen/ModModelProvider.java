@@ -92,6 +92,7 @@ public class ModModelProvider extends FabricModelProvider {
         //season 8
 
         itemModelGenerator.register(ModItems.SILVER_TOKEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GOLDEN_TOKEN, Models.GENERATED);
 
     }
 }

@@ -50,6 +50,7 @@ public class SilverlightMain {
                         entries.add(ModItems.ALCHEMIZED_MILK);
                         entries.add(ModItems.FERMENTED_MAGMA_CREAM);
                         entries.add(ModItems.BLOOD_ORANGE_ALE);
+                        entries.add(ModItems.PICKLE_JAR);
                         entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.STRAWBERRY);
@@ -65,6 +66,8 @@ public class SilverlightMain {
                         entries.add(ModItems.ZILLOW_TEN);
                         entries.add(ModItems.ZILLOW_TWENTY);
                         entries.add(ModItems.ZILLOW_HUNDRED);
+                        entries.add(ModItems.SILVER_TOKEN);
+                        entries.add(ModItems.GOLDEN_TOKEN);
                         entries.add(ModBlocks.FAKE_DIAMOND_BLOCK);
                         entries.add(ModItems.FAKE_ELYTRA);
                         entries.add(ModItems.FAKE_BREAD);
@@ -115,6 +118,7 @@ public class SilverlightMain {
                         entries.add(ModItems.VIBRATION_CHARM);
                         entries.add(ModItems.INFERNO_CHARM);
                         entries.add(ModItems.SCREECHING_CHARM);
+                        entries.add(ModItems.BLESSING_OF_CREATION);
                         entries.add(ModItems.VIKING_PATTERN);
                         entries.add(ModItems.VIKING_HORN);
                         entries.add(ModItems.VIKING_AXE);
@@ -122,7 +126,7 @@ public class SilverlightMain {
                         // Season 8
 
                         entries.add(ModBlocks.MIMIC);
-                        entries.add(ModItems.SILVER_TOKEN);
+
 
 
                     }).build());

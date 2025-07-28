@@ -193,5 +193,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CHOCOLATE_MILK), conditionsFromItem(ModItems.CHOCOLATE_MILK))
                 .offerTo(exporter, Identifier.of(getRecipeName(ModItems.CHOCOLATE_MILK)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PICKLE_JAR, 1)
+                .pattern("SSS")
+                .pattern("PPP")
+                .pattern(" B ")
+                .input('P', Items.SEA_PICKLE)
+                .input('S', Items.SUGAR)
+                .input('B', Items.GLASS_BOTTLE)
+                .criterion(hasItem(ModItems.PICKLE_JAR), conditionsFromItem(ModItems.PICKLE_JAR))
+                .offerTo(exporter, Identifier.of(getRecipeName(ModItems.PICKLE_JAR)));
+
     }
 }

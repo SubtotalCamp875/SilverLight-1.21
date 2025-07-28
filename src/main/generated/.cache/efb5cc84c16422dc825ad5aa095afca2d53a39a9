@@ -1,4 +1,4 @@
-// 1.21	2025-07-19T13:34:53.5352396	SilverLight/Model Definitions
+// 1.21	2025-07-28T13:38:20.7716238	SilverLight/Model Definitions
 22659a55ed8410fbc472a49f75f65cd27b054ac9 assets\silverlight\models\item\dragon_scrap.json
 7151869eca3be0c87f5ac76b17d7f64f35831d8d assets\silverlight\models\item\vortex.json
 c036dae8efb5f7214dd4c0234a1886fa45315134 assets\silverlight\models\item\zillow_twenty.json
@@ -50,9 +50,9 @@ b7b2c3fe843af128ddfcd9652acdbfcb4fba6fca assets\silverlight\models\item\say10s_c
 da5879f3b6c0475dc015102c85d5df6ba7efa352 assets\silverlight\models\item\holy_charm.json
 6d7f9e38b153bb464f15e2bfa80f40adcc0918f3 assets\silverlight\models\item\potent_potion_of_nausea.json
 c7c43c3c559f88052ede1e989517a7a38414157e assets\silverlight\models\block\strawberry_plant_stage4.json
+3e1dd662a273f346294c2cb9dfb27946b90a5310 assets\silverlight\blockstates\mimic.json
 142a7b70c509212dd11c64a84b6ced0b4b6f78dd assets\silverlight\models\item\dragon_omelet.json
 1605131ae9a635e855413ca04d93228a5ca36111 assets\silverlight\models\item\potion_of_tall.json
-3e1dd662a273f346294c2cb9dfb27946b90a5310 assets\silverlight\blockstates\mimic.json
 7a89e0bf42a9cfc2964527c1310cb74cd3d4528b assets\silverlight\models\item\cosmic_brownie.json
 c2efcec6ade96a9a71cc3419eedb3d106b0060dc assets\silverlight\models\item\xp_charm.json
 5c4917a50994f9c42cf1e5b143cf2063b43fcfaf assets\silverlight\models\item\left_ring.json
@@ -63,6 +63,7 @@ f22168d8ae926495ce100cf15352b58dfc1ada77 assets\silverlight\models\item\inferno_
 45ed0a46c77a01bd1a1a80bef0c742eda3e7be56 assets\silverlight\models\block\strawberry_plant_stage0.json
 d6fca9a1a7085dbedd728d1c85bf2f4b33e3bf55 assets\silverlight\models\item\zillow_one.json
 0c05c3c4c6376a32f7d14602256c7974a01289dc assets\silverlight\models\item\vibration_charm.json
+e68faee7ed8e3d6e27c386f017da6b105fb27c63 assets\silverlight\models\item\golden_token.json
 bc66a931351502973f71d7690146f257707cea90 assets\silverlight\models\item\potion_of_disproportion.json
 55a3ec031b790ca648e46ac419cae08003c46cd9 assets\silverlight\models\item\long_leech.json
 fc41496e354baf60fd9dab47fa3e36a4933d5c6a assets\silverlight\models\item\reapers_scythe.json

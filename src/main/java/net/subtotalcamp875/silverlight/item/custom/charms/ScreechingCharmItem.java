@@ -62,8 +62,7 @@ public class ScreechingCharmItem extends Item {
         if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60), user);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60), user);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {

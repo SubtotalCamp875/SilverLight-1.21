@@ -19,8 +19,7 @@ public class BlessedRingItem extends Item {
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60), user);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 60), user);
 

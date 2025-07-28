@@ -59,8 +59,7 @@ public class MeteorCharmItem extends Item {
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient && !user.isOnGround() && (itemStack.getDamage() != itemStack.getMaxDamage()) && isActivated) {
+            if (!world.isClient && !user.isOnGround() && itemStack.getDamage() != itemStack.getMaxDamage() && isActivated) {
 
                 boolean active = true;
                 for (int i = 0; i <= 5; i++) {

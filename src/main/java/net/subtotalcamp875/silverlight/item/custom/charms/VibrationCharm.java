@@ -57,8 +57,7 @@ public class VibrationCharm extends Item {
         if (entity.isPlayer() && isActivated && !entity.isSpectator() && (stack.getDamage() != stack.getMaxDamage())) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60), user);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.SCULK_CHARGE_POP, user.getX(), user.getY(), user.getZ(), 50, 0.2, 0.2, 0.2, 0.05);

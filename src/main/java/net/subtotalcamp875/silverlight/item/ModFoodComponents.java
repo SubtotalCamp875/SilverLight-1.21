@@ -127,25 +127,28 @@ public class ModFoodComponents {
             .build();
 
     public static final FoodComponent ENLIVENED_MUSHROOM_STEW = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 160), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 4160), 0.25f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 14), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 240), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 320), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 4240), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 4320), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 4200), 0.25f)
             .nutrition(4)
             .alwaysEdible()
             .build();
 
     public static final FoodComponent ALCHEMIZED_MILK = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1800), 0.9f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 300), 0.9f)
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 400), 0.9f)
+            .statusEffect(new StatusEffectInstance(ModEffects.DRUNK, 400), 0.9f)
             .nutrition(4)
             .alwaysEdible()
             .build();
 
     public static final FoodComponent FERMENTED_MAGMA_CREAM = new FoodComponent.Builder()
             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 24000), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 400), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 1), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 12000), 1f)
             .nutrition(4)
             .alwaysEdible()
             .build();
@@ -155,6 +158,12 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300), 0.9f)
             .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 1800), 0.9f)
             .nutrition(4)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent PICKLE_JAR = new FoodComponent.Builder()
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 3600), 1f)
+            .nutrition(5)
             .alwaysEdible()
             .build();
 }

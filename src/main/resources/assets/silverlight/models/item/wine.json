@@ -4,7 +4,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"1": "silverlight:item/wine",
-		"particle": "silverlight:item/wine_eating_particle"
+		"particle": "silverlight:item/wineeating"
 	},
 	"elements": [
 		{
@@ -438,7 +438,6 @@
 			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0, 90, 0],

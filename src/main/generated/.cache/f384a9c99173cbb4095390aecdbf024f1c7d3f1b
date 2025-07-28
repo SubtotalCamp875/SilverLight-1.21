@@ -1,6 +1,7 @@
-// 1.21	2025-07-19T13:34:53.5374295	SilverLight/Recipes
+// 1.21	2025-07-28T13:38:20.7746473	SilverLight/Recipes
 d75a1eab688e5e5340a670eba9664642d95939e8 data\silverlight\recipe\cracker.json
 0a7ef3829aa597c3233e6313806154f472897897 data\silverlight\recipe\obsidian_shears.json
+7a69f2dbc6f15d36fbd5523b8366aeea8723f974 data\silverlight\recipe\pickle_jar.json
 377749edbb576de3c669bcea75c4f059a9eb6a5e data\silverlight\advancement\recipes\misc\dragon_omelet.json
 fae35130bc2101d95080f96a04825e076d09ee50 data\silverlight\advancement\recipes\misc\burning_obsidian_shears.json
 a78411fd709b3f789a647ecee5c910cbc11b20de data\silverlight\advancement\recipes\misc\void_obsidian_shears.json
@@ -13,6 +14,7 @@ d3036ce6d761833c5d7c2154f1e18994df3142ae data\silverlight\recipe\dragon_omelet.j
 9043d1c9704fcafb186ba4cb60870dd2e48567ed data\silverlight\advancement\recipes\misc\viking_axe.json
 ab6f56eaaa3b577625959ee3dffe6e35ffff6453 data\silverlight\recipe\strawberry_seed.json
 9d8244140954b40a21e01c1817a3f5a468c1f920 data\silverlight\recipe\viking_axe.json
+d374fcbdcfbd3438ad4191ceb5c58b463551cf02 data\silverlight\advancement\recipes\misc\pickle_jar.json
 d866973014244411b2a642a1fc895b527e907498 data\silverlight\recipe\burning_obsidian_shears.json
 215976e2847bea40c693875b7649faf5133f18b9 data\silverlight\advancement\recipes\misc\golden_apple.json
 9dd410848a996c60de2363d80f6fc415aca674ed data\silverlight\recipe\quill.json

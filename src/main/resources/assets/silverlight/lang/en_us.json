@@ -11,8 +11,8 @@
   "item.silverlight.burning_obsidian_shears": "Burning Obsidian Shears",
   "item.silverlight.void_obsidian_shears": "Void Obsidian Shears",
   "item.silverlight.potion_of_nausea": "Potion of Nausea",
-  "item.silverlight.cracker": "Cracker",
   "item.silverlight.potent_potion_of_nausea": "Strong Potion of Nausea",
+  "item.silverlight.cracker": "Cracker",
 
 
   "item.silverlight.strawberry_plant": "Strawberry Plant",
@@ -67,7 +67,6 @@
   "item.silverlight.long_leech": "Long Leech",
   "item.silverlight.strong_leech": "Strong Leech",
   "item.silverlight.holy_charm": "Holy Relic",
-  "item.silverlight.minigun_stick": "Minigun But Stick!",
   "item.silverlight.arrow_staff": "Overclocked Dispenser",
   "item.silverlight.sound_staff": "Sound Staff",
   "item.silverlight.vortex_staff": "Vortex Staff",
@@ -99,7 +98,7 @@
   "item.silverlight.cosmic_brownie": "Cosmic Brownie",
   "item.silverlight.fake_bread": "Bread",
   "item.silverlight.golden_apple": "Golden Apple",
-  "item.silverlight.honey_cake_on_a_stick": "Honey Cake on a stick",
+  "item.silverlight.honey_cake_on_a_stick": "Honey Cake On A Stick",
   "item.silverlight.viking_pattern": "Viking Pattern",
   "item.silverlight.viking_horn": "Viking Horn",
   "item.silverlight.viking_axe": "Viking Axe",
@@ -113,6 +112,7 @@
   "item.silverlight.screeching_charm": "Screeching Relic",
   "item.silverlight.smoke_bomb": "Smoke Bomb",
   "item.silverlight.inferno_charm": "Inferno Relic",
+  "item.silverlight.blessing_of_creation": "Blessing Of Creation",
   "item.silverlight.beer": "Beer",
   "item.silverlight.wine": "Wine",
   "item.silverlight.oenobeer": "Oenobeer",
@@ -120,7 +120,9 @@
   "item.silverlight.alchemized_milk": "Alchemized Milk",
   "item.silverlight.fermented_magma_cream": "Fermented Magma Cream",
   "item.silverlight.blood_orange_ale": "Blood Orange Ale",
+  "item.silverlight.pickle_jar": "Pickle Jar",
   "item.silverlight.silver_token": "Silver Token",
+  "item.silverlight.golden_token": "Golden Token",
 
 
   "tooltip.silverlight.shift.tooltip": "Press §eShift§r for more Information!",

@@ -43,7 +43,6 @@ public class XPCharmItem extends Item {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
-            assert user != null;
             if (!world.isClient) {
                 user.addExperience(1);
 

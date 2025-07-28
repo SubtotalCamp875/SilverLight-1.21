@@ -48,8 +48,7 @@ public class CloudCharm extends Item {
         if (entity.isPlayer() && isActivated && !entity.isSpectator() && (stack.getDamage() != stack.getMaxDamage())) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 3, 2, 2, 2, 0.1);
                 }

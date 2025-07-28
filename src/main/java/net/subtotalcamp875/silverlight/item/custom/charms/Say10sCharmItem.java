@@ -22,8 +22,7 @@ public class Say10sCharmItem extends Item {
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 60), user);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.FLAME, user.getX(), user.getY(), user.getZ(), 2, 0.05, 0.05, 0.05, 0.05);

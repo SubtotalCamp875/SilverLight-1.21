@@ -38,6 +38,7 @@ public class SilverlightConsumables {
                         entries.add(ModItems.ALCHEMIZED_MILK);
                         entries.add(ModItems.FERMENTED_MAGMA_CREAM);
                         entries.add(ModItems.BLOOD_ORANGE_ALE);
+                        entries.add(ModItems.PICKLE_JAR);
                         entries.add(ModItems.CRACKER);
 
                         entries.add(ModItems.FAKE_BREAD);

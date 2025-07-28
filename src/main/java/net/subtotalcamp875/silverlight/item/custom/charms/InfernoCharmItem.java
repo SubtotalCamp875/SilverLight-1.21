@@ -43,8 +43,7 @@ public class InfernoCharmItem extends Item {
         if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            assert user != null;
-            if (!world.isClient) {
+            if (!world.isClient && user != null) {
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.FLAME, user.getX(), user.getY(), user.getZ(), 2, 2, 2, 2, 0.05);
                     serverWorld.spawnParticles(ParticleTypes.SMALL_FLAME, user.getX(), user.getY(), user.getZ(), 2, 2, 2, 2, 0.05);

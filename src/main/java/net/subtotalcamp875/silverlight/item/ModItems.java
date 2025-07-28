@@ -287,7 +287,10 @@ public class ModItems {
     public static final Item ALCHEMIZED_MILK = registerItem("alchemized_milk", new Item(new Item.Settings().food(ModFoodComponents.ALCHEMIZED_MILK).maxCount(16)));
     public static final Item FERMENTED_MAGMA_CREAM = registerItem("fermented_magma_cream", new Item(new Item.Settings().food(ModFoodComponents.FERMENTED_MAGMA_CREAM).maxCount(16)));
     public static final Item BLOOD_ORANGE_ALE = registerItem("blood_orange_ale", new Item(new Item.Settings().food(ModFoodComponents.BLOOD_ORANGE_ALE).maxCount(16)));
+    public static final Item PICKLE_JAR = registerItem("pickle_jar", new Item(new Item.Settings().food(ModFoodComponents.PICKLE_JAR).maxCount(16)));
     public static final Item SILVER_TOKEN = registerItem("silver_token", new Item(new Item.Settings()));
+    public static final Item GOLDEN_TOKEN = registerItem("golden_token", new Item(new Item.Settings()));
+    public static final Item BLESSING_OF_CREATION = registerItem("blessing_of_creation", new BlessingOfCreation(new Item.Settings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
     }

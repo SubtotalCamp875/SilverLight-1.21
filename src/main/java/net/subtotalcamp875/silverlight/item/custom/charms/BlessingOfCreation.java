@@ -2,6 +2,7 @@ package net.subtotalcamp875.silverlight.item.custom.charms;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,13 +13,12 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 
-public class HolyCharmItem extends Item {
-    public HolyCharmItem(Settings settings) {
+public class BlessingOfCreation extends Item {
+    public BlessingOfCreation(Settings settings) {
         super(settings);
     }
 
     private boolean isActivated = false;
-    private int tick = 0;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -45,20 +45,10 @@ public class HolyCharmItem extends Item {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             if (!world.isClient && user != null) {
-                if (user.getMaxHealth() == user.getHealth()) {
-                    tick++;
-                    if (tick == 300 && user.getAbsorptionAmount() < 10) {
-                        user.addStatusEffect(new StatusEffectInstance(ModEffects.HOLY_SHIELD, 320), user);
-                        stack.setDamage(stack.getDamage() + 1);
-                        tick = 0;
-                    }
-
-                    if (stack.getDamage() == stack.getMaxDamage()) {
-                        stack.decrement(1);
-                    }
-                } else {
-                    tick = 0;
-                }
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60, 1), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 60, 2), user);
+                user.addStatusEffect(new StatusEffectInstance(ModEffects.DISPROPORTION, 60, 1), user);
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);
