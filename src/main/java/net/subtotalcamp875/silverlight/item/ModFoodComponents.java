@@ -127,11 +127,11 @@ public class ModFoodComponents {
             .build();
 
     public static final FoodComponent ENLIVENED_MUSHROOM_STEW = new FoodComponent.Builder()
-            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 4160), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 3*60*20), 0.25f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 14), 0.25f)
             .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 4240), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 4320), 0.25f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 4200), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30*20), 0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 10*60*20), 0.25f)
             .nutrition(4)
             .alwaysEdible()
             .build();
