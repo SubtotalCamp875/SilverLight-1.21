@@ -130,7 +130,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-
+/**
             if (zillowChest) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
@@ -159,7 +159,7 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder2.build());
             }
-
+**/
             if (LootTables.NETHER_BRIDGE_CHEST.equals(key) ||
                     LootTables.BASTION_BRIDGE_CHEST.equals(key) ||
                     LootTables.BASTION_HOGLIN_STABLE_CHEST.equals(key) ||
