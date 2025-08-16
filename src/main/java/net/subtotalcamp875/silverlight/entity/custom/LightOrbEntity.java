@@ -28,6 +28,7 @@ public class LightOrbEntity extends ThrownItemEntity {
     public LightOrbEntity(LivingEntity livingEntity, World world) {
         super(ModEntities.LIGHT_ORB_PROJECTILE, livingEntity, world);
         this.setNoGravity(true);
+        this.setGlowing(true);
     }
 
     @Override
@@ -50,9 +51,11 @@ public class LightOrbEntity extends ThrownItemEntity {
         World world = entity.getWorld();
 
         if (entity instanceof LivingEntity) {
-            entity.setHealth(entity.getHealth() + 10);
             if (!world.isClient && world instanceof ServerWorld serverWorld) {
-                serverWorld.spawnParticles(ParticleTypes.HEART, entity.getX(), entity.getY(), entity.getZ(), 50, 0.5, 0.5, 0.5, 0.05);
+                entity.setHealth(entity.getHealth() + 10);
+                serverWorld.spawnParticles(ParticleTypes.HEART, entity.getX(), entity.getY(), entity.getZ(), 10, 0.5, 0.5, 0.5, 0.05);
+                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 40), entity);
+                this.discard();
             }
         }
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),

@@ -18,7 +18,7 @@ public class SatisfiedEffect extends StatusEffect {
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity.isPlayer() && !entity.isSpectator()) {
             World world = entity.getWorld();
-            PlayerEntity user = world.getClosestPlayer(entity, 1);
+            PlayerEntity user = (PlayerEntity) entity;
             int dx = world.getRandom().nextInt(4);
             int dy = world.getRandom().nextInt(4);
             int dz = world.getRandom().nextInt(4);
@@ -32,7 +32,6 @@ public class SatisfiedEffect extends StatusEffect {
                 dz = -dz;
             }
 
-            assert user != null;
             if (!world.isClient) {
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.HEART, user.getX()+dx, user.getY()+dy, user.getZ()+dz, 1, 0, 0, 0, 0);

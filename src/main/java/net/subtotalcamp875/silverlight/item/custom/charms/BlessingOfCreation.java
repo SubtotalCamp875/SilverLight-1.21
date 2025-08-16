@@ -46,6 +46,7 @@ public class BlessingOfCreation extends Item {
 
             if (!world.isClient && user != null) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 60, 2), user);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60, 1), user);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 60, 2), user);
                 user.addStatusEffect(new StatusEffectInstance(ModEffects.DISPROPORTION, 60, 1), user);

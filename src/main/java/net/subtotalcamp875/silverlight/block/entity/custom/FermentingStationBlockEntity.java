@@ -209,7 +209,6 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
             if (getStack(slot).getItem() == Items.IRON_BLOCK && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_GRAVITY);}}
             if (getStack(slot).getItem() == Items.FEATHER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_ANTI_GRAVITY);}}
             if (getStack(slot).getItem() == Items.STICK && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_DISPROPORTION);}}
-            if (getStack(slot).getItem() == Items.RABBIT_FOOT && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 50; if (drop <= chance) {result = new ItemStack(ModItems.POTION_OF_HAPPY_FEET);}}
             if (getStack(slot).getItem() == Items.WARPED_FUNGUS && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 30; if (drop <= chance) {result = new ItemStack(ModItems.ENLIVENED_MUSHROOM_STEW);}}
             if (getStack(slot).getItem() == Items.BLAZE_POWDER && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 25; if (drop <= chance) {result = new ItemStack(ModItems.ALCHEMIZED_MILK);}}
             if (getStack(slot).getItem() == Items.MAGMA_CREAM && getStack(INPUT_SLOT).getItem() == Items.POTION) {chance += 40; if (drop <= chance) {result = new ItemStack(ModItems.FERMENTED_MAGMA_CREAM);}}
@@ -290,9 +289,6 @@ public class FermentingStationBlockEntity extends BlockEntity implements Extende
                 || getStack(FERMENTING_SLOT_1).getItem() == Items.STICK
                 || getStack(FERMENTING_SLOT_2).getItem() == Items.STICK
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.STICK
-                || getStack(FERMENTING_SLOT_1).getItem() == Items.RABBIT_FOOT
-                || getStack(FERMENTING_SLOT_2).getItem() == Items.RABBIT_FOOT
-                || getStack(FERMENTING_SLOT_3).getItem() == Items.RABBIT_FOOT
                 || getStack(FERMENTING_SLOT_1).getItem() == Items.WHEAT
                 || getStack(FERMENTING_SLOT_2).getItem() == Items.WHEAT
                 || getStack(FERMENTING_SLOT_3).getItem() == Items.WHEAT

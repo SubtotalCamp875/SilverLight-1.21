@@ -55,7 +55,6 @@ public class ModBlocks {
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_16.tooltip"));
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_17.tooltip"));
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_18.tooltip"));
-                        tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_shift_down_19.tooltip"));
                     } else if (Screen.hasControlDown()) {
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station.tooltip"));
                         tooltip.add(Text.translatable("tooltip.silverlight.fermenting_station_control_down.tooltip"));

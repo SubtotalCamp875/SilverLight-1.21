@@ -58,10 +58,10 @@ public class VibrationCharm extends Item {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             if (!world.isClient && user != null) {
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60), user);
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.SCULK_CHARGE_POP, user.getX(), user.getY(), user.getZ(), 50, 0.2, 0.2, 0.2, 0.05);
                 }
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60), user);
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);

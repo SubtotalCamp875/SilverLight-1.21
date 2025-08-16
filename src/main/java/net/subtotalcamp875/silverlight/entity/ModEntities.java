@@ -32,7 +32,7 @@ public class ModEntities {
     public static final EntityType<LightOrbEntity> LIGHT_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "light_projectile"),
             EntityType.Builder.<LightOrbEntity>create(LightOrbEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.1f, 0.1f).build());
+                    .dimensions(0.2f, 0.2f).build());
 
     public static final EntityType<AimOrbEntity> AIM_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "aim_projectile"),

@@ -25,8 +25,8 @@ public class SmokeBombItem extends Item {
         if (!world.isClient) {
             SmokeBombEntity smokeBombEntity = new SmokeBombEntity(user, world);
             smokeBombEntity.setItem(itemStack);
-            smokeBombEntity.setVelocity(user, 0, 0, 0.0f, 0f, 0f);
-            smokeBombEntity.setPosition(user.getX(), user.getY()+4f, user.getZ());
+            smokeBombEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0f, 1f, 0.1f);
+            smokeBombEntity.setPosition(user.getX(), user.getY()+1.5f, user.getZ());
             world.spawnEntity(smokeBombEntity);
         }
 

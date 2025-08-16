@@ -36,7 +36,7 @@ public class LightStaffItem extends Item {
             Vec3d vec3d = user.getRotationVec(1.0F);
 
             LightOrbEntity lightOrbEntity = new LightOrbEntity(user, world);
-            lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1f, 0.0f);
+            lightOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2f, 0.0f);
             lightOrbEntity.setPosition(user.getX() + vec3d.x, user.getY() + 1 + vec3d.y, user.getZ() + vec3d.z);
             world.spawnEntity(lightOrbEntity);
 
@@ -64,7 +64,7 @@ public class LightStaffItem extends Item {
                 if (user.getMainHandStack().getItem() == ModItems.LIGHT_STAFF || user.getOffHandStack().getItem() == ModItems.LIGHT_STAFF) {
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60), user);
                     AimOrbEntity aimOrbEntity = new AimOrbEntity(user, world);
-                    aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 2f, 0.0f);
+                    aimOrbEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 3f, 0.0f);
                     aimOrbEntity.setPosition(user.getX() + vec3d.x, user.getY() + 1 + vec3d.y, user.getZ() + vec3d.z);
                     world.spawnEntity(aimOrbEntity);
                 }
@@ -80,7 +80,6 @@ public class LightStaffItem extends Item {
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down1.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down2.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down3.tooltip"));
-            tooltip.add(Text.translatable("tooltip.silverlight.light_staff_shift_down4.tooltip"));
         } else {
             tooltip.add(Text.translatable("tooltip.silverlight.light_staff.tooltip"));
             tooltip.add(Text.translatable("tooltip.silverlight.shift.tooltip"));

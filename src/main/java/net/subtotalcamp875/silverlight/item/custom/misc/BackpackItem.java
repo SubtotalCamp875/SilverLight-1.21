@@ -2,6 +2,9 @@ package net.subtotalcamp875.silverlight.item.custom.misc;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.StackReference;
@@ -16,7 +19,10 @@ import net.minecraft.util.ClickType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.SilverLight;
 import net.subtotalcamp875.silverlight.component.ModDataComponentTypes;
+import net.subtotalcamp875.silverlight.effect.ModEffects;
+import net.subtotalcamp875.silverlight.item.ModItems;
 import net.subtotalcamp875.silverlight.item.tooltip.BackpackTooltipData;
 import net.subtotalcamp875.silverlight.screen.custom.BackpackScreenHandler;
 
@@ -47,6 +53,8 @@ public class BackpackItem extends Item {
         };
     }
 
+    private int tick = 0;
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stackInHand = user.getStackInHand(hand);
@@ -67,7 +75,44 @@ public class BackpackItem extends Item {
         }
         return true;
     }
+/**
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        PlayerEntity playerEntity = (PlayerEntity) entity;
+        PlayerInventory playerInventory = playerEntity.getInventory();
 
+        if (!world.isClient) {
+
+            tick += 1;
+            if (tick >= 20) {
+                tick = 0;
+
+                if (!playerEntity.isCreative()) {
+                    int count = 0;
+
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 9; j++) {
+                            if (playerInventory.getStack(j + i * 9 + 9).toString().equals(ModItems.BACKPACK.getDefaultStack().toString())) {
+                                count += 1;
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < 9; i++) {
+                        if (playerInventory.getStack(i).toString().equals(ModItems.BACKPACK.getDefaultStack().toString())) {
+                            count += 1;
+                        }
+                    }
+
+                    if (count > 1 || playerEntity.getOffHandStack().toString().equals(ModItems.BACKPACK.getDefaultStack().toString())) {
+                        playerEntity.addStatusEffect(new StatusEffectInstance(ModEffects.ENCUMBERED, 30*20, 3), playerEntity);
+                    }
+                }
+            }
+        }
+        super.inventoryTick(stack, world, entity, slot, selected);
+    }
+**/
     @Override
     public boolean canBeNested() {
         return false;

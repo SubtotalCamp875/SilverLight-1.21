@@ -1,6 +1,8 @@
 package net.subtotalcamp875.silverlight.item.custom.charms;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -52,6 +54,8 @@ public class CloudCharm extends Item {
                 if (user.getWorld() instanceof ServerWorld serverWorld) {
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY(), user.getZ(), 3, 2, 2, 2, 0.1);
                 }
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 60), user);
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 60, 1), user);
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);

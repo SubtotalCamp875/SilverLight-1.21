@@ -2,6 +2,7 @@ package net.subtotalcamp875.silverlight.item.custom.staffs;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -51,31 +52,29 @@ public class ArrowStaffItem extends RangedWeaponItem {
         ItemStack itemStack = user.getProjectileType(stack);
         ItemStack offHandStack = user.getOffHandStack();
 
-        if ((offHandStack.getItem() == ModItems.METEOR_CHARM) && (itemStack.getDamage() != itemStack.getMaxDamage()) && (offHandStack.getDamage() != offHandStack.getMaxDamage())) {
-            user.sendMessage(Text.of("§6Arrows fused with the power of Meteors - How could a single staff possibly handle all this power?§r"));
-            offHandStack.setDamage(offHandStack.getMaxDamage());
-            itemStack.setDamage(itemStack.getMaxDamage());
-            user.giveItemStack(ModItems.EXPLOSION_RAIN_STAFF.getDefaultStack());
+        if (!world.isClient) {
+            if ((offHandStack.getItem() == ModItems.METEOR_CHARM) && (itemStack.getDamage() != itemStack.getMaxDamage()) && (offHandStack.getDamage() != offHandStack.getMaxDamage())) {
+                user.sendMessage(Text.of("§6Arrows fused with the power of Meteors - How could a single staff possibly handle all this power?§r"));
+                offHandStack.setDamage(offHandStack.getMaxDamage());
+                itemStack.setDamage(itemStack.getMaxDamage());
+                user.giveItemStack(ModItems.EXPLOSION_RAIN_STAFF.getDefaultStack());
 
-        } else if (!itemStack.isEmpty() && (itemStack.getDamage() != itemStack.getMaxDamage())) {
-            List<ItemStack> list = load(stack, itemStack, user);
-            if (world instanceof ServerWorld serverWorld && !list.isEmpty()) {
-                this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 2F, 1.0F, false, null);
-                itemStack.setDamage(itemStack.getDamage() +1);
+            } else if (itemStack.isEmpty() && !user.isCreative()) {
+                user.sendMessage(Text.of("This item has no ammo"));
+
+            } else if (stack.getDamage() != stack.getMaxDamage()) {
+                List<ItemStack> list = load(stack, itemStack, user);
+                if (world instanceof ServerWorld serverWorld && !list.isEmpty()) {
+                    this.shootAll(serverWorld, user, user.getActiveHand(), stack, list, 2F, 1.0F, false, null);
+                    itemStack.setDamage(itemStack.getDamage() + 1);
+                }
+
+                world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS,
+                        1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 0.9f * 0.5F);
+            } else {
+                user.sendMessage(Text.of("This item has already been used"));
             }
 
-            world.playSound(
-                    null,
-                    user.getX(),
-                    user.getY(),
-                    user.getZ(),
-                    SoundEvents.ENTITY_ARROW_SHOOT,
-                    SoundCategory.PLAYERS,
-                    1.0F,
-                    1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + 0.9f * 0.5F
-            );
-        } else {
-            user.sendMessage(Text.of("This item has already been used"));
         }
         return TypedActionResult.fail(stack);
     }

@@ -9,10 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.subtotalcamp875.silverlight.SilverLight;
-import net.subtotalcamp875.silverlight.effect.custom.BasicEffect;
-import net.subtotalcamp875.silverlight.effect.custom.ArmorlessEffect;
-import net.subtotalcamp875.silverlight.effect.custom.HolyShieldStatusEffect;
-import net.subtotalcamp875.silverlight.effect.custom.SatisfiedEffect;
+import net.subtotalcamp875.silverlight.effect.custom.*;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> SHRINK = registerEffect(
@@ -60,6 +57,17 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.GENERIC_GRAVITY, Identifier.of(SilverLight.MOD_ID, "gravity"),
                             .72F, EntityAttributeModifier.Operation.ADD_VALUE));
 
+    public static final RegistryEntry<StatusEffect> ENCUMBERED = registerEffect(
+            "encumbered", new BasicEffect(StatusEffectCategory.HARMFUL, 0)
+                    .addAttributeModifier(EntityAttributes.GENERIC_GRAVITY, Identifier.of(SilverLight.MOD_ID, "encumbered"),
+                            .72F, EntityAttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(SilverLight.MOD_ID, "encumbered"),
+                            -0.75F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(EntityAttributes.GENERIC_FLYING_SPEED, Identifier.of(SilverLight.MOD_ID, "encumbered"),
+                            -0.75F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(EntityAttributes.GENERIC_SAFE_FALL_DISTANCE, Identifier.of(SilverLight.MOD_ID, "encumbered"),
+                            -0.5F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+
     public static final RegistryEntry<StatusEffect> ANTI_GRAVITY = registerEffect(
             "anti_gravity", new BasicEffect(StatusEffectCategory.BENEFICIAL, 0)
                     .addAttributeModifier(EntityAttributes.GENERIC_GRAVITY, Identifier.of(SilverLight.MOD_ID, "anti_gravity"),
@@ -77,7 +85,7 @@ public class ModEffects {
 
 
     public static final RegistryEntry<StatusEffect> DRUNK = registerEffect(
-            "drunk", new BasicEffect(StatusEffectCategory.HARMFUL, 0));
+            "drunk", new DrunkEffect(StatusEffectCategory.HARMFUL, 0));
 
     public static final RegistryEntry<StatusEffect> HOLY_SHIELD = registerEffect(
             "holy_shield", new HolyShieldStatusEffect(StatusEffectCategory.BENEFICIAL, 2445989)
@@ -92,7 +100,7 @@ public class ModEffects {
     public static final RegistryEntry<StatusEffect> SATISFIED = registerEffect(
             "satisfied", new SatisfiedEffect(StatusEffectCategory.BENEFICIAL, 0)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(SilverLight.MOD_ID, "satisfied"),
-                            -0.015f, EntityAttributeModifier.Operation.ADD_VALUE));
+                            -0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
 
     private static RegistryEntry<StatusEffect> registerEffect(String id, StatusEffect statusEffect) {
