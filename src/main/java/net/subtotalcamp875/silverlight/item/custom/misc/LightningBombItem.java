@@ -9,10 +9,11 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.entity.custom.LightningBombEntity;
 import net.subtotalcamp875.silverlight.entity.custom.SmokeBombEntity;
 
-public class SmokeBombItem extends Item {
-    public SmokeBombItem(Settings settings) {
+public class LightningBombItem extends Item {
+    public LightningBombItem(Settings settings) {
         super(settings);
     }
 
@@ -21,14 +22,14 @@ public class SmokeBombItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-        user.getItemCooldownManager().set(this, 10*20);
+        user.getItemCooldownManager().set(this, 20*20);
 
         if (!world.isClient) {
-            SmokeBombEntity smokeBombEntity = new SmokeBombEntity(user, world);
-            smokeBombEntity.setItem(itemStack);
-            smokeBombEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0f, 1f, 0.1f);
-            smokeBombEntity.setPosition(user.getX(), user.getY()+1.5f, user.getZ());
-            world.spawnEntity(smokeBombEntity);
+            LightningBombEntity lightningBombEntity = new LightningBombEntity(user, world);
+            lightningBombEntity.setItem(itemStack);
+            lightningBombEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0f, 1.5f, 0.1f);
+            lightningBombEntity.setPosition(user.getX(), user.getY()+1.5f, user.getZ());
+            world.spawnEntity(lightningBombEntity);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

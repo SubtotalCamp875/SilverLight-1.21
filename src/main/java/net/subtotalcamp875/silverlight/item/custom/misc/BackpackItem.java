@@ -53,8 +53,6 @@ public class BackpackItem extends Item {
         };
     }
 
-    private int tick = 0;
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stackInHand = user.getStackInHand(hand);
@@ -62,6 +60,7 @@ public class BackpackItem extends Item {
         return TypedActionResult.success(stackInHand);
     }
 
+/**
     @Override
     public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
         if (player.currentScreenHandler instanceof BackpackScreenHandler backpackScreenHandler &&
@@ -75,6 +74,8 @@ public class BackpackItem extends Item {
         }
         return true;
     }
+ **/
+
 /**
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {

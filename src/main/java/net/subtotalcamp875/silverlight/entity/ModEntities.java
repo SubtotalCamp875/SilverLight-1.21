@@ -42,7 +42,17 @@ public class ModEntities {
     public static final EntityType<SmokeBombEntity> SMOKE_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "smoke_bomb"),
             EntityType.Builder.<SmokeBombEntity>create(SmokeBombEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.2f, 0.2f).build());
+                    .dimensions(0.1f, 0.1f).build());
+
+    public static final EntityType<StickyBombEntity> STICKY_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "sticky_bomb"),
+            EntityType.Builder.<StickyBombEntity>create(StickyBombEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.1f, 0.1f).build());
+
+    public static final EntityType<LightningBombEntity> LIGHTNING_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(SilverLight.MOD_ID, "lightning_bomb"),
+            EntityType.Builder.<LightningBombEntity>create(LightningBombEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.1f, 0.1f).build());
 
     public static final EntityType<ExplosionRainOrbEntity> EXPLOSION_RAIN_ORB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(SilverLight.MOD_ID, "explosion_rain_orb"),

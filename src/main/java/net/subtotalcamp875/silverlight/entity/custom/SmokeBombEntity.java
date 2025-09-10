@@ -27,7 +27,7 @@ public class SmokeBombEntity extends ThrownItemEntity {
 
     public SmokeBombEntity(LivingEntity livingEntity, World world) {
         super(ModEntities.SMOKE_BOMB_PROJECTILE, livingEntity, world);
-        this.setGlowing(true);
+        this.setGlowing(false);
         this.setNoGravity(false);
     }
 
@@ -41,6 +41,7 @@ public class SmokeBombEntity extends ThrownItemEntity {
         if (!this.getWorld().isClient) {
              this.setVelocity(0f, 0f, 0f);
              this.setNoGravity(true);
+             this.setGlowing(true);
         }
         super.onBlockHit(blockHitResult);
     }

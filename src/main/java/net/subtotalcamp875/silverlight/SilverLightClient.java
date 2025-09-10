@@ -50,6 +50,8 @@ public class SilverLightClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.STRAWBERRY_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.DEATHS_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.SMOKE_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.STICKY_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.LIGHTNING_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.LIGHTNING_ORB_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.VORTEX_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.LIGHT_ORB_PROJECTILE, FlyingItemEntityRenderer::new);

@@ -102,6 +102,8 @@ public class ModEffects {
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(SilverLight.MOD_ID, "satisfied"),
                             -0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
+    public static final RegistryEntry<StatusEffect> CHARGED = registerEffect(
+            "charged", new ChargedEffect(StatusEffectCategory.HARMFUL, 0));
 
     private static RegistryEntry<StatusEffect> registerEffect(String id, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(SilverLight.MOD_ID, id), statusEffect);

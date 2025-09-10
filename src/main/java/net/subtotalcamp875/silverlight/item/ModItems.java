@@ -214,10 +214,14 @@ public class ModItems {
     public static final Item HORN_OF_BRAN_GALED = registerItem("horn_of_bran_galed", new HornOfBranGaledItem(new Item.Settings().maxCount(1)));
     public static final Item LIGHTNING_ORB = registerItem("lightning_orb", new Item(new Item.Settings()));
     public static final Item THORS_HAMMER = registerItem("thors_hammer", new ThorsHammer(ModToolMaterials.THORS_HAMMER_MATERIAL, new Item.Settings()
-            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THORS_HAMMER_MATERIAL, 8, -3.2f))){
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THORS_HAMMER_MATERIAL, 8, -3f))){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip"));
+            tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip1"));
+            tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip2"));
+            tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip3"));
+            tooltip.add(Text.translatable("tooltip.silverlight.thors_hammer.tooltip4"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
@@ -273,6 +277,8 @@ public class ModItems {
         }
     });
     public static final Item SMOKE_BOMB = registerItem("smoke_bomb", new SmokeBombItem(new Item.Settings()));
+    public static final Item STICKY_BOMB = registerItem("sticky_bomb", new StickyBombItem(new Item.Settings()));
+    public static final Item LIGHTNING_BOMB = registerItem("lightning_bomb", new LightningBombItem(new Item.Settings()));
     public static final Item INFERNO_CHARM = registerItem("inferno_charm", new InfernoCharmItem(new Item.Settings().maxCount(1)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

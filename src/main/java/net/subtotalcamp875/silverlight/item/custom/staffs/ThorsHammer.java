@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -20,7 +21,7 @@ import net.subtotalcamp875.silverlight.entity.custom.LightningOrbEntity;
 
 import java.util.Random;
 
-public class ThorsHammer extends SwordItem {
+public class ThorsHammer extends AxeItem {
     public ThorsHammer(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
     }
@@ -28,7 +29,7 @@ public class ThorsHammer extends SwordItem {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 100);
+        user.getItemCooldownManager().set(this, 5*20);
         world.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.ENTITY_WIND_CHARGE_THROW, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
 
@@ -39,7 +40,7 @@ public class ThorsHammer extends SwordItem {
         }
 
         if (!user.getAbilities().creativeMode) {
-            itemStack.setDamage(itemStack.getDamage() + 1);
+            itemStack.setDamage(itemStack.getDamage() + 5);
             if (itemStack.getDamage() == itemStack.getMaxDamage()) {
                 itemStack.decrement(1);
             }
