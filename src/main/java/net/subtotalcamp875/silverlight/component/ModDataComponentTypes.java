@@ -20,8 +20,8 @@ public class ModDataComponentTypes {
             .packetCodec(BackpackContentsComponent.PACKET_CODEC).cache()
     );
 
-    public static final ComponentType<Integer> ISACTIVATED =
-            registerComponentType("isactivated", builder -> builder.codec(Codec.INT));
+    public static final ComponentType<Boolean> ISACTIVATED =
+            registerComponentType("isactivated", builder -> builder.codec(Codec.BOOL));
 
     private static <T> ComponentType<T> registerComponentType(String id, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(SilverLight.MOD_ID, id),

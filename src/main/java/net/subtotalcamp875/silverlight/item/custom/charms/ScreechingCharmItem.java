@@ -24,7 +24,7 @@ public class ScreechingCharmItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        int isActivated = getIsActivated(itemStack);
+        boolean isActivated = getIsActivated(itemStack);
 
         if (!world.isClient) {
             if (user.isSneaking()) {
@@ -43,29 +43,25 @@ public class ScreechingCharmItem extends Item {
                     }
                 }
 
-            } else if (isActivated == 0) {
+            } else if (!isActivated) {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-
-                isActivated = 1;
-                itemStack.set(ModDataComponentTypes.ISACTIVATED, isActivated);
-
             } else {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
-
-                isActivated = 0;
-                itemStack.set(ModDataComponentTypes.ISACTIVATED, isActivated);
             }
+
+            isActivated = !isActivated;
+            itemStack.set(ModDataComponentTypes.ISACTIVATED, isActivated);
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        int isActivated = getIsActivated(stack);
+        boolean isActivated = getIsActivated(stack);
         stack.copyComponentsToNewStack(stack.getItem(), 1);
-        if (entity.isPlayer() && (isActivated == 1) && !entity.isSpectator()) {
+        if (entity.isPlayer() && (isActivated) && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             if (!world.isClient && user != null) {
@@ -79,9 +75,9 @@ public class ScreechingCharmItem extends Item {
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-    private int getIsActivated(ItemStack stack) {
+    private boolean getIsActivated(ItemStack stack) {
         if (stack.get(ModDataComponentTypes.ISACTIVATED) == null) {
-            return 0;
+            return false;
         } else {
             return stack.get(ModDataComponentTypes.ISACTIVATED);
         }

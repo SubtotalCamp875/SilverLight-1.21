@@ -26,7 +26,7 @@ public class MeteorCharmItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        int isActivated = getIsActivated(itemStack);
+        boolean isActivated = getIsActivated(itemStack);
 
         if (!world.isClient && (itemStack.getDamage() != itemStack.getMaxDamage())) {
             if (user.getOffHandStack().getItem() == ModItems.CLOUD_CHARM) {
@@ -36,7 +36,7 @@ public class MeteorCharmItem extends Item {
                 user.giveItemStack(ModItems.INFERNO_CHARM.getDefaultStack());
 
 
-            } else if (isActivated == 0) {
+            } else if (!isActivated) {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             } else {
@@ -44,11 +44,7 @@ public class MeteorCharmItem extends Item {
                         SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             }
 
-            if (isActivated == 0) {
-                isActivated = 1;
-            } else {
-                isActivated = 0;
-            }
+            isActivated = !isActivated;
             itemStack.set(ModDataComponentTypes.ISACTIVATED, isActivated);
 
         } else if (!world.isClient) {
@@ -60,12 +56,12 @@ public class MeteorCharmItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack itemStack, World world, Entity entity, int slot, boolean selected) {
-        int isActivated = getIsActivated(itemStack);
+        boolean isActivated = getIsActivated(itemStack);
         itemStack.copyComponentsToNewStack(itemStack.getItem(), 1);
         if (entity.isPlayer() && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
-            if (!world.isClient && !user.isOnGround() && itemStack.getDamage() != itemStack.getMaxDamage() && (isActivated == 1)) {
+            if (!world.isClient && !user.isOnGround() && itemStack.getDamage() != itemStack.getMaxDamage() && (isActivated)) {
 
                 boolean active = true;
                 for (int i = 0; i <= 5; i++) {
@@ -88,9 +84,9 @@ public class MeteorCharmItem extends Item {
         super.inventoryTick(itemStack, world, entity, slot, selected);
     }
 
-    private int getIsActivated(ItemStack stack) {
+    private boolean getIsActivated(ItemStack stack) {
         if (stack.get(ModDataComponentTypes.ISACTIVATED) == null) {
-            return 0;
+            return false;
         } else {
             return stack.get(ModDataComponentTypes.ISACTIVATED);
         }
