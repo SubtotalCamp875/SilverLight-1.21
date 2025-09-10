@@ -104,8 +104,8 @@ public class SilverlightMain {
                         entries.add(ModItems.DEATHS_DOLL);
                         entries.add(ModItems.DEATHS_BOMB);
                         entries.add(ModItems.SMOKE_BOMB);
-                        entries.add(ModItems.STICKY_BOMB);
-                        entries.add(ModItems.LIGHTNING_BOMB);
+                        //entries.add(ModItems.STICKY_BOMB);
+                        //entries.add(ModItems.LIGHTNING_BOMB);
                         entries.add(ModItems.VORTEX);
                         entries.add(ModItems.LIGHT_ORB);
                         entries.add(ModItems.AIM_ORB);

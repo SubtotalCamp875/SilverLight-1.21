@@ -11,6 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.subtotalcamp875.silverlight.component.ModDataComponentTypes;
 import net.subtotalcamp875.silverlight.effect.ModEffects;
 
 public class BlessingOfCreation extends Item {
@@ -18,21 +19,26 @@ public class BlessingOfCreation extends Item {
         super(settings);
     }
 
-    private boolean isActivated = false;
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
+        int isActivated = getIsActivated(itemStack);
 
         if (!world.isClient) {
-            if (!isActivated) {
+            if (isActivated == 0) {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_NOTE_BLOCK_BELL, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             } else {
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_VAULT_BREAK, SoundCategory.NEUTRAL, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
             }
-            isActivated = !isActivated;
+
+            if (isActivated == 0) {
+                isActivated = 1;
+            } else {
+                isActivated = 0;
+            }
+            itemStack.set(ModDataComponentTypes.ISACTIVATED, isActivated);
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
@@ -40,8 +46,9 @@ public class BlessingOfCreation extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        int isActivated = getIsActivated(stack);
         stack.copyComponentsToNewStack(stack.getItem(), 1);
-        if (entity.isPlayer() && isActivated && !entity.isSpectator()) {
+        if (entity.isPlayer() && (isActivated == 1) && !entity.isSpectator()) {
             PlayerEntity user = world.getClosestPlayer(entity, 1);
 
             if (!world.isClient && user != null) {
@@ -53,5 +60,13 @@ public class BlessingOfCreation extends Item {
             }
         }
         super.inventoryTick(stack, world, entity, slot, selected);
+    }
+
+    private int getIsActivated(ItemStack stack) {
+        if (stack.get(ModDataComponentTypes.ISACTIVATED) == null) {
+            return 0;
+        } else {
+            return stack.get(ModDataComponentTypes.ISACTIVATED);
+        }
     }
 }
